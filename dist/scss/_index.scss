@@ -144,12 +144,13 @@ section.sc-home-offers {
 
         .offers-readmore {
             @include sc-underline;
+            padding: 2.5rem 0;
         }
     }
 }
 
 section.sc-home-partners {
-    padding: 2.5rem 0;
+    padding: 5rem 0 2.5rem 0;
 
     .partners-carousel {
         @include transition(0.2s);
@@ -176,30 +177,32 @@ section.sc-home-partners {
 }
 
 section.sc-home-services {
-    .sc-container {
-        text-align: center;
+    padding-bottom: 5rem;
 
+    .sc-container {
         .services-title {
             @include sc-title-text;
         }
 
         .services-description {
-            margin-bottom: 2.5rem;
+            text-align: center;
+            padding: 1rem 0;
         }
 
         .services-card-container {
-            .services-card {
-                display: flex;
-                flex-direction: column;
-                @include boxshadow;
-                background-color: $sc-white;
-                padding: 2.5rem 1.5rem;
-                border-radius: 1rem;
-                margin-bottom: 5rem;
+            display: grid;
+            margin-top: 2.5rem;
+            grid-gap: 5rem;
 
-                &-title {
-                    margin-bottom: 2.5rem;
-                }
+            .services-card {
+                background-color: $sc-white;
+                display: grid;
+                justify-content: center;
+                align-content: space-between;
+                border-radius: 1.5rem;
+                padding: 2.5rem;
+                @include boxshadow;
+                text-align: center;
 
                 &-image {
                     img {
@@ -207,12 +210,10 @@ section.sc-home-services {
                     }
                 }
 
-                &-description {
-                    margin: 2.5rem 0;
-                }
-
                 &-button {
+                    margin-top: 2.5rem;
                     @include btn;
+
                 }
             }
         }
@@ -220,6 +221,20 @@ section.sc-home-services {
 }
 
 section.sc-home-coaches {
+    padding: 5rem 0;
+
+    .sc-container {
+        .coaches-title {
+            @include sc-title-text;
+        }
+
+        .coaches-description {
+            text-align: center;
+            padding: 1rem 0;
+            margin: 0 auto 5rem;
+        }
+    }
+
     .coaches-carousel {
         .coach-card {
             width: 100%;
@@ -242,6 +257,7 @@ section.sc-home-coaches {
                 }
 
                 &-description {
+
                     padding: 0 1rem;
                 }
             }
@@ -254,115 +270,187 @@ section.sc-home-coaches {
     }
 }
 
+section.sc-home-allpartners {
+    padding: 5rem 0;
 
+    .partners-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        max-height: 27rem;
 
-// @include media-md {
-//     section.sc-home-landing {
-//         .landing-box {
-//             border: 1px solid red;
+        .partner-logo {
+            height: 5rem;
+            max-width: 12.5rem;
+            padding: 2rem;
+            box-sizing: content-box;
 
+            img {
+                width: 100%;
+                opacity: .4;
+                filter: grayscale(100%);
+                @include transition(0.2s);
+            }
 
-//             &-logo {
-//                 img {
-//                     max-width: 100%;
-//                 }
-//             }
+            &:hover {
+                img {
+                    filter: grayscale(0%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
 
-//             &-text {
-//                 display: flex;
-//                 flex-direction: column;
-//                 gap: 2.5rem;
+    .partners-readmore {
+        @include sc-underline;
+        padding: 2.5rem 0;
+    }
+}
 
-//                 .landing-title {
-//                     color: $sc-white;
-//                     font-weight: weight(bold);
-//                     text-transform: uppercase;
+section.sc-home-reviews {
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    background-color: #f2f2f2;
+}
 
-//                 }
+@include media-md {
+    section.sc-home-landing {
 
-//                 .landing-subtitle {
-//                     color: $sc-white;
-//                 }
-//             }
+        .landing-cards {
+            display: flex;
+            padding-bottom: 0;
+            justify-content: flex-end;
 
-//             &-buttons {
-//                 display: flex;
-//                 flex-direction: column;
-//                 gap: 1rem;
+            img {
+                max-width: 80%;
+            }
+        }
+    }
 
-//                 .button-top {
-//                     @include btn-white;
-//                 }
+    section.sc-home-services {
+        .sc-container {
+            .services-description {
+                margin: 0 auto 1.5rem;
+                max-width: 80rem;
+            }
 
-//                 .button-bottom {
-//                     @include btn-white;
-//                 }
-//             }
-//         }
+            .services-card-container {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
 
-//         .landing-cards {
-//             padding: 2.5rem 0;
+                .card1 {
+                    grid-area: 1 / 1 / 2 / 3;
+                }
 
-//             img {
-//                 max-width: 100%;
-//             }
-//         }
-//     }
-// }
+                .card2 {
+                    grid-area: 1 / 3 / 2 / 5;
+                }
+
+                .card3 {
+                    grid-area: 2 / 2 / 3 / 4;
+                }
+            }
+        }
+    }
+
+    section.sc-home-coaches {
+        .coaches-carousel {
+            .coach-card {
+                width: 100%;
+
+                .card-body {
+                    margin: 0 auto;
+                    text-align: center;
+                    max-width: 40rem;
+
+                    &-image {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &-name {
+                        padding: 0.5rem 0;
+                    }
+
+                    &-description {
+                        padding: 0 1rem;
+                    }
+                }
+            }
+        }
+
+        .coaches-readmore {
+            padding: 2.5rem 0;
+            @include sc-underline;
+        }
+    }
+}
 
 @include media-lg {
     nav {
         width: 100%;
         height: $nav-lg;
-
-        .logo {
-            img {
-                margin: 0 auto;
-                height: 8rem;
-            }
-        }
-
-        .button2 {
-            width: $nav-lg;
-            display: grid;
-            align-content: center;
-            justify-items: center;
-
-            // border: 1px solid yellow;
-            i {
-                font-size: 3rem;
-                color: white;
-            }
-        }
+        border-bottom: $sc-accent 1px solid;
     }
 
     section.sc-home-offers {
         .offers-container {
             margin: 0 auto;
-            padding: 1rem inherit;
-
-            .offers-title {
-                @include sc-title-text;
-            }
 
             .offers {
                 flex-direction: row;
+                gap: 2.5rem;
+
 
                 .offer {
-                    display: flex;
-                    padding: 0 1.25rem;
-
-                    &-body {
-                        &-logo {
-                            @include logo(10rem, 5rem);
-                            @include boxshadow;
-                        }
-                    }
+                    &-body {}
                 }
             }
 
             .offers-readmore {
-                padding: 1.25rem 0;
+                @include sc-underline;
+                padding: 2.5rem 0;
+            }
+        }
+    }
+
+    section.sc-home-services {
+
+        .sc-container {
+            .services-description {
+                margin: 0 auto 1.5rem;
+                max-width: 80rem;
+            }
+
+            .services-card-container {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+                margin-top: 5rem;
+
+                &:nth-child(even) {
+                    padding-top: 5rem;
+                }
+
+                .card1 {
+                    grid-area: 1 / 1 / 1 / 1;
+                }
+
+                .card2 {
+                    grid-area: 1 / 2 / 1 / 3;
+                }
+
+                .card3 {
+                    grid-area: 1 / 3 / 1 / 4;
+                }
             }
         }
     }

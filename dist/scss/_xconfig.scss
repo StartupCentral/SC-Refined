@@ -96,7 +96,6 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
 }
 
 @mixin sc-underline {
-    margin-bottom: 2.5rem;
     text-align: center;
 
     a {
@@ -158,8 +157,8 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
 }
 
 @mixin boxshadow {
-    border: 1px solid $sc-overlay-dark;
-    box-shadow: 0 4px 24px 0 rgba(22, 38, 68, .1), 0 12px 155px 0 rgba(22, 38, 68, .1);
+    // border: 1px solid $sc-overlay-dark;
+    box-shadow: 0 4px 24px 0 rgba(22, 38, 68, .1), 0 12px 50px 0 rgba(22, 38, 68, .1);
 }
 
 //Buttons
