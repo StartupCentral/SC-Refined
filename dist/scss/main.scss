@@ -106,13 +106,46 @@ section {
     font-size: 17;
 }
 
-
+////////////////////////////////////////////////
+////////////////////////BOXES///////////////////
+////////////////////////////////////////////////
 .container {
     position: relative;
     width: 1200px;
     max-width: 90%;
     margin: auto;
 }
+
+.row {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4% - 2.5%;
+    max-width: 105%;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+.centered {
+    text-align: center;
+    align-items: center !important;
+}
+
+
+
+////////////////////////////////////////////////
+//MEDIA QUERIES
+////////////////////////////////////////////////
 
 @include media-md {
     h2 {
