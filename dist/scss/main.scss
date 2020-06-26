@@ -19,7 +19,7 @@ body {
     font-family: $font-primary;
     font-weight: 400;
     line-height: 1.6;
-    color: $sc-fontcolor;
+    color: $sc-primary;
 }
 
 h1,
@@ -30,7 +30,7 @@ h5,
 h6 {
     margin-top: 5px;
     margin-bottom: 10px;
-    line-height: 25px;
+    line-height: 1.4em;
     font-weight: 700;
     width: 100%;
     max-width: 800px;
@@ -38,16 +38,16 @@ h6 {
 
 h1 {
     font-size: 35px;
-    line-height: 20px;
+    line-height: 1.8em;
 }
 
 h2 {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 1.4em;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 p,
@@ -55,7 +55,6 @@ i,
 span,
 button {
     font-size: 1.6rem;
-    width: 100%;
 }
 
 a {
@@ -69,19 +68,31 @@ ul {
 }
 
 section {
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
+#main-nav+section {
+    margin-top: 0;
+    padding-top: $nav-sm;
+}
+
+img {
+    display: block;
+    width: 100%;
+    align-self: center;
+}
+
 .headline-1 {
-    font-size: 16vw;
+    font-size: 10vw;
 }
 
 .headline-2 {
-    font-size: 10vw;
+    padding: 0;
+    font-size: 8vw;
 }
 
 .headline-3 {
@@ -97,13 +108,20 @@ section {
 .headline-3,
 .headline-4 {
     font-weight: 900;
-    line-height: 28px;
+    line-height: 1.2em;
     margin-bottom: 5px;
 }
 
 .lead {
     max-width: 850px;
-    font-size: 17;
+    font-size: 1.5rem;
+}
+
+.icon-container {
+    margin-bottom: 1.5rem;
+    padding: 2.5rem;
+    border-radius: 100%;
+    @include boxshadow;
 }
 
 ////////////////////////////////////////////////
@@ -128,6 +146,13 @@ section {
     display: flex;
     flex-direction: column;
     padding: 0 2.5%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-top: 3rem;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .column {
@@ -141,6 +166,27 @@ section {
     align-items: center !important;
 }
 
+.card {
+    border-radius: 1rem;
+    background-color: $sc-white;
+    padding: 1.5rem;
+    @include boxshadow;
+}
+
+.three-column {
+    .column-container {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.button {
+    @include btn;
+}
+
+.button-white {
+    @include btn-white;
+}
 
 
 ////////////////////////////////////////////////
@@ -157,18 +203,37 @@ section {
     }
 
     .headline-1 {
-        font-size: 13vw;
+        // font-size: 13vw;
     }
 
     .headline-2 {
-        font-size: 9vw;
+        font-size: 5vw;
     }
+
+    // .three-column {
+    //     justify-content: space-evenly;
+
+    //     .column-container {
+    //         flex: 0 0 50% !important;
+    //         max-width: 50% !important;
+
+    //         &:nth-child(-n+2) {
+    //             margin-top: 0;
+    //         }
+    //     }
+    // }
 }
 
+
 @include media-lg {
+    #main-nav+section {
+        margin-top: 0;
+        padding-top: $nav-lg;
+    }
+
     h2 {
         font-size: 27px;
-        line-height: 18px;
+        line-height: 1.25em;
     }
 
     h3 {
@@ -180,7 +245,15 @@ section {
     }
 
     .headline-2 {
-        font-size: 7vw;
+        font-size: 4vw;
+    }
+
+    .three-column {
+        .column-container {
+            flex: 0 0 33.33333333%;
+            max-width: 33.33333333%;
+            margin-top: 3rem;
+        }
     }
 }
 
@@ -190,7 +263,7 @@ section {
     }
 
     .headline-2 {
-        font-size: 80px;
+        font-size: 50px;
     }
 
     .headline-3 {
