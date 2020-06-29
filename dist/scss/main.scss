@@ -3,6 +3,8 @@
 @import './index';
 @import './footer';
 @import './partners';
+@import './usermessages';
+@import './messaging';
 
 * {
     box-sizing: border-box;
@@ -73,6 +75,10 @@ section {
     flex-direction: column;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+textarea {
+    font-family: $font-primary;
 }
 
 #main-nav+section {
