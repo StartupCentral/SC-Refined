@@ -156,6 +156,13 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     }
 }
 
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+    min-width: 100%;
+}
+
 @mixin boxshadow {
     // border: 1px solid $sc-overlay-dark;
     box-shadow: 0 4px 24px 0 rgba(22, 38, 68, .1), 0 10px 30px 0 rgba(22, 38, 68, .1);
@@ -164,15 +171,16 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
 //Buttons
 @mixin btn {
     cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .55rem 1.5rem;
+    border-radius: .5rem;
+
     color: $sc-white;
     background: $sc-primary;
     font-family: $font-primary;
-    text-align: center;
     border: 1px solid $sc-primary;
-    font-size: 1.6rem;
-    border-radius: .5rem;
-    padding: .55rem 1.5rem;
-    margin-top: 1.5rem;
+
     @include transition(.2s);
 
     &:hover,
@@ -182,95 +190,22 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     }
 }
 
-@mixin btn-outline {
-    cursor: pointer;
-    color: $sc-primary;
-
-    background: none;
-    font-family: $font-primary;
-    border: 1px solid $sc-primary;
-    font-size: 1.6rem;
-    border-radius: .5rem;
-    margin-top: 1.5rem;
-    padding: .55rem 1.5rem;
-    @include transition(.2s);
-
-    &:hover,
-    &:focus {
-        color: $sc-white;
-        background: $sc-primary;
-    }
-}
-
-@mixin btn-pill {
-    @include btn;
-    border-radius: 2rem;
-}
-
-@mixin btn-icon {
-    @include btn;
-
-    i {
-        font-size: 1.6rem;
-        align-self: center;
-        justify-self: center;
-        padding-left: .5rem;
-    }
-}
-
 @mixin btn-white {
-    cursor: pointer;
+    @include btn;
+
     color: $sc-primary;
     background: $sc-white;
     font-family: $font-primary;
     border: 1px solid $sc-white;
-    font-size: 1.6rem;
-    border-radius: .5rem;
-    margin-top: 1.5rem;
-    padding: .55rem 1.5rem;
-    @include transition(.2s);
-    text-align: center;
 
     &:hover,
     &:focus {
-        background: $sc-primary;
         color: $sc-white;
+        background: $sc-primary;
+        border-color: $sc-white;
     }
 }
 
-@mixin btn-white-outline {
-    cursor: pointer;
-    color: $sc-white;
-    background: none;
-    font-family: $font-primary;
-    border: 1px solid $sc-white;
-    font-size: 1.6rem;
-    border-radius: .5rem;
-    padding: .55rem 1.5rem;
-    @include transition(.2s);
-
-    &:hover,
-    &:focus {
-        color: $sc-black;
-        background: $sc-white;
-    }
-}
-
-@mixin btn-white-pill {
-    @include btn-white;
-    border-radius: 2rem;
-}
-
-@mixin btn-white-icon {
-    @include btn-white;
-
-    i {
-        font-size: 1.6rem;
-        align-self: center;
-        justify-self: center;
-        padding-left: .5rem;
-    }
-}
 
 
 //Transitions

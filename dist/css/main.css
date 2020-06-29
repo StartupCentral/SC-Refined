@@ -1,26 +1,95 @@
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap");
-#main-nav {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  width: 100%;
+nav {
+  position: absolute;
   height: 75px;
-  padding: 1rem 0;
+  background-color: #30C1F3;
+  width: 100%;
+  z-index: 99999;
 }
 
 section.sc-home-landing {
-  color: #FFFFFF;
+  padding-top: 12.5rem;
   background-color: #162644;
-  margin-top: 0;
-  padding-top: 75px;
+  color: #FFFFFF;
 }
 
-section.sc-home-landing .landing-bg {
+section.sc-home-landing .landing-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 100%;
+}
+
+section.sc-home-landing .landing-buttons .button-left {
+  cursor: pointer;
+  text-align: center;
   margin-top: 1rem;
-  height: 20rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #162644;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #162644;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #162644;
+  background: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #FFFFFF;
 }
 
-section.sc-home-landing .landing-bg img {
+section.sc-home-landing .landing-buttons .button-left:hover, section.sc-home-landing .landing-buttons .button-left:focus {
+  background: #23749C;
+  border-color: #23749C;
+}
+
+section.sc-home-landing .landing-buttons .button-left:hover, section.sc-home-landing .landing-buttons .button-left:focus {
+  color: #FFFFFF;
+  background: #162644;
+  border-color: #FFFFFF;
+}
+
+section.sc-home-landing .landing-buttons .button-right {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #162644;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #162644;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #162644;
+  background: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #FFFFFF;
+}
+
+section.sc-home-landing .landing-buttons .button-right:hover, section.sc-home-landing .landing-buttons .button-right:focus {
+  background: #23749C;
+  border-color: #23749C;
+}
+
+section.sc-home-landing .landing-buttons .button-right:hover, section.sc-home-landing .landing-buttons .button-right:focus {
+  color: #FFFFFF;
+  background: #162644;
+  border-color: #FFFFFF;
+}
+
+section.sc-home-landing .landing-img {
+  margin-top: 2.5rem;
+  height: 25rem;
+}
+
+section.sc-home-landing .landing-img img {
   position: absolute;
 }
 
@@ -43,6 +112,19 @@ section.sc-home-offers::before {
   z-index: -1;
 }
 
+section.sc-home-offers .offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 100%;
+}
+
 section.sc-home-offers .headline-2 {
   font-weight: bold;
   line-height: 1.3;
@@ -61,23 +143,6 @@ section.sc-home-offers .headline-2::after {
   margin: 5px auto 0;
   -webkit-transition: width .5s ease-out;
   transition: width .5s ease-out;
-}
-
-section.sc-home-offers .icon {
-  width: 50px;
-  height: 50px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-section.sc-home-offers i {
-  font-size: 5rem;
 }
 
 section.sc-home-services .headline-2 {
@@ -100,45 +165,134 @@ section.sc-home-services .headline-2::after {
   transition: width .5s ease-out;
 }
 
-section.sc-home-services .column {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+section.sc-home-services .services-card-container {
+  margin-top: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2.5rem;
+  grid: 1fr/ 1fr;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-section.sc-home-services .column .button {
+section.sc-home-services .services-card-container .service-card {
+  display: -ms-grid;
+  display: grid;
+  justify-items: stretch;
+}
+
+section.sc-home-services .services-card-container .service-card-img {
+  overflow: hidden;
+}
+
+section.sc-home-services .services-card-container .service-card img {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+section.sc-home-services .services-card-container .service-card-button {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #162644;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #162644;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
+section.sc-home-services .services-card-container .service-card-button:hover, section.sc-home-services .services-card-container .service-card-button:focus {
+  background: #23749C;
+  border-color: #23749C;
+}
+
 @media screen and (min-width: 767px) {
   section.sc-home-offers {
-    margin-top: 50;
+    margin-top: 0;
   }
-  section.sc-home-offers::before {
-    height: 75%;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+  section.sc-home-services .services-card-container {
+    margin-top: 5rem;
+    grid: 1fr/ 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 1023px) {
+  nav {
+    height: 90px;
+  }
   section.sc-home-landing {
-    color: #FFFFFF;
-    background-color: #162644;
-    margin-top: 0;
-    padding-top: 75px;
+    padding-top: 14rem;
   }
-  section.sc-home-landing .landing-bg {
-    margin-top: 1rem;
-    height: 20rem;
+  section.sc-home-landing .landing-text {
+    max-width: 500px;
   }
-  section.sc-home-landing .landing-bg img {
-    display: none;
+  section.sc-home-landing .landing-buttons {
+    min-width: 50rem;
+    width: 50rem;
+  }
+  section.sc-home-landing .landing-img {
     position: absolute;
+    top: -35rem;
+    right: 0;
+    max-width: 50rem;
+  }
+  section.sc-home-landing .landing-img img {
+    position: relative;
+  }
+  section.sc-home-offers {
+    margin-top: 0;
+  }
+  section.sc-home-offers::before {
+    height: 70%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+  }
+  section.sc-home-offers .offers-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  section.sc-home-offers .offers-container .column-container {
+    margin-top: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+  }
+  section.sc-home-services .services-card-container {
+    grid: 1fr/ 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section.sc-home-landing .landing-text {
+    max-width: 650px;
+  }
+  section.sc-home-landing .landing-buttons {
+    min-width: 65rem;
+    width: 65rem;
+  }
+  section.sc-home-landing .landing-img {
+    top: -30rem;
+    max-width: 65rem;
+  }
+  section.sc-home-landing .landing-img img {
+    position: relative;
+    width: 100%;
   }
 }
 
@@ -183,15 +337,14 @@ section.sc-benefit .benefit-box .benefit-text {
 
 section.sc-benefit .benefit-box .benefit-button {
   cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
   color: #FFFFFF;
   background: #162644;
   font-family: "Poppins", sans-serif;
-  text-align: center;
   border: 1px solid #162644;
-  font-size: 1.6rem;
-  border-radius: .5rem;
-  padding: .55rem 1.5rem;
-  margin-top: 1.5rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   text-align: center;
@@ -282,17 +435,20 @@ section.sc-newsletter .stuff-container .input-container span i {
 
 section.sc-newsletter .stuff-container .newsletter-button {
   cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #162644;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #162644;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: #162644;
   background: #FFFFFF;
   font-family: "Poppins", sans-serif;
   border: 1px solid #FFFFFF;
-  font-size: 1.6rem;
-  border-radius: .5rem;
-  margin-top: 1.5rem;
-  padding: .55rem 1.5rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  text-align: center;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
@@ -303,8 +459,14 @@ section.sc-newsletter .stuff-container .newsletter-button {
 }
 
 section.sc-newsletter .stuff-container .newsletter-button:hover, section.sc-newsletter .stuff-container .newsletter-button:focus {
-  background: #162644;
+  background: #23749C;
+  border-color: #23749C;
+}
+
+section.sc-newsletter .stuff-container .newsletter-button:hover, section.sc-newsletter .stuff-container .newsletter-button:focus {
   color: #FFFFFF;
+  background: #162644;
+  border-color: #FFFFFF;
 }
 
 footer.main-footer {
@@ -693,17 +855,18 @@ ul {
   list-style-type: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 section {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 textarea {
@@ -715,21 +878,13 @@ textarea {
   padding-top: 75px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
 .headline-1 {
-  font-size: 10vw;
+  font-size: 9vw;
 }
 
 .headline-2 {
   padding: 0;
-  font-size: 8vw;
+  font-size: 7vw;
 }
 
 .headline-3 {
@@ -754,30 +909,72 @@ img {
   font-size: 1.5rem;
 }
 
+.centered {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .icon-container {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   padding: 2.5rem;
   border-radius: 100%;
   -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
 }
 
+.icon-container .icon {
+  width: 50px;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icon-container .icon i {
+  font-size: 5rem;
+}
+
 .container {
   position: relative;
   width: 1200px;
-  max-width: 90%;
+  max-width: 95%;
   margin: auto;
 }
 
-.row {
-  position: relative;
+.title-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 1.5%;
-  max-width: 105%;
+  min-width: 100%;
+  padding: 0 2.5%;
+  margin: auto;
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-big {
+  position: relative;
+  margin: auto;
+  width: 100%;
 }
 
 .column-container {
@@ -796,28 +993,6 @@ img {
   margin-top: 3rem;
 }
 
-.column-container:first-child {
-  margin-top: 0;
-}
-
-.column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-width: 100%;
-}
-
-.centered {
-  text-align: center;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
-}
-
 .card {
   border-radius: 1rem;
   background-color: #FFFFFF;
@@ -826,24 +1001,16 @@ img {
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
 }
 
-.three-column .column-container {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
-}
-
 .button {
   cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
   color: #FFFFFF;
   background: #162644;
   font-family: "Poppins", sans-serif;
-  text-align: center;
   border: 1px solid #162644;
-  font-size: 1.6rem;
-  border-radius: .5rem;
-  padding: .55rem 1.5rem;
-  margin-top: 1.5rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -855,22 +1022,31 @@ img {
 
 .button-white {
   cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #162644;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #162644;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: #162644;
   background: #FFFFFF;
   font-family: "Poppins", sans-serif;
   border: 1px solid #FFFFFF;
-  font-size: 1.6rem;
-  border-radius: .5rem;
-  margin-top: 1.5rem;
-  padding: .55rem 1.5rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  text-align: center;
 }
 
 .button-white:hover, .button-white:focus {
-  background: #162644;
+  background: #23749C;
+  border-color: #23749C;
+}
+
+.button-white:hover, .button-white:focus {
   color: #FFFFFF;
+  background: #162644;
+  border-color: #FFFFFF;
 }
 
 @media screen and (min-width: 767px) {
@@ -879,6 +1055,9 @@ img {
   }
   h3 {
     font-size: 21px;
+  }
+  .headline-1 {
+    font-size: 7vw;
   }
   .headline-2 {
     font-size: 5vw;
@@ -897,30 +1076,26 @@ img {
   h3 {
     font-size: 22.5px;
   }
+  aside {
+    max-width: 350px;
+  }
   .headline-1 {
-    font-size: 10vw;
+    font-size: 5vw;
   }
   .headline-2 {
-    font-size: 4vw;
-  }
-  .three-column .column-container {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.33333333%;
-            flex: 0 0 33.33333333%;
-    max-width: 33.33333333%;
-    margin-top: 3rem;
+    font-size: 3vw;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .headline-1 {
-    font-size: 120px;
+    font-size: 70px;
   }
   .headline-2 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .headline-3 {
-    font-size: 50px;
+    font-size: 30px;
   }
   .headline-4 {
     font-size: 40px;

@@ -69,13 +69,18 @@ ul {
     list-style-type: none;
 }
 
+img {
+    display: block;
+    width: 100%;
+    align-self: center;
+}
+
 section {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
+
 
 textarea {
     font-family: $font-primary;
@@ -86,19 +91,15 @@ textarea {
     padding-top: $nav-sm;
 }
 
-img {
-    display: block;
-    width: 100%;
-    align-self: center;
-}
+
 
 .headline-1 {
-    font-size: 10vw;
+    font-size: 9vw;
 }
 
 .headline-2 {
     padding: 0;
-    font-size: 8vw;
+    font-size: 7vw;
 }
 
 .headline-3 {
@@ -123,12 +124,31 @@ img {
     font-size: 1.5rem;
 }
 
+.centered {
+    text-align: center;
+    align-items: center;
+}
+
 .icon-container {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     padding: 2.5rem;
     border-radius: 100%;
     @include boxshadow;
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 5rem;
+        }
+    }
 }
+
+
 
 ////////////////////////////////////////////////
 ////////////////////////BOXES///////////////////
@@ -136,16 +156,24 @@ img {
 .container {
     position: relative;
     width: 1200px;
-    max-width: 90%;
+    max-width: 95%;
     margin: auto;
 }
 
-.row {
+.title-box {
+    @include flex(column);
+    padding: 0 2.5%;
+    margin: auto;
+    max-width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.container-big {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 4% - 2.5%;
-    max-width: 105%;
+    margin: auto;
+    width: 100%;
 }
 
 .column-container {
@@ -155,35 +183,14 @@ img {
     max-width: 100%;
     flex: 0 0 100%;
     margin-top: 3rem;
-
-    &:first-child {
-        margin-top: 0;
-    }
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-}
-
-.centered {
-    text-align: center;
-    align-items: center !important;
-}
 
 .card {
     border-radius: 1rem;
     background-color: $sc-white;
     padding: 1.5rem;
     @include boxshadow;
-}
-
-.three-column {
-    .column-container {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
 }
 
 .button {
@@ -193,7 +200,6 @@ img {
 .button-white {
     @include btn-white;
 }
-
 
 ////////////////////////////////////////////////
 //MEDIA QUERIES
@@ -209,25 +215,12 @@ img {
     }
 
     .headline-1 {
-        // font-size: 13vw;
+        font-size: 7vw;
     }
 
     .headline-2 {
         font-size: 5vw;
     }
-
-    // .three-column {
-    //     justify-content: space-evenly;
-
-    //     .column-container {
-    //         flex: 0 0 50% !important;
-    //         max-width: 50% !important;
-
-    //         &:nth-child(-n+2) {
-    //             margin-top: 0;
-    //         }
-    //     }
-    // }
 }
 
 
@@ -246,34 +239,30 @@ img {
         font-size: 22.5px;
     }
 
+    aside {
+        max-width: 350px;
+    }
+
     .headline-1 {
-        font-size: 10vw;
+        font-size: 5vw;
     }
 
     .headline-2 {
-        font-size: 4vw;
-    }
-
-    .three-column {
-        .column-container {
-            flex: 0 0 33.33333333%;
-            max-width: 33.33333333%;
-            margin-top: 3rem;
-        }
+        font-size: 3vw;
     }
 }
 
 @include media-xl {
     .headline-1 {
-        font-size: 120px;
+        font-size: 70px;
     }
 
     .headline-2 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .headline-3 {
-        font-size: 50px;
+        font-size: 30px;
     }
 
     .headline-4 {

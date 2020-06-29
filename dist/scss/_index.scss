@@ -1,27 +1,42 @@
-#main-nav {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    width: 100%;
+nav {
+    position: absolute;
     height: $nav-sm;
-    padding: 1rem 0;
-    // background-color: $sc-primary;
+    background-color: $sc-accent;
+    width: 100%;
+    z-index: 99999;
 }
 
 section.sc-home-landing {
-    color: $sc-white;
+    padding-top: 12.5rem;
     background-color: $sc-primary;
-    margin-top: 0;
-    padding-top: $nav-sm;
+    color: $sc-white;
 
-    .landing-bg {
-        margin-top: 1rem;
-        height: 20rem;
+    .landing-text {
+        // border: 1px solid greenyellow;
+        // max-width: 600px;
+    }
+
+    .landing-buttons {
+        @include flex(column);
+
+        .button-left {
+            @include btn-white;
+        }
+
+        .button-right {
+            @include btn-white;
+        }
+    }
+
+    .landing-img {
+        margin-top: 2.5rem;
+        height: 25rem;
 
         img {
             position: absolute;
         }
     }
+
 }
 
 section.sc-home-offers {
@@ -41,22 +56,13 @@ section.sc-home-offers {
         z-index: -1;
     }
 
-    .card {}
+
+    .offer {
+        @include flex(column);
+    }
 
     .headline-2 {
         @include sc-title-text;
-    }
-
-    .icon {
-        width: 50px;
-        height: 50px;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-    }
-
-    i {
-        font-size: 5rem;
     }
 }
 
@@ -65,45 +71,135 @@ section.sc-home-services {
         @include sc-title-text;
     }
 
-    .column {
-        flex-grow: 1;
-        align-items: flex-end;
+    .services-card-container {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-gap: 2.5rem;
+        grid: 1fr/ 1fr;
 
-        .button {
-            align-self: flex-end;
+        align-items: stretch;
+
+        .service-card {
+            display: grid;
+            justify-items: stretch;
+
+            &-img {
+                overflow: hidden;
+            }
+
+            img {
+                @include transition(0.5s);
+            }
+
+            &:hover {
+                img {
+                    // transform: scale(1.1);
+                }
+            }
+
+            &-button {
+                @include btn;
+                align-self: flex-end;
+            }
         }
-
     }
 }
 
-@include media-md {
-    section.sc-home-offers {
-        margin-top: 50;
 
-        &::before {
-            height: 75%;
-            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+@include media-md {
+    section.sc-home-landing {
+        //////////
+    }
+
+    section.sc-home-offers {
+        margin-top: 0;
+    }
+
+    section.sc-home-services {
+        .services-card-container {
+            margin-top: 5rem;
+            grid: 1fr/ 1fr 1fr;
         }
     }
 }
 
 @include media-lg {
+    nav {
+        height: $nav-lg;
+    }
+
     section.sc-home-landing {
-        color: $sc-white;
-        background-color: $sc-primary;
-        margin-top: 0;
-        padding-top: $nav-sm;
+        padding-top: 14rem;
 
+        .landing-text {
+            max-width: 500px;
+        }
 
+        .landing-buttons {
+            min-width: 50rem;
+            width: 50rem;
+        }
 
-        .landing-bg {
-            margin-top: 1rem;
-            height: 20rem;
+        .landing-img {
+            position: absolute;
+            top: -35rem;
+            right: 0;
+            max-width: 50rem;
 
             img {
-                display: none;
-                position: absolute;
+                position: relative;
             }
         }
+
+    }
+
+    section.sc-home-offers {
+        margin-top: 0;
+
+        &::before {
+            height: 70%;
+            clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+        }
+
+        .offers-container {
+            @include flex(row);
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+
+            .column-container {
+                margin-top: 0;
+                flex: 0 0 33.33%;
+            }
+        }
+    }
+
+    section.sc-home-services {
+        .services-card-container {
+            grid: 1fr/ 1fr 1fr 1fr;
+        }
+    }
+}
+
+@include media-xl {
+    section.sc-home-landing {
+        .landing-text {
+            max-width: 650px;
+        }
+
+        .landing-buttons {
+            min-width: 65rem;
+            width: 65rem;
+        }
+
+        .landing-img {
+            top: -30rem;
+            max-width: 65rem;
+
+            img {
+                position: relative;
+                width: 100%;
+            }
+        }
+
     }
 }
