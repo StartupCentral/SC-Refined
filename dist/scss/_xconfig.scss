@@ -71,6 +71,8 @@ $sc-darkgray: #6c7378;
 $sc-dark: #2B2B2B;
 $sc-black: #111111;
 
+
+
 //Overlays
 $sc-overlay: rgba(255, 255, 255, .1);
 $sc-overlay-dark:rgba(0, 0, 0, .1);
@@ -159,8 +161,8 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
 @mixin flex($direction) {
     display: flex;
     flex-direction: $direction;
-    flex-wrap: wrap;
-    min-width: 100%;
+    // flex-wrap: wrap;
+    // min-width: 100%;
 }
 
 @mixin boxshadow {

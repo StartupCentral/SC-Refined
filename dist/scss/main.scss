@@ -77,8 +77,8 @@ img {
 
 section {
     position: relative;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 8.5rem;
+    padding-bottom: 10rem;
 }
 
 
@@ -170,6 +170,23 @@ textarea {
     align-items: center;
 }
 
+.read-more-box {
+    text-align: center;
+    padding: 1rem 0 2rem;
+
+    a {
+        color: $sc-primary;
+        font-weight: 600;
+        // padding-bottom: 2px;
+        border-bottom: $sc-accent 2px solid;
+        @include transition(0.2s);
+
+        &:hover {
+            color: $sc-accent;
+        }
+    }
+}
+
 .container-big {
     position: relative;
     margin: auto;
@@ -201,6 +218,88 @@ textarea {
     @include btn-white;
 }
 
+
+
+
+//////////////////
+//Looks
+////////////////
+.tlt-w {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    position: absolute;
+    // background-color: $sc-white;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 0;
+}
+
+.trt-w {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    position: absolute;
+    background-color: $sc-white;
+    top: 0;
+}
+
+.tlb-w {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(0 100%, 100% 100%, 0 0);
+    position: absolute;
+    background-color: $sc-white;
+    bottom: 0;
+}
+
+.trb-w {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    position: absolute;
+    background-color: $sc-white;
+    bottom: 0;
+}
+
+//////L
+.tlt-b {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    position: absolute;
+    background-color: $sc-primary;
+    top: 0;
+}
+
+.trt-b {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    position: absolute;
+    background-color: $sc-primary;
+    top: 0;
+}
+
+.tlb-b {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(0 100%, 100% 100%, 0 0);
+    position: absolute;
+    background-color: $sc-primary;
+    bottom: 0;
+}
+
+.trb-b {
+    height: 5rem;
+    width: 100%;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    position: absolute;
+    background-color: $sc-primary;
+    bottom: 0;
+}
+
+
+
 ////////////////////////////////////////////////
 //MEDIA QUERIES
 ////////////////////////////////////////////////
@@ -220,6 +319,10 @@ textarea {
 
     .headline-2 {
         font-size: 5vw;
+    }
+
+    .headline-3 {
+        font-size: 4vw;
     }
 }
 
@@ -250,6 +353,10 @@ textarea {
     .headline-2 {
         font-size: 3vw;
     }
+
+    .headline-3 {
+        font-size: 3vw;
+    }
 }
 
 @include media-xl {
@@ -262,7 +369,7 @@ textarea {
     }
 
     .headline-3 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .headline-4 {

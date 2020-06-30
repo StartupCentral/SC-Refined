@@ -56,13 +56,32 @@ section.sc-home-offers {
         z-index: -1;
     }
 
+    .headline-2 {
+        @include sc-title-text;
+    }
 
     .offer {
         @include flex(column);
     }
+}
 
-    .headline-2 {
-        @include sc-title-text;
+section.sc-home-partners {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container-big {
+        .partners-carousel {
+            @include transition(0.2s);
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: grayscale(0%);
+            }
+
+            .partner-logo {
+                padding: 0 1rem;
+            }
+        }
     }
 }
 
@@ -105,6 +124,138 @@ section.sc-home-services {
     }
 }
 
+section.sc-home-coaches {
+    position: relative;
+    color: $sc-white;
+    background-color: $sc-primary;
+
+    // .triangle {
+    //     top: 0;
+    //     height: 15rem;
+    //     background-color: $sc-gray;
+    //     width: 100%;
+    //     clip-path: polygon(100% 100%, 0 0, 100% 0);
+    //     position: absolute;
+    // }
+
+    .headline-2 {
+        @include sc-title-text;
+    }
+
+    .coaches-carousel {
+        position: relative;
+        margin-top: 5rem;
+
+        .coach-card {
+            .card-body {
+                h3 {
+                    margin: 1rem 0;
+                }
+
+                p {
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+section.sc-home-statistics {
+    .headline-2 {
+        @include sc-title-text;
+    }
+
+    .info-container {
+        padding: 2rem 0 5rem;
+        border-bottom: 1px solid $sc-accent;
+
+        .info {
+            @include flex(row);
+            justify-content: center;
+
+            &-icon {
+                margin: 5px 1rem 0 0;
+
+                i {
+                    font-size: 3rem;
+                }
+            }
+
+            &-text {}
+        }
+    }
+
+    .statistic {
+        .numbers {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+}
+
+section.sc-home-partners-all {
+    .container-big {
+        @include flex(row);
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+        max-height: 27rem;
+
+        .partner-logo {
+            height: 5rem;
+            max-width: 12.5rem;
+            box-sizing: content-box;
+            padding: 2rem;
+
+            img {
+                width: 100%;
+                opacity: .4;
+                filter: grayscale(100%);
+                @include transition(0.2s);
+
+                &:hover {
+                    filter: grayscale(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+section.sc-home-reviews {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    .review-container {
+        .trustpilot {
+            border: 5px solid blue;
+            margin-top: 3rem;
+        }
+
+        .trustpilot-carousel {
+            @include flex(row);
+            justify-content: center;
+            margin-top: 5rem;
+
+            .reviews {
+                border: 5px solid green;
+                padding: 1rem;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
 
 @include media-md {
     section.sc-home-landing {
@@ -119,6 +270,50 @@ section.sc-home-services {
         .services-card-container {
             margin-top: 5rem;
             grid: 1fr/ 1fr 1fr;
+        }
+    }
+
+    section.sc-home-statistics {
+        .info-container {
+            @include flex(row);
+
+            .info {
+                flex: 0 0 33.33%;
+            }
+        }
+
+        .statistics-container {
+            @include flex(row);
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+
+            .statistic {
+                flex: 0 0 33.33%;
+            }
+        }
+    }
+
+    section.sc-home-reviews {
+        .review-container {
+            .trustpilot-carousel {
+                @include flex(row);
+                justify-content: space-evenly;
+                margin-top: 5rem;
+
+                .reviews {
+                    // flex: 0 0 33.33%;
+                    max-width: 250px;
+
+                    &:nth-child(2) {
+                        display: block;
+                    }
+
+                    &:nth-child(3) {
+                        display: block;
+                    }
+                }
+            }
         }
     }
 }
@@ -142,9 +337,9 @@ section.sc-home-services {
 
         .landing-img {
             position: absolute;
-            top: -35rem;
+            top: -40vh;
             right: 0;
-            max-width: 50rem;
+            max-width: 47%;
 
             img {
                 position: relative;
@@ -154,7 +349,8 @@ section.sc-home-services {
     }
 
     section.sc-home-offers {
-        margin-top: 0;
+        padding-top: 0;
+        // margin-top: 0;
 
         &::before {
             height: 70%;
@@ -178,6 +374,43 @@ section.sc-home-services {
             grid: 1fr/ 1fr 1fr 1fr;
         }
     }
+
+    section.sc-home-statistics {
+        .statistics-container {
+            .statistic {
+                flex: 0 0 20%;
+            }
+        }
+    }
+
+    section.sc-home-reviews {
+        .review-container {
+            @include flex(row);
+
+            .trustpilot-carousel {
+                @include flex(row);
+                width: 100%;
+                justify-content: space-evenly;
+                margin-top: 3rem;
+
+                .reviews {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+
+    section.sc-home-partners-all {
+        padding: 5rem;
+
+        .container-big {
+            @include flex(row);
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+            max-height: fit-content;
+        }
+    }
 }
 
 @include media-xl {
@@ -192,8 +425,8 @@ section.sc-home-services {
         }
 
         .landing-img {
-            top: -30rem;
-            max-width: 65rem;
+            top: -42vh;
+            max-width: 45%;
 
             img {
                 position: relative;
