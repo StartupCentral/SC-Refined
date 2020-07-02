@@ -597,6 +597,7 @@ section.sc-home-reviews .review-container .trustpilot-carousel .reviews:nth-chil
 
 section.sc-benefit .container {
   max-width: 80%;
+  border-radius: 2.5rem;
 }
 
 section.sc-benefit .container .headline-3 {
@@ -1018,7 +1019,11 @@ section.sc-team-staff .staff-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+
+section.sc-team-staff .staff-body:first-child {
+  margin-top: 0rem;
 }
 
 section.sc-team-staff .staff-body .staff {
@@ -1059,6 +1064,37 @@ section.sc-team-staff .staff-body .staff-social {
 section.sc-team-staff .staff-body .staff-social .email {
   font-size: 1.4rem;
   color: #A0A0A0;
+}
+
+section.sc-team-join {
+  background-color: #f5f9fe;
+}
+
+section.sc-team-join .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-team-join .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-team-join .button {
+  margin-top: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media screen and (min-width: 767px) {
@@ -1114,11 +1150,13 @@ section.sc-team-staff .staff-body .staff-social .email {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    margin-top: 0;
   }
   section.sc-team-staff .container .staff-body:nth-child(3) {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-top: 0;
   }
 }
 

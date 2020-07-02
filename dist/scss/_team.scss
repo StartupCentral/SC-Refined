@@ -3,7 +3,11 @@ section.sc-team-staff {
 
     .staff-body {
         display: flex;
-        margin-bottom: 10rem;
+        margin-top: 10rem;
+
+        &:first-child {
+            margin-top: 0rem;
+        }
 
         .staff {
             @include flex(column);
@@ -41,6 +45,19 @@ section.sc-team-staff {
     }
 }
 
+section.sc-team-join {
+    .headline-2 {
+        @include sc-title-text;
+    }
+
+    .button {
+        margin-top: 2.5rem;
+        width: fit-content;
+    }
+
+    background-color: #f5f9fe;
+}
+
 @include media-md {
     section.sc-team-staff {
         .container {
@@ -60,6 +77,7 @@ section.sc-team-staff {
             }
         }
     }
+
 }
 
 @include media-lg {
@@ -78,10 +96,12 @@ section.sc-team-staff {
 
                 &:nth-child(2) {
                     order: 0;
+                    margin-top: 0;
                 }
 
                 &:nth-child(3) {
                     order: 2;
+                    margin-top: 0;
                 }
             }
         }

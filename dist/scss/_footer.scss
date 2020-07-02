@@ -1,6 +1,7 @@
 section.sc-benefit {
     .container {
         max-width: 80%;
+        border-radius: 2.5rem;
 
         .headline-3 {
             @include sc-title-text;
