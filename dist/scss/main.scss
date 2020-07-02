@@ -5,6 +5,7 @@
 @import './partners';
 @import './usermessages';
 @import './messaging';
+@import './team';
 
 * {
     box-sizing: border-box;
@@ -81,6 +82,10 @@ section {
     padding-bottom: 10rem;
 }
 
+main>section:first-child {
+    padding-top: 0rem;
+}
+
 
 textarea {
     font-family: $font-primary;
@@ -122,6 +127,7 @@ textarea {
 .lead {
     max-width: 850px;
     font-size: 1.5rem;
+    margin-top: auto;
 }
 
 .centered {
@@ -202,11 +208,18 @@ textarea {
     margin-top: 3rem;
 }
 
+.header-big {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    background-color: $sc-primary;
+    color: $sc-white;
+}
+
 
 .card {
     border-radius: 1rem;
     background-color: $sc-white;
-    padding: 1.5rem;
+    padding: 2.5rem;
     @include boxshadow;
 }
 

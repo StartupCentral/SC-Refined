@@ -1,13 +1,14 @@
 nav {
     position: absolute;
     height: $nav-sm;
-    background-color: $sc-accent;
+    // background-color: $sc-accent;
+    border-bottom: 1px solid $sc-overlay;
     width: 100%;
     z-index: 99999;
 }
 
 section.sc-home-landing {
-    padding-top: 12.5rem;
+    padding-top: 12.5rem !important;
     background-color: $sc-primary;
     color: $sc-white;
 
@@ -99,8 +100,7 @@ section.sc-home-services {
         align-items: stretch;
 
         .service-card {
-            display: grid;
-            justify-items: stretch;
+            @include flex(column);
 
             &-img {
                 overflow: hidden;
@@ -116,9 +116,14 @@ section.sc-home-services {
                 }
             }
 
+            .lead {
+                margin-bottom: 1.5rem;
+            }
+
             &-button {
                 @include btn;
-                align-self: flex-end;
+                margin-top: auto;
+                margin-bottom: 0;
             }
         }
     }
@@ -324,7 +329,7 @@ section.sc-home-reviews {
     }
 
     section.sc-home-landing {
-        padding-top: 14rem;
+        padding-top: 14rem !important;
 
         .landing-text {
             max-width: 500px;
