@@ -1,11 +1,19 @@
 //Imports
 @import './xconfig';
-@import './index';
+
+//Somthing
 @import './footer';
+
+
+//Landing Pages
+@import './index';
 @import './partners';
+@import './team';
+
+//Logged in Pages
+@import './minside';
 @import './usermessages';
 @import './messaging';
-@import './team';
 
 * {
     box-sizing: border-box;
@@ -166,6 +174,19 @@ textarea {
     margin: auto;
 }
 
+.container-small {
+    position: relative;
+    width: 800px;
+    max-width: 95%;
+    margin: auto;
+}
+
+.container-big {
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
 .title-box {
     @include flex(column);
     padding: 0 2.5%;
@@ -193,12 +214,6 @@ textarea {
     }
 }
 
-.container-big {
-    position: relative;
-    margin: auto;
-    width: 100%;
-}
-
 .column-container {
     display: flex;
     flex-direction: column;
@@ -220,6 +235,7 @@ textarea {
     border-radius: 1rem;
     background-color: $sc-white;
     padding: 2.5rem;
+    border: 1px solid #e6e7e8;
     @include boxshadow;
 }
 
@@ -356,7 +372,7 @@ textarea {
     }
 
     aside {
-        max-width: 350px;
+        max-width: 400px;
     }
 
     .headline-1 {
