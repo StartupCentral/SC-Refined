@@ -8,6 +8,9 @@
 //Landing Pages
 @import './index';
 @import './partners';
+@import './partnerpage';
+@import './coaches';
+@import './coachpage';
 @import './team';
 
 //Logged in Pages
@@ -138,6 +141,15 @@ textarea {
     margin-top: auto;
 }
 
+.testimonial {
+    max-width: 850px;
+    font-size: 1.5rem;
+
+    &::first-letter {
+        font-size: 150%;
+    }
+}
+
 .centered {
     text-align: center;
     align-items: center;
@@ -174,12 +186,6 @@ textarea {
     margin: auto;
 }
 
-.aside-container {
-    position: relative;
-    margin: auto;
-    @include flex(column);
-}
-
 .container-small {
     position: relative;
     width: 800px;
@@ -191,6 +197,12 @@ textarea {
     position: relative;
     margin: auto;
     width: 100%;
+}
+
+.aside-container {
+    position: relative;
+    margin: auto;
+    @include flex(column);
 }
 
 .title-box {
@@ -230,10 +242,21 @@ textarea {
 }
 
 .header-big {
-    padding-top: 20rem;
-    padding-bottom: 20rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
     background-color: $sc-primary;
     color: $sc-white;
+}
+
+.header-small {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: $sc-primary;
+    color: $sc-white;
+}
+
+.register-now {
+    margin: 2.5rem auto;
 }
 
 
@@ -251,6 +274,10 @@ textarea {
 
 .button-white {
     @include btn-white;
+}
+
+.cta-button {
+    @include cta-btn;
 }
 
 
@@ -387,6 +414,20 @@ textarea {
         max-width: 95%;
         margin: auto;
         @include flex(row);
+    }
+
+    .header-big {
+        padding-top: 20rem;
+        padding-bottom: 20rem;
+        background-color: $sc-primary;
+        color: $sc-white;
+    }
+
+    .header-small {
+        padding-top: 15rem;
+        padding-bottom: 14rem;
+        background-color: $sc-primary;
+        color: $sc-white;
     }
 
     .headline-1 {

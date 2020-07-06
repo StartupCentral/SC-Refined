@@ -1,0 +1,53 @@
+#sc-partnerpage {
+    background-color: $sc-soft;
+}
+
+.aside-container {
+    aside.partner-info {
+        margin-top: $nav-sm;
+        padding: 0;
+
+        .column-container {
+            margin-top: 0;
+            background-color: $sc-white;
+            @include boxshadow;
+
+            .partner-header {
+                padding: 1rem;
+
+                .header-text {
+                    @include flex(column);
+
+                    .headline-2 {
+                        @include sc-title-text;
+                    }
+
+                    a {
+                        @include cta-btn;
+                        width: 100%;
+                        font-size: 1.6rem;
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .container-small {
+        margin-top: 1rem;
+
+        section.partner-section {
+            border: 5px solid red;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding: 1rem;
+            background-color: $sc-white;
+            border: 1px solid $sc-border;
+            margin-bottom: 2.5rem;
+
+            .headline-2 {
+                @include sc-title-line;
+            }
+        }
+    }
+}

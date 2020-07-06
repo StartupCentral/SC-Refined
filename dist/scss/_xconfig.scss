@@ -208,6 +208,40 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     }
 }
 
+@mixin btn-white-outline {
+    @include btn-white;
+    color: $sc-white;
+    background: none;
+
+    &:hover,
+    &:focus {
+        color: $sc-black;
+        background: $sc-white;
+
+    }
+}
+
+@mixin cta-btn {
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+
+    color: $sc-white;
+    background: $sc-accent;
+    font-family: $font-primary;
+    border: 1px solid $sc-accent;
+    font-size: 2.2rem;
+    @include transition(.2s);
+
+    &:hover,
+    &:focus {
+        background: $sc-secondary;
+        border-color: $sc-secondary;
+    }
+}
+
 
 
 //Transitions
