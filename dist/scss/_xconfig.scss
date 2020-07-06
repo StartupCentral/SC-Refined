@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap');
 //Variables
 $nav-sm: 75px;
-$nav-md: 90px;
 $nav-lg: 90px;
 
 
@@ -71,7 +70,8 @@ $sc-darkgray: #6c7378;
 $sc-dark: #2B2B2B;
 $sc-black: #111111;
 
-
+$sc-soft:#f5f9fe;
+$sc-border:#e6e7e8;
 
 //Overlays
 $sc-overlay: rgba(255, 255, 255, .1);
