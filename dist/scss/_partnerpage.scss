@@ -51,3 +51,19 @@
         }
     }
 }
+
+@include media-lg {
+    .aside-container {
+        aside.partner-info {
+            margin-top: $nav-lg;
+
+            .column-container {
+                margin-top: 3rem;
+                border: 1px solid $sc-border;
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+
+            }
+        }
+    }
+}

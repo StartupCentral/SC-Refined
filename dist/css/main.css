@@ -1048,6 +1048,18 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   transition: width .5s ease-out;
 }
 
+@media screen and (min-width: 1023px) {
+  .aside-container aside.partner-info {
+    margin-top: 90px;
+  }
+  .aside-container aside.partner-info .column-container {
+    margin-top: 3rem;
+    border: 1px solid #e6e7e8;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
 section.coach-holder {
   display: -ms-grid;
   display: grid;
@@ -2489,6 +2501,14 @@ textarea {
 .cta-button:hover, .cta-button:focus {
   background: #23749C;
   border-color: #23749C;
+}
+
+.paragraph {
+  margin: 1rem 0;
+}
+
+.paragraph::first-letter {
+  font-size: 150%;
 }
 
 .tlt-w {

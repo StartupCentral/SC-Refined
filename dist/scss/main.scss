@@ -259,7 +259,6 @@ textarea {
     margin: 2.5rem auto;
 }
 
-
 .card {
     border-radius: 1rem;
     background-color: $sc-white;
@@ -280,6 +279,13 @@ textarea {
     @include cta-btn;
 }
 
+.paragraph {
+    margin: 1rem 0;
+
+    &::first-letter {
+        font-size: 150%;
+    }
+}
 
 
 
