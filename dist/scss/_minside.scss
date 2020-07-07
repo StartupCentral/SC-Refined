@@ -1,10 +1,7 @@
-#sc-minside {
-    background-color: $sc-soft;
-}
-
 .aside-container {
     aside.user-profile {
         margin-top: $nav-sm;
+        margin-bottom: $nav-sm;
         padding: 0;
 
         .column-container {
@@ -283,6 +280,7 @@
     .aside-container {
         aside.user-profile {
             margin-top: $nav-lg;
+            margin-bottom: $nav-lg;
             padding: 0;
 
             .column-container {

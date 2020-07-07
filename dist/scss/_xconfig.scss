@@ -170,6 +170,11 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     box-shadow: 0 4px 24px 0 rgba(22, 38, 68, .1), 0 10px 30px 0 rgba(22, 38, 68, .1);
 }
 
+@mixin boxshadow-soft {
+    // border: 1px solid $sc-overlay-dark;
+    box-shadow: 0 4px 4px 0 rgba(22, 38, 68, .1), 0 2px 6px 0 rgba(22, 38, 68, .1);
+}
+
 //Buttons
 @mixin btn {
     cursor: pointer;

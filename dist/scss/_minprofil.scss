@@ -1,0 +1,82 @@
+section.sc-minprofil-overview {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 1rem;
+    background-color: $sc-white;
+    border: 1px solid $sc-border;
+    margin-bottom: 2.5rem;
+
+    .headline-2 {
+        @include sc-title-line;
+    }
+
+    .projects-container {
+        margin-top: 2.5rem;
+        display: grid;
+        grid: 1fr/1fr;
+        grid-gap: 1rem;
+
+        .finished-projects-container {
+            .finished-project {
+                @include flex(row);
+                width: 100%;
+                justify-content: space-between;
+                border: 1px solid $sc-border;
+                @include boxshadow-soft;
+                background-color: $sc-white;
+                margin-bottom: 1rem;
+                @include transition(0.1s);
+
+                &:hover {
+                    transform: translateY(-5%);
+                }
+
+                a {
+                    color: $sc-primary;
+                    padding: 1rem;
+                }
+
+                .edit {
+                    width: fit-content;
+                    border-right: 5px solid $sc-primary;
+                    border-left: 2px solid $sc-light;
+
+                    &:hover {
+                        background-color: $sc-light;
+                    }
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .active-projects-container {
+            @include flex(column);
+
+            .active-project {
+                @include flex(row);
+                color: $sc-primary;
+                margin-bottom: 1.5rem;
+                width: 100%;
+                @include boxshadow-soft;
+                border: 1px solid $sc-border;
+                @include transition(0.1s);
+
+                &:hover {
+                    transform: translateY(-5%);
+                }
+
+                .project-link {
+                    border-right: 5px solid $sc-primary;
+                }
+
+                a {
+                    color: $sc-primary;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}

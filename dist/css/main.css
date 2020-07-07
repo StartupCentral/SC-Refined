@@ -1534,12 +1534,9 @@ section.sc-team-join .button {
   }
 }
 
-#sc-minside {
-  background-color: #f5f9fe;
-}
-
 .aside-container aside.user-profile {
   margin-top: 75px;
+  margin-bottom: 75px;
   padding: 0;
 }
 
@@ -1882,6 +1879,7 @@ section.sc-team-join .button {
 @media screen and (min-width: 1023px) {
   .aside-container aside.user-profile {
     margin-top: 90px;
+    margin-bottom: 90px;
     padding: 0;
   }
   .aside-container aside.user-profile .column-container {
@@ -2022,6 +2020,125 @@ section.sc-team-join .button {
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices i {
     font-size: 2.5rem;
   }
+}
+
+section.sc-minprofil-overview {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border: 1px solid #e6e7e8;
+  margin-bottom: 2.5rem;
+}
+
+section.sc-minprofil-overview .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-minprofil-overview .projects-container {
+  margin-top: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  grid: 1fr/1fr;
+  grid-gap: 1rem;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #e6e7e8;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  background-color: #FFFFFF;
+  margin-bottom: 1rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project:hover {
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project a {
+  color: #162644;
+  padding: 1rem;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project .edit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-right: 5px solid #162644;
+  border-left: 2px solid #EAEAEA;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project .edit:hover {
+  background-color: #EAEAEA;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project .edit i {
+  font-size: 2rem;
+}
+
+section.sc-minprofil-overview .projects-container .active-projects-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.sc-minprofil-overview .projects-container .active-projects-container .active-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #162644;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  border: 1px solid #e6e7e8;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+section.sc-minprofil-overview .projects-container .active-projects-container .active-project:hover {
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+
+section.sc-minprofil-overview .projects-container .active-projects-container .active-project .project-link {
+  border-right: 5px solid #162644;
+}
+
+section.sc-minprofil-overview .projects-container .active-projects-container .active-project a {
+  color: #162644;
+  padding: 1rem;
 }
 
 #sc-user-messages .container .row .message-box {
@@ -2513,6 +2630,10 @@ textarea {
 
 .paragraph::first-letter {
   font-size: 150%;
+}
+
+.bg-soft {
+  background: #f5f9fe;
 }
 
 .tlt-w {
