@@ -1,47 +1,205 @@
-#sc-user-messages {
-    .container {
-        .row {
-            .message-box {
-                width: 100%;
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
-                border: 1px solid $sc-overlay-dark;
-                border-radius: 1rem;
-                background-color: $sc-white;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
+section.sc-usermessages-inbox {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 1rem;
+    background-color: $sc-white;
+    border: 1px solid $sc-border;
+    margin-bottom: 2.5rem;
 
-                h3 {
-                    margin: 0;
-                    color: $sc-primary;
+    .headline-2 {
+        @include sc-title-line;
+    }
+
+    .inbox {
+        margin: 2.5rem 0;
+
+        .message-box {
+            position: relative;
+            @include flex(row);
+            flex-wrap: wrap;
+            width: 100%;
+            background-color: $sc-white;
+            color: $sc-primary;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid $sc-border;
+            border-radius: 1rem;
+            @include boxshadow-soft;
+            @include transition(.1s);
+
+            &-date {
+                margin: auto;
+                margin-right: 0;
+            }
+
+            &-message {
+                display: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $sc-light;
+                // border: 1px solid $sc-primary;
+            }
+        }
+    }
+
+    .pm-container {
+        display: grid;
+
+        .backbutton {
+            padding-bottom: .5rem;
+
+            button {
+                width: 100%;
+                margin: 0;
+            }
+
+            span {
+                margin-left: 1rem;
+            }
+        }
+
+        .outgoing-message {
+            background-color: $sc-primary;
+            color: $sc-white;
+            border-radius: 1rem;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
+        .incoming-message {
+            background-color: $sc-white;
+            color: $sc-primary;
+            border-radius: 1rem;
+        }
+
+        .private-messages {
+            margin-bottom: .5rem;
+
+            .message {
+                margin-top: 1.5rem;
+                width: 90%;
+
+                &-body {
+                    padding: 1.5rem;
+                    @include flex(row);
+                    flex-wrap: wrap;
+                    border: 1px solid $sc-gray;
+                    border-radius: 1rem;
+                    align-items: center;
+
+                    &-img {
+                        max-width: 2.5rem;
+                        margin-right: 1rem;
+
+                        img {
+                            border-radius: 100%;
+                        }
+                    }
+
+                    &-name {
+                        font-weight: bold;
+                        flex-shrink: 1;
+                        margin-left: 0;
+
+                        span {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    &-date {
+                        color: $sc-gray;
+                        margin-left: auto;
+                        margin-right: 0;
+
+                        span {
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    &-text {
+                        margin-top: 1rem;
+                        flex-basis: 100%;
+                    }
+                }
+            }
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 15rem;
+            background-color: $sc-white;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid $sc-primary;
+        }
+
+        .button {
+            justify-self: flex-end;
+            width: fit-content;
+            cursor: pointer;
+        }
+    }
+}
+
+@include media-md {
+    section.sc-usermessages-inbox {
+        .inbox {
+            margin: 2.5rem 0;
+
+            .message-box {
+                &-message {
+                    margin-top: 1rem;
+                    display: block;
+                }
+            }
+        }
+
+        .pm-container {
+            .backbutton {
+                button {
+                    width: fit-content;
                 }
 
                 span {
-                    color: $sc-gray;
-                }
-
-                &-message {
-                    display: none;
-                    flex-basis: 100%;
+                    margin-left: 1rem;
                 }
             }
         }
     }
 }
 
-@include media-md {
-    #sc-user-messages {
-        .container {
-            .row {
-                .message-box {
-                    &-message {
-                        margin-top: 1rem;
-                        display: block;
-                    }
-                }
-            }
+@include media-lg {
+    .private-messages {
+        height: 57vh;
+        overflow-y: scroll;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 10px;
         }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $sc-primary;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $sc-secondary;
+        }
+
     }
 }

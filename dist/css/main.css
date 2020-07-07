@@ -2141,13 +2141,34 @@ section.sc-minprofil-overview .projects-container .active-projects-container .ac
   padding: 1rem;
 }
 
-#sc-user-messages .container .row .message-box {
-  width: 100%;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
+section.sc-usermessages-inbox {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 1rem;
   background-color: #FFFFFF;
+  border: 1px solid #e6e7e8;
+  margin-bottom: 2.5rem;
+}
+
+section.sc-usermessages-inbox .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-usermessages-inbox .inbox {
+  margin: 2.5rem 0;
+}
+
+section.sc-usermessages-inbox .inbox .message-box {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2155,52 +2176,77 @@ section.sc-minprofil-overview .projects-container .active-projects-container .ac
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-#sc-user-messages .container .row .message-box h3 {
-  margin: 0;
+  width: 100%;
+  background-color: #FFFFFF;
   color: #162644;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e6e7e8;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
-#sc-user-messages .container .row .message-box span {
-  color: #A0A0A0;
+section.sc-usermessages-inbox .inbox .message-box-date {
+  margin: auto;
+  margin-right: 0;
 }
 
-#sc-user-messages .container .row .message-box-message {
+section.sc-usermessages-inbox .inbox .message-box-message {
   display: none;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
 }
 
-@media screen and (min-width: 767px) {
-  #sc-user-messages .container .row .message-box-message {
-    margin-top: 1rem;
-    display: block;
-  }
+section.sc-usermessages-inbox .inbox .message-box:hover {
+  cursor: pointer;
+  background-color: #EAEAEA;
 }
 
-.sc-user-messaging .container .messaging-container .outgoing-message {
+section.sc-usermessages-inbox .pm-container {
+  display: -ms-grid;
+  display: grid;
+}
+
+section.sc-usermessages-inbox .pm-container .backbutton {
+  padding-bottom: .5rem;
+}
+
+section.sc-usermessages-inbox .pm-container .backbutton button {
+  width: 100%;
+  margin: 0;
+}
+
+section.sc-usermessages-inbox .pm-container .backbutton span {
+  margin-left: 1rem;
+}
+
+section.sc-usermessages-inbox .pm-container .outgoing-message {
   background-color: #162644;
   color: #FFFFFF;
   border-radius: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
-.sc-user-messaging .container .messaging-container .incoming-message {
+section.sc-usermessages-inbox .pm-container .incoming-message {
   background-color: #FFFFFF;
   color: #162644;
   border-radius: 1rem;
 }
 
-.sc-user-messaging .container .messaging-container .message {
-  margin-top: 1.5rem;
+section.sc-usermessages-inbox .pm-container .private-messages {
+  margin-bottom: .5rem;
 }
 
-.sc-user-messaging .container .messaging-container .message-body {
+section.sc-usermessages-inbox .pm-container .private-messages .message {
+  margin-top: 1.5rem;
+  width: 90%;
+}
+
+section.sc-usermessages-inbox .pm-container .private-messages .message-body {
   padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2218,65 +2264,104 @@ section.sc-minprofil-overview .projects-container .active-projects-container .ac
           align-items: center;
 }
 
-.sc-user-messaging .container .messaging-container .message-body-img {
+section.sc-usermessages-inbox .pm-container .private-messages .message-body-img {
   max-width: 2.5rem;
   margin-right: 1rem;
 }
 
-.sc-user-messaging .container .messaging-container .message-body-img img {
+section.sc-usermessages-inbox .pm-container .private-messages .message-body-img img {
   border-radius: 100%;
 }
 
-.sc-user-messaging .container .messaging-container .message-body-name {
+section.sc-usermessages-inbox .pm-container .private-messages .message-body-name {
   font-weight: bold;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   margin-left: 0;
 }
 
-.sc-user-messaging .container .messaging-container .message-body-name span {
+section.sc-usermessages-inbox .pm-container .private-messages .message-body-name span {
   font-size: 1.5rem;
 }
 
-.sc-user-messaging .container .messaging-container .message-body-date {
+section.sc-usermessages-inbox .pm-container .private-messages .message-body-date {
   color: #A0A0A0;
-  margin-left: 1rem;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.sc-user-messaging .container .messaging-container .message-body-date span {
+section.sc-usermessages-inbox .pm-container .private-messages .message-body-date span {
   font-size: 1.3rem;
 }
 
-.sc-user-messaging .container .messaging-container .message-body-text {
+section.sc-usermessages-inbox .pm-container .private-messages .message-body-text {
   margin-top: 1rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
 
-.sc-user-messaging .container textarea {
+section.sc-usermessages-inbox .pm-container textarea {
   width: 100%;
-  margin-top: 2.5rem;
+}
+
+section.sc-usermessages-inbox .pm-container textarea {
+  width: 100%;
+  height: 15rem;
   background-color: #FFFFFF;
   padding: 1rem;
   border-radius: 1rem;
   border: 1px solid #162644;
 }
 
-.sc-user-messaging .container .button {
-  float: right;
+section.sc-usermessages-inbox .pm-container .button {
+  justify-self: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
 }
 
 @media screen and (min-width: 767px) {
-  .sc-user-messaging .container .messaging-container {
-    display: -ms-grid;
-    display: grid;
+  section.sc-usermessages-inbox .inbox {
+    margin: 2.5rem 0;
   }
-  .sc-user-messaging .container .messaging-container .outgoing-message {
-    justify-self: flex-end;
+  section.sc-usermessages-inbox .inbox .message-box-message {
+    margin-top: 1rem;
+    display: block;
   }
-  .sc-user-messaging .container .messaging-container .message {
-    max-width: 80%;
+  section.sc-usermessages-inbox .pm-container .backbutton button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  section.sc-usermessages-inbox .pm-container .backbutton span {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .private-messages {
+    height: 57vh;
+    overflow-y: scroll;
+    /* width */
+    /* Track */
+    /* Handle */
+    /* Handle on hover */
+  }
+  .private-messages::-webkit-scrollbar {
+    width: 10px;
+  }
+  .private-messages::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px grey;
+            box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  .private-messages::-webkit-scrollbar-thumb {
+    background: #162644;
+    border-radius: 10px;
+  }
+  .private-messages::-webkit-scrollbar-thumb:hover {
+    background: #23749C;
   }
 }
 
