@@ -950,6 +950,7 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 
 #sc-partnerpage {
   background-color: #f5f9fe;
+  padding-bottom: 5rem;
 }
 
 .aside-container aside.partner-info {
@@ -1014,6 +1015,7 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   width: 100%;
   font-size: 1.6rem;
   margin: 1rem 0;
+  padding: 1rem .5rem;
 }
 
 .aside-container aside.partner-info .column-container .partner-header .header-text a:hover, .aside-container aside.partner-info .column-container .partner-header .header-text a:focus {
@@ -1026,7 +1028,6 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 }
 
 .aside-container .container-small section.partner-section {
-  border: 5px solid red;
   padding-top: 0;
   padding-bottom: 0;
   padding: 1rem;
@@ -1057,6 +1058,9 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
     border: 1px solid #e6e7e8;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+  }
+  .aside-container .container-small {
+    margin-right: 0;
   }
 }
 
@@ -2622,6 +2626,7 @@ textarea {
     font-size: 22.5px;
   }
   aside {
+    min-width: 350px;
     width: 350px;
   }
   .aside-container {
@@ -2636,6 +2641,9 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header-big {
     padding-top: 20rem;

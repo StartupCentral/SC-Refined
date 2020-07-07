@@ -1,5 +1,6 @@
 #sc-partnerpage {
     background-color: $sc-soft;
+    padding-bottom: 5rem;
 }
 
 .aside-container {
@@ -27,6 +28,7 @@
                         width: 100%;
                         font-size: 1.6rem;
                         margin: 1rem 0;
+                        padding: 1rem .5rem;
                     }
                 }
             }
@@ -37,7 +39,6 @@
         margin-top: 1rem;
 
         section.partner-section {
-            border: 5px solid red;
             padding-top: 0;
             padding-bottom: 0;
             padding: 1rem;
@@ -62,8 +63,11 @@
                 border: 1px solid $sc-border;
                 border-bottom-left-radius: 1rem;
                 border-bottom-right-radius: 1rem;
-
             }
+        }
+
+        .container-small {
+            margin-right: 0;
         }
     }
 }
