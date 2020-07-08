@@ -72,14 +72,17 @@
 
                 .column-container {
                     border: 1px solid $sc-border;
-                    border-bottom-left-radius: 1rem;
-                    border-bottom-right-radius: 1rem;
+                    border-radius: 1rem;
                 }
             }
 
             .container-small {
                 margin-top: -$nav-lg;
                 margin-right: 0;
+
+                section.partner-section {
+                    // border-radius: 1rem;
+                }
             }
         }
     }

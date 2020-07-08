@@ -13,6 +13,8 @@
 @import './coachpage';
 @import './team';
 @import './tipspage';
+@import './podcast';
+@import './presspage';
 
 //Logged in Pages
 @import './minside';
@@ -243,10 +245,13 @@ textarea {
 }
 
 .header-big {
+    position: relative;
     padding-top: 15rem;
     padding-bottom: 15rem;
     background-color: $sc-primary;
     color: $sc-white;
+
+
 }
 
 .header-small {

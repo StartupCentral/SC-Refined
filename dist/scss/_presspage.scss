@@ -1,0 +1,47 @@
+section.press-articles {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .article {
+        @include flex(column);
+        border: 1px solid $sc-border;
+        background-color: $sc-white;
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+
+            h2 {
+                text-decoration: underline;
+            }
+        }
+
+        &-image {
+            overflow: hidden;
+
+            img {
+                @include transition(.2s);
+            }
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            padding: 0 1.5rem 1rem;
+            color: $sc-primary;
+
+            .date {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+}
+
+aside.sc-press-aside {
+    .media-partner {
+        @include flex(column);
+        margin-bottom: 2.5rem;
+    }
+}
