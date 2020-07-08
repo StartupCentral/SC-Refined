@@ -1,73 +1,86 @@
 #sc-partnerpage {
     background-color: $sc-soft;
     padding-bottom: 5rem;
-}
 
-.aside-container {
-    aside.partner-info {
-        margin-top: $nav-sm;
-        padding: 0;
 
-        .column-container {
-            margin-top: 0;
-            background-color: $sc-white;
-            @include boxshadow;
+    .aside-container {
+        aside.partner-info {
+            margin-top: -$nav-sm;
+            padding: 0;
 
-            .partner-header {
-                padding: 1rem;
+            .column-container {
+                margin-top: 0;
+                background-color: $sc-white;
+                @include boxshadow;
 
-                .header-text {
-                    @include flex(column);
+                .partner-header {
+                    padding: 1rem;
 
-                    .headline-2 {
-                        @include sc-title-text;
-                    }
+                    .header-text {
+                        @include flex(column);
 
-                    a {
-                        @include cta-btn;
-                        width: 100%;
-                        font-size: 1.6rem;
-                        margin: 1rem 0;
-                        padding: 1rem .5rem;
+                        .headline-2 {
+                            @include sc-title-text;
+                        }
+
+                        a {
+                            @include cta-btn;
+                            width: 100%;
+                            font-size: 1.6rem;
+                            margin: 1rem 0;
+                            padding: 1rem .5rem;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .container-small {
-        margin-top: 1rem;
+        .container-small {
+            margin-top: 5rem;
 
-        section.partner-section {
-            padding-top: 0;
-            padding-bottom: 0;
-            padding: 1rem;
-            background-color: $sc-white;
-            border: 1px solid $sc-border;
-            margin-bottom: 2.5rem;
+            section.partner-section {
+                padding-top: 0;
+                padding-bottom: 0;
+                padding: 1rem;
+                background-color: $sc-white;
+                border: 1px solid $sc-border;
+                margin-bottom: 2.5rem;
 
-            .headline-2 {
-                @include sc-title-line;
+                .headline-2 {
+                    @include sc-title-line;
+                }
             }
+        }
+    }
+}
+
+@include media-md {
+    #sc-partnerpage {
+        .aside-container {
+            max-width: 700px;
         }
     }
 }
 
 @include media-lg {
-    .aside-container {
-        aside.partner-info {
-            margin-top: $nav-lg;
+    #sc-partnerpage {
+        .aside-container {
+            max-width: initial;
 
-            .column-container {
-                margin-top: 3rem;
-                border: 1px solid $sc-border;
-                border-bottom-left-radius: 1rem;
-                border-bottom-right-radius: 1rem;
+            aside.partner-info {
+                margin-top: -$nav-lg;
+
+                .column-container {
+                    border: 1px solid $sc-border;
+                    border-bottom-left-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
             }
-        }
 
-        .container-small {
-            margin-right: 0;
+            .container-small {
+                margin-top: -$nav-lg;
+                margin-right: 0;
+            }
         }
     }
 }
