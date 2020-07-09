@@ -278,6 +278,7 @@ footer.main-footer section.footer-social .social-cvr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
   z-index: 1;
   left: 0;
   top: 0;
@@ -2997,6 +2998,15 @@ textarea {
   max-width: 850px;
   font-size: 1.5rem;
   margin-top: auto;
+}
+
+.testimonial {
+  max-width: 850px;
+  font-size: 1.5rem;
+}
+
+.testimonial::first-letter {
+  font-size: 150%;
 }
 
 .centered {
