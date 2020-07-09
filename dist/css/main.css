@@ -1537,6 +1537,10 @@ section.coach-testimonial .container .card {
   margin-top: -75px;
 }
 
+section.coach-testimonial .container .card .coach-description {
+  margin-bottom: 5rem;
+}
+
 @media screen and (min-width: 767px) {
   section.coach-header {
     padding-top: 15rem;
@@ -1594,6 +1598,39 @@ section.coach-testimonial .container .card {
   section.coach-header .container .coach-text button:hover, section.coach-header .container .coach-text button:focus {
     color: #111111;
     background: #FFFFFF;
+  }
+  section.coach-testimonial .container .card {
+    margin-top: -75px;
+  }
+  section.coach-testimonial .container .card .coach-description {
+    margin-bottom: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.coach-testimonial .container .card .coach-description-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+  section.coach-testimonial .container .card .coach-description-image {
+    margin: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+  section.coach-testimonial .container .card .coach-description:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -2960,15 +2997,6 @@ textarea {
   max-width: 850px;
   font-size: 1.5rem;
   margin-top: auto;
-}
-
-.testimonial {
-  max-width: 850px;
-  font-size: 1.5rem;
-}
-
-.testimonial::first-letter {
-  font-size: 150%;
 }
 
 .centered {

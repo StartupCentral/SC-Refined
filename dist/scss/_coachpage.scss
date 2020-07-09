@@ -30,6 +30,10 @@ section.coach-testimonial {
     .container {
         .card {
             margin-top: -$nav-sm;
+
+            .coach-description {
+                margin-bottom: 5rem;
+            }
         }
     }
 }
@@ -58,6 +62,33 @@ section.coach-testimonial {
                     color: $sc-white;
                     @include transition(.2s);
                     margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    section.coach-testimonial {
+        .container {
+            .card {
+                margin-top: -$nav-sm;
+
+                .coach-description {
+                    margin-bottom: 5rem;
+                    @include flex(row);
+                    justify-content: space-between;
+
+                    &-text {
+                        flex: 0 0 60%;
+                    }
+
+                    &-image {
+                        margin: auto;
+                        flex: 0 0 40%;
+                    }
+
+                    &:nth-child(even) {
+                        flex-direction: row-reverse;
+                    }
                 }
             }
         }
