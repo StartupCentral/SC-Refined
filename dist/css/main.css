@@ -266,12 +266,43 @@ footer.main-footer section.footer-social .social-cvr {
   }
 }
 
+.modal-container {
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-container .modal {
+  padding: 0 2.5%;
+}
+
 .sc-message-popup {
   padding: 1.5rem;
   border-radius: 1rem;
   -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  min-width: 350px;
   max-width: 500px;
+  background-color: #FFFFFF;
 }
 
 .sc-message-popup .message-popup-header {
@@ -350,62 +381,99 @@ footer.main-footer section.footer-social .social-cvr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 350px;
   max-width: 500px;
-  padding: 1.5rem;
   border-radius: 1rem;
   -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
-  margin-bottom: 10rem;
-}
-
-.sc-popup.primary {
+  padding-bottom: 1.5rem;
   background-color: #FFFFFF;
 }
 
-.sc-popup.success {
+.sc-popup .success {
   color: #FFFFFF;
-  background-color: #10ab7c;
+  background-color: #0fae64;
 }
 
-.sc-popup.danger {
+.sc-popup .danger {
   background-color: #F21B3F;
   color: #FFFFFF;
 }
 
-.sc-popup .popup-buttons {
-  margin-left: auto;
-  margin-right: 0;
+.sc-popup .popup-header {
+  width: 100%;
+  padding: 3rem 1rem 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
-.sc-popup .popup-buttons button {
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-.sc-popup .popup-buttons button i {
-  font-size: 3.5rem;
-  color: #FFFFFF;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.sc-popup .popup-buttons button:hover i {
-  color: #182848;
-}
-
-.sc-popup .popup-image {
-  margin: 3rem 0;
-}
-
-.sc-popup .popup-image img {
-  max-height: 20rem;
+.sc-popup .popup-header img {
+  max-height: 15rem;
   width: 100%;
 }
 
-.sc-popup .popup-text span {
+.sc-popup .popup-header p {
   font-size: 2rem;
   font-weight: 700;
+  margin-top: 2rem;
+}
+
+.sc-popup .popup-header .success-message {
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.sc-popup .popup-text {
+  text-align: left;
+  padding: 1.5rem;
+}
+
+.sc-popup .popup-buttons {
+  margin: auto;
+}
+
+.sc-popup .popup-buttons .button-danger {
+  cursor: pointer;
+  text-align: center;
+  padding: .75rem 3rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #F21B3F;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #F21B3F;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sc-popup .popup-buttons .button-danger:hover {
+  background: #D40C2E;
+  border: 1px solid #D40C2E;
+}
+
+.sc-popup .popup-buttons .button-success {
+  cursor: pointer;
+  text-align: center;
+  padding: .75rem 3rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #0fae64;
+  border: 1px solid #0fae64;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sc-popup .popup-buttons .button-success:hover {
+  background: #0D9B59;
+  border: 1px solid #0D9B59;
 }
 
 @media screen and (min-width: 767px) {
@@ -420,6 +488,16 @@ footer.main-footer section.footer-social .social-cvr {
   }
   .sc-message-popup .message-popup-header .popup-header-text {
     margin: auto;
+  }
+  .sc-popup {
+    width: 500px;
+  }
+  .sc-popup .popup-header {
+    padding: 5rem 1rem 2rem;
+  }
+  .sc-popup .popup-header img {
+    max-height: 20rem;
+    width: 100%;
   }
 }
 

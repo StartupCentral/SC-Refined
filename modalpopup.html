@@ -17,52 +17,62 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- <div class="sc-message-popup">
-            <div class="message-popup-header">
-                <div class="popup-header-text"><span>Du er ved at sende din forretningsplan til Frank Buchmann.<br>
-                        Vi ønsker dig alt mulig held og lykke. </span></div>
-                <div class="popup-header-image"><img src="assets/images/Coaches/jess-lee_w1024_q80.jpg" alt=""></div>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="sc-message-popup">
+                <div class="message-popup-header">
+                    <div class="popup-header-text"><span>Du er ved at sende din forretningsplan til Frank Buchmann.<br>
+                            Vi ønsker dig alt mulig held og lykke. </span></div>
+                    <div class="popup-header-image"><img src="assets/images/Coaches/jess-lee_w1024_q80.jpg" alt="">
+                    </div>
+                </div>
+                <div class="message-popup-body">
+                    <span>Write your message</span>
+                    <select name="businessplans" id="businessplans" class="bp-form-control">
+                        <option value="#!">Vaelg din forretningsplan</option>
+                        <option value="#!">Project1</option>
+                        <option value="#!">Hej Project</option>
+                    </select>
+                    <span>Write your message</span>
+                    <textarea name="message" id="message"
+                        placeholder="Jeg håber du kan hjælpe mig, specielt omkring punktet økonomi er jeg lidt udfordret"></textarea>
+                </div>
+                <div class="message-popup-buttons">
+                    <button class="button button-left">Close</button>
+                    <button class="button button-right">Send Message</button>
+                </div>
             </div>
-            <div class="message-popup-body">
-                <span>Write your message</span>
-                <select name="businessplans" id="businessplans" class="bp-form-control">
-                    <option value="#!">Vaelg din forretningsplan</option>
-                    <option value="#!">Project1</option>
-                    <option value="#!">Hej Project</option>
-                </select>
-                <span>Write your message</span>
-                <textarea name="message" id="message"
-                    placeholder="Jeg håber du kan hjælpe mig, specielt omkring punktet økonomi er jeg lidt udfordret"></textarea>
-            </div>
-            <div class="message-popup-buttons">
-                <button class="button button-left">Close</button>
-                <button class="button button-right">Send Message</button>
-            </div>
-        </div> -->
-
-
-        <div class="sc-popup centered success">
-            <div class="popup-buttons">
-                <button class="close-button"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="popup-image">
-                <img src="assets/images/UndrawSVG/Opened.svg" alt="">
-                <!-- <img src="assets/images/UndrawSVG/BusinessPlan.svg" alt=""> -->
-            </div>
-            <div class="popup-text"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></div>
         </div>
 
-        <div class="sc-popup centered danger">
-            <div class="popup-buttons">
-                <button class="close-button"><i class="fas fa-times"></i></button>
+        <div class="modal">
+            <div class="sc-popup centered">
+                <div class="popup-header success">
+                    <img src="assets/images/UndrawSVG/MesssageSent.svg" alt="">
+                    <p class="success-message">Success</p>
+                </div>
+                <div class="popup-text">
+                    <p>Your message has been sent</p>
+                </div>
+                <div class="popup-buttons">
+                    <button class="button-success">Continue</button>
+                </div>
             </div>
-            <div class="popup-image">
-                <!-- <img src="assets/images/UndrawSVG/Opened.svg" alt=""> -->
-                <img src="assets/images/UndrawSVG/BusinessPlan.svg" alt="">
+        </div>
+
+        <div class="modal">
+            <div class="sc-popup centered">
+                <div class="popup-header danger">
+                    <img src="assets/images/UndrawSVG/BusinessPlan.svg" alt="">
+                    <p>Du skal angive en forretningsplan og/eller besked.</p>
+                </div>
+                <div class="popup-text">
+                    <p>Du mangler at angive den forretningsplan eller skrive en besked, som du ønsker
+                        at sende. </p>
+                </div>
+                <div class="popup-buttons">
+                    <button class="button-danger">Retry</button>
+                </div>
             </div>
-            <div class="popup-text"><span>Du mangler at angive den forretningsplan eller skrive en besked, som du ønsker
-                    at sende. </span></div>
         </div>
 
     </div>
