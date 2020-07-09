@@ -49,14 +49,15 @@ $font-weights:( //
 //////////Colors//////////
 
 //Main Colors
-$sc-primary: #162644;
-$sc-secondary: #23749C;
+$sc-primary: #182848;
+$sc-secondary: #223869;
 $sc-fontcolor: #424767;
 $sc-accent: #30C1F3;
 
 //Material Colors
 $sc-tertiary:#ff7f66;
-$sc-danger: #ff4545;
+$sc-danger: #F21B3F;
+$sc-danger-hover: #D40C2E;
 $sc-warning: #f5b759;
 $sc-success: #10ab7c;
 $sc-info: #1e90ff;
@@ -238,6 +239,27 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     font-family: $font-primary;
     border: 1px solid $sc-accent;
     font-size: 2.2rem;
+    @include transition(.2s);
+
+    &:hover,
+    &:focus {
+        background: $sc-secondary;
+        border-color: $sc-secondary;
+    }
+}
+
+@mixin btn-success {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .55rem 1.5rem;
+    border-radius: .5rem;
+
+    color: $sc-white;
+    background: $sc-success;
+    font-family: $font-primary;
+    border: 1px solid $sc-success;
+
     @include transition(.2s);
 
     &:hover,
