@@ -1,3 +1,13 @@
+#sc-presspage {
+    .aside-container {
+        padding-bottom: 5rem;
+
+        .container-small {
+            margin-top: -$nav-sm;
+        }
+    }
+}
+
 section.press-articles {
     padding-top: 0;
     padding-bottom: 0;
@@ -6,6 +16,7 @@ section.press-articles {
         @include flex(column);
         border: 1px solid $sc-border;
         background-color: $sc-white;
+        margin-bottom: 3rem;
 
         &:hover {
             img {
@@ -13,6 +24,7 @@ section.press-articles {
             }
 
             h2 {
+                color: $sc-accent;
                 text-decoration: underline;
             }
         }
@@ -34,6 +46,10 @@ section.press-articles {
             .date {
                 margin-top: 1rem;
             }
+
+            span {
+                text-align: right;
+            }
         }
     }
 
@@ -43,5 +59,110 @@ aside.sc-press-aside {
     .media-partner {
         @include flex(column);
         margin-bottom: 2.5rem;
+    }
+
+    .media-info {
+        margin-bottom: 2.5rem;
+    }
+
+    .media-contact {
+        .media-contact-person {
+            display: grid;
+            grid-template-columns: minmax(20px, auto) 1fr;
+            // grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 1.5rem;
+            grid-row-gap: 1rem;
+
+            .contact-person-img {
+                grid-area: 1 / 1 / 2 / 2;
+                margin: auto;
+                max-width: 7.5rem;
+
+                img {
+                    border-radius: 50%;
+                    width: 7.5rem;
+                    height: 7.5rem;
+                }
+            }
+
+            .contact-person-info {
+                grid-area: 1 / 2 / 2 / 3;
+
+                span {
+                    display: block;
+                    margin-bottom: .5rem;
+
+                    a {
+                        color: $sc-primary;
+
+                        &:hover {
+                            color: $sc-accent;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    i {
+                        margin-right: .5rem;
+                    }
+                }
+            }
+
+            .contact-person-email {
+                grid-area: 2 / 1 / 3 / 3;
+                text-align: center;
+
+                a {
+                    color: $sc-primary;
+
+
+                    &:hover {
+                        color: $sc-accent;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    #sc-presspage {
+        .aside-container {
+            max-width: 600px;
+        }
+    }
+}
+
+@include media-lg {
+    #sc-presspage {
+        .aside-container {
+            max-width: initial;
+
+            .container-small {
+                margin-top: -$nav-lg;
+                padding: 2.5rem;
+                background-color: $sc-white;
+                border: 1px solid $sc-border;
+                border-radius: 1rem;
+                @include boxshadow;
+
+                section.press-articles {
+                    display: grid;
+                    grid: 1fr /1fr 1fr;
+                    grid-gap: 2.5rem;
+
+                    .article {
+                        height: min-content;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    aside.sc-press-aside {
+        .column-container {
+            margin-top: -$nav-lg;
+        }
     }
 }

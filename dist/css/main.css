@@ -1290,7 +1290,7 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 
 @media screen and (min-width: 767px) {
   #sc-partnerpage .aside-container {
-    max-width: 700px;
+    max-width: 600px;
   }
 }
 
@@ -1984,6 +1984,14 @@ section.tips-intro .tip-row .headline-2::after {
   }
 }
 
+#sc-presspage .aside-container {
+  padding-bottom: 5rem;
+}
+
+#sc-presspage .aside-container .container-small {
+  margin-top: -75px;
+}
+
 section.press-articles {
   padding-top: 0;
   padding-bottom: 0;
@@ -1999,6 +2007,7 @@ section.press-articles .article {
           flex-direction: column;
   border: 1px solid #e6e7e8;
   background-color: #FFFFFF;
+  margin-bottom: 3rem;
 }
 
 section.press-articles .article:hover img {
@@ -2007,6 +2016,7 @@ section.press-articles .article:hover img {
 }
 
 section.press-articles .article:hover h2 {
+  color: #30C1F3;
   text-decoration: underline;
 }
 
@@ -2035,6 +2045,10 @@ section.press-articles .article-body .date {
   margin-top: 1rem;
 }
 
+section.press-articles .article-body span {
+  text-align: right;
+}
+
 aside.sc-press-aside .media-partner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2044,6 +2058,115 @@ aside.sc-press-aside .media-partner {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 2.5rem;
+}
+
+aside.sc-press-aside .media-info {
+  margin-bottom: 2.5rem;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(20px, auto) 1fr;
+      grid-template-columns: minmax(20px, auto) 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1rem;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  margin: auto;
+  max-width: 7.5rem;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-img img {
+  border-radius: 50%;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-info {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-info span {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-info span a {
+  color: #182848;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-info span a:hover {
+  color: #30C1F3;
+  text-decoration: underline;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-info span i {
+  margin-right: .5rem;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-email {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / 3 / 3;
+  text-align: center;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-email a {
+  color: #182848;
+}
+
+aside.sc-press-aside .media-contact .media-contact-person .contact-person-email a:hover {
+  color: #30C1F3;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 767px) {
+  #sc-presspage .aside-container {
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  #sc-presspage .aside-container {
+    max-width: initial;
+  }
+  #sc-presspage .aside-container .container-small {
+    margin-top: -90px;
+    padding: 2.5rem;
+    background-color: #FFFFFF;
+    border: 1px solid #e6e7e8;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+            box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  }
+  #sc-presspage .aside-container .container-small section.press-articles {
+    display: -ms-grid;
+    display: grid;
+    grid: 1fr /1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+  #sc-presspage .aside-container .container-small section.press-articles .article {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    margin-bottom: 0;
+  }
+  aside.sc-press-aside .column-container {
+    margin-top: -90px;
+  }
 }
 
 .aside-container aside.user-profile {
