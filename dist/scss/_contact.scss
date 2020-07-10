@@ -5,6 +5,7 @@ section.contact-section {
         background-color: $sc-white;
         border: 1px solid #e6e7e8;
         @include boxshadow;
+        border-radius: 1rem;
 
         .contact-input {
             padding: 2.5rem;
@@ -25,22 +26,82 @@ section.contact-section {
                 .address {
                     @include flex(row);
                     align-items: center;
-                    margin-bottom: 1rem;
+                    margin: 3rem 0;
 
                     i {
                         margin-top: auto;
                         margin-bottom: auto;
                         font-size: 2.5rem;
-                        // margin-right: auto;
+                        width: 40px;
+                        text-align: center;
+                        margin-right: 1.5rem;
                     }
 
-                    p {
-                        margin-left: 2.5rem;
+                    a {
+                        color: $sc-white;
+
+                        &:hover {
+                            text-decoration: underline;
+                            color: $sc-accent;
+                        }
                     }
                 }
             }
 
-            &-social {}
+            &-social {
+                @include flex(row);
+                width: 100%;
+                justify-content: space-around;
+                text-align: center;
+                margin-top: 2.5rem;
+
+                a {
+                    padding: 1rem;
+
+                    i {
+                        font-size: 2rem;
+                    }
+
+                    &:hover {
+                        i {
+                            color: $sc-accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    section.contact-section {
+        .contact-container {
+            @include flex(row);
+            justify-content: space-between;
+
+            .contact-input {
+                padding: 2.5rem;
+            }
+
+            .contact-info {
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+
+                &-address {
+                    .address {
+                        margin: 3rem 1rem;
+                    }
+                }
+
+                &-social {
+                    justify-content: flex-end;
+
+                    a {
+                        width: fit-content;
+
+                    }
+                }
+            }
         }
     }
 }

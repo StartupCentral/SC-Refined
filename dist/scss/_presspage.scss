@@ -136,7 +136,7 @@ aside.sc-press-aside {
 @include media-lg {
     #sc-presspage {
         .aside-container {
-            max-width: initial;
+            max-width: 95%;
 
             .container-small {
                 margin-top: -$nav-lg;
@@ -144,6 +144,7 @@ aside.sc-press-aside {
                 background-color: $sc-white;
                 border: 1px solid $sc-border;
                 border-radius: 1rem;
+
                 @include boxshadow;
 
                 section.press-articles {
