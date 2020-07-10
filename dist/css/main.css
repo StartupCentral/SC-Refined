@@ -278,7 +278,7 @@ footer.main-footer section.footer-social .social-cvr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
@@ -1618,8 +1618,8 @@ section.coach-testimonial .container .card .coach-description {
   }
   section.coach-testimonial .container .card .coach-description-text {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+        -ms-flex: 0 0 57.5%;
+            flex: 0 0 57.5%;
   }
   section.coach-testimonial .container .card .coach-description-image {
     margin: auto;
@@ -1818,6 +1818,108 @@ section.sc-team-join .button {
   }
 }
 
+#sc-podcast section.podcast {
+  margin-top: -75px;
+}
+
+#sc-podcast section.podcast .podcast-container .podcast-text {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+#sc-podcast section.podcast .podcast-container .podcast-text .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  padding-bottom: 1.5rem;
+}
+
+#sc-podcast section.podcast .podcast-container .podcast-text .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 10rem;
+  height: 3px;
+  border-radius: 5px;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+#sc-podcast section.podcast .podcast-container .podcast-player {
+  height: 600px;
+}
+
+@media screen and (min-width: 1023px) {
+  #sc-podcast section.podcast {
+    margin-top: -90px;
+  }
+  #sc-podcast section.podcast .podcast-container {
+    display: -ms-grid;
+    display: grid;
+    grid: 1fr/1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+}
+
+section.contact-section {
+  margin-top: -75px;
+}
+
+section.contact-section .contact-container {
+  background-color: #FFFFFF;
+  border: 1px solid #e6e7e8;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+}
+
+section.contact-section .contact-container .contact-input {
+  padding: 2.5rem;
+}
+
+section.contact-section .contact-container .contact-info {
+  padding: 2.5rem;
+  color: #FFFFFF;
+  background-color: #182848;
+}
+
+section.contact-section .contact-container .contact-info i {
+  color: #EAEAEA;
+}
+
+section.contact-section .contact-container .contact-info-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.contact-section .contact-container .contact-info-address .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+section.contact-section .contact-container .contact-info-address .address i {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 2.5rem;
+}
+
+section.contact-section .contact-container .contact-info-address .address p {
+  margin-left: 2.5rem;
+}
+
 section.tips-intro {
   margin-top: -75px;
   padding-bottom: 0;
@@ -1938,49 +2040,6 @@ section.tips-intro .tip-row .headline-2::after {
 @media screen and (min-width: 1023px) {
   section.tips-intro {
     margin-top: -90px;
-  }
-}
-
-#sc-podcast section.podcast {
-  margin-top: -75px;
-}
-
-#sc-podcast section.podcast .podcast-container .podcast-text {
-  text-align: left;
-  margin-bottom: 3rem;
-}
-
-#sc-podcast section.podcast .podcast-container .podcast-text .headline-2 {
-  font-weight: bold;
-  line-height: 1.3;
-  padding-bottom: 1.5rem;
-}
-
-#sc-podcast section.podcast .podcast-container .podcast-text .headline-2::after {
-  content: '';
-  display: block;
-  bottom: 0;
-  background: #30C1F3;
-  width: 10rem;
-  height: 3px;
-  border-radius: 5px;
-  -webkit-transition: width .5s ease-out;
-  transition: width .5s ease-out;
-}
-
-#sc-podcast section.podcast .podcast-container .podcast-player {
-  height: 600px;
-}
-
-@media screen and (min-width: 1023px) {
-  #sc-podcast section.podcast {
-    margin-top: -90px;
-  }
-  #sc-podcast section.podcast .podcast-container {
-    display: -ms-grid;
-    display: grid;
-    grid: 1fr/1fr 1fr;
-    grid-gap: 2.5rem;
   }
 }
 

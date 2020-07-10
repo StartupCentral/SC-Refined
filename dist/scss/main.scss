@@ -3,17 +3,22 @@
 
 //SiteLayout
 @import './footer';
-@import './popup';
+@import './modalpopup';
 
 //Landing Pages
 @import './index';
+
 @import './partners';
 @import './partnerpage';
+
 @import './coaches';
 @import './coachpage';
+
 @import './team';
-@import './tipspage';
 @import './podcast';
+@import './contact';
+
+@import './tipspage';
 @import './presspage';
 
 //Logged in Pages

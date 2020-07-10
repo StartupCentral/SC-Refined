@@ -1,0 +1,46 @@
+section.contact-section {
+    margin-top: -$nav-sm;
+
+    .contact-container {
+        background-color: $sc-white;
+        border: 1px solid #e6e7e8;
+        @include boxshadow;
+
+        .contact-input {
+            padding: 2.5rem;
+        }
+
+        .contact-info {
+            padding: 2.5rem;
+            color: $sc-white;
+            background-color: $sc-primary;
+
+            i {
+                color: $sc-light;
+            }
+
+            &-address {
+                @include flex(column);
+
+                .address {
+                    @include flex(row);
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    i {
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        font-size: 2.5rem;
+                        // margin-right: auto;
+                    }
+
+                    p {
+                        margin-left: 2.5rem;
+                    }
+                }
+            }
+
+            &-social {}
+        }
+    }
+}
