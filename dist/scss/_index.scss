@@ -119,8 +119,6 @@ section.sc-home-partners {
     }
 }
 
-
-
 section.sc-home-services {
     .headline-2 {
         @include sc-title-text;
@@ -167,15 +165,6 @@ section.sc-home-coaches {
     position: relative;
     color: $sc-white;
     background-color: $sc-primary;
-
-    // .triangle {
-    //     top: 0;
-    //     height: 15rem;
-    //     background-color: $sc-gray;
-    //     width: 100%;
-    //     clip-path: polygon(100% 100%, 0 0, 100% 0);
-    //     position: absolute;
-    // }
 
     .headline-2 {
         @include sc-title-text;
@@ -358,10 +347,6 @@ section.sc-home-reviews {
 }
 
 @include media-lg {
-    nav {
-        height: $nav-lg;
-    }
-
     section.sc-home-landing {
         padding-top: 14rem !important;
 
