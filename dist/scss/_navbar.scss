@@ -5,8 +5,8 @@
         width: 100%;
         height: $nav-sm;
         background-color: $sc-primary;
-        @include transition(0.5s);
-
+        @include transition(.3s);
+        border-bottom: $sc-overlay 1px solid;
         display: flex;
         flex-direction: row;
         align-content: center;
@@ -20,6 +20,7 @@
 
         &.scrolling {
             @include boxshadow;
+            border-bottom: $sc-overlay 1px solid;
         }
 
         .nav-burger {
@@ -114,10 +115,6 @@
                 transform: translateY(-$nav-lg);
             }
 
-            &.scrolling {
-                @include boxshadow-soft;
-            }
-
             .nav-burger {
                 display: none;
             }
@@ -142,7 +139,7 @@
 
 
                     li {
-                        border-left: $sc-overlay 1px solid;
+                        // border-left: $sc-overlay 1px solid;
                         @include transition(0.2s);
                         cursor: pointer;
 
@@ -155,7 +152,6 @@
                     .dropdown {
                         position: relative;
                         height: 100%;
-                        // border: 1px solid red;
                         padding: 0 .5rem;
                         flex: 1;
 
@@ -187,19 +183,6 @@
                         }
 
                         &-menu {
-                            // &::before {
-                            //     content: "";
-                            //     position: absolute;
-                            //     top: -10px;
-                            //     left: 20px;
-                            //     display: block;
-                            //     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-                            //     width: 10px;
-                            //     height: 10px;
-                            //     background-color: $sc-white;
-                            // }
-                            // top: calc(#{$nav-lg} + 15px);
-
                             display: none;
                             position: absolute;
                             left: 0;
@@ -256,7 +239,7 @@
                     height: $nav-lg;
                     // width: $nav-lg;
                     width: auto;
-                    border-left: 1px solid $sc-overlay;
+                    // border-left: 1px solid $sc-overlay;
 
                     &:last-child {
                         border-left: 3px solid $sc-overlay;

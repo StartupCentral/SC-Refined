@@ -240,16 +240,19 @@ section.sc-home-partners-all {
             box-sizing: content-box;
             padding: 2rem;
 
+            &:hover {
+
+                img {
+                    filter: grayscale(0);
+                    opacity: 1;
+                }
+            }
+
             img {
                 width: 100%;
                 opacity: .4;
                 filter: grayscale(100%);
                 @include transition(0.2s);
-
-                &:hover {
-                    filter: grayscale(0);
-                    opacity: 1;
-                }
             }
         }
     }

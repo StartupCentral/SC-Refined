@@ -290,6 +290,7 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
         <section class="sc-home-statistics">
@@ -418,9 +419,9 @@
 
         <section class="sc-home-partners-all">
             <div class="container-big">
-                <div class="partner-logo">
+                <a href="#!" class="partner-logo">
                     <img src="assets/images/Partners/aconta.png" alt="">
-                </div>
+                </a>
                 <div class="partner-logo">
                     <img src="assets/images/Partners/billy.png" alt="">
                 </div>
@@ -658,6 +659,18 @@
             ]
         });
     });
+</script>
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("main-nav").style.top = "0";
+        } else {
+            // document.getElementById("main-nav").style.top = "-90px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
 </script>
 </body>
 
