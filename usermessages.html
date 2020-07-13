@@ -49,134 +49,231 @@
                             <h2 class="headline-2">Inbox</h2>
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
+                        <!-- 
+    Default Stuff: 
+    .backbutton{display:none;} 
+    .pm-container{display:none;}
+
+
+    When You click on a shortmessage:
+    .title-box{display:none;} 
+    .backbutton{display:block;} 
+    .pm-container{display:grid;}
+
+
+    When you click one back button: 
+    .title-box{display:none;}
+    .backbutton{display:none;} 
+    .pm-container{display:none;}
+    .title-box{display:flex;}
+ -->
                         <div class="inbox">
+                            <div class="backbutton">
+                                <button class="button">
+                                    <i class="fas fa-arrow-circle-left"></i>
+                                    <span>Back to my messages</span>
+                                </button>
+                            </div>
+
                             <div class="message-box">
-                                <div class="message-box-name">
-                                    <h3>John Doe</h3>
+                                <div class="shortmessage">
+                                    <div class="shortmessage-name">
+                                        <h3>John Doe</h3>
+                                    </div>
+                                    <div class="shortmessage-date"><span>Jun 24</span></div>
+                                    <div class="shortmessage-message">
+                                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                                            repudiandae
+                                            placeat
+                                            consectetur voluptatibus corporis eligendi labore alias culpa deserunt
+                                            vitae?</span>
+                                    </div>
                                 </div>
-                                <div class="message-box-date"><span>Jun 24</span></div>
-                                <div class="message-box-message">
-                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                                        repudiandae
-                                        placeat
-                                        consectetur voluptatibus corporis eligendi labore alias culpa deserunt
-                                        vitae?</span>
+
+                                <div class="pm-container">
+                                    <div class="private-messages">
+                                        <div class="message outgoing-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="message incoming-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Gratsiela Gesheva Delarosa
+                                                        Ramirez</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Woah Szabi you are so mucular and handsome!! 🚀🚀🚀</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message incoming-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Gratsiela Gesheva Delarosa
+                                                        Ramirez</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message outgoing-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="message outgoing-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <textarea name="user-message" id="user-message" cols="20" rows="10"
+                                        placeholder="Your message"></textarea>
+                                    <button class="button send-btn">Send Message</button>
                                 </div>
                             </div>
                             <div class="message-box">
-                                <div class="message-box-name">
-                                    <h3>John Doe</h3>
+                                <div class="shortmessage">
+                                    <div class="shortmessage-name">
+                                        <h3>John Doe</h3>
+                                    </div>
+                                    <div class="shortmessage-date"><span>Jun 24</span></div>
+                                    <div class="shortmessage-message">
+                                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+                                            repudiandae
+                                            placeat
+                                            consectetur voluptatibus corporis eligendi labore alias culpa deserunt
+                                            vitae?</span>
+                                    </div>
                                 </div>
-                                <div class="message-box-date"><span>Jun 24</span></div>
-                                <div class="message-box-message">
-                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                                        repudiandae
-                                        placeat
-                                        consectetur voluptatibus corporis eligendi labore alias culpa deserunt
-                                        vitae?</span>
-                                </div>
-                            </div>
-                            <div class="message-box">
-                                <div class="message-box-name">
-                                    <h3>John Doe</h3>
-                                </div>
-                                <div class="message-box-date"><span>Jun 24</span></div>
-                                <div class="message-box-message">
-                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                                        repudiandae
-                                        placeat
-                                        consectetur voluptatibus corporis eligendi labore alias culpa deserunt
-                                        vitae?</span>
+
+                                <div class="pm-container">
+                                    <div class="private-messages">
+                                        <div class="message outgoing-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="message incoming-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Gratsiela Gesheva Delarosa
+                                                        Ramirez</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Woah Szabi you are so mucular and handsome!! 🚀🚀🚀</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message incoming-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Gratsiela Gesheva Delarosa
+                                                        Ramirez</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message outgoing-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="message outgoing-message">
+                                            <div class="message-body">
+                                                <div class="message-body-img"><img src="assets/images/User/hihi.jpg"
+                                                        alt="#"></div>
+                                                <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
+                                                <div class="message-body-date"><span>March 26, 19:25</span></div>
+                                                <div class="message-body-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Assumenda recusandae
+                                                        laborum est
+                                                        nemo consectetur facilis error enim blanditiis alias
+                                                        consequuntur.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <textarea name="user-message" id="user-message" cols="20" rows="10"
+                                        placeholder="Your message"></textarea>
+                                    <button class="button send-btn">Send Message</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    <div class="pm-container">
-                        <div class="backbutton">
-                            <button class="button">
-                                <i class="fas fa-arrow-circle-left"></i><span>Back to my messages
-                                </span></button>
-                        </div>
-                        <div class="private-messages">
-                            <div class="message outgoing-message">
-                                <div class="message-body">
-                                    <div class="message-body-img"><img src="assets/images/User/hihi.jpg" alt="#"></div>
-                                    <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
-                                    <div class="message-body-date"><span>March 26, 19:25</span></div>
-                                    <div class="message-body-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda recusandae
-                                            laborum est
-                                            nemo consectetur facilis error enim blanditiis alias consequuntur.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="message incoming-message">
-                                <div class="message-body">
-                                    <div class="message-body-img"><img src="assets/images/User/hihi.jpg" alt="#"></div>
-                                    <div class="message-body-name"><span>Gratsiela Gesheva Delarosa Ramirez</span></div>
-                                    <div class="message-body-date"><span>March 26, 19:25</span></div>
-                                    <div class="message-body-text">
-                                        <p>Woah Szabi you are so mucular and handsome!! 🚀🚀🚀</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="message incoming-message">
-                                <div class="message-body">
-                                    <div class="message-body-img"><img src="assets/images/User/hihi.jpg" alt="#"></div>
-                                    <div class="message-body-name"><span>Gratsiela Gesheva Delarosa Ramirez</span></div>
-                                    <div class="message-body-date"><span>March 26, 19:25</span></div>
-                                    <div class="message-body-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda recusandae
-                                            laborum est
-                                            nemo consectetur facilis error enim blanditiis alias consequuntur.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="message outgoing-message">
-                                <div class="message-body">
-                                    <div class="message-body-img"><img src="assets/images/User/hihi.jpg" alt="#"></div>
-                                    <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
-                                    <div class="message-body-date"><span>March 26, 19:25</span></div>
-                                    <div class="message-body-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda recusandae
-                                            laborum est
-                                            nemo consectetur facilis error enim blanditiis alias consequuntur.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="message outgoing-message">
-                                <div class="message-body">
-                                    <div class="message-body-img"><img src="assets/images/User/hihi.jpg" alt="#"></div>
-                                    <div class="message-body-name"><span>Szabolcs Ronyai</span></div>
-                                    <div class="message-body-date"><span>March 26, 19:25</span></div>
-                                    <div class="message-body-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda recusandae
-                                            laborum est
-                                            nemo consectetur facilis error enim blanditiis alias consequuntur.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <textarea name="user-message" id="user-message" cols="20" rows="10"
-                            placeholder="Your message"></textarea>
-                        <button class="button send-btn">Send Message</button>
                     </div>
                 </section>
             </div>

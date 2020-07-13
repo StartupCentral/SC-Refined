@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css" />
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0ed5b1a423.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="dist/css/main.css">
+    <title>NavigationBar</title>
+</head>
+
+<body style="background: rgba(255, 255, 255, 1); height: 200vh;">
+    <header id="sc-site-header" class="sc-site-header">
+        <nav class="main-nav scrolling">
+            <div class="nav-burger">
+                <button id="nav-burger-button" class="nav-burger-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="nav-logo">
+                <a href="#"> <img src="assets/images/Logos/suc-white-logo.svg" alt="SUC LOGO"></a>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="menu-items">
+                    <li class="dropdown">
+                        <div class="dropdown-box">
+                            <div class="dropdown-box-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div class="dropdown-box-text">
+                                <span>Offers<i class="fas fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <div class="dropdown-box">
+                            <div class="dropdown-box-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="dropdown-box-text">
+                                <span>iværksætteri<i class="fas fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <div class="dropdown-box">
+                            <div class="dropdown-box-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div class="dropdown-box-text">
+                                <span>News<i class="fas fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-box">
+                            <div class="dropdown-box-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="dropdown-box-text">
+                                <span>Tips<i class="fas fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-box">
+                            <div class="dropdown-box-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="dropdown-box-text">
+                                <span>Social<i class="fas fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#!" class="nav-actions-button">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span class="nav-actions-button-name">Beskeder</span>
+                    <span class="message-indicator">1</span>
+                </a>
+                <a href="#!" class="nav-actions-button">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-actions-button-name">Min side</span>
+                </a>
+                <a href="#!" class="nav-actions-button">
+                    <i class="fas fa-edit"></i>
+                    <span class="nav-actions-button-name">Min projekter</span>
+                </a>
+                <a href="#!" class="nav-actions-button">
+                    <i class="fas fa-tasks"></i>
+                    <span class="nav-actions-button-name">Forretningsplan</span>
+                </a>
+
+
+
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("dropmenu");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("open");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

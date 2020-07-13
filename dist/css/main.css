@@ -1,4 +1,272 @@
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap");
+#sc-site-header .main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #182848;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 999;
+}
+
+#sc-site-header .main-nav.scroll-down {
+  -webkit-transform: translateY(-75px);
+          transform: translateY(-75px);
+}
+
+#sc-site-header .main-nav.scrolling {
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+}
+
+#sc-site-header .main-nav .nav-burger {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sc-site-header .main-nav .nav-burger-button {
+  color: #FFFFFF;
+  display: -ms-grid;
+  display: grid;
+  width: 75px;
+  height: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#sc-site-header .main-nav .nav-burger-button i {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+}
+
+#sc-site-header .main-nav .nav-menu {
+  display: none;
+}
+
+#sc-site-header .main-nav .nav-logo {
+  display: -ms-grid;
+  display: grid;
+  width: 15rem;
+}
+
+#sc-site-header .main-nav .nav-logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#sc-site-header .main-nav .nav-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+}
+
+#sc-site-header .main-nav .nav-actions-button {
+  color: #FFFFFF;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75px;
+  height: 75px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#sc-site-header .main-nav .nav-actions-button:not(:first-child) {
+  display: none;
+}
+
+#sc-site-header .main-nav .nav-actions-button i {
+  font-size: 2.5rem;
+}
+
+#sc-site-header .main-nav .nav-actions-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#sc-site-header .main-nav .nav-actions-button-name {
+  display: none;
+}
+
+#sc-site-header .main-nav .nav-actions-button .message-indicator {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  font-size: 1.5rem;
+  background: #30C1F3;
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1023px) {
+  #sc-site-header .main-nav {
+    height: 90px;
+  }
+  #sc-site-header .main-nav.scroll-down {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+  #sc-site-header .main-nav.scrolling {
+    -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+            box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  }
+  #sc-site-header .main-nav .nav-burger {
+    display: none;
+  }
+  #sc-site-header .main-nav .nav-logo {
+    margin-left: 1rem;
+    width: 20rem;
+  }
+  #sc-site-header .main-nav .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    border: 1px solid red;
+  }
+  #sc-site-header .main-nav .nav-menu .menu-items {
+    list-style-type: none;
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 90px;
+  }
+  #sc-site-header .main-nav .nav-menu .menu-items .dropdown {
+    height: 100%;
+    border: 1px solid red;
+    padding: 0 .5rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #sc-site-header .main-nav .nav-menu .menu-items .dropdown-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #sc-site-header .main-nav .nav-menu .menu-items .dropdown-box-icon {
+    margin-bottom: .5rem;
+  }
+  #sc-site-header .main-nav .nav-menu .menu-items .dropdown-box-icon i {
+    font-size: 2.5rem;
+  }
+  #sc-site-header .main-nav .nav-menu .menu-items .dropdown-box-text span {
+    font-size: 1.4rem;
+  }
+  #sc-site-header .main-nav .nav-menu .menu-items .dropdown-box-text span i {
+    margin-left: .5rem;
+  }
+  #sc-site-header .main-nav .nav-actions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #sc-site-header .main-nav .nav-actions-button {
+    padding: 0 .5rem;
+    width: auto;
+    height: 90px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  #sc-site-header .main-nav .nav-actions-button:not(:first-child) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #sc-site-header .main-nav .nav-actions-button:last-child {
+    border-left: 1px solid #e6e7e8;
+  }
+  #sc-site-header .main-nav .nav-actions-button-name {
+    font-size: 1.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: .5rem;
+  }
+  #sc-site-header .main-nav .nav-actions-button .message-indicator {
+    position: absolute;
+    top: .75rem;
+    right: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.5rem;
+    background: #30C1F3;
+    border-radius: 50%;
+    color: #FFFFFF;
+  }
+}
+
 section.sc-benefit .container {
   max-width: 80%;
   border-radius: 2.5rem;
@@ -503,14 +771,6 @@ footer.main-footer section.footer-social .social-cvr {
     max-height: 20rem;
     width: 100%;
   }
-}
-
-nav {
-  position: absolute;
-  height: 75px;
-  border-bottom: 1px solid #30C1F3;
-  width: 100%;
-  z-index: 99999;
 }
 
 section.sc-home-landing {
@@ -2983,7 +3243,21 @@ section.sc-usermessages-inbox .inbox {
   margin: 2.5rem 0;
 }
 
-section.sc-usermessages-inbox .inbox .message-box {
+section.sc-usermessages-inbox .inbox .backbutton {
+  display: none;
+  padding-bottom: 1rem;
+}
+
+section.sc-usermessages-inbox .inbox .backbutton button {
+  width: 100%;
+  margin: 0;
+}
+
+section.sc-usermessages-inbox .inbox .backbutton span {
+  margin-left: 1rem;
+}
+
+section.sc-usermessages-inbox .inbox .shortmessage {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3007,36 +3281,22 @@ section.sc-usermessages-inbox .inbox .message-box {
   transition: all 0.1s ease-in-out;
 }
 
-section.sc-usermessages-inbox .inbox .message-box-date {
+section.sc-usermessages-inbox .inbox .shortmessage-date {
   margin: auto;
   margin-right: 0;
 }
 
-section.sc-usermessages-inbox .inbox .message-box-message {
+section.sc-usermessages-inbox .inbox .shortmessage-message {
   display: none;
 }
 
-section.sc-usermessages-inbox .inbox .message-box:hover {
+section.sc-usermessages-inbox .inbox .shortmessage:hover {
   cursor: pointer;
   background-color: #EAEAEA;
 }
 
 section.sc-usermessages-inbox .pm-container {
-  display: -ms-grid;
-  display: grid;
-}
-
-section.sc-usermessages-inbox .pm-container .backbutton {
-  padding-bottom: .5rem;
-}
-
-section.sc-usermessages-inbox .pm-container .backbutton button {
-  width: 100%;
-  margin: 0;
-}
-
-section.sc-usermessages-inbox .pm-container .backbutton span {
-  margin-left: 1rem;
+  display: none;
 }
 
 section.sc-usermessages-inbox .pm-container .outgoing-message {
@@ -3141,17 +3401,17 @@ section.sc-usermessages-inbox .pm-container .button {
   section.sc-usermessages-inbox .inbox {
     margin: 2.5rem 0;
   }
-  section.sc-usermessages-inbox .inbox .message-box-message {
-    margin-top: 1rem;
-    display: block;
-  }
-  section.sc-usermessages-inbox .pm-container .backbutton button {
+  section.sc-usermessages-inbox .inbox .backbutton button {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-  section.sc-usermessages-inbox .pm-container .backbutton span {
+  section.sc-usermessages-inbox .inbox .backbutton span {
     margin-left: 1rem;
+  }
+  section.sc-usermessages-inbox .inbox .shortmessage-message {
+    margin-top: 1rem;
+    display: block;
   }
 }
 
@@ -3242,7 +3502,11 @@ a {
 }
 
 ul {
-  list-style-type: none;
+  font-size: 1.6rem;
+}
+
+li {
+  font-size: 1.6rem;
 }
 
 img {

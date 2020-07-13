@@ -13,7 +13,21 @@ section.sc-usermessages-inbox {
     .inbox {
         margin: 2.5rem 0;
 
-        .message-box {
+        .backbutton {
+            display: none;
+            padding-bottom: 1rem;
+
+            button {
+                width: 100%;
+                margin: 0;
+            }
+
+            span {
+                margin-left: 1rem;
+            }
+        }
+
+        .shortmessage {
             position: relative;
             @include flex(row);
             flex-wrap: wrap;
@@ -45,20 +59,7 @@ section.sc-usermessages-inbox {
     }
 
     .pm-container {
-        display: grid;
-
-        .backbutton {
-            padding-bottom: .5rem;
-
-            button {
-                width: 100%;
-                margin: 0;
-            }
-
-            span {
-                margin-left: 1rem;
-            }
-        }
+        display: none;
 
         .outgoing-message {
             background-color: $sc-primary;
@@ -152,15 +153,6 @@ section.sc-usermessages-inbox {
         .inbox {
             margin: 2.5rem 0;
 
-            .message-box {
-                &-message {
-                    margin-top: 1rem;
-                    display: block;
-                }
-            }
-        }
-
-        .pm-container {
             .backbutton {
                 button {
                     width: fit-content;
@@ -168,6 +160,13 @@ section.sc-usermessages-inbox {
 
                 span {
                     margin-left: 1rem;
+                }
+            }
+
+            .shortmessage {
+                &-message {
+                    margin-top: 1rem;
+                    display: block;
                 }
             }
         }

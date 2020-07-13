@@ -1,0 +1,222 @@
+#sc-site-header {
+    .main-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: $nav-sm;
+        background-color: $sc-primary;
+        @include transition(0.5s);
+
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+
+        z-index: 999;
+
+        &.scroll-down {
+            transform: translateY(-$nav-sm);
+        }
+
+        &.scrolling {
+            @include boxshadow;
+        }
+
+        .nav-burger {
+            display: grid;
+            align-items: center;
+
+            &-button {
+                color: $sc-white;
+                display: grid;
+                width: $nav-sm;
+                height: 2rem;
+                border: none;
+                background: none;
+                cursor: pointer;
+
+                i {
+                    color: $sc-white;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+        .nav-logo {
+            display: grid;
+            width: 15rem;
+
+            a {
+                display: flex
+            }
+        }
+
+        .nav-actions {
+            display: flex;
+            color: $sc-white;
+
+            &-button {
+                &:not(:first-child) {
+                    display: none;
+                }
+
+                color: $sc-white;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: $nav-sm;
+                height: $nav-sm;
+                @include transition(.2s);
+
+                i {
+                    font-size: 2.5rem;
+                }
+
+                &:hover {
+                    background-color: $sc-overlay;
+                }
+
+                &-name {
+                    display: none;
+                }
+
+                .message-indicator {
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 1.5rem;
+                    display: grid;
+                    align-content: center;
+                    justify-content: center;
+                    width: 1.7rem;
+                    height: 1.7rem;
+                    font-size: 1.5rem;
+                    background: $sc-accent;
+                    border-radius: 50%;
+                    color: $sc-white;
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    #sc-site-header {
+        .main-nav {
+            height: $nav-lg;
+
+            &.scroll-down {
+                transform: translateY(-$nav-lg);
+            }
+
+            &.scrolling {
+                @include boxshadow-soft;
+            }
+
+            .nav-burger {
+                display: none;
+            }
+
+            .nav-logo {
+                margin-left: 1rem;
+                width: 20rem;
+            }
+
+            .nav-menu {
+                display: flex;
+                flex: 1;
+                border: 1px solid red;
+
+                .menu-items {
+                    list-style-type: none;
+                    color: $sc-white;
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    height: $nav-lg;
+
+                    .dropdown {
+                        height: 100%;
+                        border: 1px solid red;
+                        padding: 0 .5rem;
+                        flex: 1;
+
+                        &-box {
+                            display: flex;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            &-icon {
+                                i {
+                                    font-size: 2.5rem;
+                                }
+
+                                margin-bottom: .5rem;
+                            }
+
+                            &-text {
+                                span {
+                                    font-size: 1.4rem;
+
+                                    i {
+                                        margin-left: .5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nav-actions {
+                flex-direction: row-reverse;
+                width: fit-content;
+
+                &-button {
+                    &:not(:first-child) {
+                        display: flex;
+                    }
+
+                    // width: $nav-lg;
+                    padding: 0 .5rem;
+                    width: auto;
+                    height: $nav-lg;
+                    border-left: 1px solid $sc-overlay;
+
+                    &:last-child {
+                        border-left: 1px solid $sc-border;
+                    }
+
+                    &-name {
+                        font-size: 1.4rem;
+                        display: flex;
+                        padding-top: .5rem;
+                    }
+
+                    .message-indicator {
+                        position: absolute;
+                        top: .75rem;
+                        right: 2rem;
+                        display: grid;
+                        align-content: center;
+                        justify-content: center;
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        font-size: 1.5rem;
+                        background: $sc-accent;
+                        border-radius: 50%;
+                        color: $sc-white;
+                    }
+                }
+            }
+        }
+    }
+}

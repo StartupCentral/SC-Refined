@@ -2,6 +2,7 @@
 @import './xconfig';
 
 //SiteLayout
+@import './navbar';
 @import './footer';
 @import './modalpopup';
 
@@ -86,7 +87,12 @@ a {
 }
 
 ul {
-    list-style-type: none;
+    font-size: 1.6rem;
+    // list-style-type: none;
+}
+
+li {
+    font-size: 1.6rem;
 }
 
 img {
