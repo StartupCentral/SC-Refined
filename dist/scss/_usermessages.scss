@@ -59,7 +59,7 @@ section.sc-usermessages-inbox {
     }
 
     .pm-container {
-        display: none;
+        display: grid;
 
         .outgoing-message {
             background-color: $sc-primary;
@@ -122,6 +122,25 @@ section.sc-usermessages-inbox {
                     &-text {
                         margin-top: 1rem;
                         flex-basis: 100%;
+                    }
+
+                    &-button {
+                        margin-left: auto;
+                        margin-right: 0;
+                        margin-top: 1rem;
+
+                        a {
+                            padding: .5rem 1rem;
+                            color: $sc-white;
+                            border: 1px solid $sc-accent;
+                            background-color: $sc-accent;
+                            border-radius: .5rem;
+                            @include transition(0.2s);
+
+                            &:hover {
+                                background-color: $sc-secondary;
+                            }
+                        }
                     }
                 }
             }
