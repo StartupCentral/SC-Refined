@@ -16,8 +16,8 @@
     <title>NavigationBar</title>
 </head>
 
-<body style="background: rgba(0, 0, 0, .6); height: 200vh;">
-    <!-- 
+<body style="height: 100vh; background-color: aliceblue;">
+    <!--
     When starting to scroll down add class: scrolling
     When the pixel from top reaches 100px add .scroll-down
     Example: appsumo
@@ -242,9 +242,198 @@
                 </a>
             </div>
         </nav>
+
+        <nav class="mobile-menu">
+            <div class="topmenu-section">
+                <a href="#" id="my-profile" class="topmenu-buttons">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+
+                <a href="#" id="my-projects" class="topmenu-buttons">
+                    <i class="fas fa-edit"></i>
+                    <span>My Projects</span>
+                </a>
+
+                <a href="#" id="business-plan" class="topmenu-buttons">
+                    <i class="fas fa-tasks"></i>
+                    <span>Business Plan</span>
+                </a>
+
+                <!-- <a href="#" id="signup-btn" class="signup-button">
+                    <span>
+                        Sign up
+                        <i class="fas fa-user-plus"></i>
+                    </span>
+                </a> -->
+            </div>
+
+            <div class="main-menu-section">
+                <span class="menu-section-title">Main</span>
+
+                <div class="menu-item dropmenu">
+                    <a href="#"> <i class="fas fa-hand-holding-usd"></i>
+                        <span>Our offers</span></a>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#"><i class="far fa-address-card"></i><span>Membership</span></a>
+                    </li>
+                    <li class="submenu-item"><a href="#"><i class="fas fa-user-graduate"></i><span>Coaching &
+                                Sparring</span></a></li>
+                    <li class="submenu-item"><a href="#"><i class="fas fa-project-diagram"></i><span>Network</span></a>
+                    </li>
+                    <li class="submenu-item"><a href="#"><i class="fas fa-piggy-bank"></i><span>Discounts</span></a>
+                    </li>
+                </ul>
+
+                <div class="menu-item dropmenu">
+                    <a href="#">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Entrepreneurship</span></a>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">
+                            <i class="fas fa-satellite-dish"></i>
+                            <span>Before Startup</span></a>
+                    </li>
+                    <li class="submenu-item"><a href="#">
+                            <i class="fas fa-user-astronaut"></i>
+                            <span>Startup Phase</span>
+                        </a></li>
+                    <li class="submenu-item"><a href="#">
+                            <i class="fas fa-space-shuttle"></i>
+                            <span>Already Started</span>
+                        </a></li>
+                </ul>
+
+                <div class="menu-item dropmenu">
+                    <a href="#">
+                        <i class="fas fa-newspaper"></i>
+                        <span>News</span></a>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">
+                            <i class="far fa-comment-dots"></i>
+                            <span>Blog</span></a>
+                    </li>
+                    <li class="submenu-item"><a href="#">
+                            <i class="fas fa-microphone-alt"></i>
+                            <span>Podcast</span>
+                        </a></li>
+                    <li class="submenu-item"><a href="#">
+                            <i class="far fa-newspaper"></i>
+                            <span>Press</span>
+                        </a></li>
+                </ul>
+
+
+                <div class="menu-item dropmenu">
+                    <a href="#">
+                        <i class="fas fa-info"></i>
+                        <span>About us</span></a>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">
+                            <i class="fas fa-history"></i>
+                            <span>History</span>
+                        </a></li>
+                    <li class="submenu-item"><a href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Our Team</span>
+                        </a></li>
+                </ul>
+
+
+            </div>
+
+            <div class="menu-section">
+                <span class="menu-section-title">Tips</span>
+                <ul class="menu-section-links">
+                    <li class="nav-link"><a href="#"><i class="fab fa-github"></i><span>CVR</span></a></li>
+                    <li class="nav-link"><a href="#"><i class="fab fa-adobe"></i><span>Kom i gang med Adobe</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="fab fa-github"></i><span>Kom i gang med Canva</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-file-signature"></i></i><span>Vælg
+                                virksomhedsnavn</span></a></li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-at"></i><span>Vælg e-mail platform</span></a></li>
+                    <li class="nav-link"><a href="#"><i class="fab fa-internet-explorer"></i><span>Få leads gennem
+                                webinars</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-shopping-basket"></i><span>En god
+                                webshop</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-warehouse"></i><span>Vælg lagersystem</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-calculator"></i><span>Vælg
+                                regnskabsprogram</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-utensils"></i><span>Restaurant
+                                løsninger</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-search"></i><span>Kom i gang med SEO</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <span class="menu-section-title">Help</span>
+                <ul class="menu-section-links">
+                    <li class="nav-link"><a href="#"><i class="far fa-question-circle"></i><span>FAQ</span></a></li>
+                    <li class="nav-link"><a href="#"><i class="far fa-envelope"></i><span>Contact</span></a></li>
+                    <li class="nav-link"><a href="#"><i class="fas fa-user-secret"></i><span>Privacy Policy</span></a>
+                    </li>
+                    <li class="nav-link"><a href="#"><i class="far fa-file-alt"></i><span>Terms of use</span></a></li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <span class="menu-section-title">Settings</span>
+                <ul class="menu-section-links">
+                    <li class="nav-link"><a href="#"><i class="fas fa-globe-europe"></i><span>Language</span></a></li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <span class="menu-section-title">Community</span>
+                <ul class="menu-section-links">
+                    <li class="nav-link"><a href="#"><i class="fas fa-rocket"></i><span>Startup Lounge</span></a></li>
+                </ul>
+                <div class="menu-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <script>
+        // Mobile Nav and Overlay Toggler toggler
+        const btns = document.querySelectorAll('.nav-burger-button');
+        const bodyBtn = document.querySelectorAll('body');
+        const nav = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.mobile-nav-overlay');
+
+        const toggleMenu = () => nav.classList.toggle('active');
+        const toggleScrollLock = () => bodyBtn.classList.toggle('scrollLock');
+        const toggleOverlay = () => overlay.classList.toggle('active');
+
+        btns.forEach(el => el.addEventListener('click', toggleMenu));
+        btns.forEach(el => el.addEventListener('click', toggleScrollLock));
+        btns.forEach(el => el.addEventListener('click', toggleOverlay));
+
+
+
+
+
+
+
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
