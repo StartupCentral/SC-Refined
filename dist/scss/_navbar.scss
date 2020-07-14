@@ -115,8 +115,6 @@
         visibility: hidden;
         transform: translateX(-100%);
         @include transition(.3s);
-        visibility: visible;
-        transform: translateX(0%);
 
         &.active {
             position: relative;

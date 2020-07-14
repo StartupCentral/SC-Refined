@@ -150,9 +150,6 @@
           transform: translateX(-100%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  visibility: visible;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
 }
 
 #sc-site-header nav.mobile-menu.active {
@@ -1144,6 +1141,234 @@ footer.main-footer section.footer-social .social-cvr {
   .sc-popup .popup-header img {
     max-height: 20rem;
     width: 100%;
+  }
+}
+
+.sc-login-page {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.sc-login-page .login-page-container {
+  position: relative;
+  max-width: 350px;
+  height: 100vh;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+}
+
+.sc-login-page .login-page-container .login-header {
+  margin-top: auto;
+  text-align: center;
+}
+
+.sc-login-page .login-page-container .login-header img {
+  margin: auto;
+  max-width: 500px;
+  padding: 1rem 2.5rem;
+}
+
+.sc-login-page .login-page-container .form-box-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.5rem;
+  overflow-y: hidden;
+}
+
+.sc-login-page .login-page-container .form-box-container .form-container {
+  padding-top: 1.5rem;
+  width: 100%;
+}
+
+.sc-login-page .login-page-container .form-box-container .form-container label {
+  display: block;
+  font-size: 1.6rem;
+  padding-left: .2rem;
+}
+
+.sc-login-page .login-page-container .form-box-container .form-container .input-container {
+  position: relative;
+}
+
+.sc-login-page .login-page-container .form-box-container .form-container .input-container input {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.6rem;
+  border: 0.2rem solid #EAEAEA;
+  border-radius: .5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sc-login-page .login-page-container .form-box-container .form-container .input-container input:focus {
+  border-color: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 0px 0.2rem #223869;
+          box-shadow: 0px 0px 0px 0.2rem #223869;
+}
+
+.sc-login-page .login-page-container .form-box-container .form-container .input-container span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.sc-login-page .login-page-container .form-box-container .form-container .input-container span i {
+  font-size: 2rem;
+  color: #EAEAEA;
+}
+
+.sc-login-page .login-page-container .form-box-container .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.sc-login-page .login-page-container .form-box-container .forgot-password {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.sc-login-page .login-page-container .form-box-container .forgot-password .fpw {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #223869;
+}
+
+.sc-login-page .login-page-container .form-box-container .forgot-password .fpw:hover {
+  color: #30C1F3;
+  text-decoration: underline;
+}
+
+.sc-login-page .login-page-container .form-box-container .forgotpw-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 0 2.5rem;
+  background: #FFFFFF;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  visibility: hidden;
+}
+
+.sc-login-page .login-page-container .form-box-container .forgotpw-container.active {
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.sc-login-page .login-page-container .form-box-container .forgotpw-container .form-container button {
+  width: 100%;
+}
+
+.sc-login-page .login-page-container .form-box-container .forgotpw-container .form-container .cancel {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #223869;
+  margin-top: 1.5rem;
+}
+
+.sc-login-page .login-page-container .form-box-container .forgotpw-container .form-container .cancel:hover {
+  color: #30C1F3;
+  text-decoration: underline;
+}
+
+.sc-login-page .login-page-container .login-footer {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  border-top: 2px dotted #e6e7e8;
+  padding-top: 1rem;
+}
+
+.sc-login-page .login-page-container .login-footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: .5rem 0;
+}
+
+.sc-login-page .login-page-container .login-footer-links a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.3rem;
+  color: #6c7378;
+}
+
+.sc-login-page .login-page-container .login-footer-links a:hover {
+  color: #30C1F3;
+  text-decoration: underline;
+}
+
+.sc-login-page .login-page-container .login-footer-copyright {
+  text-align: center;
+}
+
+.sc-login-page .login-page-container .login-footer-copyright span {
+  font-size: 1.3rem;
+  color: #6c7378;
+}
+
+@media screen and (min-width: 767px) {
+  .sc-login-page .login-page-container {
+    position: relative;
+    max-width: 600px;
+  }
+  .sc-login-page .login-page-container .form-box-container {
+    padding: 0 7.5rem;
+  }
+  .sc-login-page .login-page-container .form-box-container .forgotpw-container {
+    padding: 0 7.5rem;
   }
 }
 

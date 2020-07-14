@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css" />
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0ed5b1a423.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="dist/css/main.css">
+    <title>Startup Central</title>
+</head>
+
+<body>
+    <main id="sc-login-page" class="sc-login-page">
+        <div class="login-page-container">
+            <div class="login-header">
+                <img src="assets/images/Logos/suc-blue-logo.svg" alt="#">
+                <h2>Sign me in</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="form-box-container">
+                <div class="form-container">
+                    <label for="email" class="label-name">
+                        <span class="content-name">Email Address</span>
+                    </label>
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" autocomplete="off" required />
+                        <span><i class="far fa-envelope"></i></span>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <label for="password" class="label-name">
+                        <span class="content-name">Password</span>
+                    </label>
+                    <div class="input-container">
+                        <input type="password" id="pass" name="password" minlength="8" required />
+                        <span><i class="fas fa-lock"></i></span>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <a href="#!" class="button">Sign me in</a>
+                </div>
+                <div class="forgot-password">
+                    <button class="fpw">Forgot your password?</button>
+                </div>
+
+                <div class="forgotpw-container">
+                    <div class="form-container">
+                        <label for="email" class="label-name">
+                            <span class="content-name">Enter your Email Address</span>
+                        </label>
+                        <div class="input-container">
+                            <input type="email" id="email" name="email" autocomplete="off" required />
+                            <span><i class="far fa-envelope"></i></span>
+                        </div>
+
+                        <button class="button">Reset Password</button>
+                        <button class="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="login-footer">
+                <div class="login-footer-links">
+                    <a href="#">Brugerbetingselser</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Privatlivspolitik</a>
+                </div>
+                <div class="login-footer-copyright">
+                    <span>© 2020 Startup Central | CVR - 39319942</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        //Forgot Password Toggler
+        const forgotBtns = document.querySelectorAll('.fpw, .cancel')
+        const forgotContainer = document.querySelector('.forgotpw-container');
+
+        const toggleForgotContainer = () => forgotContainer.classList.toggle('active');
+
+        forgotBtns.forEach(el => el.addEventListener('click', toggleForgotContainer));
+    </script>
+</body>
