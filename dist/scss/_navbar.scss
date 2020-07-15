@@ -19,7 +19,7 @@
         }
 
         &.scrolling {
-            @include boxshadow;
+            // @include boxshadow;
             border-bottom: $sc-overlay 1px solid;
         }
 
@@ -166,7 +166,7 @@
                     display: grid;
                     align-items: center;
                     justify-content: center;
-                    @include boxshadow;
+                    @include boxshadow-soft;
                     width: 5rem;
                     height: 5rem;
                     border-radius: 50%;

@@ -1,0 +1,158 @@
+.sc-businessplan {
+    .container {
+        section.businessplan {
+            padding-top: 0;
+
+            .businessplan-container {
+                // border: 1px solid $sc-border;
+                // @include boxshadow;
+
+                .businessplan-navigation-container {
+                    background-color: $sc-primary;
+                    @include flex(column);
+                    padding: 1rem;
+
+                    ul {
+                        li {
+                            list-style-type: none;
+
+                            a {
+                                color: $sc-white;
+                            }
+                        }
+                    }
+                }
+
+                .businessplan-form-container {
+                    padding: 1rem;
+                    @include flex(column);
+
+                    .businessplan-form {
+                        padding-top: 1rem;
+
+                        .form-container {
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+
+                    .form-header {
+                        @include flex(row);
+                        border-bottom: 1px solid $sc-border;
+                        padding-bottom: .5rem;
+
+                        &-text {
+                            @include flex(column);
+                            color: $sc-gray;
+
+                            .text-name {
+                                margin-right: 1.5rem;
+                                margin-bottom: 1rem;
+                            }
+
+                            h3 {
+                                margin: 0;
+                                // color: $sc-secondary;
+                            }
+                        }
+
+                        &-progress {
+                            span {
+                                // font-size: 1rem;
+                            }
+
+                            margin-top: auto;
+                            margin-bottom: 0;
+                            margin-left: auto;
+                            margin-right: 0;
+                        }
+                    }
+
+                    .form-container {
+                        textarea {
+                            // margin-top: .5rem;
+                            max-width: 100%;
+                            width: 100%;
+                            height: 15rem;
+                            background-color: $sc-white;
+                            padding: 1rem;
+                            border-radius: 1rem;
+                            border: 1px solid $sc-primary;
+                        }
+
+                        input {
+                            display: block;
+                            padding: 1rem;
+                            width: 100%;
+                            font-size: 1.6rem;
+                            border: .2rem solid $sc-light;
+                            border-radius: .5rem;
+                            @include transition(.1s);
+
+                            &:focus {
+                                // border-color: $sc-primary;
+                                border: none;
+                                border-radius: 0;
+                            }
+
+                        }
+
+                        .inspo {
+                            text-align: right;
+
+                            a {
+                                font-size: 1.4rem;
+                                color: $sc-gray;
+                                display: inline-block;
+                                width: fit-content;
+
+                                i {
+                                    font-size: 1.4rem;
+                                    margin-left: .2rem;
+                                }
+
+                                &:hover {
+                                    color: $sc-accent;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .form-footer {
+                        @include flex(row);
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .footer-buttons {
+                            margin-top: 1rem;
+
+                            span {
+                                font-size: 1.4rem;
+                                cursor: pointer;
+                                color: $sc-gray;
+
+                                &:hover {
+                                    color: $sc-accent;
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            .button {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+
+                    input {
+                        display: block;
+                        width: 100%;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -32,51 +32,6 @@
             padding: 0 2.5rem;
             overflow-y: hidden;
 
-            .form-container {
-                padding-top: 1.5rem;
-                width: 100%;
-
-                label {
-                    display: block;
-                    font-size: 1.6rem;
-                    padding-left: .2rem;
-                }
-
-                .input-container {
-                    position: relative;
-
-                    input {
-                        display: block;
-                        padding: 1rem;
-                        width: 100%;
-                        font-size: 1.6rem;
-                        border: .2rem solid $sc-light;
-                        border-radius: .5rem;
-                        @include transition(.2s);
-
-                        &:focus {
-                            border-color: $sc-white;
-                            box-shadow: 0px 0px 0px .2rem $sc-secondary;
-                        }
-                    }
-
-                    span {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        display: grid;
-                        align-items: center;
-                        padding: 1rem;
-                        pointer-events: none;
-
-                        i {
-                            font-size: 2rem;
-                            color: $sc-light;
-                        }
-                    }
-                }
-            }
-
             .button-container {
                 display: flex;
                 width: 100%;
