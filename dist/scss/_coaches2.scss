@@ -1,0 +1,93 @@
+.sc-coaches2 {
+    .container-big {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    .coachcard {
+        // @include boxshadow;
+        border-radius: 1rem;
+        text-align: center;
+        // border: 1px solid $sc-border;
+        max-width: 350px;
+        @include flex(column);
+        padding-bottom: 1.5rem;
+
+        h2 {
+            margin: 1rem 0;
+        }
+
+        &-textbox {
+            padding: 1rem;
+            background-color: $sc-white;
+            border: 1px solid $sc-border;
+            margin: -5rem 1rem 0;
+        }
+
+        &-btn {
+            margin: auto;
+            @include flex(row);
+            width: fit-content;
+            // border: 2px solid red;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+
+            a {
+                background-color: green;
+                background-color: $sc-primary;
+                color: $sc-white;
+                padding: 1rem;
+
+                border-right: 2px solid $sc-overlay;
+
+                &:hover {
+                    background-color: black;
+                }
+            }
+
+            .send-msg {
+                cursor: pointer;
+                border: none;
+                background: none;
+                background-color: blue;
+                background-color: $sc-primary;
+
+                padding: 0 1rem;
+
+                &:hover {
+                    background-color: black;
+                }
+
+                i {
+                    color: $sc-white;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        &-tags {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            margin: .25rem .5rem;
+            // color: $sc-white;
+            // background-color: $sc-primary;
+
+            color: $sc-primary;
+            background-color: $sc-white;
+            border: 1px solid $sc-primary;
+
+
+            padding: .5rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-radius: 1rem;
+            // font-weight: bold;
+        }
+
+    }
+}

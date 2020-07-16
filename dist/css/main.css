@@ -2356,6 +2356,107 @@ section.coach-holder .coach-button:hover {
   }
 }
 
+.sc-coaches2 .container-big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+}
+
+.sc-coaches2 .coachcard {
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+.sc-coaches2 .coachcard h2 {
+  margin: 1rem 0;
+}
+
+.sc-coaches2 .coachcard-textbox {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border: 1px solid #e6e7e8;
+  margin: -5rem 1rem 0;
+}
+
+.sc-coaches2 .coachcard-btn {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+}
+
+.sc-coaches2 .coachcard-btn a {
+  background-color: green;
+  background-color: #182848;
+  color: #FFFFFF;
+  padding: 1rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.sc-coaches2 .coachcard-btn a:hover {
+  background-color: black;
+}
+
+.sc-coaches2 .coachcard-btn .send-msg {
+  cursor: pointer;
+  border: none;
+  background: none;
+  background-color: blue;
+  background-color: #182848;
+  padding: 0 1rem;
+}
+
+.sc-coaches2 .coachcard-btn .send-msg:hover {
+  background-color: black;
+}
+
+.sc-coaches2 .coachcard-btn .send-msg i {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+.sc-coaches2 .coachcard-tags {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sc-coaches2 .coachcard .tag {
+  margin: .25rem .5rem;
+  color: #182848;
+  background-color: #FFFFFF;
+  border: 1px solid #182848;
+  padding: .5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+
 section.coach-header {
   padding-top: 10rem;
   padding-bottom: 10rem;
