@@ -192,8 +192,8 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
 
     @include transition(.2s);
 
-    &:hover,
-    &:focus {
+    // &:focus,
+    &:hover {
         background: $sc-secondary;
         border-color: $sc-secondary;
     }

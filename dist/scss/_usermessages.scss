@@ -183,6 +183,8 @@ section.sc-usermessages-inbox {
                 &-message {
                     margin-top: 1rem;
                     display: block;
+                    max-height: 5rem;
+                    overflow: hidden;
                 }
             }
         }

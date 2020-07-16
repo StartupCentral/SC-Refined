@@ -258,7 +258,7 @@ textarea {
             @include transition(.1s);
 
             &:focus {
-                // border-color: $sc-primary;
+                border-color: $sc-primary;
                 border: none;
                 border-radius: 0;
             }
@@ -318,7 +318,7 @@ textarea {
             opacity: 0;
             cursor: pointer;
             height: 0;
-            width: 0;
+            width: 0 !important;
 
             /* Show the checkmark when checked */
             &:checked~.checkmark:after {
