@@ -112,15 +112,21 @@
         color: $sc-white;
     }
 
+    .primary {
+        background-color: $sc-primary;
+        color: $sc-white;
+    }
+
     .popup-header {
         width: 100%;
-        padding: 3rem 1rem 2rem;
+        padding: 2rem 1rem;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
         @include flex(column);
         text-align: center;
 
         img {
+            margin-top: 1rem;
             max-height: 15rem;
             width: 100%;
         }
@@ -128,7 +134,6 @@
         p {
             font-size: 2rem;
             font-weight: 700;
-            margin-top: 2rem;
         }
 
         .success-message {
@@ -138,17 +143,19 @@
     }
 
     .popup-text {
-        text-align: left;
         padding: 1.5rem;
     }
 
     .popup-buttons {
-        margin: auto;
+        // margin: auto;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+
 
         .button-danger {
             cursor: pointer;
             text-align: center;
-            // margin-top: 1rem;
+
             padding: .75rem 3rem;
             border-radius: .5rem;
 
@@ -183,6 +190,25 @@
             }
         }
 
+        .button-primary {
+            cursor: pointer;
+            text-align: center;
+            // margin-top: 1rem;
+            padding: .75rem 3rem;
+            border-radius: .5rem;
+
+            color: $sc-white;
+            background: $sc-primary;
+            border: 1px solid $sc-primary;
+            font-family: $font-primary;
+            @include transition(0.2s);
+
+            &:hover {
+                background: $sc-secondary;
+                border: 1px solid $sc-secondary;
+            }
+        }
+
     }
 }
 
@@ -201,9 +227,9 @@
         width: 500px;
 
         .popup-header {
-            padding: 5rem 1rem 2rem;
-
             img {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
                 max-height: 20rem;
                 width: 100%;
             }
