@@ -1332,13 +1332,13 @@ footer.main-footer section.footer-social .social-cvr {
 @media screen and (min-width: 767px) {
   .sc-login-page .login-page-container {
     position: relative;
-    max-width: 600px;
+    max-width: 500px;
   }
   .sc-login-page .login-page-container .form-box-container {
-    padding: 0 7.5rem;
+    padding: 0 10rem;
   }
   .sc-login-page .login-page-container .form-box-container .forgotpw-container {
-    padding: 0 7.5rem;
+    padding: 0 10rem;
   }
 }
 
@@ -2543,6 +2543,152 @@ section.coach-testimonial .container .card .coach-description {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+}
+
+section.coach-holder2 {
+  margin-top: -75px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2.5rem;
+}
+
+section.coach-holder2 .coachcard {
+  border: 1px solid #e6e7e8;
+  width: 350px;
+  margin: auto;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+}
+
+section.coach-holder2 .coachcard-header {
+  margin-top: 2.5rem;
+}
+
+section.coach-holder2 .coachcard-header img {
+  max-width: 20rem;
+  border-radius: 50%;
+  margin: auto;
+  border: 1px solid #e6e7e8;
+}
+
+section.coach-holder2 .coachcard-text {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  padding: 2.5rem;
+}
+
+section.coach-holder2 .coachcard-text .name h2 {
+  margin: 0;
+}
+
+section.coach-holder2 .coachcard-text .name p {
+  font-size: 1.5rem;
+  color: #A0A0A0;
+}
+
+section.coach-holder2 .coachcard-text .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.coach-holder2 .coachcard-text .tags .tag {
+  border: 1px solid #e6e7e8;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  margin: .5rem;
+  border-radius: 2.5rem;
+  padding: .25rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+section.coach-holder2 .coachcard-text .shortdesc p {
+  font-size: 1.5rem;
+}
+
+section.coach-holder2 .coachcard-buttons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.coach-holder2 .coachcard-buttons:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15rem;
+  height: 1px;
+  background-color: #e6e7e8;
+  border-radius: 50%;
+}
+
+section.coach-holder2 .coachcard-buttons .profile-btn {
+  display: block;
+  padding: 1rem;
+  color: #182848;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+section.coach-holder2 .coachcard-buttons .profile-btn:hover {
+  color: #FFFFFF;
+  background-color: #182848;
+}
+
+section.coach-holder2 .coachcard-buttons .send-msg {
+  display: block;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  color: #182848;
+  padding: 1rem;
+  border: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+section.coach-holder2 .coachcard-buttons .send-msg i {
+  font-size: 2rem;
+}
+
+section.coach-holder2 .coachcard-buttons .send-msg:hover {
+  color: #FFFFFF;
+  background-color: #182848;
+}
+
+@media screen and (min-width: 1023px) {
+  section.coach-holder2 {
+    margin-top: -90px;
+    grid-gap: 7.5rem;
   }
 }
 
