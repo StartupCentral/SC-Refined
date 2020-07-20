@@ -150,6 +150,11 @@
 
                 .info-box {
                     margin: 1.5rem 0;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
 
                     &.news {
                         // display: none;

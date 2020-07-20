@@ -261,8 +261,10 @@ textarea {
 
             &:focus {
                 border-color: $sc-primary;
-                border: none;
-                border-radius: 0;
+                // border: none;
+                // border-radius: 0;
+                // box-shadow: 0px 0px 0px .1rem $sc-primary;
+
             }
         }
 

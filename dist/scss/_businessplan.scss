@@ -121,7 +121,7 @@
                             padding: 1rem;
                             border-radius: 1rem;
                             border: 1px solid $sc-primary;
-                            @include transition(.1s);
+                            // @include transition(.1s);
 
                             &:focus {
                                 box-shadow: 0px 0px 0px .1rem $sc-primary;
@@ -136,11 +136,9 @@
                             font-size: 1.6rem;
                             border: .2rem solid $sc-light;
                             border-radius: .5rem;
-                            @include transition(.1s);
 
                             &:focus {
-                                box-shadow: 0px 0px 0px .1rem $sc-primary;
-
+                                border-color: $sc-primary;
                             }
 
                         }
