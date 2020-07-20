@@ -1180,6 +1180,19 @@ footer.main-footer section.footer-social .social-cvr {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-items: center;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+}
+
+.sc-register-page .register-page-container .register-header {
+  margin-top: auto;
+  text-align: center;
+}
+
+.sc-register-page .register-page-container .register-header img {
+  margin: auto;
+  max-width: 500px;
+  padding: 1rem 2.5rem;
 }
 
 .sc-register-page .register-page-container .form-box-container {
@@ -1316,6 +1329,10 @@ footer.main-footer section.footer-social .social-cvr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
@@ -1323,12 +1340,28 @@ footer.main-footer section.footer-social .social-cvr {
   margin-top: 0;
 }
 
+.sc-register-page .register-page-container .form-box-container .button-container span {
+  padding-top: .5rem;
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+.sc-register-page .register-page-container .form-box-container .button-container span a {
+  font-size: 1.3rem;
+  color: #30C1F3;
+}
+
+.sc-register-page .register-page-container .form-box-container .button-container span a:hover {
+  text-decoration: underline;
+}
+
 .sc-register-page .register-footer {
   text-align: center;
   margin-top: auto;
   margin-bottom: 1rem;
   border-top: 2px dotted #e6e7e8;
-  padding-top: 5rem;
+  margin-top: 5rem;
+  padding-top: 1rem;
 }
 
 .sc-register-page .register-footer-links {
@@ -1432,6 +1465,14 @@ footer.main-footer section.footer-social .social-cvr {
   }
   .sc-register-page .register-page-container .form-box-container .form-container .checkbox span a {
     font-size: 1.5rem;
+  }
+  .sc-register-page .register-page-container .form-box-container .button-container span {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .sc-register-page .register-page-container .form-box-container .button-container span a {
+    font-size: 1.5rem;
+    color: #30C1F3;
   }
 }
 
@@ -5164,6 +5205,7 @@ textarea {
 }
 
 .form-container {
+  position: relative;
   margin-bottom: 2rem;
   width: 100%;
   /* CheckBox container */
@@ -5291,6 +5333,33 @@ textarea {
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.form-container .tooltip {
+  position: absolute;
+  display: inline-block;
+  color: #FFFFFF;
+  color: #182848;
+  padding-left: .5rem;
+}
+
+.form-container .tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.form-container .tooltip-text {
+  visibility: hidden;
+  width: auto;
+  padding: 1rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
 }
 
 .title-box {

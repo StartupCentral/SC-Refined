@@ -5,10 +5,20 @@
         position: relative;
         max-width: 350px;
         margin: 0 auto;
-
         @include flex(column);
         justify-items: center;
+        @include boxshadow;
 
+        .register-header {
+            margin-top: auto;
+            text-align: center;
+
+            img {
+                margin: auto;
+                max-width: 500px;
+                padding: 1rem 2.5rem;
+            }
+        }
 
         .form-box-container {
             position: relative;
@@ -121,10 +131,26 @@
 
             .button-container {
                 display: flex;
+                flex-direction: column;
                 width: 100%;
 
                 .button {
                     margin-top: 0;
+                }
+
+                span {
+                    padding-top: .5rem;
+                    margin: auto;
+                    font-size: 1.3rem;
+
+                    a {
+                        font-size: 1.3rem;
+                        color: $sc-accent;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
         }
@@ -135,7 +161,8 @@
         margin-top: auto;
         margin-bottom: 1rem;
         border-top: 2px dotted $sc-border;
-        padding-top: 5rem;
+        margin-top: 5rem;
+        padding-top: 1rem;
 
         &-links {
             display: flex;
@@ -235,6 +262,18 @@
                             a {
                                 font-size: 1.5rem;
                             }
+                        }
+                    }
+                }
+
+                .button-container {
+                    span {
+                        padding-top: 1rem;
+                        font-size: 1.5rem;
+
+                        a {
+                            font-size: 1.5rem;
+                            color: $sc-accent;
                         }
                     }
                 }

@@ -231,6 +231,7 @@ textarea {
 }
 
 .form-container {
+    position: relative;
 
     // padding-top: 1.5rem;
     &:first-child {
@@ -361,6 +362,36 @@ textarea {
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
+        }
+    }
+
+    .tooltip {
+        position: absolute;
+        display: inline-block;
+        // background-color: $sc-primary;
+        color: $sc-white;
+        color: $sc-primary;
+        padding-left: .5rem;
+
+        &:hover {
+            .tooltip-text {
+                visibility: visible;
+            }
+        }
+
+        &-text {
+            visibility: hidden;
+            width: auto;
+            padding: 1rem;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -60px;
         }
     }
 }
