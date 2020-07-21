@@ -1,0 +1,59 @@
+section.sc-beforesu-intro {
+    margin-top: -$nav-sm;
+    text-align: center;
+    padding-bottom: 0;
+
+    .intro-container {
+
+        .intro {
+            @include flex(column);
+        }
+    }
+}
+
+section.sc-beforesu-timeline {
+    border: 5px solid red;
+
+    .triangle {
+        position: absolute;
+        top: 0;
+        height: 5rem;
+        width: 5rem;
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        background-color: $sc-primary;
+    }
+
+    .timeline-idea {
+        position: relative;
+
+
+    }
+}
+
+@include media-md {
+    section.sc-beforesu-intro {
+        .intro-container {
+            @include flex(row);
+            flex-wrap: wrap;
+
+            .column-container {
+                flex: 0 0 50%;
+            }
+        }
+    }
+}
+
+@include media-lg {
+    section.sc-beforesu-intro {
+        margin-top: -$nav-lg;
+
+        .intro-container {
+            @include flex(row);
+            flex-wrap: wrap;
+
+            .column-container {
+                flex: 0 0 25%;
+            }
+        }
+    }
+}

@@ -25,6 +25,7 @@
 @import './podcast';
 @import './contact';
 @import './weoffer';
+@import './beforestartup';
 
 @import './tipspage';
 @import './presspage';
@@ -227,6 +228,29 @@ textarea {
 
         i {
             font-size: 5rem;
+        }
+
+        img {
+            width: 5rem;
+        }
+    }
+}
+
+.image-container {
+    margin-bottom: 1rem;
+    padding: 2.5rem;
+    border-radius: 100%;
+    @include boxshadow;
+
+    .image {
+        width: 7.5rem;
+        height: 7.5rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 7.5rem;
         }
     }
 }
