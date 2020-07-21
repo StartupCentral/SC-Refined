@@ -24,6 +24,7 @@
 @import './team';
 @import './podcast';
 @import './contact';
+@import './weoffer';
 
 @import './tipspage';
 @import './presspage';
@@ -381,17 +382,31 @@ textarea {
 
         &-text {
             visibility: hidden;
-            width: auto;
+            width: 20rem;
             padding: 1rem;
-            background-color: black;
-            color: #fff;
+            background-color: $sc-primary;
+            color: $sc-white;
             text-align: center;
-            border-radius: 6px;
+            border-radius: .5rem;
+            border: 1px solid $sc-border;
+            @include boxshadow;
             position: absolute;
             z-index: 1;
             bottom: 150%;
             left: 50%;
-            margin-left: -60px;
+            margin-left: -10rem;
+
+            &:after {
+                content: " ";
+                position: absolute;
+                top: 100%;
+                /* At the bottom of the tooltip */
+                left: 50%;
+                margin-left: -7.5px;
+                border-width: 10px;
+                border-style: solid;
+                border-color: $sc-primary transparent transparent transparent;
+            }
         }
     }
 }
@@ -404,6 +419,24 @@ textarea {
     flex: 0 0 100%;
     text-align: center;
     align-items: center;
+}
+
+.text-box {
+    margin-top: 7.5rem;
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 15rem;
+    }
+
+    a {
+        color: $sc-accent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .read-more-box {

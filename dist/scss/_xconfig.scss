@@ -177,6 +177,16 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     box-shadow: 0 4px 4px 0 rgba(22, 38, 68, .1), 0 2px 6px 0 rgba(22, 38, 68, .1);
 }
 
+@mixin link {
+    a {
+        color: $sc-accent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 //Buttons
 @mixin btn {
     cursor: pointer;
