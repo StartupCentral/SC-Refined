@@ -7,10 +7,11 @@ section.coach-holder2 {
     .coachcard {
         border: 1px solid $sc-border;
         width: 350px;
-        margin: auto;
+        // margin: auto;
         @include boxshadow;
         border-radius: 1rem;
         background-color: $sc-white;
+        @include flex(column);
 
         &-header {
             img {
@@ -76,61 +77,18 @@ section.coach-holder2 {
 
         }
 
-        // &-buttons {
-        //     @include flex(row);
-        //     width: fit-content;
-        //     // border: 2px solid red;
-        //     margin: auto;
-        //     align-items: center;
-
-        //     .profile-btn {
-        //         background-color: $sc-primary;
-        //         color: $sc-white;
-        //         width: fit-content;
-        //         padding: .75rem 1rem;
-        //         border-right: 2px solid $sc-overlay;
-        //         border-top-left-radius: .5rem;
-        //         border-bottom-left-radius: .5rem;
-        //         @include transition(0.2s);
-
-        //         &:hover {
-        //             background-color: $sc-secondary;
-        //         }
-        //     }
-
-        //     .send-msg {
-        //         cursor: pointer;
-        //         background-color: $sc-primary;
-        //         color: $sc-white;
-        //         padding: 1rem 1.5rem;
-        //         border: none;
-        //         border-top-right-radius: .5rem;
-        //         border-bottom-right-radius: .5rem;
-        //         @include transition(0.2s);
-
-        //         i {
-        //             font-size: 2rem;
-        //         }
-
-        //         &:hover {
-        //             background-color: $sc-secondary;
-        //         }
-        //     }
-        // }
         &-buttons {
             position: relative;
             @include flex(column);
             padding: 1rem 0;
-            // border: 2px solid red;
-            margin: auto;
-            align-items: center;
-            justify-content: center;
+            margin-top: auto;
+            margin-bottom: 0;
+            width: 100%;
 
             &:before {
                 content: "";
                 position: absolute;
                 top: 0;
-                // left: 50%;
                 width: 15rem;
                 height: 1px;
                 background-color: $sc-border;
@@ -139,7 +97,6 @@ section.coach-holder2 {
 
             .profile-btn {
                 display: block;
-                // font-weight: bold;
                 padding: 1rem;
                 color: $sc-primary;
                 @include transition(0.2s);
@@ -157,10 +114,10 @@ section.coach-holder2 {
                 color: $sc-primary;
                 padding: 1rem;
                 border: none;
-                // border: 1px solid red;
+
                 @include transition(0.2s);
                 width: 100%;
-                // font-weight: bold;
+
 
                 i {
                     font-size: 2rem;
