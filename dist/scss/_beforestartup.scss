@@ -12,8 +12,11 @@ section.sc-beforesu-intro {
 }
 
 section.sc-beforesu-timeline {
+    margin-top: -$nav-sm;
+
     .timeline-box {
         position: relative;
+
 
         &:last-child {
             .timeline-text {
@@ -44,7 +47,7 @@ section.sc-beforesu-timeline {
             padding-left: 4rem;
             margin-left: 3rem;
             padding-top: 1.5rem;
-            padding-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
             border-left: 3px solid $sc-primary;
 
             h2 {
@@ -62,12 +65,15 @@ section.sc-beforesu-timeline {
                     margin: 0;
                 }
 
+                img {
+                    max-width: 25rem;
+                    margin: auto;
+                }
+
                 text-align: center;
                 border-radius: 1rem;
-                margin-top: 1.5rem;
-                margin-bottom: 1.5rem;
+                margin: 2.5rem auto;
                 padding: 1.5rem;
-                margin-right: 2rem;
                 width: fit-content;
                 border: 1px solid $sc-border;
                 @include boxshadow-soft;
@@ -85,6 +91,10 @@ section.sc-beforesu-timeline {
     .plan {}
 }
 
+section.sc-beforesu-weoffer {
+    padding-top: 0;
+}
+
 @include media-md {
     section.sc-beforesu-intro {
         .intro-container {
@@ -98,6 +108,8 @@ section.sc-beforesu-timeline {
     }
 
     section.sc-beforesu-timeline {
+        margin-top: -$nav-lg;
+
         .container {
             display: grid;
             grid-template-columns: 1fr;
@@ -106,13 +118,12 @@ section.sc-beforesu-timeline {
 
             .timeline-box {
                 display: grid;
-                padding-bottom: 5rem;
 
                 &:last-child {
                     .timeline-text {
-                        border: none;
-                        text-align: center;
-
+                        &::after {
+                            display: none;
+                        }
                     }
                 }
 
@@ -156,10 +167,6 @@ section.sc-beforesu-timeline {
 
                     .question-box {
                         margin: auto;
-
-                        img {
-                            display: none;
-                        }
                     }
                 }
 
@@ -210,12 +217,16 @@ section.sc-beforesu-timeline {
             }
 
             .plan {
+                padding-top: 8rem;
+                text-align: center;
+
                 h2 {
-                    grid-column: 8/14;
+                    margin: auto;
+                    grid-column: 1/14;
                 }
 
                 p {
-                    grid-column: 8/14;
+                    grid-column: 1/14;
                 }
 
                 .question-box {
@@ -238,6 +249,107 @@ section.sc-beforesu-timeline {
 
             .column-container {
                 flex: 0 0 25%;
+            }
+        }
+    }
+
+    section.sc-beforesu-timeline {
+        margin-top: -$nav-lg;
+
+        .container {
+            .timeline-box {
+                padding-bottom: 0;
+
+                &:last-child {
+                    .timeline-text {
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .timeline-bubble {
+                    width: 10rem;
+                    height: 10rem;
+
+                    img {
+                        width: 6.5rem;
+                    }
+                }
+
+                .timeline-text {
+                    // padding-top: 2rem;
+
+
+                    &>p {
+                        margin: 5rem auto;
+                    }
+                }
+
+            }
+
+            .idea {
+                h2 {
+                    grid-column: 1/7;
+                }
+
+                p {
+                    grid-column: 1/7;
+                }
+
+                .question-box {
+                    grid-column: 8/14;
+                }
+            }
+
+            .export {
+                h2 {
+                    grid-column: 8/14;
+                }
+
+                p {
+                    grid-column: 8/14;
+                }
+
+                .question-box {
+                    grid-column: 1/7;
+                    grid-row: 2/3;
+                    margin: 0;
+                }
+            }
+
+            .skills {
+                h2 {
+                    grid-column: 1/7;
+                }
+
+                p {
+                    grid-column: 1/7;
+                }
+
+                .question-box {
+                    grid-column: 8/14;
+                }
+            }
+
+            .plan {
+                padding-top: 8rem;
+                text-align: center;
+
+                h2 {
+                    margin: auto;
+                    grid-column: 1/14;
+                }
+
+                p {
+                    grid-column: 1/14;
+                }
+
+                .question-box {
+                    grid-column: 1/7;
+                    grid-row: 2/3;
+                    margin: 0;
+                }
             }
         }
     }

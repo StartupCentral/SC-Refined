@@ -3678,6 +3678,10 @@ section.sc-beforesu-intro .intro-container .intro {
           flex-direction: column;
 }
 
+section.sc-beforesu-timeline {
+  margin-top: -75px;
+}
+
 section.sc-beforesu-timeline .timeline-box {
   position: relative;
 }
@@ -3709,7 +3713,7 @@ section.sc-beforesu-timeline .timeline-box .timeline-text {
   padding-left: 4rem;
   margin-left: 3rem;
   padding-top: 1.5rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
   border-left: 3px solid #182848;
 }
 
@@ -3735,10 +3739,8 @@ section.sc-beforesu-timeline .timeline-box .timeline-text h2::after {
 section.sc-beforesu-timeline .timeline-box .timeline-text .question-box {
   text-align: center;
   border-radius: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 2.5rem auto;
   padding: 1.5rem;
-  margin-right: 2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -3754,6 +3756,15 @@ section.sc-beforesu-timeline .timeline-box .timeline-text .question-box a {
 
 section.sc-beforesu-timeline .timeline-box .timeline-text .question-box h3 {
   margin: 0;
+}
+
+section.sc-beforesu-timeline .timeline-box .timeline-text .question-box img {
+  max-width: 25rem;
+  margin: auto;
+}
+
+section.sc-beforesu-weoffer {
+  padding-top: 0;
 }
 
 @media screen and (min-width: 767px) {
@@ -3773,6 +3784,9 @@ section.sc-beforesu-timeline .timeline-box .timeline-text .question-box h3 {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
   }
+  section.sc-beforesu-timeline {
+    margin-top: -90px;
+  }
   section.sc-beforesu-timeline .container {
     display: -ms-grid;
     display: grid;
@@ -3784,11 +3798,9 @@ section.sc-beforesu-timeline .timeline-box .timeline-text .question-box h3 {
   section.sc-beforesu-timeline .container .timeline-box {
     display: -ms-grid;
     display: grid;
-    padding-bottom: 5rem;
   }
-  section.sc-beforesu-timeline .container .timeline-box:last-child .timeline-text {
-    border: none;
-    text-align: center;
+  section.sc-beforesu-timeline .container .timeline-box:last-child .timeline-text::after {
+    display: none;
   }
   section.sc-beforesu-timeline .container .timeline-box .timeline-bubble {
     -ms-grid-column-align: center;
@@ -3845,8 +3857,119 @@ section.sc-beforesu-timeline .timeline-box .timeline-text .question-box h3 {
   section.sc-beforesu-timeline .container .timeline-box .timeline-text .question-box {
     margin: auto;
   }
-  section.sc-beforesu-timeline .container .timeline-box .timeline-text .question-box img {
-    display: none;
+  section.sc-beforesu-timeline .container .idea h2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  section.sc-beforesu-timeline .container .idea p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  section.sc-beforesu-timeline .container .idea .question-box {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 6;
+    grid-column: 8/14;
+  }
+  section.sc-beforesu-timeline .container .export h2 {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 6;
+    grid-column: 8/14;
+  }
+  section.sc-beforesu-timeline .container .export p {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 6;
+    grid-column: 8/14;
+  }
+  section.sc-beforesu-timeline .container .export .question-box {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    margin: 0;
+  }
+  section.sc-beforesu-timeline .container .skills h2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  section.sc-beforesu-timeline .container .skills p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  section.sc-beforesu-timeline .container .skills .question-box {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 6;
+    grid-column: 8/14;
+  }
+  section.sc-beforesu-timeline .container .plan {
+    padding-top: 8rem;
+    text-align: center;
+  }
+  section.sc-beforesu-timeline .container .plan h2 {
+    margin: auto;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 13;
+    grid-column: 1/14;
+  }
+  section.sc-beforesu-timeline .container .plan p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 13;
+    grid-column: 1/14;
+  }
+  section.sc-beforesu-timeline .container .plan .question-box {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  section.sc-beforesu-intro {
+    margin-top: -90px;
+  }
+  section.sc-beforesu-intro .intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.sc-beforesu-intro .intro-container .column-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+  section.sc-beforesu-timeline {
+    margin-top: -90px;
+  }
+  section.sc-beforesu-timeline .container .timeline-box {
+    padding-bottom: 0;
+  }
+  section.sc-beforesu-timeline .container .timeline-box:last-child .timeline-text p {
+    margin: 0;
+  }
+  section.sc-beforesu-timeline .container .timeline-box .timeline-bubble {
+    width: 10rem;
+    height: 10rem;
+  }
+  section.sc-beforesu-timeline .container .timeline-box .timeline-bubble img {
+    width: 6.5rem;
+  }
+  section.sc-beforesu-timeline .container .timeline-box .timeline-text > p {
+    margin: 5rem auto;
   }
   section.sc-beforesu-timeline .container .idea h2 {
     -ms-grid-column: 1;
@@ -3897,15 +4020,20 @@ section.sc-beforesu-timeline .timeline-box .timeline-text .question-box h3 {
     -ms-grid-column-span: 6;
     grid-column: 8/14;
   }
+  section.sc-beforesu-timeline .container .plan {
+    padding-top: 8rem;
+    text-align: center;
+  }
   section.sc-beforesu-timeline .container .plan h2 {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 6;
-    grid-column: 8/14;
+    margin: auto;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 13;
+    grid-column: 1/14;
   }
   section.sc-beforesu-timeline .container .plan p {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 6;
-    grid-column: 8/14;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 13;
+    grid-column: 1/14;
   }
   section.sc-beforesu-timeline .container .plan .question-box {
     -ms-grid-column: 1;
@@ -3915,28 +4043,6 @@ section.sc-beforesu-timeline .timeline-box .timeline-text .question-box h3 {
     -ms-grid-row-span: 1;
     grid-row: 2/3;
     margin: 0;
-  }
-}
-
-@media screen and (min-width: 1023px) {
-  section.sc-beforesu-intro {
-    margin-top: -90px;
-  }
-  section.sc-beforesu-intro .intro-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  section.sc-beforesu-intro .intro-container .column-container {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
   }
 }
 
