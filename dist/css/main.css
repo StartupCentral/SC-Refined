@@ -1,4 +1,13 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap");
+#sc-site-header ul li {
+  margin: 0;
+}
+
+#sc-site-header ul li::before {
+  display: none;
+}
+
 #sc-site-header nav.main-nav {
   position: fixed;
   top: 0;
@@ -732,6 +741,14 @@ footer.main-footer {
   background-color: #FFFFFF;
 }
 
+footer.main-footer ul li {
+  margin: 0;
+}
+
+footer.main-footer ul li::before {
+  display: none;
+}
+
 footer.main-footer a {
   color: #182848;
 }
@@ -750,10 +767,6 @@ footer.main-footer section.footer-links {
   grid-gap: 2.5rem;
   padding: 2.5rem 0;
   text-align: center;
-}
-
-footer.main-footer section.footer-links li {
-  list-style-type: none;
 }
 
 footer.main-footer section.footer-links .links-contacts {
@@ -789,7 +802,7 @@ footer.main-footer section.footer-social .social-links {
 }
 
 footer.main-footer section.footer-social .social-links i {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #182848;
 }
 
@@ -897,9 +910,6 @@ footer.main-footer section.footer-social .social-cvr {
         -ms-flex-align: start;
             align-items: flex-start;
     grid-gap: 0;
-  }
-  footer.main-footer section.footer-social .social-links i {
-    font-size: 2rem;
   }
 }
 
@@ -4050,6 +4060,38 @@ section.sc-beforesu-weoffer .container-small {
   }
 }
 
+section.sc-startuplounge-intro {
+  margin-top: -75px;
+  padding-bottom: 0;
+}
+
+section.sc-startuplounge-intro .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-startuplounge-intro .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+@media screen and (min-width: 1023px) {
+  section.sc-startuplounge-intro {
+    margin-top: -90px;
+    padding-bottom: 0;
+  }
+}
+
 section.tips-intro {
   margin-top: -75px;
   padding-bottom: 0;
@@ -5726,6 +5768,20 @@ a {
 
 ul {
   font-size: 1.6rem;
+  list-style-type: none;
+}
+
+ul li {
+  margin-left: 30px;
+  list-style-type: none;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li:before {
+  content: '🚀';
+  margin-left: -30px;
+  margin-right: 7px;
 }
 
 li {

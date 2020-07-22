@@ -1,4 +1,15 @@
 #sc-site-header {
+    ul {
+        li {
+            margin: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+    }
+
     nav.main-nav {
         position: fixed;
         top: 0;
@@ -114,6 +125,8 @@
         visibility: hidden;
         transform: translateX(-100%);
         @include transition(.3s);
+
+
 
         &.active {
             position: relative;

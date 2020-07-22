@@ -1,0 +1,22 @@
+section.sc-startuplounge-intro {
+    margin-top: -$nav-sm;
+    padding-bottom: 0;
+
+    .headline-2 {
+        @include sc-title-text;
+    }
+
+    .lead {
+        // border: 1px solid red;
+
+    }
+}
+
+@include media-lg {
+    section.sc-startuplounge-intro {
+        margin-top: -$nav-lg;
+        // text-align: center;
+        padding-bottom: 0;
+    }
+
+}
