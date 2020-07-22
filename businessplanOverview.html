@@ -1,0 +1,410 @@
+<section class="startupcentralbackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt60">
+                <a href="javascript:void(0);" class="visible-xs wizradbtn">Wizard menu</a>
+                <div class="wizardmenumobile fleft w100" style="display:none;">@Umbraco.RenderMacro("BlueNavMenu")</div>
+                <div class="formwrapper shadowlight">
+                    <div class="leftnavi seeforretning bluebg col-md-3 col-xs-12 hidden-xs">
+                        @Umbraco.RenderMacro("BlueNavMenuSeeForretningplan")
+                        <a href="javascript:void(0);" class="white pdf-download-link" data-id="@Model.Content.Id"
+                            data-member="@currentMember.Id" target="_blank">
+                            <div class="downloadpdf f18">
+                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download pdf
+                            </div>
+                        </a>
+                    </div>
+                    <div class="rightformother pb70 col-md-8 col-xs-12">
+                        @Umbraco.RenderMacro("FormTopSeeForeetningsplan")
+                        @* Introduktion start *@
+                        <div id="tab-1" class="fleft w100 tab-content current">
+                            <span class="fleft w100 mb40">
+                                <div class="fleft w100 f60 fw700 lh60 mt40 mb20 f20mob">@CurrentPage.wwprojektnavn</div>
+                                <div class="tag fleft  fw600 f12 mr10 white mb5">@CurrentPage.wwkategori</div>
+                                @if(CurrentPage.wweng != false){
+                                <div class="f12 fleft w100 mb20">
+                                    This is in english
+                                </div>
+                                }
+                            </span>
+
+                            <div class="fleft w100 mb20 f22 fw700 lh26">Beskrivelse</div>
+                            <div class="forrettxt fleft w100 f18">
+                                @CurrentPage.wwidedesc
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-2">Næste side</a>
+                        </div>
+                        @* Introduktion end *@
+
+                        @* Idegrundlag start *@
+                        <div id="tab-2" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Uddyb projektet og giv læseren fuld adgang
+                                    til at se hvordan ideen opstod</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwuddyb
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Løser produktet et problem som endnu ikke
+                                    bliver løst?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwloser
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Er produktet en videreudvikling af noget
+                                    eksisterende?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwvidereudvik
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Fortæl hvor produktet kan bruges</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwbrugprod
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-3">Næste side</a>
+                        </div>
+                        @* Idegrundlag end *@
+
+                        @* Målsætning start *@
+                        <div id="tab-3" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Del aktiviteter op i 1 år, 3 år og 5 års
+                                    planer</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwsplitaktiviteter
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-4">Næste side</a>
+                        </div>
+                        @* Målsætning end *@
+
+                        @* Værdier start *@
+                        <div id="tab-4" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Beskriv hvorfor firmaet er vigtigt</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmimportant
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvilke behov opfylder firmaet og for hvilke
+                                    kunder</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmbehov
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvad vil du opnå om 1 mdr., 1 år og 3 år
+                                </div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmreach
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvad er de største problemer, og hvordan vil
+                                    du løse dem?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmissues
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvordan er dine værdier?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmvalues
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-5">Næste side</a>
+                        </div>
+                        @* Værdier end *@
+
+                        @* Team og Ressourcer start *@
+                        <div id="tab-5" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvem er med i projektet og hvilke roller har
+                                    de?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmroller
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvem tager ansvaret for økonomi,
+                                    slag/markedsføring og produktudvikling?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmokonomi
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Er der behov for yderligere (eventuelt
+                                    eksterne) ressourcer?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmres
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvem er den drivende person og hvem træffer
+                                    beslutninger?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmdriv
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvor mange timer/dage/måneder kan eamet
+                                    arbejde for projektet?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwfirmvwork
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-6">Næste side</a>
+                        </div>
+                        @* Team og Ressourcer end *@
+
+                        @* Produktbeskrivelse start *@
+                        <div id="tab-6" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Giv en beskrivelse af produktet - hvad kan
+                                    det?<</div> <div class="forrettxt fleft w100 f18">
+                                        @CurrentPage.wwproddesc
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Er der forskellige versioner?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodvers
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvordan fungerer det?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodfunkt
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvordan skal det laves og kræves der
+                                    obligatoriske godkendelser?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodmake
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvad mangler, før produktet er klart til
+                                    salg?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodready
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-7">Næste side</a>
+                        </div>
+                        @* Produktbeskrivelse end *@
+
+                        @* Markedsanalyse start *@
+                        <div id="tab-7" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvem er kunderne?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwcuswho
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvor mange kunder findes der?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwcusfind
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvordan opfyldes deres behov nu?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwcusneeds
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvilke konkurrenter er der, og hvordan
+                                    adskiler dit produkt sig?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwcuskon
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvad er konkurrentens stærke og svage sider?
+                                </div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwcusstrong
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-8">Næste side</a>
+                        </div>
+                        @* Markedsanalyse end *@
+
+                        @* Økonomi start *@
+                        <div id="tab-8" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvilke større udgifter skal der afholdes før
+                                    produktet er klar til salg?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodsale
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Kan projektet starte op i det små?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodstart
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Budget?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @if (CurrentPage.HasValue("wwbudgetfile"))
+                                    {
+
+                                    int docId = 0;
+
+                                    Umbraco.Core.Models.IContent content =
+                                    ApplicationContext.Current.Services.ContentService.GetById(CurrentPage.Id);
+                                    if (content != null)
+                                    {
+                                    if (content.GetValue("wwbudgetfile").ToString().Contains("umb://"))
+                                    {
+                                    docId = content.GetValue("wwbudgetfile").ToString().GetIdByUdi();
+                                    }
+                                    else if (content.GetValue<string>("wwbudgetfile").ToString().IsNumeric())
+                                        {
+                                        docId = Convert.ToInt32(content.GetValue("wwbudgetfile").ToString());
+                                        }
+                                        }
+
+                                        if (docId > 0)
+                                        {
+                                        <a href="@Umbraco.TypedMedia(docId.ToString()).Url">Hent budget</a>
+                                        }
+                                        else
+                                        {
+                                        <span>Der er ikke lavet et budget endnu</span>
+                                        }
+
+                                        }
+                                        else
+                                        {
+                                        <span>Der er ikke lavet et budget endnu</span>
+                                        }
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvornår i de næste 12 måneder er der
+                                    udgifter og indtægter?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodfinance
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-9">Næste side</a>
+                        </div>
+                        @* Økonomi end *@
+
+                        @* Salgsmarkedsføring start *@
+                        <div id="tab-9" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Beskriv priserne for produktet</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodprice
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvordan er priserne udregnet og hvad er
+                                    overskudsgraden?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodudregn
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvordan skal salget foregå - og hvem skal
+                                    stå for det?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodsaleplace
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvordan skal kunderne finde ud af at
+                                    produktet eksisterer?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodeksi
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Hvilke udgifter er der til markedsføring, og
+                                    hvordan skal det foregå?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwprodmarkedsf
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-10">Næste side</a>
+                        </div>
+                        @* Salgsmarkedsføring end *@
+
+                        @* Juridisk start *@
+                        <div id="tab-10" class="fleft w100 tab-content">
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Er der en aftale på, hvem der skal investere
+                                    tid/penge og hvordan ejeforholdet er?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwjuraftale
+                                </div>
+
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Skal leverandører eller andre involveres i
+                                    projektet - hvis ja, er der en aftale med dem?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwjurleverand
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Er der kontaktet jurister - og hvem?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwjurcontact
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Er der behov for CVR nummer og/eller
+                                    momsregistrering - hvornår?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwjurcvr
+                                </div>
+                            </div>
+                            <div class="txtforetwrapper">
+                                <div class="fleft w100 mb20 f22 fw700 lh26">Har du andet et tilføje?</div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwandetheadline
+                                </div>
+                                <div class="forrettxt fleft w100 f18">
+                                    @CurrentPage.wwandet
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btnlightbg white viderebtn nexttab"
+                                data-tab="tab-1">Start igen</a>
+                        </div>
+                        @* Juridisk end *@
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="upload" class="pt0">
+    <img src="/media/1133/skyer_baggrund.svg" id="cloudbg">
+</section>
+}
+
+}

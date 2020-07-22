@@ -1,0 +1,196 @@
+section.sc-howdowehelp-intro {
+    margin-top: -$nav-sm;
+    padding-bottom: 0;
+
+    .headline-2 {
+        @include sc-title-text;
+    }
+
+    .intro-container {
+
+        .intro {
+            @include flex(column);
+        }
+    }
+}
+
+section.sc-howdowehelp-section {
+    .headline-2 {
+        @include sc-title-text;
+    }
+
+    .member-benefits {
+        margin-top: 5rem;
+
+        .benefit-img {
+            text-align: center;
+            background-color: $sc-white;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            @include boxshadow-soft;
+            border: 1px solid $sc-border;
+            margin: auto;
+            display: grid;
+            justify-items: center;
+
+            img {
+                max-width: 6rem;
+            }
+        }
+
+        .benefit-text {
+            margin-top: 2.5rem;
+
+            p {
+                text-align: center;
+            }
+
+            .benefit {
+                @include flex(row);
+                margin-top: 2.5rem;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    font-size: 3rem;
+                    margin: auto 1.5rem;
+                    width: 2.5rem;
+                }
+
+                span {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+section.startupphase {
+    background-color: $sc-primary;
+    color: $sc-white;
+}
+
+section.sc-howdowehelp-weoffer {
+    padding-top: 0;
+
+
+
+    .container-small {
+        max-width: 50rem;
+        background-color: $sc-primary;
+        color: $sc-white;
+    }
+}
+
+section.alreadystarted {}
+
+@include media-md {
+    section.sc-howdowehelp-intro {
+        margin-top: -$nav-sm;
+
+        .headline-2 {
+            @include sc-title-text;
+        }
+
+        .intro-container {
+            display: flex;
+            @include flex(row);
+
+            .column-container {
+                flex: 0 0 33.33%;
+            }
+
+            .intro {}
+        }
+    }
+
+    section.sc-howdowehelp-section {
+        .container {
+            @include flex(row);
+
+            .title-box {
+                flex: 0 0 60%;
+            }
+
+            .member-benefits {
+                flex: 0 0 35%;
+                margin: auto;
+
+                .benefit-img {
+                    text-align: center;
+                    background-color: $sc-white;
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                    @include boxshadow-soft;
+                    border: 1px solid $sc-border;
+                    margin: auto;
+                    display: grid;
+                    justify-items: center;
+
+                    img {
+                        max-width: 6rem;
+                    }
+                }
+
+                .benefit-text {
+                    margin-top: 2.5rem;
+
+                    p {
+                        text-align: center;
+                    }
+
+                    .benefit {
+                        @include flex(row);
+                        margin-top: 2.5rem;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            font-size: 3rem;
+                            margin: auto 1.5rem;
+                            width: 2.5rem;
+                        }
+
+                        span {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    section.startupphase {
+        .container {
+
+            flex-direction: row-reverse;
+        }
+    }
+
+}
+
+@include media-lg {
+    section.sc-howdowehelp-intro {
+        margin-top: -$nav-lg;
+
+        .headline-2 {
+            @include sc-title-text;
+        }
+
+        .intro-container {
+            display: flex;
+            @include flex(row);
+
+            .column-container {
+                flex: 0 0 33.33%;
+            }
+
+            .intro {}
+        }
+    }
+
+}

@@ -4085,10 +4085,306 @@ section.sc-startuplounge-intro .headline-2::after {
   transition: width .5s ease-out;
 }
 
+section.sc-startuplounge-intro .title-box:not(:first-child) {
+  margin-top: 5rem;
+}
+
+section.sc-startuplounge-intro .lounge-btn {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width: 1023px) {
   section.sc-startuplounge-intro {
     margin-top: -90px;
     padding-bottom: 0;
+  }
+  section.sc-startuplounge-intro .lounge-btn {
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+section.sc-howdowehelp-intro {
+  margin-top: -75px;
+  padding-bottom: 0;
+}
+
+section.sc-howdowehelp-intro .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-howdowehelp-intro .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-howdowehelp-intro .intro-container .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.sc-howdowehelp-section .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-howdowehelp-section .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-howdowehelp-section .member-benefits {
+  margin-top: 5rem;
+}
+
+section.sc-howdowehelp-section .member-benefits .benefit-img {
+  text-align: center;
+  background-color: #FFFFFF;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  border: 1px solid #e6e7e8;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+section.sc-howdowehelp-section .member-benefits .benefit-img img {
+  max-width: 6rem;
+}
+
+section.sc-howdowehelp-section .member-benefits .benefit-text {
+  margin-top: 2.5rem;
+}
+
+section.sc-howdowehelp-section .member-benefits .benefit-text p {
+  text-align: center;
+}
+
+section.sc-howdowehelp-section .member-benefits .benefit-text .benefit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.sc-howdowehelp-section .member-benefits .benefit-text .benefit i {
+  font-size: 3rem;
+  margin: auto 1.5rem;
+  width: 2.5rem;
+}
+
+section.sc-howdowehelp-section .member-benefits .benefit-text .benefit span {
+  margin: auto;
+}
+
+section.startupphase {
+  background-color: #182848;
+  color: #FFFFFF;
+}
+
+section.sc-howdowehelp-weoffer {
+  padding-top: 0;
+}
+
+section.sc-howdowehelp-weoffer .container-small {
+  max-width: 50rem;
+  background-color: #182848;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 767px) {
+  section.sc-howdowehelp-intro {
+    margin-top: -75px;
+  }
+  section.sc-howdowehelp-intro .headline-2 {
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  section.sc-howdowehelp-intro .headline-2::after {
+    content: '';
+    display: block;
+    bottom: 0;
+    background: #30C1F3;
+    width: 15rem;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto 0;
+    -webkit-transition: width .5s ease-out;
+    transition: width .5s ease-out;
+  }
+  section.sc-howdowehelp-intro .intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section.sc-howdowehelp-intro .intro-container .column-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+  }
+  section.sc-howdowehelp-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section.sc-howdowehelp-section .container .title-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+  section.sc-howdowehelp-section .container .member-benefits {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+    margin: auto;
+  }
+  section.sc-howdowehelp-section .container .member-benefits .benefit-img {
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+            box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+    border: 1px solid #e6e7e8;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  section.sc-howdowehelp-section .container .member-benefits .benefit-img img {
+    max-width: 6rem;
+  }
+  section.sc-howdowehelp-section .container .member-benefits .benefit-text {
+    margin-top: 2.5rem;
+  }
+  section.sc-howdowehelp-section .container .member-benefits .benefit-text p {
+    text-align: center;
+  }
+  section.sc-howdowehelp-section .container .member-benefits .benefit-text .benefit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 2.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.sc-howdowehelp-section .container .member-benefits .benefit-text .benefit i {
+    font-size: 3rem;
+    margin: auto 1.5rem;
+    width: 2.5rem;
+  }
+  section.sc-howdowehelp-section .container .member-benefits .benefit-text .benefit span {
+    margin-left: 1rem;
+  }
+  section.startupphase .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  section.sc-howdowehelp-intro {
+    margin-top: -90px;
+  }
+  section.sc-howdowehelp-intro .headline-2 {
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  section.sc-howdowehelp-intro .headline-2::after {
+    content: '';
+    display: block;
+    bottom: 0;
+    background: #30C1F3;
+    width: 15rem;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto 0;
+    -webkit-transition: width .5s ease-out;
+    transition: width .5s ease-out;
+  }
+  section.sc-howdowehelp-intro .intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section.sc-howdowehelp-intro .intro-container .column-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
   }
 }
 
@@ -5772,13 +6068,13 @@ ul {
 }
 
 ul li {
-  margin-left: 30px;
   list-style-type: none;
+  margin-left: 30px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-li:before {
+ul li:before {
   content: '🚀';
   margin-left: -30px;
   margin-right: 7px;
@@ -5935,6 +6231,7 @@ textarea {
   border-radius: 100%;
   -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  border: 1px solid #e6e7e8;
 }
 
 .image-container .image {
@@ -6435,6 +6732,12 @@ textarea {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .aside-container ul li {
+    margin: 0;
+  }
+  .aside-container ul li::before {
+    display: none;
   }
   .header-big {
     padding-top: 20rem;

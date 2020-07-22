@@ -27,6 +27,7 @@
 @import './weoffer';
 @import './beforestartup';
 @import './startuplounge';
+@import './howdowehelp';
 
 @import './tipspage';
 @import './presspage';
@@ -103,18 +104,17 @@ ul {
 
 ul {
     li {
-        margin-left: 30px;
         list-style-type: none;
+        margin-left: 30px;
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+
+        &:before {
+            content: '🚀';
+            margin-left: -30px;
+            margin-right: 7px;
+        }
     }
-
-}
-
-li:before {
-    content: '🚀';
-    margin-left: -30px;
-    margin-right: 7px;
 }
 
 li {
@@ -258,6 +258,7 @@ textarea {
     padding: 2.5rem;
     border-radius: 100%;
     @include boxshadow;
+    border: 1px solid $sc-border;
 
     .image {
         width: 7.5rem;
@@ -693,6 +694,16 @@ textarea {
         margin: auto;
         @include flex(row);
         justify-content: space-between;
+
+        ul {
+            li {
+                margin: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
     }
 
     .header-big {

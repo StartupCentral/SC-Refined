@@ -6,17 +6,32 @@ section.sc-startuplounge-intro {
         @include sc-title-text;
     }
 
-    .lead {
-        // border: 1px solid red;
+    .title-box {
+        &:not(:first-child) {
+            margin-top: 5rem;
+        }
+    }
 
+    .lounge-btn {
+        text-align: center;
+        margin-top: 2.5rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 @include media-lg {
     section.sc-startuplounge-intro {
         margin-top: -$nav-lg;
-        // text-align: center;
         padding-bottom: 0;
+
+        .lounge-btn {
+            text-align: center;
+            margin-top: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
+
 
 }
