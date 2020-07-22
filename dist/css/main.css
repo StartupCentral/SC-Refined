@@ -3767,6 +3767,10 @@ section.sc-beforesu-weoffer {
   padding-top: 0;
 }
 
+section.sc-beforesu-weoffer .container-small {
+  max-width: 50rem;
+}
+
 @media screen and (min-width: 767px) {
   section.sc-beforesu-intro .intro-container {
     display: -webkit-box;

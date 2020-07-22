@@ -93,6 +93,10 @@ section.sc-beforesu-timeline {
 
 section.sc-beforesu-weoffer {
     padding-top: 0;
+
+    .container-small {
+        max-width: 50rem;
+    }
 }
 
 @include media-md {
