@@ -1,0 +1,28 @@
+section.paylike {
+    margin-top: -$nav-sm;
+
+    .container {
+        .text {
+            h2 {
+                margin-left: auto;
+                margin-right: auto;
+                @include sc-title-text;
+            }
+        }
+
+        .thankyou-img {
+            margin-top: 1rem;
+            max-width: 25rem;
+
+            img {
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+@include media-lg {
+    section.paylike {
+        margin-top: -$nav-lg;
+    }
+}

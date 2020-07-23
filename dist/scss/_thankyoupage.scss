@@ -1,0 +1,39 @@
+section.sc-thankyou-page {
+    margin-top: -$nav-sm;
+
+    .container {
+        .text {
+            h2 {
+                margin-left: auto;
+                margin-right: auto;
+                @include sc-title-text;
+            }
+        }
+
+        .thankyou-img {
+            margin-top: 1rem;
+            max-width: 25rem;
+
+            img {
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+@include media-md {
+    section.sc-thankyou-page {
+        .container {
+            .thankyou-img {
+                // margin-top: 2.5rem;
+
+            }
+        }
+    }
+}
+
+@include media-lg {
+    section.sc-thankyou-page {
+        margin-top: -$nav-lg;
+    }
+}

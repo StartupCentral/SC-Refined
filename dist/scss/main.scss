@@ -9,6 +9,8 @@
 //Register and Login
 @import './register';
 @import './login';
+@import './thankyoupage';
+@import './paylikepage';
 
 //Landing Pages
 @import './index';
@@ -16,10 +18,11 @@
 @import './partners';
 @import './partnerpage';
 
-@import './coaches';
-@import './coaches2';
 @import './coachpage';
 @import './coachcard';
+// @import './coaches';
+// @import './coaches2';
+
 
 @import './team';
 @import './podcast';
@@ -91,6 +94,16 @@ i,
 span,
 button {
     font-size: 1.6rem;
+}
+
+P> {
+    a {
+        color: $sc-accent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 a {
@@ -548,14 +561,6 @@ textarea {
 
 .cta-button {
     @include cta-btn;
-}
-
-.paragraph {
-    margin: 1rem 0;
-
-    &::first-letter {
-        font-size: 150%;
-    }
 }
 
 .bg-soft {
