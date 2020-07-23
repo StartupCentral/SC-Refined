@@ -51,22 +51,7 @@ section.coach-holder2 {
                 }
             }
 
-            .tags {
-                @include flex(row);
-                justify-content: center;
-                flex-wrap: wrap;
 
-                .tag {
-                    border: 1px solid $sc-border;
-                    // border: 1px solid $sc-primary
-                    @include boxshadow-soft;
-                    margin: .5rem;
-                    border-radius: 2.5rem;
-                    padding: .25rem 1.5rem;
-                    font-size: 1.4rem;
-                    font-weight: bold;
-                }
-            }
 
             .shortdesc {
                 p {
