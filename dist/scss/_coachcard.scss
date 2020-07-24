@@ -7,7 +7,8 @@ section.coach-holder2 {
     .coachcard {
         border: 1px solid $sc-border;
         width: 350px;
-        // margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         @include boxshadow;
         border-radius: 1rem;
         background-color: $sc-white;

@@ -633,34 +633,34 @@
 
 div.ttt-button {
   position: fixed;
+  cursor: pointer;
   right: 2rem;
   z-index: 999;
   -webkit-transition: .5s;
   transition: .5s;
   bottom: 100px;
-  visibility: hidden;
-}
-
-div.ttt-button .active {
-  bottom: 10rem;
-  opacity: 1;
-  visibility: visible;
-}
-
-div.ttt-button .tothetop {
-  width: 5rem;
-  height: 5rem;
-  display: -ms-grid;
-  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  text-align: center;
   border-radius: 50%;
-  cursor: pointer;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+div.ttt-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+div.ttt-button .tothetop {
+  color: #FFFFFF;
+  display: -ms-grid;
+  display: grid;
+  width: 5rem;
+  height: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 div.ttt-button .tothetop i {
@@ -2866,6 +2866,8 @@ section.coach-holder2 {
 section.coach-holder2 .coachcard {
   border: 1px solid #e6e7e8;
   width: 350px;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
   border-radius: 1rem;
@@ -3620,7 +3622,7 @@ section.sc-beforesu-weoffer {
 }
 
 section.sc-beforesu-weoffer .container-small {
-  max-width: 50rem;
+  width: 50rem;
 }
 
 @media screen and (min-width: 767px) {
@@ -3902,55 +3904,6 @@ section.sc-beforesu-weoffer .container-small {
   }
 }
 
-section.sc-startuplounge-intro {
-  margin-top: -75px;
-  padding-bottom: 0;
-}
-
-section.sc-startuplounge-intro .headline-2 {
-  font-weight: bold;
-  line-height: 1.3;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-section.sc-startuplounge-intro .headline-2::after {
-  content: '';
-  display: block;
-  bottom: 0;
-  background: #30C1F3;
-  width: 15rem;
-  height: 3px;
-  border-radius: 5px;
-  margin: 5px auto 0;
-  -webkit-transition: width .5s ease-out;
-  transition: width .5s ease-out;
-}
-
-section.sc-startuplounge-intro .title-box:not(:first-child) {
-  margin-top: 5rem;
-}
-
-section.sc-startuplounge-intro .lounge-btn {
-  text-align: center;
-  margin-top: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 1023px) {
-  section.sc-startuplounge-intro {
-    margin-top: -90px;
-    padding-bottom: 0;
-  }
-  section.sc-startuplounge-intro .lounge-btn {
-    text-align: center;
-    margin-top: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 section.sc-howdowehelp-intro {
   margin-top: -75px;
   padding-bottom: 0;
@@ -4074,7 +4027,7 @@ section.sc-howdowehelp-weoffer {
 }
 
 section.sc-howdowehelp-weoffer .container-small {
-  max-width: 50rem;
+  width: 50rem;
   background-color: #182848;
   color: #FFFFFF;
 }
@@ -4227,6 +4180,55 @@ section.sc-howdowehelp-weoffer .container-small {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33%;
             flex: 0 0 33.33%;
+  }
+}
+
+section.sc-startuplounge-intro {
+  margin-top: -75px;
+  padding-bottom: 0;
+}
+
+section.sc-startuplounge-intro .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-startuplounge-intro .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-startuplounge-intro .title-box:not(:first-child) {
+  margin-top: 5rem;
+}
+
+section.sc-startuplounge-intro .lounge-btn {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1023px) {
+  section.sc-startuplounge-intro {
+    margin-top: -90px;
+    padding-bottom: 0;
+  }
+  section.sc-startuplounge-intro .lounge-btn {
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -4538,6 +4540,10 @@ aside.sc-press-aside .media-contact .media-contact-person .contact-person-email 
   aside.sc-press-aside .column-container {
     margin-top: -90px;
   }
+}
+
+section.sc-faq-questions {
+  margin-top: -75px;
 }
 
 .aside-container aside.user-profile {

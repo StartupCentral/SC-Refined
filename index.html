@@ -27,8 +27,8 @@
                         erhverv. Skal vi også kæmpe for dine forudsætninger?</p>
                 </div>
                 <div class="landing-buttons">
-                    <a href="#!" class="button-left">Register</a>
-                    <a href="#!" class="button-right">Register</a>
+                    <a href="register.html" class="button-left">Register</a>
+                    <a href="weoffer.html" class="button-right">What we offer</a>
                 </div>
             </div>
 
@@ -352,41 +352,41 @@
                     </div>
                 </div>
 
-                <div class="statistics-container">
-                    <div class="statistic column-container centered">
+                <div class="statistics-container" id="waypoint1">
+                    <div class="statistic column-container centered" id="waypoint">
                         <div class="icon-container">
                             <span class="icon"><i class="fab fa-github-alt"></i></span>
                         </div>
-                        <span class="numbers">7500</span>
-                        <h3>STARTUP LOUNGE MEDLEMMER</h3>
+                        <span class="numbers counter" data-target="7500">7500</span>
+                        <h3>Counter Text</h3>
                     </div>
                     <div class="statistic column-container centered">
                         <div class="icon-container">
                             <span class="icon"><i class="fab fa-github-alt"></i></span>
                         </div>
-                        <span class="numbers">7500</span>
-                        <h3>STARTUP LOUNGE MEDLEMMER</h3>
+                        <span class="numbers counter">0</span>
+                        <h3>Counter Text</h3>
                     </div>
                     <div class="statistic column-container centered">
                         <div class="icon-container">
                             <span class="icon"><i class="fab fa-github-alt"></i></span>
                         </div>
-                        <span class="numbers">7500</span>
-                        <h3>STARTUP LOUNGE MEDLEMMER</h3>
+                        <span class="numbers counter" data-target="65">0</span>
+                        <h3>Counter Text</h3>
                     </div>
                     <div class="statistic column-container centered">
                         <div class="icon-container">
                             <span class="icon"><i class="fab fa-github-alt"></i></span>
                         </div>
-                        <span class="numbers">7500</span>
-                        <h3>STARTUP LOUNGE MEDLEMMER</h3>
+                        <span class="numbers counter" data-target="1131">0</span>
+                        <h3>Counter Text</h3>
                     </div>
                     <div class="statistic column-container centered">
                         <div class="icon-container">
                             <span class="icon"><i class="fab fa-github-alt"></i></span>
                         </div>
-                        <span class="numbers">7500</span>
-                        <h3>STARTUP LOUNGE MEDLEMMER</h3>
+                        <span class="numbers counter" data-target="6000">0</span>
+                        <h3>Counter Text</h3>
                     </div>
                 </div>
             </div>
@@ -616,79 +616,27 @@
 </body>
 <div id="main-nav"></div>
 <script src="dist/js/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="dist/slick/slick.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.partners-carousel').slick({
-            infinite: true,
-            slidesToShow: 10,
-            slidesToScroll: 5,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            arrows: false,
-            responsive: [{
-                    breakpoint: 1100,
-                    settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 3,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                    }
-                },
-            ]
-        });
-    });
 
-    $(document).ready(function () {
-        $('.coaches-carousel').slick({
-            infinite: true,
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            arrows: false,
-            responsive: [{
-                    breakpoint: 1100,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                    }
-                },
-                {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                },
-            ]
-        });
+<script>
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200); // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200); // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function () { // When arrow is clicked
+        $('body,html').animate({
+            scrollTop: 0 // Scroll to top of body
+        }, 500);
     });
 </script>
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("main-nav").style.top = "0";
-        } else {
-            // document.getElementById("main-nav").style.top = "-90px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-</script>
+
+<script src="dist/slick/slick.min.js"></script>
+<script src="dist/js/carousels.js"></script>
+<script src="dist/js/navbarscripts.js"></script>
+<script src="dist/js/main.js"></script>
 </body>
 
 </html>

@@ -1,28 +1,26 @@
 div.ttt-button {
     position: fixed;
+    cursor: pointer;
     right: 2rem;
     z-index: 999;
     transition: .5s;
     bottom: 100px;
-    visibility: hidden;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
 
-    .active {
-        bottom: 10rem;
-        opacity: 1;
-        visibility: visible;
+    &:hover {
+        background-color: rgba(0, 0, 0, .8);
     }
 
     .tothetop {
+        color: $sc-white;
+        display: grid;
         width: 5rem;
         height: 5rem;
-        display: grid;
         align-items: center;
-        color: $sc-white;
-        background-color: rgba(0, 0, 0, .5);
-        border: none;
-        text-align: center;
-        border-radius: 50%;
-        cursor: pointer;
 
         i {
             font-size: 2rem;
