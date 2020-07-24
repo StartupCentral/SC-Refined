@@ -708,7 +708,7 @@
                         </form> -->
 
 
-                        <form action="" method="post" class="businessplan-form" name="idegrundlag" id="introduktion"
+                        <!-- <form action="" method="post" class="businessplan-form" name="idegrundlag" id="introduktion"
                             novalidate>
                             <h2 class="headline-2">Idegrundlag</h2>
 
@@ -753,7 +753,7 @@
                                     <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
 
 
                         <!-- <form action="" method="post" class="businessplan-form" name="malsetning" id="introduktion"
@@ -970,7 +970,7 @@
                         </form> -->
 
 
-                        <!-- <form action="" method="post" class="businessplan-form" name="okonomi" id="introduktion"
+                        <form action="" method="post" class="businessplan-form" name="okonomi" id="introduktion"
                             novalidate>
                             <h2 class="headline-2">Økonomi</h2>
 
@@ -990,6 +990,13 @@
                                 <textarea name="prodstart" id="prodstart" class="form-control" placeholder="Skriv..."
                                     rows="6"></textarea>
                             </div>
+
+
+
+
+
+
+
                             <div class="form-container">
                                 <label class="checkbox">
                                     <span>Er der lavet et budget?</span>
@@ -998,6 +1005,35 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
+
+                            <!-- Change this to display none -->
+                            <div class="form-container" id="budget" style="display:block;">
+                                <label for="cusneeds">Upload dit budget</label>
+
+                                <!-- I HAVE NO IDEA WHAT THIS IS FOR HONESTLY -->
+                                @if(CurrentPage.wwinspi3 !=""){
+                                <span class="f14 pull-right ">
+                                    <a href="javascript:void(0);" class="inspicolor" data-toggle="modal"
+                                        data-target="#inspi_3">Brug for inspiration
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i></a></span>
+                                }
+                                <!-- I HAVE NO IDEA WHAT THIS IS FOR HONESTLY -->
+
+                                <input type="file" class="uploadBtn" name="budgetfile" id="budgetfile">
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <div class="form-container">
                                 <label for="prodfinance">
                                     <span>Hvornår i de næste 12 måneder er der udgifter og indtægter?</span>
@@ -1005,7 +1041,7 @@
                                 <textarea name="prodfinance" id="prodfinance" class="form-control"
                                     placeholder="Skriv..." rows="6"></textarea>
                             </div>
-                        </form> -->
+                        </form>
 
 
                         <!-- <form action="" method="post" class="businessplan-form" name="salgsmarkedsføring"

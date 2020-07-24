@@ -145,6 +145,36 @@
   color: #FFFFFF;
 }
 
+#sc-site-header .signupline {
+  position: absolute;
+  height: 2.2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  background-color: #223869;
+  bottom: -2.2rem;
+  z-index: -1;
+  padding: .5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#sc-site-header .signupline:hover {
+  background-color: #30C1F3;
+}
+
+#sc-site-header .signupline span {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #sc-site-header nav.mobile-menu {
   position: fixed;
   overflow-y: auto;
@@ -5539,7 +5569,7 @@ section.sc-usermessages-inbox .pm-container .button {
 
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-container textarea {
   max-width: 100%;
-  width: 100%;
+  width: 99%;
   height: 15rem;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -6209,6 +6239,7 @@ main > section:first-child {
 }
 
 textarea {
+  max-width: 100%;
   font-family: "Poppins", sans-serif;
 }
 
