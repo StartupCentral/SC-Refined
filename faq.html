@@ -32,19 +32,38 @@
     <main id="sc-faq" class="sc-faq">
         <section class="sc-faq-questions">
             <div class="container card">
-                <div class="title-box">
-                    <!-- <h2 class="headline-2">HVAD KOSTER ET MEDLEMSKAB?</h2>
+                <!-- <div class="title-box">
+                    <h2 class="headline-2">HVAD KOSTER ET MEDLEMSKAB?</h2>
                     <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-                </div>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div> -->
                 <div class="questions-container">
                     <div class="question">
-                        <h2></h2>
+                        <h2 class="dropmenu">Er mine data fortrolige?</h2>
+                        <p>Ja, naturligvis. Alle vores coaches/mentorer har udfyldt fortrolighedserklæringer; hvilket er
+                            din garanti for, at vi overholder alle gældende regler.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <script>
+        var acc = document.getElementsByClassName("dropmenu");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("open");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

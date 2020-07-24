@@ -103,7 +103,12 @@ section.bpoverview {
             }
 
             .bpo-form {
+                display: none;
                 padding-top: 2.5rem;
+
+                &.active {
+                    display: block;
+                }
 
                 .headline-2 {
                     @include sc-title-text-side;
