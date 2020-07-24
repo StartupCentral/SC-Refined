@@ -1,6 +1,6 @@
 div.ttt-button {
     position: fixed;
-    cursor: pointer;
+
     right: 2rem;
     z-index: 999;
     transition: .5s;
@@ -21,6 +21,9 @@ div.ttt-button {
         width: 5rem;
         height: 5rem;
         align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
 
         i {
             font-size: 2rem;

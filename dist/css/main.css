@@ -618,7 +618,6 @@
 
 div.ttt-button {
   position: fixed;
-  cursor: pointer;
   right: 2rem;
   z-index: 999;
   -webkit-transition: .5s;
@@ -646,6 +645,9 @@ div.ttt-button .tothetop {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 div.ttt-button .tothetop i {
