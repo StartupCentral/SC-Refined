@@ -175,7 +175,22 @@ section.sc-home-coaches {
         margin-top: 5rem;
 
         .coach-card {
+            color: $sc-white;
+
+            &:hover {
+                img {
+                    @include transition(.3s);
+                    transform: scale(1.05);
+                }
+            }
+
             .card-body {
+                overflow: hidden;
+
+                &-img {
+                    overflow: hidden;
+                }
+
                 h3 {
                     margin: 1rem 0;
                 }

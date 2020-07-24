@@ -2088,6 +2088,25 @@ section.sc-home-coaches .coaches-carousel {
   margin-top: 5rem;
 }
 
+section.sc-home-coaches .coaches-carousel .coach-card {
+  color: #FFFFFF;
+}
+
+section.sc-home-coaches .coaches-carousel .coach-card:hover img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+section.sc-home-coaches .coaches-carousel .coach-card .card-body {
+  overflow: hidden;
+}
+
+section.sc-home-coaches .coaches-carousel .coach-card .card-body-img {
+  overflow: hidden;
+}
+
 section.sc-home-coaches .coaches-carousel .coach-card .card-body h3 {
   margin: 1rem 0;
 }
