@@ -6058,6 +6058,16 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer {
           justify-content: space-between;
 }
 
+section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .prevbtn {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbtn {
+  margin-left: auto;
+  margin-right: 0;
+}
+
 @media screen and (min-width: 767px) {
   section.bpoverview .bpo-container .bpoverview-form-container .bpo-header .header-user {
     padding-top: 1.5rem;

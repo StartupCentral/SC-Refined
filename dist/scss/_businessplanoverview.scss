@@ -143,6 +143,16 @@ section.bpoverview {
                 margin-top: 1rem;
                 @include flex(row);
                 justify-content: space-between;
+
+                .prevbtn {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+
+                .nextbtn {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
             }
         }
     }
