@@ -6213,11 +6213,6 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbt
             flex-direction: column;
     height: 50rem;
     padding-bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 5rem;
-    border: 5px solid red;
     /* width */
     /* Track */
     /* Handle */
