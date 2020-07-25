@@ -1556,12 +1556,20 @@ footer.main-footer section.footer-social .social-cvr {
   overflow-y: hidden;
 }
 
-.sc-login-page .login-page-container .form-box-container .button-container {
+.sc-login-page .login-page-container .form-box-container form {
+  width: 100%;
+}
+
+.sc-login-page .login-page-container .form-box-container form .button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-top: 1rem;
+}
+
+.sc-login-page .login-page-container .form-box-container form .button-container button {
+  width: 100%;
 }
 
 .sc-login-page .login-page-container .form-box-container .forgot-password {
@@ -5431,7 +5439,7 @@ section.sc-usermessages-inbox .pm-container .button {
 
 @media screen and (min-width: 1023px) {
   .private-messages {
-    height: 57vh;
+    height: 55vh;
     overflow-y: scroll;
     /* width */
     /* Track */

@@ -32,10 +32,18 @@
             padding: 0 2.5rem;
             overflow-y: hidden;
 
-            .button-container {
-                display: flex;
+            form {
                 width: 100%;
-                margin-top: 1rem;
+
+                .button-container {
+                    display: flex;
+                    width: 100%;
+                    margin-top: 1rem;
+
+                    button {
+                        width: 100%;
+                    }
+                }
             }
 
             .forgot-password {
@@ -93,6 +101,7 @@
                     }
                 }
             }
+
         }
 
         .login-footer {
