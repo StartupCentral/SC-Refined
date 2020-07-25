@@ -124,6 +124,8 @@
         border-top-right-radius: 1rem;
         @include flex(column);
         text-align: center;
+        font-family: $font-primary;
+        font-size: 2rem;
 
         img {
             margin-top: 1rem;
