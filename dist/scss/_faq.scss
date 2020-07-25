@@ -1,0 +1,13 @@
+section.sc-faq-questions {
+    margin-top: -$nav-sm;
+
+    .headline-2 {
+        @include sc-title-text-side;
+    }
+}
+
+@include media-lg {
+    section.sc-faq-questions {
+        margin-top: -$nav-lg;
+    }
+}

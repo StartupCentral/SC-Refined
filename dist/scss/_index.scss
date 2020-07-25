@@ -175,7 +175,22 @@ section.sc-home-coaches {
         margin-top: 5rem;
 
         .coach-card {
+            color: $sc-white;
+
+            &:hover {
+                img {
+                    @include transition(.3s);
+                    transform: scale(1.05);
+                }
+            }
+
             .card-body {
+                overflow: hidden;
+
+                &-img {
+                    overflow: hidden;
+                }
+
                 h3 {
                     margin: 1rem 0;
                 }
@@ -183,6 +198,26 @@ section.sc-home-coaches {
                 p {
                     padding: 0 0.5rem;
                 }
+            }
+        }
+    }
+
+    .read-more-box {
+        text-align: center;
+        padding: 0;
+        margin-top: 5rem;
+        margin-bottom: -5rem;
+
+
+        a {
+            color: $sc-white;
+            font-weight: 600;
+            // padding-bottom: 2px;
+            border-bottom: $sc-accent 2px solid;
+            @include transition(0.2s);
+
+            &:hover {
+                color: $sc-accent;
             }
         }
     }

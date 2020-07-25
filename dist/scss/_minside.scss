@@ -33,9 +33,28 @@
                     position: absolute;
                     width: fit-content;
                     margin: 0;
+                    // bottom: 0;
+                    left: 8rem;
+                    padding: .6rem;
+                    border-radius: 50%;
+                    display: flex;
+
+                    i {
+                        font-size: 2rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+
+                .logout-btn {
+                    position: absolute;
+                    width: fit-content;
+                    margin: 0;
                     bottom: 1rem;
-                    left: 6.75rem;
-                    padding: .75rem;
+                    left: 6rem;
+                    padding: .6rem;
                     border-radius: 50%;
                     display: flex;
 
@@ -150,6 +169,11 @@
 
                 .info-box {
                     margin: 1.5rem 0;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
 
                     &.news {
                         // display: none;
@@ -301,6 +325,27 @@
                     }
 
                     .settings-button {
+                        position: relative;
+                        bottom: 0;
+                        left: 0;
+                        padding: 0.2rem .7rem;
+                        border-radius: .5rem;
+                        align-items: center;
+                        margin: .5rem auto;
+
+                        i {
+                            font-size: 1.4rem;
+                        }
+
+                        span {
+                            display: block;
+                            margin-left: .5rem;
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .logout-btn {
+                        cursor: pointer;
                         position: relative;
                         bottom: 0;
                         left: 0;

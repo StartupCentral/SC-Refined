@@ -9,6 +9,8 @@
 //Register and Login
 @import './register';
 @import './login';
+@import './thankyoupage';
+@import './paylikepage';
 
 //Landing Pages
 @import './index';
@@ -16,22 +18,31 @@
 @import './partners';
 @import './partnerpage';
 
-@import './coaches';
 @import './coachpage';
 @import './coachcard';
+// @import './coaches';
+// @import './coaches2';
+
 
 @import './team';
 @import './podcast';
 @import './contact';
+@import './weoffer';
+@import './beforestartup';
+@import './howdowehelp';
+@import './startuplounge';
 
 @import './tipspage';
 @import './presspage';
+@import './faq';
 
 //Logged in Pages
 @import './minside';
 @import './minprofil';
 @import './usermessages';
+
 @import './businessplan';
+@import './businessplanoverview';
 
 * {
     box-sizing: border-box;
@@ -86,6 +97,16 @@ button {
     font-size: 1.6rem;
 }
 
+P> {
+    a {
+        color: $sc-accent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 a {
     text-decoration: none;
     font-size: 1.6rem;
@@ -94,7 +115,22 @@ a {
 
 ul {
     font-size: 1.6rem;
-    // list-style-type: none;
+    list-style-type: none;
+}
+
+ul {
+    li {
+        list-style-type: none;
+        margin-left: 30px;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        &:before {
+            content: '🚀';
+            margin-left: -30px;
+            margin-right: 7px;
+        }
+    }
 }
 
 li {
@@ -119,6 +155,7 @@ main>section:first-child {
 
 
 textarea {
+    max-width: 100%;
     font-family: $font-primary;
 }
 
@@ -226,10 +263,35 @@ textarea {
         i {
             font-size: 5rem;
         }
+
+        img {
+            width: 5rem;
+        }
+    }
+}
+
+.image-container {
+    margin-bottom: 1rem;
+    padding: 2.5rem;
+    border-radius: 100%;
+    @include boxshadow;
+    border: 1px solid $sc-border;
+
+    .image {
+        width: 7.5rem;
+        height: 7.5rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 7.5rem;
+        }
     }
 }
 
 .form-container {
+    position: relative;
 
     // padding-top: 1.5rem;
     &:first-child {
@@ -260,8 +322,10 @@ textarea {
 
             &:focus {
                 border-color: $sc-primary;
-                border: none;
-                border-radius: 0;
+                // border: none;
+                // border-radius: 0;
+                // box-shadow: 0px 0px 0px .1rem $sc-primary;
+
             }
         }
 
@@ -360,6 +424,50 @@ textarea {
             }
         }
     }
+
+    .tooltip {
+        position: absolute;
+        display: inline-block;
+        // background-color: $sc-primary;
+        color: $sc-white;
+        color: $sc-primary;
+        padding-left: .5rem;
+
+        &:hover {
+            .tooltip-text {
+                visibility: visible;
+            }
+        }
+
+        &-text {
+            visibility: hidden;
+            width: 20rem;
+            padding: 1rem;
+            background-color: $sc-primary;
+            color: $sc-white;
+            text-align: center;
+            border-radius: .5rem;
+            border: 1px solid $sc-border;
+            @include boxshadow;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -10rem;
+
+            &:after {
+                content: " ";
+                position: absolute;
+                top: 100%;
+                /* At the bottom of the tooltip */
+                left: 50%;
+                margin-left: -7.5px;
+                border-width: 10px;
+                border-style: solid;
+                border-color: $sc-primary transparent transparent transparent;
+            }
+        }
+    }
 }
 
 .title-box {
@@ -370,6 +478,24 @@ textarea {
     flex: 0 0 100%;
     text-align: center;
     align-items: center;
+}
+
+.text-box {
+    margin-top: 7.5rem;
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 15rem;
+    }
+
+    a {
+        color: $sc-accent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .read-more-box {
@@ -439,16 +565,25 @@ textarea {
     @include cta-btn;
 }
 
-.paragraph {
-    margin: 1rem 0;
-
-    &::first-letter {
-        font-size: 150%;
-    }
-}
-
 .bg-soft {
     background: $sc-soft;
+}
+
+.tags {
+    @include flex(row);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .tag {
+        border: 1px solid $sc-border;
+        // border: 1px solid $sc-primary
+        @include boxshadow-soft;
+        margin: .5rem;
+        border-radius: 2.5rem;
+        padding: .25rem 1.5rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
 }
 
 
@@ -585,6 +720,16 @@ textarea {
         margin: auto;
         @include flex(row);
         justify-content: space-between;
+
+        ul {
+            li {
+                margin: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
     }
 
     .header-big {

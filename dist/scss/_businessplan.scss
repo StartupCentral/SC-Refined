@@ -1,13 +1,9 @@
 .sc-businessplan {
     .container {
         section.businessplan {
-            // padding-top: 0;
             padding-bottom: 1rem;
 
             .businessplan-container {
-                // border: 1px solid $sc-border;
-                // @include boxshadow;
-
                 .businessplan-navigation-container {
                     background-color: $sc-primary;
                     @include flex(column);
@@ -23,7 +19,7 @@
                     }
 
                     .open~ul {
-                        margin: 1.5rem;
+                        margin: 0 1.5rem;
                     }
 
                     .business-nav {
@@ -35,7 +31,11 @@
                     ul {
                         li {
                             list-style-type: none;
-                            margin-bottom: .5rem;
+                            margin-left: 0;
+
+                            &::before {
+                                display: none;
+                            }
 
                             a {
                                 color: $sc-white;
@@ -45,12 +45,11 @@
                                     text-decoration: underline;
                                 }
 
+
                                 &.active {
                                     font-size: 1.8rem;
                                     font-weight: 600;
                                     color: $sc-accent;
-                                    // text-decoration: underline;
-
                                 }
                             }
                         }
@@ -115,13 +114,13 @@
                     .form-container {
                         textarea {
                             max-width: 100%;
-                            width: 100%;
+                            width: 99%;
                             height: 15rem;
                             background-color: $sc-white;
                             padding: 1rem;
                             border-radius: 1rem;
                             border: 1px solid $sc-primary;
-                            @include transition(.1s);
+                            // @include transition(.1s);
 
                             &:focus {
                                 box-shadow: 0px 0px 0px .1rem $sc-primary;
@@ -136,11 +135,9 @@
                             font-size: 1.6rem;
                             border: .2rem solid $sc-light;
                             border-radius: .5rem;
-                            @include transition(.1s);
 
                             &:focus {
-                                box-shadow: 0px 0px 0px .1rem $sc-primary;
-
+                                border-color: $sc-primary;
                             }
 
                         }
@@ -240,7 +237,7 @@
                             padding: .5rem 1.5rem;
 
                             li {
-                                margin-bottom: 1.5rem;
+                                margin-top: 0;
                             }
                         }
                     }

@@ -1,4 +1,14 @@
 #sc-site-header {
+    ul {
+        li {
+            margin: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
     nav.main-nav {
         position: fixed;
         top: 0;
@@ -90,7 +100,7 @@
                     position: absolute;
                     top: 1.5rem;
                     right: 1.5rem;
-                    display: grid;
+                    display: none;
                     align-content: center;
                     justify-content: center;
                     width: 1.7rem;
@@ -104,6 +114,32 @@
         }
     }
 
+    .signupline {
+        position: absolute;
+        height: 2.2rem;
+        width: 100%;
+        display: flex;
+
+        margin: auto;
+        background-color: $sc-secondary;
+        bottom: -2.2rem;
+        z-index: -1;
+        padding: .5rem;
+        align-items: center;
+        @include transition(0.2s);
+
+        &:hover {
+            background-color: $sc-accent;
+        }
+
+        span {
+            color: $sc-white;
+            font-size: 1.4rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     nav.mobile-menu {
         position: fixed;
         overflow-y: auto;
@@ -114,6 +150,8 @@
         visibility: hidden;
         transform: translateX(-100%);
         @include transition(.3s);
+
+
 
         &.active {
             position: relative;
@@ -478,18 +516,8 @@
                     }
 
                     .message-indicator {
-                        position: absolute;
                         top: .75rem;
                         right: 2rem;
-                        display: grid;
-                        align-content: center;
-                        justify-content: center;
-                        width: 1.7rem;
-                        height: 1.7rem;
-                        font-size: 1.5rem;
-                        background: $sc-accent;
-                        border-radius: 50%;
-                        color: $sc-white;
                     }
                 }
             }
