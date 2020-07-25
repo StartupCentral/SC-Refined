@@ -153,10 +153,20 @@ main>section:first-child {
     padding-top: 0rem;
 }
 
-
 textarea {
     max-width: 100%;
+    width: 100%;
+    height: 15rem;
+    background-color: $sc-white;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid $sc-border;
+    // @include transition(.1s);
     font-family: $font-primary;
+
+    &:focus {
+        box-shadow: 0px 0px 0px .1rem $sc-primary;
+    }
 }
 
 #main-nav+section {
