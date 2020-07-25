@@ -35,12 +35,16 @@
                 <div class="contact-input">
                     <h2>Send us a message</h2>
 
-                    <div class="input-container">
-                        <label for="name">First name:</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-                        <label for="lname">Last name:</label><br>
-                        <input type="text" id="lname" name="lname"><br><br>
-                        <input type="submit" value="Submit">
+                    <div class="form-box-container">
+                        <div class="form-container">
+                            <label for="email" class="label-name">
+                                <span class="content-name">Email Address</span>
+                            </label>
+                            <div class="input-container">
+                                <input type="email" id="email" name="email" autocomplete="off" required />
+                                <span><i class="far fa-envelope"></i></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
