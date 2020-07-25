@@ -106,8 +106,31 @@ section.bpoverview {
                 display: none;
                 padding-top: 2.5rem;
 
+                /* width */
+                &::-webkit-scrollbar {
+                    width: 10px;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 5px grey;
+                    border-radius: 10px;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: $sc-primary;
+                    border-radius: 10px;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $sc-secondary;
+                }
+
                 &.active {
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 .headline-2 {
@@ -117,7 +140,7 @@ section.bpoverview {
                 .category {
                     border: 1px solid $sc-border;
                     @include boxshadow-soft;
-                    margin: 2rem 0;
+                    margin: 0;
                     border-radius: 2.5rem;
                     padding: .25rem 1.5rem;
                     font-size: 1.4rem;
@@ -126,7 +149,7 @@ section.bpoverview {
                 }
 
                 .english {
-                    margin: 2rem 0;
+                    margin-top: 1rem;
                     font-size: 1.8rem;
                 }
 
@@ -143,6 +166,7 @@ section.bpoverview {
                 margin-top: 1rem;
                 @include flex(row);
                 justify-content: space-between;
+                margin-bottom: 0;
 
                 .prevbtn {
                     margin-left: 0;
@@ -238,6 +262,7 @@ section.bpoverview {
                 @include flex(column);
                 width: 100%;
 
+
                 .bpo-header {
                     .header-user {
                         padding-top: 0;
@@ -251,9 +276,47 @@ section.bpoverview {
 
                 .bpo-form {
                     padding-top: 2.5rem;
+                    padding-bottom: 1rem;
+                    flex-direction: column;
+                    height: 50rem;
+
+                    padding-bottom: 0;
+                    display: flex;
+                    margin-top: 5rem;
+                    border: 5px solid red;
+
+                    &-questions {
+                        overflow: auto;
+                    }
+
+                    /* width */
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                    }
+
+                    /* Track */
+                    &::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 5px grey;
+                        border-radius: 10px;
+                    }
+
+                    /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background: $sc-primary;
+                        border-radius: 10px;
+                    }
+
+                    /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: $sc-secondary;
+                    }
 
                     .category {
                         font-size: 1.6rem;
+                    }
+
+                    .bpo-footer {
+                        margin-top: auto;
                     }
                 }
             }
