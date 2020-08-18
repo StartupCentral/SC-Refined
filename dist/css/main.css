@@ -146,14 +146,14 @@
 
 #sc-site-header .signupline {
   position: absolute;
-  height: 2.2rem;
+  height: 2rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: auto;
   background-color: #223869;
-  bottom: -2.2rem;
+  bottom: -1.4rem;
   z-index: -1;
   padding: .5rem;
   -webkit-box-align: center;
@@ -716,7 +716,7 @@ section.sc-newsletter .stuff-container {
 
 section.sc-newsletter .stuff-container .input-container {
   position: relative;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 section.sc-newsletter .stuff-container .input-container input {
@@ -904,7 +904,9 @@ footer.main-footer section.footer-social .social-cvr {
             justify-content: center;
   }
   section.sc-newsletter .stuff-container .input-container {
-    margin: 0 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 1rem;
   }
   section.sc-newsletter .stuff-container .input-container input {
     padding: 1.25rem;
@@ -1530,6 +1532,7 @@ footer.main-footer section.footer-social .social-cvr {
 
 .sc-login-page .login-page-container .login-header {
   margin-top: auto;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -1556,6 +1559,7 @@ footer.main-footer section.footer-social .social-cvr {
           align-items: center;
   padding: 0 2.5rem;
   overflow-y: hidden;
+  margin-bottom: auto;
 }
 
 .sc-login-page .login-page-container .form-box-container form {
@@ -2094,6 +2098,8 @@ section.sc-home-coaches .coaches-carousel .coach-card:hover img {
   transition: all 0.3s ease-in-out;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 section.sc-home-coaches .coaches-carousel .coach-card .card-body {
@@ -2918,9 +2924,9 @@ section.coach-holder2 .coachcard-buttons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1rem 0;
+  padding: 1rem 2.5rem 2rem;
   margin-top: auto;
-  margin-bottom: 0;
+  margin-bottom: auto;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2938,37 +2944,46 @@ section.coach-holder2 .coachcard-buttons:before {
 }
 
 section.coach-holder2 .coachcard-buttons .profile-btn {
-  display: block;
-  padding: 1rem;
-  color: #182848;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #182848;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 section.coach-holder2 .coachcard-buttons .profile-btn:hover {
-  color: #FFFFFF;
-  background-color: #182848;
+  background: #223869;
+  border-color: #223869;
 }
 
 section.coach-holder2 .coachcard-buttons .send-msg {
-  display: block;
   cursor: pointer;
-  background-color: #FFFFFF;
-  color: #182848;
-  padding: 1rem;
-  border: none;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #182848;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #182848;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 100%;
 }
 
-section.coach-holder2 .coachcard-buttons .send-msg i {
-  font-size: 2rem;
-}
-
 section.coach-holder2 .coachcard-buttons .send-msg:hover {
-  color: #FFFFFF;
-  background-color: #182848;
+  background: #223869;
+  border-color: #223869;
 }
 
 @media screen and (min-width: 1023px) {
@@ -4929,6 +4944,34 @@ section.sc-faq-questions .headline-2::after {
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.tips .tips-box .tip-link i {
   font-size: 2.5rem;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoices-container {
+  max-height: 300px;
+  overflow: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoices-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoices-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoices-container::-webkit-scrollbar-thumb {
+  background: #182848;
+  border-radius: 10px;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoices-container::-webkit-scrollbar-thumb:hover {
+  background: #223869;
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice {

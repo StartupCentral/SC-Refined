@@ -181,6 +181,7 @@ section.sc-home-coaches {
                 img {
                     @include transition(.3s);
                     transform: scale(1.05);
+                    filter: grayscale(100%);
                 }
             }
 

@@ -63,12 +63,66 @@ section.coach-holder2 {
 
         }
 
+        // &-buttons {
+        //     position: relative;
+        //     @include flex(column);
+        //     padding: 1rem 0;
+        //     margin-top: auto;
+        //     margin-bottom: 0;
+        //     width: 100%;
+        //     align-items: center;
+
+        //     &:before {
+        //         content: "";
+        //         position: absolute;
+        //         top: 0;
+        //         width: 15rem;
+        //         height: 1px;
+        //         background-color: $sc-border;
+        //         border-radius: 50%;
+        //     }
+
+        //     .profile-btn {
+        //         display: block;
+        //         padding: 1rem;
+        //         color: $sc-primary;
+        //         @include transition(0.2s);
+
+        //         &:hover {
+        //             color: $sc-white;
+        //             background-color: $sc-primary;
+        //         }
+        //     }
+
+        //     .send-msg {
+        //         display: block;
+        //         cursor: pointer;
+        //         background-color: $sc-white;
+        //         color: $sc-primary;
+        //         padding: 1rem;
+        //         border: none;
+
+        //         @include transition(0.2s);
+        //         width: 100%;
+
+
+        //         i {
+        //             font-size: 2rem;
+        //         }
+
+        //         &:hover {
+        //             color: $sc-white;
+        //             background-color: $sc-primary;
+        //         }
+        //     }
+        // }
+
         &-buttons {
             position: relative;
             @include flex(column);
-            padding: 1rem 0;
+            padding: 1rem 2.5rem 2rem;
             margin-top: auto;
-            margin-bottom: 0;
+            margin-bottom: auto;
             width: 100%;
             align-items: center;
 
@@ -83,37 +137,15 @@ section.coach-holder2 {
             }
 
             .profile-btn {
-                display: block;
-                padding: 1rem;
-                color: $sc-primary;
                 @include transition(0.2s);
-
-                &:hover {
-                    color: $sc-white;
-                    background-color: $sc-primary;
-                }
+                @include btn;
             }
 
             .send-msg {
-                display: block;
-                cursor: pointer;
-                background-color: $sc-white;
-                color: $sc-primary;
-                padding: 1rem;
-                border: none;
+                @include btn;
 
                 @include transition(0.2s);
                 width: 100%;
-
-
-                i {
-                    font-size: 2rem;
-                }
-
-                &:hover {
-                    color: $sc-white;
-                    background-color: $sc-primary;
-                }
             }
         }
     }

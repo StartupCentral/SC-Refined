@@ -55,7 +55,8 @@ section.sc-newsletter {
 
         .input-container {
             position: relative;
-            margin-top: 3rem;
+            margin-top: 1rem;
+
 
             input {
                 display: block;
@@ -233,7 +234,9 @@ footer.main-footer {
             justify-content: center;
 
             .input-container {
-                margin: 0 2.5rem;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-right: 1rem;
 
                 input {
                     padding: 1.25rem;
