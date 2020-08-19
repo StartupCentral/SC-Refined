@@ -1,6 +1,5 @@
 section.sc-startuplounge-intro {
     margin-top: -$nav-sm;
-    padding-bottom: 0;
 
     .headline-2 {
         @include sc-title-text;
@@ -23,7 +22,6 @@ section.sc-startuplounge-intro {
 @include media-lg {
     section.sc-startuplounge-intro {
         margin-top: -$nav-lg;
-        padding-bottom: 0;
 
         .lounge-btn {
             text-align: center;
@@ -32,6 +30,4 @@ section.sc-startuplounge-intro {
             margin-right: auto;
         }
     }
-
-
 }
