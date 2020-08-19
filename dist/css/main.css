@@ -146,14 +146,12 @@
 
 #sc-site-header .signupline {
   position: absolute;
-  height: 2rem;
+  height: 2.2rem;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin: auto;
   background-color: #223869;
-  bottom: -1.4rem;
+  bottom: -2.2rem;
   z-index: -1;
   padding: .5rem;
   -webkit-box-align: center;
@@ -594,6 +592,11 @@
   #sc-site-header nav.main-nav .nav-actions-button .message-indicator {
     top: .75rem;
     right: 2rem;
+  }
+  #sc-site-header .signupline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #sc-site-header nav.mobile-menu {
     display: none;

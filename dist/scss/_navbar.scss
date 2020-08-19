@@ -116,13 +116,13 @@
 
     .signupline {
         position: absolute;
-        height: 2rem;
+        height: 2.2rem;
         width: 100%;
-        display: flex;
+        display: none;
 
         margin: auto;
         background-color: $sc-secondary;
-        bottom: -1.4rem;
+        bottom: -2.2rem;
         z-index: -1;
         padding: .5rem;
         align-items: center;
@@ -521,6 +521,10 @@
                     }
                 }
             }
+        }
+
+        .signupline {
+            display: flex;
         }
 
         nav.mobile-menu {
