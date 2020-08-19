@@ -202,7 +202,7 @@
                                 margin: auto;
 
                                 img {
-                                    height: 11rem;
+                                    height: 14rem;
                                     object-fit: cover;
                                     border-radius: .5rem;
                                 }
@@ -210,8 +210,31 @@
 
                             &-text {
                                 margin-left: 1rem;
-                                height: 13rem;
+                                height: 15rem;
                                 overflow: hidden;
+                                @include flex(column);
+
+                                h3 {
+                                    height: 4.5rem;
+                                    overflow: hidden;
+                                    margin-bottom: 0;
+                                }
+
+                                .lead {
+                                    margin-top: 0;
+                                    height: 5rem;
+                                    overflow: hidden;
+                                }
+
+                                .date-author {
+                                    @include flex(row);
+                                    justify-content: space-between;
+                                    margin-top: auto;
+                                    margin-bottom: 0;
+                                    height: 3rem;
+                                    overflow: hidden;
+                                    align-items: flex-end;
+                                }
                             }
                         }
                     }
@@ -321,6 +344,57 @@
                 .quick-actions-container {
                     .actions-body {
                         flex: 0 0 25%;
+                    }
+                }
+            }
+
+            section.sc-minside-informations {
+                .info-container {
+                    .info-box {
+                        &.news {
+                            .news-box {
+                                &-img {
+                                    flex: 0 0 35%;
+                                    margin-left: 0;
+                                    margin-right: 0;
+
+                                    img {
+                                        height: 15rem;
+                                        object-fit: cover;
+                                        border-radius: .5rem;
+                                    }
+                                }
+
+                                &-text {
+                                    margin-left: 1rem;
+                                    height: 15rem;
+                                    overflow: hidden;
+                                    @include flex(column);
+
+                                    h3 {
+                                        height: 6rem;
+                                        overflow: hidden;
+                                        margin-bottom: 0;
+                                    }
+
+                                    .lead {
+                                        margin-top: 0;
+                                        height: 5rem;
+                                        overflow: hidden;
+                                    }
+
+                                    .date-author {
+                                        @include flex(row);
+                                        justify-content: space-between;
+                                        margin-top: auto;
+                                        margin-bottom: 0;
+                                        height: 3rem;
+                                        overflow: hidden;
+                                        align-items: flex-end;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -457,7 +531,7 @@
                                     margin: auto 0;
 
                                     img {
-                                        height: 13rem;
+                                        height: 15rem;
                                         object-fit: cover;
                                         border-radius: .5rem;
                                     }
@@ -465,8 +539,30 @@
 
                                 &-text {
                                     margin-left: 1rem;
-                                    height: 14rem;
+                                    height: 15rem;
                                     overflow: hidden;
+
+                                    h3 {
+                                        height: 6.5rem;
+                                        overflow: hidden;
+                                        margin-bottom: 0;
+                                    }
+
+                                    .lead {
+                                        margin-top: 0;
+                                        height: 5rem;
+                                        overflow: hidden;
+                                    }
+
+                                    .date-author {
+                                        @include flex(row);
+                                        justify-content: space-between;
+                                        margin-top: auto;
+                                        margin-bottom: 0;
+                                        height: 2.6rem;
+                                        overflow: hidden;
+                                        align-items: flex-end;
+                                    }
                                 }
                             }
                         }

@@ -2645,6 +2645,10 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   transition: width .5s ease-out;
 }
 
+#sc-partnerpage .aside-container .container-small section.partner-section .paragraph {
+  margin-top: 1rem;
+}
+
 @media screen and (min-width: 767px) {
   #sc-partnerpage .aside-container {
     max-width: 600px;
@@ -5178,7 +5182,7 @@ section.sc-faq-questions .headline-2::after {
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img img {
-  height: 11rem;
+  height: 14rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: .5rem;
@@ -5186,8 +5190,47 @@ section.sc-faq-questions .headline-2::after {
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text {
   margin-left: 1rem;
-  height: 13rem;
+  height: 15rem;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text h3 {
+  height: 4.5rem;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text .lead {
+  margin-top: 0;
+  height: 5rem;
+  overflow: hidden;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text .date-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 0;
+  height: 3rem;
+  overflow: hidden;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.tips .tips-box {
@@ -5300,6 +5343,60 @@ section.sc-faq-questions .headline-2::after {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img img {
+    height: 15rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: .5rem;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text {
+    margin-left: 1rem;
+    height: 15rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text h3 {
+    height: 6rem;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text .lead {
+    margin-top: 0;
+    height: 5rem;
+    overflow: hidden;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text .date-author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 0;
+    height: 3rem;
+    overflow: hidden;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -5428,15 +5525,44 @@ section.sc-faq-questions .headline-2::after {
     margin: auto 0;
   }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img img {
-    height: 13rem;
+    height: 15rem;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: .5rem;
   }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text {
     margin-left: 1rem;
-    height: 14rem;
+    height: 15rem;
     overflow: hidden;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text h3 {
+    height: 6.5rem;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text .lead {
+    margin-top: 0;
+    height: 5rem;
+    overflow: hidden;
+  }
+  .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-text .date-author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 0;
+    height: 2.6rem;
+    overflow: hidden;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice {
     cursor: pointer;

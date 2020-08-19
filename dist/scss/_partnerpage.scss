@@ -49,6 +49,10 @@
                 .headline-2 {
                     @include sc-title-line;
                 }
+
+                .paragraph {
+                    margin-top: 1rem;
+                }
             }
         }
     }
