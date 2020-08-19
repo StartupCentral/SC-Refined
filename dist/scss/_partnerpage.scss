@@ -23,7 +23,7 @@
                             @include sc-title-text;
                         }
 
-                        a {
+                        .cta-btn {
                             @include cta-btn;
                             width: 100%;
                             font-size: 1.6rem;

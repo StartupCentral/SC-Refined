@@ -2592,7 +2592,7 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   transition: width .5s ease-out;
 }
 
-#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text a {
+#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .cta-btn {
   cursor: pointer;
   text-align: center;
   margin: auto;
@@ -2611,7 +2611,7 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   padding: 1rem .5rem;
 }
 
-#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text a:hover, #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text a:focus {
+#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .cta-btn:hover, #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .cta-btn:focus {
   background: #223869;
   border-color: #223869;
 }
