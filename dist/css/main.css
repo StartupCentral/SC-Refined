@@ -6255,6 +6255,162 @@ section.sc-usermessages-inbox .pm-container .button {
   }
 }
 
+section.sc-settings {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border: 1px solid #e6e7e8;
+  margin-bottom: 2.5rem;
+}
+
+section.sc-settings .settings-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.sc-settings .settings-header .header-tab {
+  text-align: center;
+  -webkit-box-flex: 33.33%;
+      -ms-flex: 33.33%;
+          flex: 33.33%;
+  padding-bottom: 2rem;
+}
+
+section.sc-settings .settings-header .header-tab button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+section.sc-settings .settings-header .header-tab button:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #e6e7e8;
+}
+
+section.sc-settings .settings-header .header-tab span {
+  margin: auto;
+}
+
+section.sc-settings .settings-header .header-tab.active {
+  background-color: #182848;
+  border: none;
+  color: #FFFFFF;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+
+section.sc-settings .settings-header .header-tab.active button {
+  color: #FFFFFF;
+}
+
+section.sc-settings .settings-header .header-tab.active button:hover {
+  background-color: #182848;
+}
+
+section.sc-settings .settings-main {
+  border-top: #e6e7e8 1px solid;
+  margin-top: -1.8rem;
+  padding-top: 4rem;
+}
+
+section.sc-settings .settings-main.account-settings {
+  display: none;
+}
+
+section.sc-settings .settings-main.info-settings {
+  display: none;
+}
+
+section.sc-settings .settings-main.subscription-settings {
+  display: none;
+}
+
+section.sc-settings .settings-main.active {
+  display: block;
+}
+
+section.sc-settings .settings-main .form-box-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+section.sc-settings .settings-main .form-box-container .form-container #phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.sc-settings .settings-main .form-box-container .form-container #phone p {
+  margin-right: .5rem;
+}
+
+section.sc-settings .settings-button button {
+  width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+  section.sc-settings {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border: 1px solid #e6e7e8;
+    margin-bottom: 2.5rem;
+  }
+  section.sc-settings .settings-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.sc-settings .settings-header .header-tab button {
+    padding: 1rem;
+  }
+  section.sc-settings .settings-main {
+    margin-top: -1.5rem;
+    padding-top: 3rem;
+  }
+}
+
 .sc-businessplan .container section.businessplan {
   padding-bottom: 1rem;
 }

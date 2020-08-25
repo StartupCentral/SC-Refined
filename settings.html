@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/0ed5b1a423.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="dist/css/main.css">
+    <title>Settings Page</title>
+</head>
+
+<body>
+
+    <main id="sc-settingspage" class="sc-settingspage bg-soft">
+        <div class="aside-container">
+            <aside class="user-profile ">
+                <div class="column-container">
+                    <div class="profile-header centered">
+                        <div class="header-image">
+                            <img src="assets/images/User/hihi.jpg" alt="">
+                        </div>
+                        <a href="#!" class="button settings-button"><i class="fas fa-cog"></i><span>Settings</span></a>
+                        <button class="button logout-btn"><i class="fas fa-sign-out-alt"></i><span>Sign
+                                out</span></button>
+                        <div class="header-text ">
+                            <h2>Hi, Generic Name!</h2>
+                            <p class="lead">Start your journey here at StartupCentral</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-body">
+                        <h3>User Information</h3>
+                        <ul class="user-info">
+                            <li id="name"><span>Name</span><span class="info">Anders Fogh</span></li>
+                            <li id="city"><span>City</span><span class="info">Horsens</span></li>
+                            <li id="address"><span>Address</span><span class="info">Kattesund 4 2TV</span></li>
+                            <li id="phone"><span>Tel</span><span class="info">+45 12345678</span></li>
+                            <li id="email"><span>Email</span><span class="info">crackedelowsoul@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="container-small">
+                <section class="sc-settings">
+                    <div class="settings-header">
+                        <div class="header-tab account-settings active">
+                            <button>Account Settings</button>
+                        </div>
+                        <div class="header-tab info-settings">
+
+                            <button>Info Settings</button>
+                        </div>
+                        <div class="header-tab subscription-settings">
+
+                            <button>Subscription Settings</button>
+                        </div>
+                    </div>
+
+
+                    <div class="settings-main account-settings ">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="profilepic" class="label-name">
+                                    <span class="content-name">Change Profile Picture</span>
+                                </label>
+                                <form action="#!">
+                                    <input type="file" id="myFile" name="filename" class="custom-file-input">
+                                    <input type="submit">
+                                </form>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="email" class="label-name">
+                                    <span class="content-name">Email Address</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="email" id="email" name="email" autocomplete="off" required />
+                                    <span><i class="far fa-envelope"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="password" class="label-name">
+                                    <span class="content-name">Old Password</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="password" id="pass" name="password" minlength="8" required />
+                                    <span><i class="fas fa-lock"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="password" class="label-name">
+                                    <span class="content-name">New Password</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="password" id="pass" name="password" minlength="8" required />
+                                    <span><i class="fas fa-lock"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-main info-settings ">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="firstname" class="label-name">
+                                    <span class="content-name">Name</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="firstname" name="firstname" autocomplete="off" required />
+                                    <span><i class="fas fa-user"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Address</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="firstname" name="firstname" autocomplete="off" required />
+                                    <span><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Postnummer</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="firstname" name="firstname" autocomplete="off" required />
+                                    <span><i class="fas fa-mail-bulk"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="city" class="label-name">
+                                    <span class="content-name">By</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="firstname" name="firstname" autocomplete="off" required />
+                                    <span><i class="fas fa-city"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="telephone" class="label-name">
+                                    <span class="content-name">Phone Number</span>
+                                </label>
+                                <div class="input-container" id="phone">
+                                    <p>+45</p>
+                                    <input type="tel" id="telephone" name="telephone" autocomplete="off" required
+                                        maxlength="8" />
+                                    <span><i class="fas fa-phone"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-main subscription-settings active">
+                        <button class="button">Change Account details</button>
+                        <p>If you want to unsubscribe fack you you can't lmao</p>
+                        <img src="https://media1.tenor.com/images/0fcc389e18d3da7ca8e5f1723d509a80/tenor.gif" alt="">
+                    </div>
+
+                    <div class="settings-button">
+                        <button class="button">Save</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
