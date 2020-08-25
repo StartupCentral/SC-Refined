@@ -32,6 +32,7 @@
 @import './howdowehelp';
 @import './startuplounge';
 @import './inspiration';
+@import './personalpartner';
 
 @import './tipspage';
 @import './presspage';
@@ -71,6 +72,8 @@ h5,
 h6 {
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.4em;
     font-weight: 700;
     width: 100%;
@@ -602,77 +605,77 @@ textarea {
 //Looks
 ////////////////
 .tlt-w {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(100% 0, 0 0, 0 100%);
     position: absolute;
     // background-color: $sc-white;
     background-color: rgba(255, 255, 255, 0.2);
-    top: 0;
+    top: -2px;
 }
 
 .trt-w {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(100% 0, 0 0, 100% 100%);
     position: absolute;
     background-color: $sc-white;
-    top: 0;
+    top: -2px;
 }
 
 .tlb-w {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(0 100%, 100% 100%, 0 0);
     position: absolute;
     background-color: $sc-white;
-    bottom: 0;
+    bottom: -2px;
 }
 
 .trb-w {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(0 100%, 100% 100%, 100% 0);
     position: absolute;
     background-color: $sc-white;
-    bottom: 0;
+    bottom: -2px;
 }
 
 //////L
 .tlt-b {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(100% 0, 0 0, 0 100%);
     position: absolute;
     background-color: $sc-primary;
-    top: 0;
+    top: -2px;
 }
 
 .trt-b {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(100% 0, 0 0, 100% 100%);
     position: absolute;
     background-color: $sc-primary;
-    top: 0;
+    top: -2px;
 }
 
 .tlb-b {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(0 100%, 100% 100%, 0 0);
     position: absolute;
     background-color: $sc-primary;
-    bottom: 0;
+    bottom: -2px;
 }
 
 .trb-b {
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     clip-path: polygon(0 100%, 100% 100%, 100% 0);
     position: absolute;
     background-color: $sc-primary;
-    bottom: 0;
+    bottom: -2px;
 }
 
 
