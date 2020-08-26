@@ -3559,8 +3559,8 @@ section.sc-weoffer-cost .price-box a:hover {
   }
   section.sc-weoffer-help .help-container .column-container {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
   }
   section.sc-weoffer-conditions .container .text-container {
     display: -webkit-box;
@@ -3600,8 +3600,8 @@ section.sc-weoffer-cost .price-box a:hover {
   }
   section.sc-weoffer-cost .container .text-container .text-box {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
   }
   section.sc-weoffer-cost .container .text-container .text-box .lead {
     margin-left: 2.5rem;
@@ -3636,8 +3636,8 @@ section.sc-weoffer-cost .price-box a:hover {
   }
   section.sc-weoffer-cost .container .text-container .text-box {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.33%;
-            flex: 0 0 33.33%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
   }
 }
 
