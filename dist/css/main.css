@@ -3000,8 +3000,53 @@ section.coach-holder2 .coachcard-buttons .send-msg:hover {
   }
 }
 
-section.sc-team-staff {
+section.sc-team-history {
   margin-top: -75px;
+}
+
+section.sc-team-history .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-team-history .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-team-staff .title-box {
+  margin-top: -10rem;
+  margin-bottom: 10rem;
+}
+
+section.sc-team-staff .title-box .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-team-staff .title-box .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
 }
 
 section.sc-team-staff .staff-body {
@@ -3117,6 +3162,27 @@ section.sc-team-join .button {
 }
 
 @media screen and (min-width: 1023px) {
+  section.sc-team-history {
+    margin-top: -90px;
+  }
+  section.sc-team-history .headline-2 {
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  section.sc-team-history .headline-2::after {
+    content: '';
+    display: block;
+    bottom: 0;
+    background: #30C1F3;
+    width: 15rem;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto 0;
+    -webkit-transition: width .5s ease-out;
+    transition: width .5s ease-out;
+  }
   section.sc-team-staff .container .staff-body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33%;

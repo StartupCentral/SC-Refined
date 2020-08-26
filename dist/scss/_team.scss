@@ -1,5 +1,20 @@
-section.sc-team-staff {
+section.sc-team-history {
     margin-top: -$nav-sm;
+
+    .headline-2 {
+        @include sc-title-text;
+    }
+}
+
+section.sc-team-staff {
+    .title-box {
+        margin-top: -10rem;
+        margin-bottom: 10rem;
+
+        .headline-2 {
+            @include sc-title-text;
+        }
+    }
 
     .staff-body {
         display: flex;
@@ -81,6 +96,14 @@ section.sc-team-join {
 }
 
 @include media-lg {
+    section.sc-team-history {
+        margin-top: -$nav-lg;
+
+        .headline-2 {
+            @include sc-title-text;
+        }
+    }
+
     section.sc-team-staff {
         .container {
             .staff-body {
