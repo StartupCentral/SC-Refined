@@ -77,6 +77,10 @@
                 .column-container {
                     border: 1px solid $sc-border;
                     border-radius: 1rem;
+
+                    .headline-2 {
+                        font-size: 2.5rem;
+                    }
                 }
             }
 
@@ -84,9 +88,7 @@
                 margin-top: -$nav-lg;
                 margin-right: 0;
 
-                section.partner-section {
-                    // border-radius: 1rem;
-                }
+                section.partner-section {}
             }
         }
     }
