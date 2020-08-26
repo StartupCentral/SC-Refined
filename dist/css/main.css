@@ -5281,6 +5281,55 @@ section.sc-faq-questions .headline-2::after {
   transition: width .5s ease-out;
 }
 
+section.sc-faq-questions .questions-container .questions {
+  border-bottom: 1px solid #e6e7e8;
+}
+
+section.sc-faq-questions .questions-container .questions .question {
+  max-width: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.5rem 0;
+  cursor: pointer;
+  margin: 0;
+}
+
+section.sc-faq-questions .questions-container .questions .question i {
+  font-size: 2rem;
+}
+
+section.sc-faq-questions .questions-container .questions .question .dropdown-arrow {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section.sc-faq-questions .questions-container .questions .open .dropdown-arrow {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+section.sc-faq-questions .questions-container .questions .answer {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section.sc-faq-questions .questions-container .questions .answer p {
+  margin: 0 4rem 4rem;
+}
+
 @media screen and (min-width: 1023px) {
   section.sc-faq-questions {
     margin-top: -90px;

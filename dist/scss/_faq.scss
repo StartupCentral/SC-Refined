@@ -4,6 +4,50 @@ section.sc-faq-questions {
     .headline-2 {
         @include sc-title-text-side;
     }
+
+    .questions-container {
+        .questions {
+            border-bottom: 1px solid $sc-border;
+
+            .question {
+                max-width: unset;
+                @include flex(row);
+                justify-content: space-between;
+                padding: 2.5rem 0;
+                cursor: pointer;
+                // border: 1px solid red;
+                margin: 0;
+
+                i {
+                    font-size: 2rem;
+                }
+
+                .dropdown-arrow {
+                    background: none;
+                    border: none;
+                    padding: 1rem 1.5rem;
+                    @include transition(0.3s);
+                }
+            }
+
+            .open {
+                .dropdown-arrow {
+                    transform: rotate(135deg);
+                }
+            }
+
+            .answer {
+                p {
+                    margin: 0 4rem 4rem;
+                }
+
+                max-height: 0;
+                overflow: hidden;
+                @include transition(.3s);
+            }
+
+        }
+    }
 }
 
 @include media-lg {
