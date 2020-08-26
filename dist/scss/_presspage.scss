@@ -18,6 +18,11 @@ section.press-articles {
         background-color: $sc-white;
         margin-bottom: 3rem;
 
+        a {
+            @include flex(column);
+            height: 100%;
+        }
+
         &:hover {
             img {
                 transform: scale(1.05);
@@ -42,9 +47,11 @@ section.press-articles {
             flex-direction: column;
             padding: 0 1.5rem 1rem;
             color: $sc-primary;
+            height: 100%;
 
             .date {
-                margin-top: 1rem;
+                margin-top: auto;
+                margin-bottom: 0;
             }
 
             span {
@@ -153,7 +160,6 @@ aside.sc-press-aside {
                     grid-gap: 2.5rem;
 
                     .article {
-                        height: min-content;
                         margin-bottom: 0;
                     }
                 }
