@@ -757,6 +757,11 @@ section.sc-newsletter .stuff-container .input-container span i {
   color: #A0A0A0;
 }
 
+div.sc-trustpilot {
+  padding: 2.5rem;
+  background-color: #e6e7e8;
+}
+
 footer.main-footer {
   background-color: #FFFFFF;
 }
@@ -2619,6 +2624,29 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   border-color: #223869;
 }
 
+#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .promocode {
+  background-color: #182848;
+  color: #FFFFFF;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin-bottom: .5rem;
+}
+
+#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .promocode span {
+  font-size: 2rem;
+}
+
+#sc-partnerpage .aside-container aside.partner-info .attention-box {
+  background-color: #fcbf49;
+  padding: .5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+#sc-partnerpage .aside-container aside.partner-info .attention-box p {
+  color: black;
+}
+
 #sc-partnerpage .aside-container .container-small {
   margin-top: 5rem;
 }
@@ -2668,6 +2696,10 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   }
   #sc-partnerpage .aside-container aside.partner-info .column-container .headline-2 {
     font-size: 2.5rem;
+  }
+  #sc-partnerpage .aside-container aside.partner-info .attention-box {
+    margin-left: 0;
+    margin-right: 0;
   }
   #sc-partnerpage .aside-container .container-small {
     margin-top: -90px;
@@ -4936,6 +4968,44 @@ section.sc-personalpartner-intro .container .reviews .reviews-container .review-
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+}
+
+section.sc-cases-holder {
+  margin-top: -75px;
+}
+
+section.sc-cases-holder .case-card-container .case-card .case-body {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.sc-cases-holder .case-card-container .case-card .case-body .case-img {
+  width: 200px;
+  height: 200px;
+}
+
+section.sc-cases-holder .case-card-container .case-card .case-body .case-img img {
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+}
+
+section.sc-cases-holder .case-card-container .case-card .case-body .case-text {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  margin-top: -6rem;
+  margin-left: 7.5rem;
+  width: 250px;
 }
 
 section.tips-intro {

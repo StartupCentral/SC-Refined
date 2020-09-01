@@ -30,7 +30,30 @@
                             margin: 1rem 0;
                             padding: 1rem .5rem;
                         }
+
+                        .promocode {
+                            background-color: $sc-primary;
+                            color: $sc-white;
+                            padding: 1rem;
+                            border-radius: .5rem;
+                            margin-bottom: .5rem;
+
+                            span {
+                                font-size: 2rem;
+                            }
+                        }
                     }
+                }
+            }
+
+            .attention-box {
+                background-color: $sc-warning;
+                padding: .5rem;
+                margin: 1rem;
+                border-radius: 1rem;
+
+                p {
+                    color: black;
                 }
             }
         }
@@ -81,6 +104,12 @@
                     .headline-2 {
                         font-size: 2.5rem;
                     }
+                }
+
+                .attention-box {
+                    margin-left: 0;
+                    margin-right: 0;
+
                 }
             }
 
