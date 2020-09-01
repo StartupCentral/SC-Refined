@@ -1,0 +1,45 @@
+section.casepage-intro {
+    margin-top: -$nav-sm;
+
+    .intro-container {
+        .intro-text {
+            text-align: left;
+
+            .headline-2 {
+                @include sc-title-text-side;
+            }
+        }
+
+        .intro-image {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@include media-lg {
+    section.casepage-intro {
+        margin-top: -$nav-sm;
+
+        .intro-container {
+            @include flex(row);
+
+            .intro-text {
+                text-align: left;
+                flex: 0 0 50%;
+
+                .headline-2 {
+                    @include sc-title-text-side;
+                }
+            }
+
+            .intro-image {
+                // ml margin-right: 0;
+                width: 500px;
+                object-fit: cover;
+
+                img {}
+            }
+        }
+    }
+
+}

@@ -20,6 +20,9 @@
 
 @import './coachpage';
 @import './coachcard';
+
+@import './cases';
+@import './casepage';
 // @import './coaches';
 // @import './coaches2';
 
@@ -33,7 +36,6 @@
 @import './startuplounge';
 @import './inspiration';
 @import './personalpartner';
-@import './cases';
 
 @import './tipspage';
 @import './presspage';
@@ -494,6 +496,13 @@ textarea {
     flex: 0 0 100%;
     text-align: center;
     align-items: center;
+
+    .searchbar {
+        height: 3rem;
+        padding: 1rem;
+        width: 350px;
+        margin-top: 1.5rem;
+    }
 }
 
 .text-box {
@@ -737,15 +746,15 @@ textarea {
         @include flex(row);
         justify-content: space-between;
 
-        ul {
-            li {
-                margin: 0;
+        // ul {
+        //     li {
+        //         margin: 0;
 
-                &::before {
-                    display: none;
-                }
-            }
-        }
+        //         &::before {
+        //             display: none;
+        //         }
+        //     }
+        // }
     }
 
     .header-big {
