@@ -497,11 +497,14 @@ textarea {
     text-align: center;
     align-items: center;
 
-    .searchbar {
-        height: 3rem;
-        padding: 1rem;
-        width: 350px;
-        margin-top: 1.5rem;
+    .form-container {
+        max-width: 350px;
+
+        input {
+            margin-top: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
