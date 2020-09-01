@@ -2630,9 +2630,12 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   padding: 1rem;
   border-radius: .5rem;
   margin-bottom: .5rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .promocode span {
+#sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .promocode p {
   font-size: 2rem;
 }
 
