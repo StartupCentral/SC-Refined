@@ -11,10 +11,18 @@ section.tips-intro {
     }
 }
 
+section.tips-section {
+    // padding-top: 5rem;
+    // padding-bottom: 5rem;
+
+    &:nth-child(odd) {
+        color: $sc-white;
+        background-color: $sc-primary;
+    }
+}
+
 @include media-md {
     section.tips-intro {
-        margin-top: -$nav-sm;
-
         .tip-row {
             @include flex(row);
 

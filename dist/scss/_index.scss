@@ -177,11 +177,14 @@ section.sc-home-coaches {
         .coach-card {
             color: $sc-white;
 
+            img {
+                filter: grayscale(100%);
+            }
+
             &:hover {
                 img {
                     @include transition(.3s);
                     transform: scale(1.05);
-                    filter: grayscale(100%);
                 }
             }
 

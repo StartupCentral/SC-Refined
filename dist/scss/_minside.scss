@@ -485,6 +485,16 @@
                         }
                     }
 
+                    ul {
+                        li {
+                            margin: 0;
+
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+
                     .user-info {
                         li {
                             display: flex;
