@@ -3,42 +3,279 @@ section.sc-cases-holder {
 
     .case-card-container {
         .case-card {
-            // background-color: red;
-            // border: 5px solid green;
+            margin-bottom: 5rem;
 
             .case-body {
                 position: relative;
-                // background-color: mediumslateblue;
-                // border: 5px solid yellow;
-                width: 300px;
-                height: 300px;
-                @include flex(column);
-
 
                 .case-img {
-                    // position: absolute;
-                    width: 200px;
-                    // z-index: -1;
-                    height: 200px;
+                    position: relative;
+                    z-index: 1;
 
                     img {
-                        // border-radius: 50%;
+                        z-index: 1;
+                        border-radius: 1rem;
                         @include boxshadow;
+                        filter: grayscale(1);
+                        object-fit: cover;
+                        max-height: 500px;
                     }
                 }
 
                 .case-text {
-                    padding: 1rem;
-                    // background-color: moccasin;
-                    background-color: white;
-                    border-radius: 1.5rem;
+                    position: relative;
+                    @include flex(column);
+                    margin: 0rem -1.5rem 0;
+                    padding: 2.5rem;
+                    color: $sc-white;
+                    background-color: $sc-primary;
                     @include boxshadow;
-                    margin-top: -6rem;
-                    margin-left: 7.5rem;
-                    width: 250px;
-                    // align-self: flex-end;
+
+                    border-bottom-left-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+
+                    &-name {
+                        align-self: flex-start;
+
+                        p {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    &-quote {
+                        margin: 1.5rem 0;
+                    }
+
+                    &-position {
+                        font-style: italic;
+                        color: $sc-border;
+                    }
+
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        background-color: $sc-primary;
+                        top: -5rem;
+                        left: 0;
+                        height: 5rem;
+                        position: absolute;
+                        border-top-left-radius: 1rem;
+                        border-top-right-radius: 1rem;
+                    }
                 }
             }
         }
     }
 }
+
+@include media-md {
+    section.sc-cases-holder {
+        .case-card-container {
+            @include flex(row);
+            flex-wrap: wrap;
+
+            .case-card {
+                flex: 0 0 50%;
+
+                .case-body {
+                    margin: 0 2.5rem;
+                    position: relative;
+
+                    .case-img {
+                        position: relative;
+                        z-index: 1;
+
+                        img {
+                            max-height: 385px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    section.sc-cases-holder {
+        margin-top: -$nav-lg;
+
+        .case-card-container {
+            justify-content: space-around;
+
+            .case-card {
+                flex: none;
+
+                .case-body {
+                    position: relative;
+                    @include flex(row);
+                    height: 350px;
+                    margin: 0;
+
+                    .case-img {
+                        max-width: 225px;
+                        max-height: 280px;
+
+                        img {
+                            width: 225px;
+                            height: 280px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .case-text {
+                        align-self: flex-end;
+                        height: 300px;
+                        width: 250px;
+                        margin: 0;
+                        border-top-right-radius: 1rem;
+                        border-bottom-left-radius: 0;
+
+                        &-quote {
+                            margin-top: auto;
+                            margin-bottom: auto;
+                        }
+
+                        &::before {
+                            width: 5rem;
+                            left: -5rem;
+                            top: 0;
+                            height: 100%;
+                            border-bottom-left-radius: 1rem;
+                            border-top-left-radius: 0rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////
+// .case-card {
+//     .case-body {
+//         position: relative;
+//         width: 500px;
+//         height: 350px;
+//         @include flex(row);
+
+
+//         .case-img {
+//             width: 225px;
+//             z-index: 1;
+
+//             img {
+//                 border: 1px solid $sc-border;
+//                 border-radius: 1rem;
+//                 @include boxshadow;
+//                 filter: grayscale(1);
+//             }
+//         }
+
+//         .case-text {
+//             align-self: flex-end;
+
+//             padding: 2.5rem;
+//             position: relative;
+//             @include flex(column);
+
+//             color: white;
+//             height: 300px;
+//             width: 250px;
+
+//             background-color: $sc-primary;
+//             border-top-right-radius: 1rem;
+//             border-bottom-right-radius: 1rem;
+//             border-bottom: 1px solid $sc-primary;
+//             border-right: 1px solid $sc-primary;
+//             border-top: 1px solid $sc-primary;
+//             @include boxshadow;
+
+//             &-name {
+//                 align-self: flex-start;
+
+//                 p {
+//                     font-size: 2rem;
+//                 }
+//             }
+
+//             &-quote {
+//                 margin-top: auto;
+//                 margin-bottom: auto;
+//             }
+
+//             &-position {
+//                 font-style: italic;
+//                 color: $sc-border;
+//             }
+
+
+//             &::before {
+//                 content: "";
+//                 width: 5rem;
+//                 background-color: $sc-primary;
+//                 border-left: 1px solid $sc-primary;
+//                 border-bottom: 1px solid $sc-primary;
+//                 left: -5rem;
+//                 top: 0;
+//                 z-index: 0;
+//                 height: 100%;
+//                 position: absolute;
+//                 border-bottom-left-radius: 1rem;
+//             }
+//         }
+//     }
+
+
+//     margin-left: 2.5rem;
+//     margin-right: 2.5rem;
+// }
