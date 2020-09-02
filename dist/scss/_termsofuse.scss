@@ -1,0 +1,9 @@
+section.termsofuse {
+    margin-top: -$nav-sm;
+}
+
+@include media-lg {
+    section.termsofuse {
+        margin-top: -$nav-lg;
+    }
+}
