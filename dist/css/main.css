@@ -2280,6 +2280,85 @@ section.sc-home-reviews .review-container .trustpilot-carousel .reviews:nth-chil
   display: none;
 }
 
+section.sc-home-cases .cases-container {
+  margin: auto;
+  width: 90%;
+}
+
+section.sc-home-cases .cases-container .case-card {
+  margin: 5rem 0;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body {
+  position: relative;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-img {
+  position: relative;
+  z-index: 1;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-img img {
+  z-index: 1;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 500px;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-text {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0rem -1.5rem 0;
+  padding: 2.5rem;
+  color: #FFFFFF;
+  background-color: #182848;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-text-name {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-text-name p {
+  font-size: 2rem;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-text-quote {
+  margin: 1.5rem 0;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-text-position {
+  font-style: italic;
+  color: #e6e7e8;
+}
+
+section.sc-home-cases .cases-container .case-card .case-body .case-text::before {
+  content: "";
+  width: 100%;
+  background-color: #182848;
+  top: -5rem;
+  left: 0;
+  height: 5rem;
+  position: absolute;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 @media screen and (min-width: 767px) {
   section.sc-home-offers {
     margin-top: 0;
@@ -2343,6 +2422,35 @@ section.sc-home-reviews .review-container .trustpilot-carousel .reviews:nth-chil
   }
   section.sc-home-reviews .review-container .trustpilot-carousel .reviews:nth-child(3) {
     display: block;
+  }
+  section.sc-home-cases .cases-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  section.sc-home-cases .cases-container .case-card {
+    margin: 2.5rem 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body {
+    margin: 0 2.5rem;
+    position: relative;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body .case-img {
+    position: relative;
+    z-index: 1;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body .case-img img {
+    height: 385px;
   }
 }
 
@@ -2445,6 +2553,59 @@ section.sc-home-reviews .review-container .trustpilot-carousel .reviews:nth-chil
     max-height: -webkit-fit-content;
     max-height: -moz-fit-content;
     max-height: fit-content;
+  }
+  section.sc-home-cases .cases-container {
+    margin-top: 5rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  section.sc-home-cases .cases-container .case-card {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 350px;
+    margin: 0;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body .case-img {
+    max-width: 225px;
+    max-height: 280px;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body .case-img img {
+    width: 225px;
+    height: 280px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body .case-text {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    height: 300px;
+    width: 250px;
+    margin: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body .case-text-quote {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  section.sc-home-cases .cases-container .case-card .case-body .case-text::before {
+    width: 5rem;
+    left: -5rem;
+    top: 0;
+    height: 100%;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 0rem;
   }
 }
 
@@ -3145,7 +3306,7 @@ section.sc-cases-holder .case-card-container .case-card .case-body .case-text::b
     z-index: 1;
   }
   section.sc-cases-holder .case-card-container .case-card .case-body .case-img img {
-    max-height: 385px;
+    height: 385px;
   }
 }
 

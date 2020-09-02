@@ -327,6 +327,78 @@ section.sc-home-reviews {
     }
 }
 
+section.sc-home-cases {
+    .cases-container {
+        margin: auto;
+        width: 90%;
+
+        .case-card {
+            margin: 5rem 0;
+
+            .case-body {
+                position: relative;
+
+                .case-img {
+                    position: relative;
+                    z-index: 1;
+
+                    img {
+                        z-index: 1;
+                        border-radius: 1rem;
+                        @include boxshadow;
+                        filter: grayscale(1);
+                        object-fit: cover;
+                        max-height: 500px;
+                    }
+                }
+
+                .case-text {
+                    position: relative;
+                    @include flex(column);
+                    margin: 0rem -1.5rem 0;
+                    padding: 2.5rem;
+                    color: $sc-white;
+                    background-color: $sc-primary;
+                    @include boxshadow;
+
+                    border-bottom-left-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+
+                    &-name {
+                        align-self: flex-start;
+
+                        p {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    &-quote {
+                        margin: 1.5rem 0;
+                    }
+
+                    &-position {
+                        font-style: italic;
+                        color: $sc-border;
+                    }
+
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        background-color: $sc-primary;
+                        top: -5rem;
+                        left: 0;
+                        height: 5rem;
+                        position: absolute;
+                        border-top-left-radius: 1rem;
+                        border-top-right-radius: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include media-md {
     section.sc-home-landing {
         //////////
@@ -381,6 +453,33 @@ section.sc-home-reviews {
 
                     &:nth-child(3) {
                         display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    section.sc-home-cases {
+        .cases-container {
+            @include flex(row);
+            flex-wrap: wrap;
+            width: 100%;
+
+            .case-card {
+                margin: 2.5rem 0;
+                flex: 0 0 50%;
+
+                .case-body {
+                    margin: 0 2.5rem;
+                    position: relative;
+
+                    .case-img {
+                        position: relative;
+                        z-index: 1;
+
+                        img {
+                            height: 385px;
+                        }
                     }
                 }
             }
@@ -475,6 +574,58 @@ section.sc-home-reviews {
             justify-content: center;
             overflow: hidden;
             max-height: fit-content;
+        }
+    }
+
+    section.sc-home-cases {
+        .cases-container {
+            margin-top: 5rem;
+            justify-content: space-around;
+
+            .case-card {
+                flex: none;
+
+                .case-body {
+                    position: relative;
+                    @include flex(row);
+                    height: 350px;
+                    margin: 0;
+
+                    .case-img {
+                        max-width: 225px;
+                        max-height: 280px;
+
+                        img {
+                            width: 225px;
+                            height: 280px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .case-text {
+                        align-self: flex-end;
+                        height: 300px;
+                        width: 250px;
+                        margin: 0;
+                        border-top-right-radius: 1rem;
+                        border-bottom-left-radius: 0;
+
+                        &-quote {
+                            margin-top: auto;
+                            margin-bottom: auto;
+                        }
+
+                        &::before {
+                            width: 5rem;
+                            left: -5rem;
+                            top: 0;
+                            height: 100%;
+                            border-bottom-left-radius: 1rem;
+                            border-top-left-radius: 0rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
