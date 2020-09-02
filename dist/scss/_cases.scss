@@ -11,6 +11,7 @@ section.sc-cases-holder {
                 .case-img {
                     position: relative;
                     z-index: 1;
+                    @include transition(0.1s);
 
                     img {
                         z-index: 1;
@@ -62,6 +63,18 @@ section.sc-cases-holder {
                         position: absolute;
                         border-top-left-radius: 1rem;
                         border-top-right-radius: 1rem;
+                    }
+                }
+            }
+
+            &:hover {
+                .case-img {
+                    transform: translateY(-2%);
+                }
+
+                .case-text {
+                    &-name {
+                        text-decoration: underline;
                     }
                 }
             }

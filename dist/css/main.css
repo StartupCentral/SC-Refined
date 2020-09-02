@@ -2296,6 +2296,8 @@ section.sc-home-cases .cases-container .case-card .case-body {
 section.sc-home-cases .cases-container .case-card .case-body .case-img {
   position: relative;
   z-index: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 section.sc-home-cases .cases-container .case-card .case-body .case-img img {
@@ -2357,6 +2359,15 @@ section.sc-home-cases .cases-container .case-card .case-body .case-text::before 
   position: absolute;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+
+section.sc-home-cases .cases-container .case-card:hover .case-img {
+  -webkit-transform: translateY(-2%);
+          transform: translateY(-2%);
+}
+
+section.sc-home-cases .cases-container .case-card:hover .case-text-name {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 767px) {
@@ -2451,6 +2462,10 @@ section.sc-home-cases .cases-container .case-card .case-body .case-text::before 
   }
   section.sc-home-cases .cases-container .case-card .case-body .case-img img {
     height: 385px;
+  }
+  section.sc-home-cases .read-more-box {
+    margin-top: 2.5rem;
+    margin-bottom: -5rem;
   }
 }
 
@@ -3217,6 +3232,8 @@ section.sc-cases-holder .case-card-container .case-card .case-body {
 section.sc-cases-holder .case-card-container .case-card .case-body .case-img {
   position: relative;
   z-index: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 section.sc-cases-holder .case-card-container .case-card .case-body .case-img img {
@@ -3278,6 +3295,15 @@ section.sc-cases-holder .case-card-container .case-card .case-body .case-text::b
   position: absolute;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+
+section.sc-cases-holder .case-card-container .case-card:hover .case-img {
+  -webkit-transform: translateY(-2%);
+          transform: translateY(-2%);
+}
+
+section.sc-cases-holder .case-card-container .case-card:hover .case-text-name {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 767px) {
