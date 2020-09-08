@@ -29,7 +29,8 @@ section.sc-settings {
                 }
 
                 i {
-                    font-size: 3rem;
+                    font-size: 2.6rem;
+                    color: $sc-primary;
                 }
 
                 span {
@@ -51,6 +52,10 @@ section.sc-settings {
 
                 button {
                     color: $sc-white;
+
+                    i {
+                        color: $sc-white;
+                    }
 
                     &:hover {
                         background-color: $sc-primary;
@@ -87,6 +92,20 @@ section.sc-settings {
             justify-content: center;
             align-items: center;
             padding: 0;
+
+            .box {
+                width: 100%;
+
+                #industry {
+                    input {
+                        cursor: not-allowed;
+                    }
+
+                    i {
+                        color: $sc-white;
+                    }
+                }
+            }
 
             .form-container {
                 #phone {
@@ -152,7 +171,6 @@ section.sc-settings {
         .settings-main {
             .form-box-container {
                 .box {
-                    width: 100%;
                     @include flex(row);
 
                     #cvr {
@@ -162,14 +180,6 @@ section.sc-settings {
                     #industry {
                         flex: 0 0 75%;
                         margin-left: 2.5rem;
-
-                        &:disabled {
-                            background: $sc-border;
-                        }
-
-                        i {
-                            color: $sc-white;
-                        }
                     }
 
                     .zip {

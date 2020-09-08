@@ -528,8 +528,18 @@ section.sc-home-cases {
         }
 
         .landing-buttons {
+            @include flex(row);
             min-width: 50rem;
             width: 50rem;
+
+            .button-left {
+                width: 50%;
+                margin-right: .5rem;
+            }
+
+            .button-right {
+                width: 50%;
+            }
         }
 
         .landing-img {

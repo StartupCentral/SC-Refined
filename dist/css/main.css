@@ -2553,8 +2553,22 @@ section.sc-home-cases .cases-container .case-card:hover .case-text-name {
     max-width: 500px;
   }
   section.sc-home-landing .landing-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     min-width: 50rem;
     width: 50rem;
+  }
+  section.sc-home-landing .landing-buttons .button-left {
+    width: 50%;
+    margin-right: .5rem;
+  }
+  section.sc-home-landing .landing-buttons .button-right {
+    width: 50%;
   }
   section.sc-home-landing .landing-img {
     position: absolute;
@@ -7168,7 +7182,8 @@ section.sc-settings .settings-header .header-tab button:hover {
 }
 
 section.sc-settings .settings-header .header-tab button i {
-  font-size: 3rem;
+  font-size: 2.6rem;
+  color: #182848;
 }
 
 section.sc-settings .settings-header .header-tab button span {
@@ -7188,6 +7203,10 @@ section.sc-settings .settings-header .header-tab.active {
 }
 
 section.sc-settings .settings-header .header-tab.active button {
+  color: #FFFFFF;
+}
+
+section.sc-settings .settings-header .header-tab.active button i {
   color: #FFFFFF;
 }
 
@@ -7233,6 +7252,18 @@ section.sc-settings .settings-main .form-box-container {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
+}
+
+section.sc-settings .settings-main .form-box-container .box {
+  width: 100%;
+}
+
+section.sc-settings .settings-main .form-box-container .box #industry input {
+  cursor: not-allowed;
+}
+
+section.sc-settings .settings-main .form-box-container .box #industry i {
+  color: #FFFFFF;
 }
 
 section.sc-settings .settings-main .form-box-container .form-container #phone {
@@ -7294,7 +7325,6 @@ section.sc-settings .settings-button button {
 
 @media screen and (min-width: 1023px) {
   section.sc-settings .settings-main .form-box-container .box {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7308,12 +7338,6 @@ section.sc-settings .settings-button button {
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
     margin-left: 2.5rem;
-  }
-  section.sc-settings .settings-main .form-box-container .box #industry:disabled {
-    background: #e6e7e8;
-  }
-  section.sc-settings .settings-main .form-box-container .box #industry i {
-    color: #FFFFFF;
   }
   section.sc-settings .settings-main .form-box-container .box .city {
     -webkit-box-flex: 0;
