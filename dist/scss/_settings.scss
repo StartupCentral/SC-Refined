@@ -27,6 +27,14 @@ section.sc-settings {
                     @include transition(0.2s);
                     background-color: $sc-border;
                 }
+
+                i {
+                    font-size: 3rem;
+                }
+
+                span {
+                    display: none;
+                }
             }
 
 
@@ -54,7 +62,7 @@ section.sc-settings {
 
     .settings-main {
         border-top: $sc-border 1px solid;
-        margin-top: -1.8rem;
+        margin-top: -1.6rem;
         padding-top: 4rem;
 
         &.account-settings {
@@ -117,14 +125,63 @@ section.sc-settings {
             .header-tab {
                 button {
                     padding: 1rem;
+
+                    i {
+                        display: none;
+
+                    }
+
+                    span {
+                        display: block;
+                    }
                 }
+
             }
         }
 
         .settings-main {
-            margin-top: -1.5rem;
+            margin-top: -1.6rem;
             padding-top: 3rem;
         }
     }
 
+}
+
+@include media-lg {
+    section.sc-settings {
+        .settings-main {
+            .form-box-container {
+                .box {
+                    width: 100%;
+                    @include flex(row);
+
+                    #cvr {
+                        // flex: 40%;
+                    }
+
+                    #industry {
+                        flex: 0 0 75%;
+                        margin-left: 2.5rem;
+
+                        &:disabled {
+                            background: $sc-border;
+                        }
+
+                        i {
+                            color: $sc-white;
+                        }
+                    }
+
+                    .zip {
+                        // flex: 0 0 25%;
+                    }
+
+                    .city {
+                        flex: 0 0 75%;
+                        margin-left: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
 }

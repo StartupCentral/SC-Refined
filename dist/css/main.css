@@ -146,12 +146,12 @@
 
 #sc-site-header .signupline {
   position: absolute;
-  height: 2.2rem;
+  height: 3rem;
   width: 100%;
   display: none;
   margin: auto;
   background-color: #223869;
-  bottom: -2.2rem;
+  bottom: -3rem;
   z-index: -1;
   padding: .5rem;
   -webkit-box-align: center;
@@ -167,7 +167,7 @@
 
 #sc-site-header .signupline span {
   color: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -7167,6 +7167,14 @@ section.sc-settings .settings-header .header-tab button:hover {
   background-color: #e6e7e8;
 }
 
+section.sc-settings .settings-header .header-tab button i {
+  font-size: 3rem;
+}
+
+section.sc-settings .settings-header .header-tab button span {
+  display: none;
+}
+
 section.sc-settings .settings-header .header-tab span {
   margin: auto;
 }
@@ -7189,7 +7197,7 @@ section.sc-settings .settings-header .header-tab.active button:hover {
 
 section.sc-settings .settings-main {
   border-top: #e6e7e8 1px solid;
-  margin-top: -1.8rem;
+  margin-top: -1.6rem;
   padding-top: 4rem;
 }
 
@@ -7272,9 +7280,46 @@ section.sc-settings .settings-button button {
   section.sc-settings .settings-header .header-tab button {
     padding: 1rem;
   }
+  section.sc-settings .settings-header .header-tab button i {
+    display: none;
+  }
+  section.sc-settings .settings-header .header-tab button span {
+    display: block;
+  }
   section.sc-settings .settings-main {
-    margin-top: -1.5rem;
+    margin-top: -1.6rem;
     padding-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  section.sc-settings .settings-main .form-box-container .box {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section.sc-settings .settings-main .form-box-container .box #industry {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
+    margin-left: 2.5rem;
+  }
+  section.sc-settings .settings-main .form-box-container .box #industry:disabled {
+    background: #e6e7e8;
+  }
+  section.sc-settings .settings-main .form-box-container .box #industry i {
+    color: #FFFFFF;
+  }
+  section.sc-settings .settings-main .form-box-container .box .city {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
+    margin-left: 2.5rem;
   }
 }
 
