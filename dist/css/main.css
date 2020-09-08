@@ -5764,9 +5764,191 @@ section.sc-faq-questions .questions-container .questions .answer p {
   margin: 0 4rem 4rem;
 }
 
+section.sc-faq-cards .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #182848;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+section.sc-faq-cards .categories button.category {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #182848;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #182848;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #182848;
+  background: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #FFFFFF;
+  margin-top: 0;
+}
+
+section.sc-faq-cards .categories button.category:hover {
+  background: #223869;
+  border-color: #223869;
+}
+
+section.sc-faq-cards .categories button.category:hover, section.sc-faq-cards .categories button.category:focus {
+  color: #FFFFFF;
+  background: #223869;
+  border-color: #223869;
+  border-color: #FFFFFF;
+}
+
+section.sc-faq-cards .cards-container .faqcard-body {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.sc-faq-cards .cards-container .faqcard-body .faqcard {
+  margin: 5rem 0;
+}
+
+section.sc-faq-cards .cards-container .faqcard-body .faqcard-answer {
+  margin: 2.5rem 0;
+}
+
+section.sc-faq-cards .cards-container .faqcard-body .faqcard .tags {
+  margin: 2.5rem 0;
+}
+
+section.sc-faq-cards .cards-container .faqcard-body .faqcard-link {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  background: #182848;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #182848;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+section.sc-faq-cards .cards-container .faqcard-body .faqcard-link:hover {
+  background: #223869;
+  border-color: #223869;
+}
+
+section.sc-faq-cards .cards-container .faqcard-body .faqcard-link a {
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 767px) {
+  section.sc-faq-cards .categories {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.sc-faq-cards .categories .category {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .55rem 1.5rem;
+    border-radius: .5rem;
+    color: #FFFFFF;
+    background: #182848;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #182848;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  section.sc-faq-cards .categories .category:hover {
+    background: #223869;
+    border-color: #223869;
+  }
+  section.sc-faq-cards .cards-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 1023px) {
   section.sc-faq-questions {
     margin-top: -90px;
+  }
+  section.sc-faq-cards .categories {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: #182848;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  section.sc-faq-cards .categories button.category {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .55rem 1.5rem;
+    border-radius: .5rem;
+    color: #FFFFFF;
+    background: #182848;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #182848;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color: #182848;
+    background: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #FFFFFF;
+    margin-top: 0;
+  }
+  section.sc-faq-cards .categories button.category:hover {
+    background: #223869;
+    border-color: #223869;
+  }
+  section.sc-faq-cards .categories button.category:hover, section.sc-faq-cards .categories button.category:focus {
+    color: #FFFFFF;
+    background: #223869;
+    border-color: #223869;
+    border-color: #FFFFFF;
   }
 }
 

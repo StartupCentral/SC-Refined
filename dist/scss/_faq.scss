@@ -50,8 +50,91 @@ section.sc-faq-questions {
     }
 }
 
+section.sc-faq-cards {
+    .categories {
+        @include flex(row);
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background-color: $sc-primary;
+        border-radius: .5rem;
+        padding: 1rem;
+
+        button.category {
+            @include btn-white;
+            margin-top: 0;
+        }
+    }
+
+    .cards-container {
+        .faqcard-body {
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .faqcard {
+                margin: 5rem 0;
+
+                &-question {}
+
+                &-answer {
+                    margin: 2.5rem 0;
+                }
+
+                .tags {
+                    margin: 2.5rem 0;
+                }
+
+                &-link {
+                    @include btn;
+
+                    a {
+                        color: $sc-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    section.sc-faq-cards {
+        .categories {
+            @include flex(row);
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .category {
+                @include btn;
+            }
+        }
+
+        .cards-container {
+            @include flex(row);
+            flex-wrap: wrap;
+        }
+    }
+}
+
 @include media-lg {
     section.sc-faq-questions {
         margin-top: -$nav-lg;
+    }
+
+    section.sc-faq-cards {
+        .categories {
+            @include flex(row);
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            background-color: $sc-primary;
+            border-radius: .5rem;
+            padding: 1rem;
+            margin-left: 2.5rem;
+            margin-right: 2.5rem;
+
+            button.category {
+                @include btn-white;
+                margin-top: 0;
+            }
+        }
     }
 }
