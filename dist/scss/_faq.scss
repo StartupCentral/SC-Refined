@@ -51,17 +51,46 @@ section.sc-faq-questions {
 }
 
 section.sc-faq-cards {
+    padding-top: 0;
+
     .categories {
-        @include flex(row);
-        justify-content: space-evenly;
+        @include flex(column);
+        justify-content: space-around;
         flex-wrap: wrap;
-        background-color: $sc-primary;
+        // background-color: $sc-primary;
         border-radius: .5rem;
         padding: 1rem;
 
+        .top {
+            @include flex(row);
+            margin: auto;
+        }
+
+        .bottom {
+            @include flex(row);
+            margin: auto;
+
+        }
+
         button.category {
-            @include btn-white;
-            margin-top: 0;
+            cursor: pointer;
+            text-align: center;
+            margin: .5rem .5rem;
+            padding: .55rem 1.5rem;
+            border-radius: 2.5rem;
+
+            color: $sc-primary;
+            background: $sc-white;
+            font-family: $font-primary;
+            border: 1px solid $sc-primary;
+
+            @include transition(.2s);
+
+            &:focus,
+            &:hover {
+                background: $sc-primary;
+                color: $sc-white;
+            }
         }
     }
 
@@ -81,6 +110,7 @@ section.sc-faq-cards {
                 }
 
                 .tags {
+                    display: none;
                     margin: 2.5rem 0;
                 }
 
@@ -99,13 +129,8 @@ section.sc-faq-cards {
 @include media-md {
     section.sc-faq-cards {
         .categories {
-            @include flex(row);
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-
-            .category {
-                @include btn;
-            }
+            max-width: 600px;
+            margin: auto;
         }
 
         .cards-container {
@@ -120,21 +145,5 @@ section.sc-faq-cards {
         margin-top: -$nav-lg;
     }
 
-    section.sc-faq-cards {
-        .categories {
-            @include flex(row);
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            background-color: $sc-primary;
-            border-radius: .5rem;
-            padding: 1rem;
-            margin-left: 2.5rem;
-            margin-right: 2.5rem;
-
-            button.category {
-                @include btn-white;
-                margin-top: 0;
-            }
-        }
-    }
+    section.sc-faq-cards {}
 }
