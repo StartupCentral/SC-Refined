@@ -150,7 +150,7 @@
   width: 100%;
   display: none;
   margin: auto;
-  background-color: #080808;
+  background-color: #223869;
   bottom: -2.2rem;
   z-index: -1;
   padding: .5rem;
@@ -241,7 +241,7 @@
 }
 
 #sc-site-header nav.mobile-menu .topmenu-section .signup-button span:hover {
-  background-color: #080808;
+  background-color: #223869;
 }
 
 #sc-site-header nav.mobile-menu .topmenu-section .topmenu-buttons {
@@ -580,7 +580,7 @@
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 0 2rem;
-    background-color: #080808;
+    background-color: #223869;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid #30C1F3;
   }
@@ -1180,8 +1180,8 @@ footer.main-footer section.footer-social .social-cvr {
 }
 
 .sc-popup .popup-buttons .button-primary:hover {
-  background: #080808;
-  border: 1px solid #080808;
+  background: #223869;
+  border: 1px solid #223869;
 }
 
 @media screen and (min-width: 767px) {
@@ -1658,7 +1658,7 @@ footer.main-footer section.footer-social .social-cvr {
   cursor: pointer;
   background: none;
   border: none;
-  color: #080808;
+  color: #223869;
 }
 
 .sc-login-page .login-page-container .form-box-container .forgot-password .fpw:hover {
@@ -1698,7 +1698,7 @@ footer.main-footer section.footer-social .social-cvr {
   cursor: pointer;
   background: none;
   border: none;
-  color: #080808;
+  color: #223869;
   margin-top: 1.5rem;
 }
 
@@ -1883,14 +1883,14 @@ section.sc-home-landing .landing-buttons .button-left {
 }
 
 section.sc-home-landing .landing-buttons .button-left:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 section.sc-home-landing .landing-buttons .button-left:hover, section.sc-home-landing .landing-buttons .button-left:focus {
   color: #FFFFFF;
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
   border-color: #FFFFFF;
 }
 
@@ -1913,14 +1913,14 @@ section.sc-home-landing .landing-buttons .button-right {
 }
 
 section.sc-home-landing .landing-buttons .button-right:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 section.sc-home-landing .landing-buttons .button-right:hover, section.sc-home-landing .landing-buttons .button-right:focus {
   color: #FFFFFF;
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
   border-color: #FFFFFF;
 }
 
@@ -2125,8 +2125,8 @@ section.sc-home-services .services-card-container .service-card-button {
 }
 
 section.sc-home-services .services-card-container .service-card-button:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 section.sc-home-coaches {
@@ -2762,8 +2762,8 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 }
 
 section.sc-partners-partnercards .container .cards-container .card-body .card .button:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 @media screen and (min-width: 767px) {
@@ -2875,8 +2875,8 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 }
 
 #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .cta-btn:hover, #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .cta-btn:focus {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .promocode {
@@ -3005,14 +3005,14 @@ section.coach-header .container .coach-text button {
 }
 
 section.coach-header .container .coach-text button:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 section.coach-header .container .coach-text button:hover, section.coach-header .container .coach-text button:focus {
   color: #FFFFFF;
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
   border-color: #FFFFFF;
 }
 
@@ -3075,13 +3075,13 @@ section.coach-testimonial .container .card .coach-description {
     margin-bottom: 1rem;
   }
   section.coach-header .container .coach-text button:hover {
-    background: #080808;
-    border-color: #080808;
+    background: #223869;
+    border-color: #223869;
   }
   section.coach-header .container .coach-text button:hover, section.coach-header .container .coach-text button:focus {
     color: #FFFFFF;
-    background: #080808;
-    border-color: #080808;
+    background: #223869;
+    border-color: #223869;
     border-color: #FFFFFF;
   }
   section.coach-header .container .coach-text button:hover, section.coach-header .container .coach-text button:focus {
@@ -3260,8 +3260,8 @@ section.coach-holder2 .coachcard-buttons .profile-btn {
 }
 
 section.coach-holder2 .coachcard-buttons .profile-btn:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 section.coach-holder2 .coachcard-buttons .send-msg {
@@ -3282,8 +3282,8 @@ section.coach-holder2 .coachcard-buttons .send-msg {
 }
 
 section.coach-holder2 .coachcard-buttons .send-msg:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 @media screen and (min-width: 1023px) {
@@ -6337,7 +6337,7 @@ section.contact-section .contact-container .contact-info-social a:hover i {
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoices-container::-webkit-scrollbar-thumb:hover {
-  background: #080808;
+  background: #223869;
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice {
@@ -6934,7 +6934,7 @@ section.sc-usermessages-inbox .pm-container .private-messages .message-body-butt
 }
 
 section.sc-usermessages-inbox .pm-container .private-messages .message-body-button a:hover {
-  background-color: #080808;
+  background-color: #223869;
 }
 
 section.sc-usermessages-inbox .pm-container textarea {
@@ -6997,7 +6997,7 @@ section.sc-usermessages-inbox .pm-container .button {
     border-radius: 10px;
   }
   .private-messages::-webkit-scrollbar-thumb:hover {
-    background: #080808;
+    background: #223869;
   }
 }
 
@@ -7603,7 +7603,7 @@ section.bpoverview .bpo-container .bpo-navigation-container .business-nav {
 }
 
 section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link {
-  background-color: #080808;
+  background-color: #223869;
   color: #FFFFFF;
   text-align: center;
   margin-top: 0rem;
@@ -7716,7 +7716,7 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-form::-webkit-
 }
 
 section.bpoverview .bpo-container .bpoverview-form-container .bpo-form::-webkit-scrollbar-thumb:hover {
-  background: #080808;
+  background: #223869;
 }
 
 section.bpoverview .bpo-container .bpoverview-form-container .bpo-form.active {
@@ -7864,13 +7864,13 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbt
     margin-top: 5rem;
   }
   section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link:hover {
-    background: #080808;
-    border-color: #080808;
+    background: #223869;
+    border-color: #223869;
   }
   section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link:hover, section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link:focus {
     color: #FFFFFF;
-    background: #080808;
-    border-color: #080808;
+    background: #223869;
+    border-color: #223869;
     border-color: #FFFFFF;
   }
   section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link i {
@@ -7936,7 +7936,7 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbt
     border-radius: 10px;
   }
   section.bpoverview .bpo-container .bpoverview-form-container .bpo-form::-webkit-scrollbar-thumb:hover {
-    background: #080808;
+    background: #223869;
   }
   section.bpoverview .bpo-container .bpoverview-form-container .bpo-form .category {
     font-size: 1.6rem;
@@ -8514,8 +8514,8 @@ textarea:focus {
 }
 
 .button:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 .button-white {
@@ -8537,14 +8537,14 @@ textarea:focus {
 }
 
 .button-white:hover {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 .button-white:hover, .button-white:focus {
   color: #FFFFFF;
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
   border-color: #FFFFFF;
 }
 
@@ -8564,8 +8564,8 @@ textarea:focus {
 }
 
 .cta-button:hover, .cta-button:focus {
-  background: #080808;
-  border-color: #080808;
+  background: #223869;
+  border-color: #223869;
 }
 
 .bg-soft {
