@@ -150,7 +150,7 @@
   width: 100%;
   display: none;
   margin: auto;
-  background-color: #223869;
+  background-color: #080808;
   bottom: -2.2rem;
   z-index: -1;
   padding: .5rem;
@@ -184,6 +184,7 @@
           transform: translateX(-100%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  z-index: 5;
 }
 
 #sc-site-header nav.mobile-menu.active {
@@ -206,6 +207,10 @@
           justify-content: space-evenly;
 }
 
+#sc-site-header nav.mobile-menu .topmenu-section a {
+  width: auto;
+}
+
 #sc-site-header nav.mobile-menu .topmenu-section .signup-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,7 +226,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: .75rem 1rem;
   font-weight: 700;
   background-color: #30C1F3;
@@ -232,11 +237,11 @@
 }
 
 #sc-site-header nav.mobile-menu .topmenu-section .signup-button span i {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 #sc-site-header nav.mobile-menu .topmenu-section .signup-button span:hover {
-  background-color: #223869;
+  background-color: #080808;
 }
 
 #sc-site-header nav.mobile-menu .topmenu-section .topmenu-buttons {
@@ -575,7 +580,7 @@
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 0 2rem;
-    background-color: #223869;
+    background-color: #080808;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid #30C1F3;
   }
@@ -1175,8 +1180,8 @@ footer.main-footer section.footer-social .social-cvr {
 }
 
 .sc-popup .popup-buttons .button-primary:hover {
-  background: #223869;
-  border: 1px solid #223869;
+  background: #080808;
+  border: 1px solid #080808;
 }
 
 @media screen and (min-width: 767px) {
@@ -1226,12 +1231,67 @@ footer.main-footer section.footer-social .social-cvr {
 .sc-register-page .register-page-container .register-header {
   margin-top: auto;
   text-align: center;
+  padding: 0 2.5rem;
 }
 
 .sc-register-page .register-page-container .register-header img {
   margin: auto;
   max-width: 500px;
-  padding: 1rem 2.5rem;
+  padding: 1rem 0rem;
+}
+
+.sc-register-page .register-page-container .register-header .tooltip {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+  color: #FFFFFF;
+  color: #182848;
+}
+
+.sc-register-page .register-page-container .register-header .tooltip i {
+  font-size: 2rem;
+}
+
+.sc-register-page .register-page-container .register-header .tooltip i:hover .tooltip-text {
+  visibility: visible;
+}
+
+.sc-register-page .register-page-container .register-header .tooltip i span {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.sc-register-page .register-page-container .register-header .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 27.5rem;
+  padding: 1rem;
+  right: 3rem;
+  background-color: #182848;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: .5rem;
+  border-top-right-radius: 0;
+  border: 1px solid #e6e7e8;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  z-index: 1;
+}
+
+.sc-register-page .register-page-container .register-header .tooltip-text:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #182848;
 }
 
 .sc-register-page .register-page-container .form-box-container {
@@ -1445,6 +1505,9 @@ footer.main-footer section.footer-social .social-cvr {
   .sc-register-page .register-page-container {
     max-width: 500px;
   }
+  .sc-register-page .register-page-container .register-header .tooltip-text {
+    width: 42rem;
+  }
   .sc-register-page .register-page-container .form-box-container .form-container.subscription-cb .rb-container {
     display: -ms-grid;
     display: grid;
@@ -1524,7 +1587,7 @@ footer.main-footer section.footer-social .social-cvr {
 .sc-login-page .login-page-container {
   position: relative;
   max-width: 350px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
@@ -1595,7 +1658,7 @@ footer.main-footer section.footer-social .social-cvr {
   cursor: pointer;
   background: none;
   border: none;
-  color: #223869;
+  color: #080808;
 }
 
 .sc-login-page .login-page-container .form-box-container .forgot-password .fpw:hover {
@@ -1635,7 +1698,7 @@ footer.main-footer section.footer-social .social-cvr {
   cursor: pointer;
   background: none;
   border: none;
-  color: #223869;
+  color: #080808;
   margin-top: 1.5rem;
 }
 
@@ -1820,14 +1883,14 @@ section.sc-home-landing .landing-buttons .button-left {
 }
 
 section.sc-home-landing .landing-buttons .button-left:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 section.sc-home-landing .landing-buttons .button-left:hover, section.sc-home-landing .landing-buttons .button-left:focus {
   color: #FFFFFF;
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
   border-color: #FFFFFF;
 }
 
@@ -1850,14 +1913,14 @@ section.sc-home-landing .landing-buttons .button-right {
 }
 
 section.sc-home-landing .landing-buttons .button-right:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 section.sc-home-landing .landing-buttons .button-right:hover, section.sc-home-landing .landing-buttons .button-right:focus {
   color: #FFFFFF;
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
   border-color: #FFFFFF;
 }
 
@@ -2062,8 +2125,8 @@ section.sc-home-services .services-card-container .service-card-button {
 }
 
 section.sc-home-services .services-card-container .service-card-button:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 section.sc-home-coaches {
@@ -2148,6 +2211,11 @@ section.sc-home-coaches .read-more-box a:hover {
   color: #30C1F3;
 }
 
+section.sc-home-statistics {
+  background-color: #182848;
+  color: #FFFFFF;
+}
+
 section.sc-home-statistics .headline-2 {
   font-weight: bold;
   line-height: 1.3;
@@ -2202,6 +2270,14 @@ section.sc-home-statistics .statistic .numbers {
 section.sc-home-statistics .statistic h3 {
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+section.sc-home-statistics .statistic .icon-container {
+  background-color: #FFFFFF;
+}
+
+section.sc-home-statistics .statistic .icon-container i {
+  color: #182848;
 }
 
 section.sc-home-partners-all .container-big {
@@ -2686,8 +2762,8 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 }
 
 section.sc-partners-partnercards .container .cards-container .card-body .card .button:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 @media screen and (min-width: 767px) {
@@ -2799,8 +2875,8 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 }
 
 #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .cta-btn:hover, #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .cta-btn:focus {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 #sc-partnerpage .aside-container aside.partner-info .column-container .partner-header .header-text .promocode {
@@ -2929,14 +3005,14 @@ section.coach-header .container .coach-text button {
 }
 
 section.coach-header .container .coach-text button:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 section.coach-header .container .coach-text button:hover, section.coach-header .container .coach-text button:focus {
   color: #FFFFFF;
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
   border-color: #FFFFFF;
 }
 
@@ -2999,13 +3075,13 @@ section.coach-testimonial .container .card .coach-description {
     margin-bottom: 1rem;
   }
   section.coach-header .container .coach-text button:hover {
-    background: #223869;
-    border-color: #223869;
+    background: #080808;
+    border-color: #080808;
   }
   section.coach-header .container .coach-text button:hover, section.coach-header .container .coach-text button:focus {
     color: #FFFFFF;
-    background: #223869;
-    border-color: #223869;
+    background: #080808;
+    border-color: #080808;
     border-color: #FFFFFF;
   }
   section.coach-header .container .coach-text button:hover, section.coach-header .container .coach-text button:focus {
@@ -3184,8 +3260,8 @@ section.coach-holder2 .coachcard-buttons .profile-btn {
 }
 
 section.coach-holder2 .coachcard-buttons .profile-btn:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 section.coach-holder2 .coachcard-buttons .send-msg {
@@ -3206,8 +3282,8 @@ section.coach-holder2 .coachcard-buttons .send-msg {
 }
 
 section.coach-holder2 .coachcard-buttons .send-msg:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 @media screen and (min-width: 1023px) {
@@ -3789,23 +3865,8 @@ section.sc-team-join .button {
   }
 }
 
-section.sc-weoffer-help {
-  margin-top: -75px;
-}
-
-section.sc-weoffer-help .help-container .help {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 section.sc-weoffer-conditions {
-  background-color: #182848;
-  color: #FFFFFF;
+  margin-top: -75px;
 }
 
 section.sc-weoffer-conditions .headline-2 {
@@ -3837,6 +3898,11 @@ section.sc-weoffer-conditions .container .text-container {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+}
+
+section.sc-weoffer-cost {
+  background-color: #182848;
+  color: #FFFFFF;
 }
 
 section.sc-weoffer-cost .headline-2 {
@@ -3901,26 +3967,17 @@ section.sc-weoffer-cost .price-box a:hover {
   text-decoration: underline;
 }
 
+section.sc-weoffer-help .help-container .help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 @media screen and (min-width: 767px) {
-  section.sc-weoffer-help {
-    margin-top: -75px;
-  }
-  section.sc-weoffer-help .help-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  section.sc-weoffer-help .help-container .column-container {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
-  }
   section.sc-weoffer-conditions .container .text-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3966,19 +4023,27 @@ section.sc-weoffer-cost .price-box a:hover {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
-}
-
-@media screen and (min-width: 1023px) {
-  section.sc-weoffer-help {
-    margin-top: -90px;
+  section.sc-weoffer-help .help-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   section.sc-weoffer-help .help-container .column-container {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
   }
-  section.sc-weoffer-help .help-container .column-container .help h3 {
-    font-size: 1.8rem;
+}
+
+@media screen and (min-width: 1023px) {
+  section.sc-weoffer-conditions {
+    margin-top: -90px;
   }
   section.sc-weoffer-cost .container .text-container {
     display: -webkit-box;
@@ -3997,6 +4062,14 @@ section.sc-weoffer-cost .price-box a:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
+  }
+  section.sc-weoffer-help .help-container .column-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+  section.sc-weoffer-help .help-container .column-container .help h3 {
+    font-size: 1.8rem;
   }
 }
 
@@ -6264,7 +6337,7 @@ section.contact-section .contact-container .contact-info-social a:hover i {
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoices-container::-webkit-scrollbar-thumb:hover {
-  background: #223869;
+  background: #080808;
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice {
@@ -6861,7 +6934,7 @@ section.sc-usermessages-inbox .pm-container .private-messages .message-body-butt
 }
 
 section.sc-usermessages-inbox .pm-container .private-messages .message-body-button a:hover {
-  background-color: #223869;
+  background-color: #080808;
 }
 
 section.sc-usermessages-inbox .pm-container textarea {
@@ -6924,7 +6997,7 @@ section.sc-usermessages-inbox .pm-container .button {
     border-radius: 10px;
   }
   .private-messages::-webkit-scrollbar-thumb:hover {
-    background: #223869;
+    background: #080808;
   }
 }
 
@@ -7530,7 +7603,7 @@ section.bpoverview .bpo-container .bpo-navigation-container .business-nav {
 }
 
 section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link {
-  background-color: #223869;
+  background-color: #080808;
   color: #FFFFFF;
   text-align: center;
   margin-top: 0rem;
@@ -7643,7 +7716,7 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-form::-webkit-
 }
 
 section.bpoverview .bpo-container .bpoverview-form-container .bpo-form::-webkit-scrollbar-thumb:hover {
-  background: #223869;
+  background: #080808;
 }
 
 section.bpoverview .bpo-container .bpoverview-form-container .bpo-form.active {
@@ -7791,13 +7864,13 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbt
     margin-top: 5rem;
   }
   section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link:hover {
-    background: #223869;
-    border-color: #223869;
+    background: #080808;
+    border-color: #080808;
   }
   section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link:hover, section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link:focus {
     color: #FFFFFF;
-    background: #223869;
-    border-color: #223869;
+    background: #080808;
+    border-color: #080808;
     border-color: #FFFFFF;
   }
   section.bpoverview .bpo-container .bpo-navigation-container .pdf-download-link i {
@@ -7863,7 +7936,7 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbt
     border-radius: 10px;
   }
   section.bpoverview .bpo-container .bpoverview-form-container .bpo-form::-webkit-scrollbar-thumb:hover {
-    background: #223869;
+    background: #080808;
   }
   section.bpoverview .bpo-container .bpoverview-form-container .bpo-form .category {
     font-size: 1.6rem;
@@ -8441,8 +8514,8 @@ textarea:focus {
 }
 
 .button:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 .button-white {
@@ -8464,14 +8537,14 @@ textarea:focus {
 }
 
 .button-white:hover {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 .button-white:hover, .button-white:focus {
   color: #FFFFFF;
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
   border-color: #FFFFFF;
 }
 
@@ -8491,8 +8564,8 @@ textarea:focus {
 }
 
 .cta-button:hover, .cta-button:focus {
-  background: #223869;
-  border-color: #223869;
+  background: #080808;
+  border-color: #080808;
 }
 
 .bg-soft {

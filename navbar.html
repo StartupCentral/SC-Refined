@@ -15,7 +15,7 @@
     <title>NavigationBar</title>
 </head>
 
-<body style="height: 300vh; background-color: aliceblue;">
+<body style="height: 100vh; background-color: aliceblue;">
     <!--
     When starting to scroll down add class: scrolling
     When the pixel from top reaches 100px add .scroll-down
@@ -249,6 +249,9 @@
         </nav>
 
         <nav class="mobile-menu">
+            <div class="overlay">
+
+            </div>
             <div class="topmenu-section">
                 <!-- <a href="minside.html" id="my-profile" class="topmenu-buttons">
                     <i class="fas fa-user"></i>
@@ -267,7 +270,7 @@
 
                 <a href="register.html" id="signup-btn" class="signup-button">
                     <span>
-                        Sign up
+                        Bliv Medlem
                         <i class="fas fa-user-plus"></i>
                     </span>
                 </a>
@@ -439,23 +442,6 @@
     <script src="dist/js/jquery-3.5.1.js"></script>
 
     <script src="dist/js/navbarscripts.js"></script>
-
-
-    <script>
-        // ===== Scroll to Top ==== 
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= 200) { // If page is scrolled more than 50px
-                $('#return-to-top').fadeIn(200); // Fade in the arrow
-            } else {
-                $('#return-to-top').fadeOut(200); // Else fade out the arrow
-            }
-        });
-        $('#return-to-top').click(function () { // When arrow is clicked
-            $('body,html').animate({
-                scrollTop: 0 // Scroll to top of body
-            }, 500);
-        });
-    </script>
 </body>
 
 </html>

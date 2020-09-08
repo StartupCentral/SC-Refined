@@ -1,17 +1,7 @@
-section.sc-weoffer-help {
-    margin-top: -$nav-sm;
-
-    .help-container {
-
-        .help {
-            @include flex(column);
-        }
-    }
-}
-
 section.sc-weoffer-conditions {
-    background-color: $sc-primary;
-    color: $sc-white;
+    margin-top: -$nav-sm;
+    // background-color: $sc-primary;
+    // color: $sc-white;
 
     .headline-2 {
         @include sc-title-text;
@@ -26,6 +16,9 @@ section.sc-weoffer-conditions {
 }
 
 section.sc-weoffer-cost {
+    background-color: $sc-primary;
+    color: $sc-white;
+
     .headline-2 {
         @include sc-title-text;
     }
@@ -56,20 +49,18 @@ section.sc-weoffer-cost {
     }
 }
 
-@include media-md {
-    section.sc-weoffer-help {
-        margin-top: -$nav-sm;
+section.sc-weoffer-help {
+    // background-color: $sc-primary;
 
-        .help-container {
-            @include flex(row);
-            flex-wrap: wrap;
+    .help-container {
 
-            .column-container {
-                flex: 0 0 45%;
-            }
+        .help {
+            @include flex(column);
         }
     }
+}
 
+@include media-md {
     section.sc-weoffer-conditions {
         .container {
             .text-container {
@@ -109,23 +100,24 @@ section.sc-weoffer-cost {
             }
         }
     }
+
+    section.sc-weoffer-help {
+        .help-container {
+            @include flex(row);
+            flex-wrap: wrap;
+
+            .column-container {
+                flex: 0 0 45%;
+            }
+        }
+    }
+
+
 }
 
 @include media-lg {
-    section.sc-weoffer-help {
+    section.sc-weoffer-conditions {
         margin-top: -$nav-lg;
-
-        .help-container {
-            .column-container {
-                flex: 0 0 25%;
-
-                .help {
-                    h3 {
-                        font-size: 1.8rem;
-                    }
-                }
-            }
-        }
     }
 
     section.sc-weoffer-cost {
@@ -137,6 +129,20 @@ section.sc-weoffer-cost {
 
                 .text-box {
                     flex: 0 0 30%;
+                }
+            }
+        }
+    }
+
+    section.sc-weoffer-help {
+        .help-container {
+            .column-container {
+                flex: 0 0 25%;
+
+                .help {
+                    h3 {
+                        font-size: 1.8rem;
+                    }
                 }
             }
         }

@@ -12,11 +12,64 @@
         .register-header {
             margin-top: auto;
             text-align: center;
+            padding: 0 2.5rem;
 
             img {
                 margin: auto;
                 max-width: 500px;
-                padding: 1rem 2.5rem;
+                padding: 1rem 0rem;
+            }
+
+            .tooltip {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                // background-color: $sc-primary;
+                margin-left: auto;
+                margin-right: 0;
+                color: $sc-white;
+                color: $sc-primary;
+
+                i {
+                    font-size: 2rem;
+
+                    &:hover {
+                        .tooltip-text {
+                            visibility: visible;
+                        }
+                    }
+
+                    span {
+                        font-family: $font-primary;
+                        line-height: 1.5;
+                    }
+                }
+
+                &-text {
+                    visibility: hidden;
+                    position: absolute;
+                    width: 27.5rem;
+                    padding: 1rem;
+                    right: 3rem;
+                    background-color: $sc-primary;
+                    color: $sc-white;
+                    text-align: center;
+                    border-radius: .5rem;
+                    border-top-right-radius: 0;
+                    border: 1px solid $sc-border;
+                    @include boxshadow;
+                    z-index: 1;
+
+                    &:after {
+                        content: " ";
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        border-width: 10px;
+                        border-style: solid;
+                        border-color: transparent transparent transparent $sc-primary;
+                    }
+                }
             }
         }
 
@@ -199,6 +252,14 @@
     .sc-register-page {
         .register-page-container {
             max-width: 500px;
+
+            .register-header {
+                .tooltip {
+                    &-text {
+                        width: 42rem;
+                    }
+                }
+            }
 
             .form-box-container {
                 .form-container {

@@ -150,8 +150,7 @@
         visibility: hidden;
         transform: translateX(-100%);
         @include transition(.3s);
-
-
+        z-index: 5;
 
         &.active {
             position: relative;
@@ -164,6 +163,10 @@
             flex-direction: row;
             justify-content: space-evenly;
 
+            a {
+                width: auto;
+            }
+
             .signup-button {
                 display: flex;
                 justify-content: center;
@@ -172,7 +175,7 @@
                 span {
                     display: block;
                     width: fit-content;
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                     padding: .75rem 1rem;
                     font-weight: 700;
                     background-color: $sc-accent;
@@ -181,7 +184,7 @@
                     @include transition(0.2s);
 
                     i {
-                        font-size: 2rem;
+                        font-size: 1.6rem;
                     }
 
                     &:hover {

@@ -228,6 +228,10 @@ section.sc-home-coaches {
 }
 
 section.sc-home-statistics {
+    //CHANGING THE COLOR
+    background-color: $sc-primary;
+    color: $sc-white;
+
     .headline-2 {
         @include sc-title-text;
     }
@@ -262,6 +266,16 @@ section.sc-home-statistics {
             font-size: 1.5rem;
             font-weight: 400;
         }
+
+        //CHANGING THE COLOR
+        .icon-container {
+            background-color: $sc-white;
+
+            i {
+                color: $sc-primary;
+            }
+        }
+
     }
 }
 
