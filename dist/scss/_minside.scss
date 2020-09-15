@@ -6,7 +6,7 @@
         .column-container {
             margin-top: 0;
             background-color: $sc-white;
-            @include boxshadow;
+            @include boxshadow-soft;
 
             .profile-header {
                 position: relative;
@@ -435,7 +435,7 @@
             section.sc-minside-welcome {
                 .quick-actions-container {
                     .actions-body {
-                        flex: 0 0 25%;
+                        // flex: 0 0 25%;
                     }
                 }
             }
@@ -446,7 +446,7 @@
                         &.news {
                             .news-box {
                                 &-img {
-                                    flex: 0 0 35%;
+                                    flex: 0 0 30%;
                                     margin-left: 0;
                                     margin-right: 0;
 
@@ -504,8 +504,6 @@
             .column-container {
                 margin-top: 3rem;
                 border: 1px solid $sc-border;
-                border-bottom-left-radius: 1rem;
-                border-bottom-right-radius: 1rem;
 
                 .profile-header {
                     @include flex(column);
@@ -589,12 +587,12 @@
 
                     .user-info {
                         li {
-                            display: flex;
-                            flex-direction: row;
+                            @include flex(column);
                             justify-content: space-between;
                             padding: 1rem 0;
 
                             .info {
+                                align-self: flex-end;
                                 font-size: 1.4rem;
                                 color: $sc-gray;
                             }
@@ -629,7 +627,6 @@
                             .news-box {
 
                                 &-img {
-                                    flex: 0 0 25%;
                                     margin: auto 0;
 
                                     img {
@@ -703,7 +700,9 @@
 
         .banner-container {
             margin-top: 12rem;
-            width: 200px;
+            margin-right: 0;
+            margin-left: 0;
+            width: 300px;
             max-width: 95%;
             @include flex(column);
 

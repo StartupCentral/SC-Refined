@@ -2828,6 +2828,8 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 #sc-partnerpage .aside-container aside.partner-info {
   margin-top: -75px;
   padding: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #sc-partnerpage .aside-container aside.partner-info .column-container {
@@ -2963,6 +2965,7 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   }
   #sc-partnerpage .aside-container aside.partner-info {
     margin-top: -90px;
+    width: 350px;
   }
   #sc-partnerpage .aside-container aside.partner-info .column-container {
     border: 1px solid #e6e7e8;
@@ -2978,6 +2981,8 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   #sc-partnerpage .aside-container .container-small {
     margin-top: -90px;
     margin-right: 0;
+    max-width: 95%;
+    width: 800px;
   }
 }
 
@@ -5691,6 +5696,7 @@ aside.sc-press-aside .media-contact .media-contact-person .contact-person-email 
     background-color: #FFFFFF;
     border: 1px solid #e6e7e8;
     border-radius: 1rem;
+    width: 800px;
     -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
             box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
   }
@@ -5702,6 +5708,9 @@ aside.sc-press-aside .media-contact .media-contact-person .contact-person-email 
   }
   #sc-presspage .aside-container .container-small section.press-articles .article {
     margin-bottom: 0;
+  }
+  aside.sc-press-aside {
+    width: 350px;
   }
   aside.sc-press-aside .column-container {
     margin-top: -90px;
@@ -6111,8 +6120,8 @@ section.contact-section .contact-container .contact-info-social a:hover i {
 .aside-container aside.user-profile .column-container {
   margin-top: 0;
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
-          box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
 }
 
 .aside-container aside.user-profile .column-container .profile-header {
@@ -6617,15 +6626,10 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   .aside-container aside.user-profile {
     padding: 0 1rem;
   }
-  .aside-container .container-small section.sc-minside-welcome .quick-actions-container .actions-body {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-  }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 35%;
-            flex: 0 0 35%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -6687,8 +6691,6 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   .aside-container aside.user-profile .column-container {
     margin-top: 3rem;
     border: 1px solid #e6e7e8;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
   }
   .aside-container aside.user-profile .column-container .profile-header {
     display: -webkit-box;
@@ -6772,16 +6774,18 @@ section.contact-section .contact-container .contact-info-social a:hover i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 1rem 0;
   }
   .aside-container aside.user-profile .column-container .profile-body .user-info li .info {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     font-size: 1.4rem;
     color: #A0A0A0;
   }
@@ -6803,9 +6807,6 @@ section.contact-section .contact-container .contact-info-social a:hover i {
     margin: 1.5rem 0;
   }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
     margin: auto 0;
   }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img img {
@@ -6879,7 +6880,9 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   }
   .aside-container .banner-container {
     margin-top: 12rem;
-    width: 200px;
+    margin-right: 0;
+    margin-left: 0;
+    width: 300px;
     max-width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7296,6 +7299,7 @@ section.sc-usermessages-inbox .pm-container .button {
 }
 
 section.sc-settings {
+  margin-top: 2.5rem;
   padding-top: 0;
   padding-bottom: 0;
   padding: 1rem;
@@ -7483,6 +7487,11 @@ section.sc-settings .settings-button button {
 }
 
 @media screen and (min-width: 1023px) {
+  section.sc-settings {
+    padding-top: 0;
+    margin-top: 12rem;
+    margin-left: 2.5rem;
+  }
   section.sc-settings .settings-main .form-box-container .box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8488,7 +8497,7 @@ textarea:focus {
 
 .container-small {
   position: relative;
-  width: 700px;
+  width: 600px;
   max-width: 95%;
   margin: auto;
 }

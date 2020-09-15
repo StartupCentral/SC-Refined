@@ -151,7 +151,7 @@ aside.sc-press-aside {
                 background-color: $sc-white;
                 border: 1px solid $sc-border;
                 border-radius: 1rem;
-
+                width: 800px;
                 @include boxshadow;
 
                 section.press-articles {
@@ -168,6 +168,8 @@ aside.sc-press-aside {
     }
 
     aside.sc-press-aside {
+        width: 350px;
+
         .column-container {
             margin-top: -$nav-lg;
         }

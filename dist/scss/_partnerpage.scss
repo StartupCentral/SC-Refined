@@ -7,6 +7,9 @@
         aside.partner-info {
             margin-top: -$nav-sm;
             padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+            // max-width: 95%;
 
             .column-container {
                 margin-top: 0;
@@ -96,8 +99,10 @@
         .aside-container {
             max-width: 95%;
 
+
             aside.partner-info {
                 margin-top: -$nav-lg;
+                width: 350px;
 
                 .column-container {
                     border: 1px solid $sc-border;
@@ -118,6 +123,8 @@
             .container-small {
                 margin-top: -$nav-lg;
                 margin-right: 0;
+                max-width: 95%;
+                width: 800px;
 
                 section.partner-section {}
             }
