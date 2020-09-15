@@ -49,10 +49,15 @@ $font-weights:( //
 //////////Colors//////////
 
 //Main Colors
+// $sc-primary: #101410;
+// $sc-secondary: #FFEB00;
+// $sc-accent: #F1F514;
+
 $sc-primary: #182848;
 $sc-secondary: #223869;
-$sc-fontcolor: #424767;
 $sc-accent: #30C1F3;
+
+$sc-fontcolor: #424767;
 
 //Material Colors
 $sc-tertiary:#f77f00;
@@ -74,6 +79,9 @@ $sc-black: #111111;
 
 $sc-soft:#f5f9fe;
 $sc-border:#e6e7e8;
+
+$sc-blackfriday-black: #101410;
+$sc-blackfriday-yellow: #F1F514;
 
 //Overlays
 $sc-overlay: rgba(255, 255, 255, .1);

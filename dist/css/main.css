@@ -5780,11 +5780,60 @@ section.sc-faq-questions .questions-container .questions .answer p {
   margin: 0 4rem 4rem;
 }
 
-section.sc-faq-cards {
+section.sc-faq-more {
   padding-top: 0;
 }
 
-section.sc-faq-cards .categories {
+section.sc-faq-more .questions-container .questions {
+  border-bottom: 1px solid #e6e7e8;
+}
+
+section.sc-faq-more .questions-container .questions .question {
+  max-width: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2.5rem 0;
+  cursor: pointer;
+  margin: 0;
+}
+
+section.sc-faq-more .questions-container .questions .question i {
+  font-size: 2rem;
+}
+
+section.sc-faq-more .questions-container .questions .question .dropdown-arrow {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section.sc-faq-more .questions-container .questions .open .dropdown-arrow {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+section.sc-faq-more .questions-container .questions .answer {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section.sc-faq-more .questions-container .questions .answer p {
+  margin: 0 4rem 4rem;
+}
+
+section.sc-faq-more .categories {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5798,9 +5847,10 @@ section.sc-faq-cards .categories {
       flex-wrap: wrap;
   border-radius: .5rem;
   padding: 1rem;
+  margin: 2.5rem 0;
 }
 
-section.sc-faq-cards .categories .top {
+section.sc-faq-more .categories .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5811,7 +5861,7 @@ section.sc-faq-cards .categories .top {
   margin: auto;
 }
 
-section.sc-faq-cards .categories .bottom {
+section.sc-faq-more .categories .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5820,9 +5870,13 @@ section.sc-faq-cards .categories .bottom {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-section.sc-faq-cards .categories button.category {
+section.sc-faq-more .categories button.category {
   cursor: pointer;
   text-align: center;
   margin: .5rem .5rem;
@@ -5836,59 +5890,16 @@ section.sc-faq-cards .categories button.category {
   transition: all 0.2s ease-in-out;
 }
 
-section.sc-faq-cards .categories button.category:focus, section.sc-faq-cards .categories button.category:hover {
+section.sc-faq-more .categories button.category:focus, section.sc-faq-more .categories button.category:hover {
   background: #182848;
   color: #FFFFFF;
 }
 
-section.sc-faq-cards .cards-container .faqcard-body {
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section.sc-faq-cards .cards-container .faqcard-body .faqcard {
-  margin: 5rem 0;
-}
-
-section.sc-faq-cards .cards-container .faqcard-body .faqcard-answer {
-  margin: 2.5rem 0;
-}
-
-section.sc-faq-cards .cards-container .faqcard-body .faqcard .tags {
-  display: none;
-  margin: 2.5rem 0;
-}
-
-section.sc-faq-cards .cards-container .faqcard-body .faqcard-link {
-  cursor: pointer;
-  text-align: center;
-  margin-top: 1rem;
-  padding: .55rem 1.5rem;
-  border-radius: .5rem;
-  color: #FFFFFF;
-  background: #182848;
-  font-family: "Poppins", sans-serif;
-  border: 1px solid #182848;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-section.sc-faq-cards .cards-container .faqcard-body .faqcard-link:hover {
-  background: #223869;
-  border-color: #223869;
-}
-
-section.sc-faq-cards .cards-container .faqcard-body .faqcard-link a {
-  color: #FFFFFF;
-}
-
-@media screen and (min-width: 767px) {
-  section.sc-faq-cards .categories {
-    max-width: 600px;
-    margin: auto;
+@media screen and (min-width: 1023px) {
+  section.sc-faq-questions {
+    margin-top: -90px;
   }
-  section.sc-faq-cards .cards-container {
+  section.sc-faq-more .categories {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5896,14 +5907,21 @@ section.sc-faq-cards .cards-container .faqcard-body .faqcard-link a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.sc-faq-more .categories .top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.sc-faq-more .categories .bottom {
+    margin: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 1023px) {
-  section.sc-faq-questions {
-    margin-top: -90px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 
@@ -6509,6 +6527,92 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   font-size: 2.5rem;
 }
 
+.aside-container .banner-container {
+  margin: auto;
+  width: 1000px;
+  max-width: 95%;
+}
+
+.aside-container .banner-container .banner-box {
+  margin-bottom: 2.5rem;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+}
+
+.aside-container .banner-container .banner-box .title-line {
+  border-top: 1px solid #e6e7e8;
+  border-bottom: 1px solid #e6e7e8;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.aside-container .banner-container .banner-box .title-line h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #182848;
+}
+
+.aside-container .banner-container .banner-box a {
+  color: #182848;
+}
+
+.aside-container .banner-container .banner-box a:hover {
+  color: #30C1F3;
+  text-decoration: underline;
+}
+
+.aside-container .banner-container .discount-codes .discount-links {
+  padding: .5rem 2rem;
+}
+
+.aside-container .banner-container .events .event-list {
+  padding: .5rem 2rem;
+}
+
+.aside-container .banner-container .featured-partners .partner-image {
+  padding: 0 2rem;
+}
+
+.aside-container .banner-container .featured-partners .partner-image img {
+  margin: auto;
+  max-width: 250px;
+}
+
+.aside-container .banner-container .featured-coaches .coach-box {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.aside-container .banner-container .featured-coaches .coach-box .coach-img {
+  margin-right: 1rem;
+}
+
+.aside-container .banner-container .featured-coaches .coach-box .coach-img img {
+  max-width: 75px;
+  border-radius: 50%;
+}
+
+.aside-container .banner-container .featured-coaches .coach-text .coach-name span {
+  font-weight: 700;
+}
+
+.aside-container .banner-container .featured-coaches .coach-text .coach-quote {
+  margin-left: .5rem;
+}
+
+.aside-container .banner-container .featured-coaches .coach-text .coach-quote span {
+  font-size: 1.4rem;
+}
+
 @media screen and (min-width: 767px) {
   .aside-container aside.user-profile {
     padding: 0 1rem;
@@ -6772,6 +6876,59 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices i {
     font-size: 2.5rem;
+  }
+  .aside-container .banner-container {
+    margin-top: 12rem;
+    width: 200px;
+    max-width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aside-container .banner-container .discount-codes .discount-links {
+    padding: .5rem 2rem;
+  }
+  .aside-container .banner-container .events .event-list {
+    padding: .5rem 2rem;
+  }
+  .aside-container .banner-container .featured-partners .partner-image {
+    padding: 0 2rem;
+  }
+  .aside-container .banner-container .featured-partners .partner-image img {
+    margin: auto;
+    max-width: 250px;
+  }
+  .aside-container .banner-container .featured-coaches .coach-box {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .aside-container .banner-container .featured-coaches .coach-box .coach-img {
+    margin-right: 1rem;
+  }
+  .aside-container .banner-container .featured-coaches .coach-box .coach-img img {
+    max-width: 75px;
+    border-radius: 50%;
+  }
+  .aside-container .banner-container .featured-coaches .coach-text .coach-name span {
+    font-weight: 700;
+  }
+  .aside-container .banner-container .featured-coaches .coach-text .coach-quote {
+    margin-left: .5rem;
+  }
+  .aside-container .banner-container .featured-coaches .coach-text .coach-quote span {
+    font-size: 1.4rem;
   }
 }
 
@@ -8331,7 +8488,7 @@ textarea:focus {
 
 .container-small {
   position: relative;
-  width: 800px;
+  width: 700px;
   max-width: 95%;
   margin: auto;
 }
@@ -8901,8 +9058,8 @@ textarea:focus {
     font-size: 22.5px;
   }
   aside {
-    min-width: 350px;
-    width: 350px;
+    min-width: 250px;
+    width: 250px;
   }
   .aside-container {
     position: relative;

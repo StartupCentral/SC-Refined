@@ -331,6 +331,98 @@
             }
         }
     }
+
+    .banner-container {
+        margin: auto;
+        width: 1000px;
+        max-width: 95%;
+
+        .banner-box {
+            margin-bottom: 2.5rem;
+            background-color: $sc-white;
+            @include boxshadow-soft;
+
+            .title-line {
+                border-top: 1px solid $sc-border;
+                border-bottom: 1px solid $sc-border;
+                width: 100%;
+                padding: 1rem 2rem;
+
+                h2 {
+                    font-size: 1.6rem;
+                    margin: 0;
+                    color: $sc-primary;
+                }
+            }
+
+            a {
+                color: $sc-primary;
+
+                &:hover {
+                    color: $sc-accent;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .discount-codes {
+            .discount-links {
+                padding: .5rem 2rem;
+            }
+        }
+
+        .events {
+            .event-list {
+                padding: .5rem 2rem;
+            }
+        }
+
+        .featured-partners {
+            .partner-image {
+                padding: 0 2rem;
+
+                img {
+                    margin: auto;
+                    max-width: 250px;
+                }
+            }
+        }
+
+        .featured-coaches {
+            .coach-box {
+                padding: 1rem 2rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                @include flex(row);
+
+                .coach-img {
+                    margin-right: 1rem;
+
+                    img {
+                        max-width: 75px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .coach-text {
+                .coach-name {
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                .coach-quote {
+                    margin-left: .5rem;
+
+                    span {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @include media-md {
@@ -605,6 +697,76 @@
                         }
                     }
 
+                }
+            }
+        }
+
+        .banner-container {
+            margin-top: 12rem;
+            width: 200px;
+            max-width: 95%;
+            @include flex(column);
+
+
+
+
+
+
+
+            .discount-codes {
+                .discount-links {
+                    padding: .5rem 2rem;
+                }
+            }
+
+            .events {
+                .event-list {
+                    padding: .5rem 2rem;
+                }
+            }
+
+            .featured-partners {
+                .partner-image {
+                    padding: 0 2rem;
+
+                    img {
+                        margin: auto;
+                        max-width: 250px;
+                    }
+                }
+            }
+
+            .featured-coaches {
+                .coach-box {
+                    padding: 1rem 2rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    @include flex(row);
+
+                    .coach-img {
+                        margin-right: 1rem;
+
+                        img {
+                            max-width: 75px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .coach-text {
+                    .coach-name {
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .coach-quote {
+                        margin-left: .5rem;
+
+                        span {
+                            font-size: 1.4rem;
+                        }
+                    }
                 }
             }
         }

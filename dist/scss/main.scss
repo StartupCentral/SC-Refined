@@ -250,7 +250,7 @@ textarea {
 
 .container-small {
     position: relative;
-    width: 800px;
+    width: 700px;
     max-width: 95%;
     margin: auto;
 }
@@ -579,7 +579,7 @@ textarea {
     border-radius: 1rem;
     background-color: $sc-white;
     padding: 2.5rem;
-    border: 1px solid #e6e7e8;
+    border: 1px solid $sc-border;
     @include boxshadow;
 }
 
@@ -739,8 +739,8 @@ textarea {
     }
 
     aside {
-        min-width: 350px;
-        width: 350px;
+        min-width: 250px;
+        width: 250px;
     }
 
     .aside-container {
@@ -750,16 +750,6 @@ textarea {
         margin: auto;
         @include flex(row);
         justify-content: space-between;
-
-        // ul {
-        //     li {
-        //         margin: 0;
-
-        //         &::before {
-        //             display: none;
-        //         }
-        //     }
-        // }
     }
 
     .header-big {
@@ -805,21 +795,4 @@ textarea {
     .headline-4 {
         font-size: 40px;
     }
-
-    // .container {
-    //     width: 1500px;
-    // }
-
-    // .container-small {
-    //     width: 1100px;
-    // }
-
-    // .aside-container {
-    //     position: relative;
-    //     width: 1500px;
-    //     max-width: 95%;
-    //     margin: auto;
-    //     @include flex(row);
-    //     justify-content: space-between;
-    // }
 }
