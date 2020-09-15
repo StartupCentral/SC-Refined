@@ -377,15 +377,14 @@
 
                 .event {
                     @include flex(row);
+                    flex-wrap: wrap;
 
-                    a {
-                        @include flex(column);
-
-                        .date {
-                            font-size: 1.2rem;
-                            color: $sc-gray;
-                            align-self: flex-end;
-                        }
+                    .date {
+                        font-size: 1.2rem;
+                        color: $sc-gray;
+                        align-self: center;
+                        margin-right: 0;
+                        margin-left: auto;
                     }
                 }
             }
