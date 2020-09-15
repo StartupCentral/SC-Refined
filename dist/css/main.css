@@ -6626,6 +6626,9 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   .aside-container aside.user-profile {
     padding: 0 1rem;
   }
+  .aside-container .container-small {
+    width: 95%;
+  }
   .aside-container .container-small section.sc-minside-informations .info-container .info-box.news .news-box-img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30%;
@@ -6791,6 +6794,7 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   }
   .aside-container .container-small {
     margin-top: 120px;
+    width: 600px;
   }
   .aside-container .container-small section.sc-minside-welcome {
     padding: 2.5rem;
