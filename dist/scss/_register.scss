@@ -342,3 +342,21 @@
         }
     }
 }
+
+@include media-lg {
+    .sc-register-page {
+        width: 100%;
+
+        .sc-register-welcome {
+            position: absolute;
+            top: 0;
+            left: -26rem;
+            border: 1px solid red;
+            width: 26rem;
+            padding: 1.5rem;
+
+            background-color: $sc-primary;
+            color: $sc-white;
+        }
+    }
+}
