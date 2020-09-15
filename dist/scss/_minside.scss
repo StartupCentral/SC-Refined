@@ -374,6 +374,20 @@
         .events {
             .event-list {
                 padding: .5rem 2rem;
+
+                .event {
+                    @include flex(row);
+
+                    a {
+                        @include flex(column);
+
+                        .date {
+                            font-size: 1.2rem;
+                            color: $sc-gray;
+                            align-self: flex-end;
+                        }
+                    }
+                }
             }
         }
 
@@ -703,7 +717,7 @@
             margin-top: 12rem;
             margin-right: 0;
             margin-left: 0;
-            width: 300px;
+            width: 275px;
             max-width: 95%;
             @include flex(column);
 

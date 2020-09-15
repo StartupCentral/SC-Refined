@@ -12,6 +12,12 @@ section.sc-weoffer-conditions {
             @include flex(column);
             text-align: center;
         }
+
+        .container-small {
+            .title-box {
+                text-align: justify;
+            }
+        }
     }
 }
 
