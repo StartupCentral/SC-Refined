@@ -7501,6 +7501,10 @@ section.sc-usermessages-inbox .pm-container .button {
   }
 }
 
+.sc-settingspage .aside-container .container {
+  margin-top: 0;
+}
+
 section.sc-settings {
   margin-top: 2.5rem;
   padding-top: 0;
@@ -7643,6 +7647,10 @@ section.sc-settings .settings-main .form-box-container .box #industry i {
   color: #FFFFFF;
 }
 
+section.sc-settings .settings-main .form-box-container .form-container #AddChangeCreditCard i {
+  margin-right: 1rem;
+}
+
 section.sc-settings .settings-main .form-box-container .form-container #phone {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7658,6 +7666,10 @@ section.sc-settings .settings-main .form-box-container .form-container #phone {
 
 section.sc-settings .settings-main .form-box-container .form-container #phone p {
   margin-right: .5rem;
+}
+
+section.sc-settings .settings-button {
+  width: 100%;
 }
 
 section.sc-settings .settings-button button {
@@ -9299,6 +9311,9 @@ textarea:focus {
   aside {
     min-width: 275px;
     width: 275px;
+  }
+  textarea {
+    max-width: 960px;
   }
   .aside-container {
     position: relative;

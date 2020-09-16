@@ -1,3 +1,11 @@
+.sc-settingspage {
+    .aside-container {
+        .container {
+            margin-top: 0;
+        }
+    }
+}
+
 section.sc-settings {
     margin-top: 2.5rem;
     padding-top: 0;
@@ -120,6 +128,12 @@ section.sc-settings {
             }
 
             .form-container {
+                #AddChangeCreditCard {
+                    i {
+                        margin-right: 1rem;
+                    }
+                }
+
                 #phone {
                     display: flex;
                     flex-direction: row;
@@ -134,6 +148,8 @@ section.sc-settings {
     }
 
     .settings-button {
+        width: 100%;
+
         button {
             width: 100%;
         }

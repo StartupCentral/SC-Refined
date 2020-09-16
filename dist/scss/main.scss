@@ -749,6 +749,10 @@ textarea {
         width: 275px;
     }
 
+    textarea {
+        max-width: 960px;
+    }
+
     .aside-container {
         position: relative;
         width: 1200px;
