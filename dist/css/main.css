@@ -1226,6 +1226,8 @@ footer.main-footer section.footer-social .social-cvr {
   justify-items: center;
   -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+  min-height: 100vh;
+  height: 100%;
 }
 
 .sc-register-page .register-page-container .register-header {
