@@ -3,7 +3,7 @@
 
     .register-page-container {
         position: relative;
-        max-width: 350px;
+        max-width: 400px;
         margin: 0 auto;
         @include flex(column);
         justify-items: center;
@@ -14,9 +14,21 @@
             text-align: center;
             padding: 0 2.5rem;
 
+            .header-text {
+                h2 {
+                    &:first-child {
+                        display: block;
+                    }
+
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+            }
+
             img {
                 margin: auto;
-                max-width: 500px;
+                max-width: 350px;
                 padding: 1rem 0rem;
             }
 
@@ -80,6 +92,15 @@
             align-items: center;
             padding: 0 2.5rem;
             // overflow-y: hidden;
+
+            .sc-register-welcome {
+                display: none;
+            }
+
+            .sc-register-info {
+                display: none;
+            }
+
 
             .form-container {
                 #phone {
@@ -347,16 +368,81 @@
     .sc-register-page {
         width: 100%;
 
-        .sc-register-welcome {
-            position: absolute;
-            top: 0;
-            left: -26rem;
-            border: 1px solid red;
-            width: 26rem;
-            padding: 1.5rem;
+        .register-page-container {
+            .register-header {
+                .header-text {
+                    h2 {
+                        &:first-child {
+                            display: none;
+                        }
 
-            background-color: $sc-primary;
-            color: $sc-white;
+                        &:nth-child(2) {
+                            display: block;
+                        }
+                    }
+
+                    p {
+                        display: none;
+                    }
+                }
+            }
+
+            .form-box-container {
+                .sc-register-welcome {
+                    display: block;
+
+                    .welcome-heading {
+                        h2 {
+                            font-size: 2rem;
+                            @include sc-title-text;
+                        }
+                    }
+
+                    position: absolute;
+                    top: 0;
+                    left: calc(0% - 27vw);
+                    // border: 1px solid red;
+                    width: 25vw;
+                    padding: 2.5rem;
+                    @include boxshadow-soft;
+                    border: 1px solid $sc-border;
+                    background-color: $sc-white;
+                    // color: $sc-white;
+                }
+
+                .sc-register-info {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: calc(0% - 27vw);
+                    width: 25vw;
+                    padding: 2.5rem;
+                    @include boxshadow-soft;
+                    border: 1px solid $sc-border;
+                    background-color: $sc-white;
+
+                    .info-header {
+                        border-bottom: 1px solid $sc-primary;
+                        width: fit-content;
+                        margin: auto;
+                        font-weight: bold;
+
+                        .price {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    .info-text {
+                        margin-top: 2.5rem;
+                    }
+
+                    .info-trustpilot {
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 }

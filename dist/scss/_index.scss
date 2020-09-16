@@ -342,6 +342,12 @@ section.sc-home-reviews {
 }
 
 section.sc-home-cases {
+    .title-box {
+        .headline-2 {
+            @include sc-title-text;
+        }
+    }
+
     .cases-container {
         margin: auto;
         width: 90%;
