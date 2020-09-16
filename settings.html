@@ -47,21 +47,91 @@
             <div class="container">
                 <section class="sc-settings">
                     <div class="settings-header">
+                        <!-- Student Header -->
                         <div class="header-tab account-settings ">
-                            <button><i class="fas fa-users-cog"></i><span>Account Settings</span></button>
+                            <button>
+                                <i class="fas fa-users-cog"></i>
+                                <span>Account Settings</span>
+                            </button>
                         </div>
+
                         <div class="header-tab info-settings">
-                            <button><i class="fas fa-key"></i><span>ASD Settings</span></button>
+                            <button>
+                                <i class="fas fa-key"></i>
+                                <span>ASD Settings</span>
+                            </button>
                         </div>
+
                         <div class="header-tab subscription-settings">
-                            <button><i class="far fa-credit-card"></i><span>Subscription Settings</span></button>
+                            <button>
+                                <i class="far fa-credit-card"></i>
+                                <span>Subscription Settings</span>
+                            </button>
                         </div>
-                        <div class="header-tab subscription-settings active">
-                            <button><i class="fas fa-building"></i><span>CVR Settings</span></button>
+
+                        <div class="header-tab cvr-settings active">
+                            <button>
+                                <i class="fas fa-building"></i>
+                                <span>CVR Settings</span>
+                            </button>
                         </div>
+                        <!-- Student Header -->
+
+
+
+
+
+                        <!-- Partner Header -->
+                        <div class="header-tab account-settings">
+                            <button>
+                                <i class="fas fa-key"></i>
+                                <span>PartnerTab1</span>
+                            </button>
+                        </div>
+
+                        <div class="header-tab info-settings">
+                            <button>
+                                <i class="fas fa-id-card"></i>
+                                <span>PartnerTab2</span>
+                            </button>
+                        </div>
+
+                        <div class="header-tab subscription-settings">
+                            <button>
+                                <i class="fas fa-sticky-note"></i>
+                                <span>PartnerTab3</span>
+                            </button>
+                        </div>
+
+                        <div class="header-tab cvr-settings active">
+                            <button>
+                                <i class="fas fa-file-alt"></i>
+                                <span>PartnerTab4</span>
+                            </button>
+                        </div>
+                        <!-- Partner Header -->
+
+
+                        <!-- Coach Header -->
+                        <div class="header-tab account-settings ">
+                            <button>
+                                <i class="fas fa-key"></i>
+                                <span>CoachTab1</span>
+                            </button>
+                        </div>
+
+                        <div class="header-tab info-settings">
+                            <button>
+                                <i class="fas fa-file-invoice"></i>
+                                <span>CoachTab2</span>
+                            </button>
+                        </div>
+                        <!-- Coach Header -->
                     </div>
 
 
+
+                    <!-- Student Settings -->
                     <div class="settings-main account-settings" style="display: block;">
                         <div class="form-box-container">
                             <div class="form-container">
@@ -186,6 +256,8 @@
                                     </div>
                                 </div>
 
+                                <input type="button" class="button" value="CVR">
+
                                 <div class="form-container" id="industry">
                                     <label for="address" class="label-name">
                                         <span class="content-name">Industry Code</span>
@@ -235,6 +307,219 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Student Settings -->
+
+
+                    <!-- Partner Settings -->
+                    <div class="settings-main account-settings" style="display: block;">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="profilepic" class="label-name">
+                                    <span class="content-name">Change Profile Picture</span>
+                                </label>
+                                <form action="#!">
+                                    <input type="file" id="myFile" name="filename" class="custom-file-input">
+                                    <input type="submit">
+                                </form>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="password" class="label-name">
+                                    <span class="content-name">New Password</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="password" id="pass" name="password" minlength="8" required />
+                                    <span><i class="fas fa-lock"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="password" class="label-name">
+                                    <span class="content-name">Again Password</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="password" id="pass" name="password" minlength="8" required />
+                                    <span><i class="fas fa-lock"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-main info-settings" style="display: block;">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="firstname" class="label-name">
+                                    <span class="content-name">Contact Person</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="cardintro" name="cardintro" autocomplete="off" required />
+                                    <span>
+                                        <i class="fas fa-user-tie"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="telephone" class="label-name">
+                                    <span class="content-name">Phone Number</span>
+                                </label>
+                                <div class="input-container" id="phone">
+                                    <p>+45</p>
+                                    <input type="tel" id="telephone" name="telephone" autocomplete="off" required
+                                        maxlength="8" />
+                                    <span><i class="fas fa-phone"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="settings-main info-settings" style="display: block;">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="firstname" class="label-name">
+                                    <span class="content-name">Kort Intro Text</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="cardintro" name="cardintro" autocomplete="off" required />
+                                    <span>
+                                        <i class="fas fa-align-left"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Above Tilbud</span>
+                                </label>
+                                <textarea name="partner-intro" class="form-control" id="partner-intro"
+                                    placeholder="Skriv..." rows="1"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Tilbud</span>
+                                </label>
+                                <textarea name="partner-intro" class="form-control" id="partner-intro"
+                                    placeholder="Skriv..." rows="1"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="settings-main info-settings" style="display: block;">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="firstname" class="label-name">
+                                    <span class="content-name">Partner Link</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="partnerlink" name="partnerlink" autocomplete="off"
+                                        required />
+                                    <span>
+                                        <i class="fas fa-link"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Promo Code</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="promocode" name="promocode" autocomplete="off" required />
+                                    <span><i class="fas fa-tag"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Partner introduction</span>
+                                </label>
+                                <textarea name="partner-intro" class="form-control" id="partner-intro"
+                                    placeholder="Skriv..." rows="1"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Partner Description</span>
+                                </label>
+                                <textarea name="partner-description" class="form-control" id="partner-description"
+                                    placeholder="Skriv..." rows="1"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Partner Offer</span>
+                                </label>
+                                <textarea name="partner-offer" class="form-control" id="partner-offer"
+                                    placeholder="Skriv..." rows="1"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Partner Settings -->
+
+
+                    <!-- Coach Settings -->
+                    <div class="settings-main account-settings" style="display: block;">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="password" class="label-name">
+                                    <span class="content-name">New Password</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="password" id="pass" name="password" minlength="8" required />
+                                    <span><i class="fas fa-lock"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="password" class="label-name">
+                                    <span class="content-name">Again Password</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="password" id="pass" name="password" minlength="8" required />
+                                    <span><i class="fas fa-lock"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-main info-settings" style="display: block;">
+                        <div class="form-box-container">
+                            <div class="form-container">
+                                <label for="firstname" class="label-name">
+                                    <span class="content-name">Coach Profession</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="coach-profession" name="cardintro" autocomplete="off"
+                                        required />
+                                    <span>
+                                        <i class="fas fa-user-graduate"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Coach Intro</span>
+                                </label>
+                                <textarea name="coach-intro" class="form-control" id="coach-intro"
+                                    placeholder="Skriv..." rows="1"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="address" class="label-name">
+                                    <span class="content-name">Coach Description</span>
+                                </label>
+                                <textarea name="coach-description" class="form-control" id="coach-description"
+                                    placeholder="Skriv..." rows="1"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Coach Settings -->
 
                     <div class="settings-button">
                         <button class="button">Save</button>

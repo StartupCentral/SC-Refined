@@ -167,6 +167,7 @@ main>section:first-child {
 textarea {
     max-width: 100%;
     width: 100%;
+    // max-width: 335px;
     height: 15rem;
     background-color: $sc-white;
     padding: 1rem;
@@ -720,6 +721,10 @@ textarea {
 
     .headline-3 {
         font-size: 4vw;
+    }
+
+    textarea {
+        max-width: 880px;
     }
 }
 

@@ -83,6 +83,10 @@ section.sc-settings {
             display: none;
         }
 
+        &.cvr-settings {
+            display: none;
+        }
+
         &.active {
             display: block;
         }
@@ -96,6 +100,13 @@ section.sc-settings {
 
             .box {
                 width: 100%;
+
+                .button {
+                    height: 42.4px;
+                    margin-top: -1rem;
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
 
                 #industry {
                     input {
@@ -179,11 +190,19 @@ section.sc-settings {
                     @include flex(row);
 
                     #cvr {
-                        // flex: 40%;
+                        flex: 20%;
+                    }
+
+                    .button {
+                        height: 42.4px;
+                        margin-top: 2.56rem;
+                        margin-left: 1rem;
+                        width: fit-content;
+
                     }
 
                     #industry {
-                        flex: 0 0 75%;
+                        flex: 0 0 65%;
                         margin-left: 2.5rem;
                     }
 
@@ -192,7 +211,7 @@ section.sc-settings {
                     }
 
                     .city {
-                        flex: 0 0 75%;
+                        flex: 0 0 65%;
                         margin-left: 2.5rem;
                     }
                 }
