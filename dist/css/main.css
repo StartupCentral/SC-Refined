@@ -4086,6 +4086,41 @@ section.sc-weoffer-help .help-container .help {
   section.sc-weoffer-conditions {
     margin-top: -90px;
   }
+  section.sc-weoffer-conditions .container .title-box {
+    max-width: 600px;
+    text-align: justify;
+  }
+  section.sc-weoffer-conditions .container .title-box h2:nth-child(2) {
+    font-size: 1.7rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+  }
+  section.sc-weoffer-conditions .container .text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+  section.sc-weoffer-conditions .container .text-container .text-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+  }
+  section.sc-weoffer-conditions .container .text-container .text-box img {
+    max-width: 10rem;
+  }
+  section.sc-weoffer-conditions .container .text-container .text-box p {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
   section.sc-weoffer-cost .container .text-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5736,6 +5771,30 @@ aside.sc-press-aside .media-contact .media-contact-person .contact-person-email 
   aside.sc-press-aside .column-container {
     margin-top: -90px;
   }
+}
+
+section.coachingsparring-intro {
+  margin-top: -75px;
+}
+
+section.coachingsparring-intro .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.coachingsparring-intro .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
 }
 
 section.sc-faq-questions {

@@ -1,7 +1,5 @@
 section.sc-weoffer-conditions {
     margin-top: -$nav-sm;
-    // background-color: $sc-primary;
-    // color: $sc-white;
 
     .headline-2 {
         @include sc-title-text;
@@ -124,6 +122,43 @@ section.sc-weoffer-help {
 @include media-lg {
     section.sc-weoffer-conditions {
         margin-top: -$nav-lg;
+
+        .container {
+            .title-box {
+                h2:nth-child(2) {
+                    font-size: 1.7rem;
+                    text-align: center;
+                    font-style: italic;
+                    margin-bottom: 2.5rem;
+                }
+
+                max-width: 600px;
+                text-align: justify;
+            }
+
+            .text-container {
+                @include flex(row);
+                text-align: center;
+                // justify-content: space-around;
+                flex-wrap: wrap;
+                margin-bottom: 5rem;
+
+                .text-box {
+                    flex: 0 0 33%;
+
+                    img {
+                        max-width: 10rem;
+                    }
+
+                    p {
+                        margin-left: 2.5rem;
+                        margin-right: 2.5rem;
+
+                    }
+                }
+
+            }
+        }
     }
 
     section.sc-weoffer-cost {

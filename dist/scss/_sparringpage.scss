@@ -1,0 +1,7 @@
+section.coachingsparring-intro {
+    margin-top: -$nav-sm;
+
+    .headline-2 {
+        @include sc-title-text;
+    }
+}
