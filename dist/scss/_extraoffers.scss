@@ -1,0 +1,151 @@
+section.sc-extraoffers-section {
+    margin-top: -$nav-sm;
+
+    .headline-2 {
+        @include sc-title-text;
+    }
+
+    .extraoffers-container {
+        .extraoffer {
+            .extraoffer-header {
+                @include flex(column);
+                align-items: center;
+                max-width: unset;
+                justify-content: space-between;
+                padding: 5rem 0;
+                cursor: pointer;
+                // border: 1px solid red;
+                margin: 0;
+
+                i {
+                    font-size: 2rem;
+                }
+
+                .dropdown-arrow {
+                    background: none;
+                    border: none;
+                    @include transition(0.3s);
+                }
+
+                .icon {
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    margin-top: 1rem;
+                    width: 4rem;
+                    height: 4rem;
+                    border: 1px solid $sc-border;
+                    @include boxshadow-soft;
+                    border-radius: 50%;
+                }
+
+                .header-img {}
+
+                .header-middle {}
+
+            }
+
+            .open {
+                .dropdown-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .extraoffer-description {
+                p {
+                    margin: 0 4rem 4rem;
+                }
+
+                max-height: 0;
+                overflow: hidden;
+                @include transition(.3s);
+            }
+        }
+    }
+}
+
+@include media-md {
+    section.sc-extraoffers-section {
+        .extraoffers-container {
+            .extraoffer {
+                border-bottom: 1px solid $sc-border;
+
+                .extraoffer-header {
+                    @include flex(row);
+                    align-items: center;
+                    max-width: unset;
+                    justify-content: space-between;
+                    padding: 2.5rem 0;
+                    cursor: pointer;
+                    margin: 0;
+
+                    .icon {
+                        margin-top: 0;
+                        align-self: flex-start;
+
+                        i {
+                            padding: 1rem;
+                        }
+                    }
+
+                    .header-img {
+                        margin: auto 1.5rem auto 0;
+
+                        img {
+                            object-fit: contain;
+                            width: 15rem;
+                        }
+                    }
+
+                    .header-middle {
+
+
+                        h2 {
+                            margin-left: 0;
+                        }
+                    }
+
+                }
+
+                .extraoffer-description {
+                    p {
+                        margin: 0 1.5rem;
+                    }
+
+                    .button-box {
+                        display: flex;
+                        width: 100%;
+                        margin: 2.5rem auto;
+
+                        .button {
+                            width: max-content;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    section.sc-extraoffers-section {
+        .extraoffers-container {
+            .extraoffer {
+                .extraoffer-header {
+                    .header-img {
+                        img {
+                            width: 20rem;
+                        }
+                    }
+                }
+
+                .extraoffer-description {
+                    p {
+                        margin: 0 5rem;
+                    }
+                }
+            }
+        }
+    }
+}

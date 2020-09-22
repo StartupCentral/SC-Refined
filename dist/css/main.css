@@ -2079,10 +2079,6 @@ section.sc-home-landing .landing-text .flip3 {
   }
 }
 
-section.sc-home-landing .landing-text h2 {
-  margin-left: 2rem;
-}
-
 section.sc-home-landing .landing-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6056,6 +6052,163 @@ section.coachingsparring-intro .headline-2::after {
   margin: 5px auto 0;
   -webkit-transition: width .5s ease-out;
   transition: width .5s ease-out;
+}
+
+section.sc-extraoffers-section {
+  margin-top: -75px;
+}
+
+section.sc-extraoffers-section .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section.sc-extraoffers-section .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 15rem;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: unset;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5rem 0;
+  cursor: pointer;
+  margin: 0;
+}
+
+section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header i {
+  font-size: 2rem;
+}
+
+section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .dropdown-arrow {
+  background: none;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .icon {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #e6e7e8;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  border-radius: 50%;
+}
+
+section.sc-extraoffers-section .extraoffers-container .extraoffer .open .dropdown-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-description {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-description p {
+  margin: 0 4rem 4rem;
+}
+
+@media screen and (min-width: 767px) {
+  section.sc-extraoffers-section .extraoffers-container .extraoffer {
+    border-bottom: 1px solid #e6e7e8;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2.5rem 0;
+    cursor: pointer;
+    margin: 0;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .icon {
+    margin-top: 0;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .icon i {
+    padding: 1rem;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .header-img {
+    margin: auto 1.5rem auto 0;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .header-img img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 15rem;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .header-middle h2 {
+    margin-left: 0;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-description p {
+    margin: 0 1.5rem;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-description .button-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 2.5rem auto;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-description .button-box .button {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-header .header-img img {
+    width: 20rem;
+  }
+  section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-description p {
+    margin: 0 5rem;
+  }
 }
 
 section.sc-faq-questions {
