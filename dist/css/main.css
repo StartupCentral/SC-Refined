@@ -1,5 +1,47 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue|Montserrat|Open+Sans|Oswald|Playfair+Display|Poppins|Raleway|Roboto&display=swap");
+.testingcontainer h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+
+.testingcontainer .typing {
+  position: relative;
+  margin-left: 10px;
+}
+
+.testingcontainer .typing::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  width: 1px;
+  top: 0;
+  height: 5rem;
+  border-right: 2px solid red;
+  -webkit-animation: blink .5s infinite ease;
+          animation: blink .5s infinite ease;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #sc-site-header ul li {
   margin: 0;
 }

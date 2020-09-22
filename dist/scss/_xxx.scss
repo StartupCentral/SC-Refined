@@ -1,0 +1,32 @@
+.testingcontainer {
+    h1 {
+        width: fit-content;
+        margin: 0;
+    }
+
+    .typing {
+        position: relative;
+        margin-left: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -5px;
+            width: 1px;
+            top: 0;
+            height: 5rem;
+            border-right: 2px solid red;
+            animation: blink .5s infinite ease;
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
