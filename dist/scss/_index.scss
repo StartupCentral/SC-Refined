@@ -4,31 +4,38 @@ section.sc-home-landing {
     color: $sc-white;
 
     .landing-text {
-        // border: 1px solid greenyellow;
-        // max-width: 600px;
-
         .wordCarousel {
-            div {
+            .flip-container {
                 overflow: hidden;
                 position: relative;
-                float: left;
-                height: 65px;
-                padding-top: 10px;
-                margin-top: -10px;
+                height: 50px;
 
-                li {
-                    color: red;
-                    font-weight: 700;
-                    padding: 0 1rem;
-                    height: 45px;
-                    margin-bottom: 45px;
-                    display: block;
+                ul {
+                    li {
+                        display: grid;
+
+                        h2 {
+                            font-size: 6vw;
+                            font-weight: bolder;
+                            margin: auto;
+                        }
+
+                        list-style-type: none;
+                        margin: 0;
+                        height: 50px;
+                        margin-bottom: 40px;
+
+                        &:before {
+                            content: '';
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }
 
         .flip3 {
-            animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+            animation: flip3 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
         }
 
         @keyframes flip3 {
@@ -63,6 +70,11 @@ section.sc-home-landing {
             100% {
                 margin-top: -270px;
             }
+        }
+
+
+        h2 {
+            margin-left: 2rem;
         }
     }
 
@@ -492,7 +504,24 @@ section.sc-home-cases {
 
 @include media-md {
     section.sc-home-landing {
-        //////////
+        .landing-text {
+            h1 {
+                margin: 0;
+            }
+
+            .wordCarousel {
+                .flip-container {
+                    height: 65px;
+
+                    ul {
+                        li {
+                            height: 60px;
+                            margin-bottom: 27px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     section.sc-home-offers {
@@ -588,13 +617,30 @@ section.sc-home-cases {
         padding-top: 14rem !important;
 
         .landing-text {
-            max-width: 500px;
+            max-width: 55rem;
+
+            .wordCarousel {
+                .flip-container {
+                    height: 80px;
+
+                    ul {
+                        li {
+                            height: 80px;
+                            margin-bottom: 15px;
+
+                            h2 {
+                                font-size: 4.2rem
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .landing-buttons {
             @include flex(row);
             min-width: 50rem;
-            width: 50rem;
+            width: 55rem;
 
             .button-left {
                 width: 50%;
@@ -740,6 +786,23 @@ section.sc-home-cases {
     section.sc-home-landing {
         .landing-text {
             max-width: 650px;
+
+            .wordCarousel {
+                .flip-container {
+                    height: 70px;
+
+                    ul {
+                        li {
+                            height: 70px;
+                            margin-bottom: 20px;
+
+                            h2 {
+                                font-size: 5.3rem
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .landing-buttons {
