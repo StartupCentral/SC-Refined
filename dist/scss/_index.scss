@@ -6,6 +6,64 @@ section.sc-home-landing {
     .landing-text {
         // border: 1px solid greenyellow;
         // max-width: 600px;
+
+        .wordCarousel {
+            div {
+                overflow: hidden;
+                position: relative;
+                float: left;
+                height: 65px;
+                padding-top: 10px;
+                margin-top: -10px;
+
+                li {
+                    color: red;
+                    font-weight: 700;
+                    padding: 0 1rem;
+                    height: 45px;
+                    margin-bottom: 45px;
+                    display: block;
+                }
+            }
+        }
+
+        .flip3 {
+            animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        }
+
+        @keyframes flip3 {
+            0% {
+                margin-top: -270px;
+            }
+
+            5% {
+                margin-top: -180px;
+            }
+
+            33% {
+                margin-top: -180px;
+            }
+
+            38% {
+                margin-top: -90px;
+            }
+
+            66% {
+                margin-top: -90px;
+            }
+
+            71% {
+                margin-top: 0px;
+            }
+
+            99.99% {
+                margin-top: 0px;
+            }
+
+            100% {
+                margin-top: -270px;
+            }
+        }
     }
 
     .landing-buttons {

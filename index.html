@@ -21,10 +21,24 @@
         <section class="sc-home-landing">
             <div class="container">
                 <div class="landing-text">
-                    <h1 class="headline-1">StartupCentral</h1>
-                    <h2 class="headline-2">Dine forudsætninger har aldrig været bedre.</h2>
-                    <p class="lead">Vi kæmper for at selvstændige og iværksættere får et bedre fundament i dansk
-                        erhverv. Skal vi også kæmpe for dine forudsætninger?</p>
+                    <h1 class="headline-1 wordCarousel">
+                        <span>din virksomhed
+                        </span>
+                        <div>
+                            <ul class="flip3">
+                                <li>Start</li>
+                                <li>Driv</li>
+                                <li>Udvikle</li>
+                            </ul>
+                        </div>
+                    </h1>
+                    <!-- <h2 class="headline-2">Dine forudsætninger har aldrig været bedre.</h2> -->
+                    <!-- <h1 class="txt-type" data-wait="3000" data-words='
+                        ["Start", "Drive", "Udvikle"]'></h1> -->
+
+                    <h2>... nemmere og billigere</h2>
+                    <p class="lead">Gennem vores netværk hjælper vi dig og din
+                        virksomhed med at nå nye højder.</p>
                 </div>
                 <div class="landing-buttons">
                     <a href="register.html" class="button-left">Register</a>
@@ -657,6 +671,75 @@
 <script src="dist/js/carousels.js"></script>
 <script src="dist/js/navbarscripts.js"></script>
 <script src="dist/js/main.js"></script>
+<script>
+    // ES6 Class
+    class TypeWriter {
+        constructor(txtElement, words, wait = 3000) {
+            this.txtElement = txtElement;
+            this.words = words;
+            this.txt = '';
+            this.wordIndex = 0;
+            this.wait = parseInt(wait, 10);
+            this.type();
+            this.isDeleting = false;
+        }
+
+        type() {
+            // Current index of word
+            const current = this.wordIndex % this.words.length;
+            // Get full text of current word
+            const fullTxt = this.words[current];
+
+            // Check if deleting
+            if (this.isDeleting) {
+                // Remove char
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                // Add char
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            // Insert txt into element
+            this.txtElement.innerHTML = `<h1 class="headline-1 txt">${this.txt}</h1>`;
+
+            // Initial Type Speed
+            let typeSpeed = 100;
+
+            if (this.isDeleting) {
+                typeSpeed /= 2;
+            }
+
+            // If word is complete
+            if (!this.isDeleting && this.txt === fullTxt) {
+                // Make pause at end
+                typeSpeed = this.wait;
+                // Set delete to true
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                // Move to next word
+                this.wordIndex++;
+                // Pause before start typing
+                typeSpeed = 500;
+            }
+
+            setTimeout(() => this.type(), typeSpeed);
+        }
+    }
+
+
+    // Init On DOM Load
+    document.addEventListener('DOMContentLoaded', init);
+
+    // Init App
+    function init() {
+        const txtElement = document.querySelector('.txt-type');
+        const words = JSON.parse(txtElement.getAttribute('data-words'));
+        const wait = txtElement.getAttribute('data-wait');
+        // Init TypeWriter
+        new TypeWriter(txtElement, words, wait);
+    }
+</script>
 </body>
 
 </html>
