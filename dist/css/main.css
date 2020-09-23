@@ -8080,6 +8080,151 @@ section.sc-settings .settings-button button {
   }
 }
 
+.sc-onboarding section.onboarding-welcome {
+  margin-top: -75px;
+  padding-bottom: 0;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-text .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  padding-bottom: 1.5rem;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-text .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 10rem;
+  height: 3px;
+  border-radius: 5px;
+  margin-left: 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-video {
+  margin: 1.5rem 0;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-video .video-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-video .video-buttons .actions-body {
+  padding: .5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-video .video-buttons .actions-body:hover {
+  -webkit-transform: translateY(2%);
+          transform: translateY(2%);
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-video .video-buttons .actions-body:hover .action {
+  background-color: #EAEAEA;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-video .video-buttons .actions-body .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #182848;
+  background-color: #FFFFFF;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sc-onboarding section.onboarding-welcome .welcome-container .welcome-video .video-buttons .actions-body .action i {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.sc-onboarding section.onboarding-info .title-box {
+  text-align: left;
+}
+
+.sc-onboarding section.onboarding-info .title-box h2 {
+  margin-left: 0;
+}
+
+.sc-onboarding section.onboarding-info .title-box .headline-2 {
+  font-weight: bold;
+  line-height: 1.3;
+  padding-bottom: 1.5rem;
+}
+
+.sc-onboarding section.onboarding-info .title-box .headline-2::after {
+  content: '';
+  display: block;
+  bottom: 0;
+  background: #30C1F3;
+  width: 10rem;
+  height: 3px;
+  border-radius: 5px;
+  margin-left: 0;
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
+}
+
+@media screen and (min-width: 767px) {
+  .sc-onboarding section.onboarding-welcome {
+    margin-top: -75px;
+    padding-bottom: 0;
+  }
+  .sc-onboarding section.onboarding-welcome .welcome-container .welcome-video .video-buttons .actions-body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .sc-onboarding section.onboarding-welcome {
+    margin-top: -90px;
+  }
+  .sc-onboarding section.onboarding-welcome .welcome-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sc-onboarding section.onboarding-welcome .welcome-container .welcome-video {
+    border: 1px solid red;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66666666666667%;
+            flex: 0 0 41.66666666666667%;
+  }
+  .sc-onboarding section.onboarding-welcome .welcome-container .welcome-video iframe {
+    margin: 0 .5rem;
+    max-width: 100%;
+  }
+}
+
 .sc-businessplan .container section.businessplan {
   padding-bottom: 1rem;
 }

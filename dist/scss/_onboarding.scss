@@ -1,0 +1,109 @@
+.sc-onboarding {
+    section.onboarding-welcome {
+        margin-top: -$nav-sm;
+        padding-bottom: 0;
+
+        .welcome-container {
+            .welcome-text {
+                .headline-2 {
+                    @include sc-title-text-side;
+                }
+            }
+
+            .welcome-video {
+                margin: 1.5rem 0;
+
+                .video-buttons {
+                    @include flex(row);
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    margin-top: 1rem;
+
+                    .actions-body {
+                        padding: .5rem;
+                        flex: 0 0 50%;
+                        @include transition(.2s);
+
+                        &:hover {
+                            transform: translateY(2%);
+
+                            .action {
+                                background-color: $sc-light;
+                            }
+                        }
+
+                        .action {
+                            @include flex(column);
+                            color: $sc-primary;
+                            background-color: $sc-white;
+                            @include transition(.2s);
+
+                            i {
+                                font-size: 2.5rem;
+                                margin-bottom: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.onboarding-info {
+        .title-box {
+            text-align: left;
+
+            h2 {
+
+                margin-left: 0;
+            }
+
+            .headline-2 {
+                @include sc-title-text-side;
+            }
+        }
+    }
+}
+
+@include media-md {
+    .sc-onboarding {
+        section.onboarding-welcome {
+            margin-top: -$nav-sm;
+            padding-bottom: 0;
+
+            .welcome-container {
+                .welcome-video {
+
+                    .video-buttons {
+                        .actions-body {
+                            flex: 0 0 33%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .sc-onboarding {
+        section.onboarding-welcome {
+            margin-top: -$nav-lg;
+
+            .welcome-container {
+                @include flex(row);
+
+                .welcome-video {
+                    border: 1px solid red;
+
+                    iframe {
+                        margin: 0 .5rem;
+                        max-width: 100%;
+                    }
+
+                    flex: 0 0 41.66666666666667%;
+                }
+            }
+        }
+    }
+}
