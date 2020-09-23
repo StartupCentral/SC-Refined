@@ -6,6 +6,8 @@
             justify-content: space-evenly;
 
             .eventcard {
+                display: flex;
+
                 &-body {
                     position: relative;
                     max-width: 450px;
@@ -87,7 +89,7 @@
 
                     .event-location {
                         @include flex(row);
-                        margin: .5rem 1rem;
+                        margin: 1.5rem 1rem;
                         align-items: center;
 
                         .location-icon {

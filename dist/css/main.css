@@ -6221,6 +6221,12 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
           justify-content: space-evenly;
 }
 
+.sc-eventspage section.eventspage .cards-holder .eventcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .sc-eventspage section.eventspage .cards-holder .eventcard-body {
   position: relative;
   max-width: 450px;
@@ -6315,7 +6321,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: .5rem 1rem;
+  margin: 1.5rem 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
