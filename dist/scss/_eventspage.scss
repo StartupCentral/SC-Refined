@@ -1,0 +1,174 @@
+.sc-eventspage {
+    section.eventspage {
+        margin-top: -$nav-sm;
+
+        .cards-holder {
+            justify-content: space-evenly;
+
+            .eventcard {
+                &-body {
+                    position: relative;
+                    max-width: 450px;
+                    @include flex(column);
+                    background-color: $sc-soft;
+                    border: 1px solid $sc-border;
+                    margin-top: 5rem;
+                    margin-bottom: 5rem;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .event-picture {
+                        height: 175px;
+                        width: 100%;
+                        z-index: 1;
+
+                        img {
+                            width: 100%;
+                            height: 175px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .event-date {
+                        position: relative;
+                        background: rgba(18, 28, 48, .8);
+                        color: $sc-white;
+                        padding: 1.5rem 1rem;
+                        width: fit-content;
+                        margin-top: -11.5rem;
+                        margin-bottom: 5.5rem;
+                        z-index: 2;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background: rgba(18, 28, 48, .8);
+                            width: 8px;
+                            left: -8px;
+                            top: 0;
+                            height: 100%;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background-color: $sc-primary;
+                            width: 8px;
+                            left: -8px;
+                            bottom: -8px;
+                            height: 8px;
+                            clip-path: polygon(100% 0, 0 0, 100% 100%);
+                        }
+
+                        i {
+                            margin-right: .5rem;
+                        }
+
+                        .start {}
+
+                        .end {
+                            &::before {
+                                content: "-";
+                                margin-left: .5rem;
+                                margin-right: .5rem;
+                            }
+                        }
+                    }
+
+                    .event-title {
+                        padding: 1rem;
+
+                        h3 {
+                            width: 100%;
+                            font-size: 2rem;
+                            margin: 0;
+                        }
+                    }
+
+                    .event-location {
+                        @include flex(row);
+                        margin: .5rem 1rem;
+                        align-items: center;
+
+                        .location-icon {
+                            width: 2.75rem;
+                            text-align: center;
+                            margin-right: .5rem;
+
+                            i {
+                                font-size: 2rem;
+                            }
+                        }
+
+                    }
+
+                    .event-price {
+                        margin: 1.5rem 1rem;
+                        @include flex(row);
+                        align-items: center;
+
+                        span {
+                            font-weight: bold;
+                        }
+
+                        .price-icon {
+                            width: 3rem;
+                            margin-right: .6rem;
+                            text-align: center;
+                        }
+
+                        i {
+                            font-size: 2rem;
+                            transform: rotate(-45deg);
+                        }
+
+                        .event-button {
+                            margin-left: auto;
+                            margin-right: 0;
+                        }
+
+                        margin-bottom: 2.5rem;
+                    }
+                }
+            }
+
+            .passed {
+                filter: grayscale(90%);
+            }
+        }
+    }
+}
+
+@include media-md {
+    .sc-eventspage {
+        section.eventspage {
+            .cards-holder {
+                @include flex(row);
+                flex-wrap: wrap;
+
+                .eventcard {
+                    flex: 0 0 50%;
+
+                    &-body {
+                        margin-left: 1rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .sc-eventspage {
+        section.eventspage {
+            margin-top: -$nav-lg;
+
+            .cards-holder {
+                .eventcard {
+                    flex: 0 0 33.33%;
+                }
+            }
+        }
+    }
+}

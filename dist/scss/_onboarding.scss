@@ -94,8 +94,6 @@
                 @include flex(row);
 
                 .welcome-video {
-                    border: 1px solid red;
-
                     iframe {
                         margin: 0 .5rem;
                         max-width: 100%;

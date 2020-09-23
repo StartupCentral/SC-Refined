@@ -6211,6 +6211,201 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   }
 }
 
+.sc-eventspage section.eventspage {
+  margin-top: -75px;
+}
+
+.sc-eventspage section.eventspage .cards-holder {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body {
+  position: relative;
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f5f9fe;
+  border: 1px solid #e6e7e8;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-picture {
+  height: 175px;
+  width: 100%;
+  z-index: 1;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-picture img {
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-date {
+  position: relative;
+  background: rgba(18, 28, 48, 0.8);
+  color: #FFFFFF;
+  padding: 1.5rem 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: -11.5rem;
+  margin-bottom: 5.5rem;
+  z-index: 2;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-date::before {
+  content: "";
+  position: absolute;
+  background: rgba(18, 28, 48, 0.8);
+  width: 8px;
+  left: -8px;
+  top: 0;
+  height: 100%;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-date::after {
+  content: "";
+  position: absolute;
+  background-color: #182848;
+  width: 8px;
+  left: -8px;
+  bottom: -8px;
+  height: 8px;
+  -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+          clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-date i {
+  margin-right: .5rem;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-date .end::before {
+  content: "-";
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-title {
+  padding: 1rem;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-title h3 {
+  width: 100%;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: .5rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-location .location-icon {
+  width: 2.75rem;
+  text-align: center;
+  margin-right: .5rem;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-location .location-icon i {
+  font-size: 2rem;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-price {
+  margin: 1.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-price span {
+  font-weight: bold;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-price .price-icon {
+  width: 3rem;
+  margin-right: .6rem;
+  text-align: center;
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-price i {
+  font-size: 2rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.sc-eventspage section.eventspage .cards-holder .eventcard-body .event-price .event-button {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.sc-eventspage section.eventspage .cards-holder .passed {
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+}
+
+@media screen and (min-width: 767px) {
+  .sc-eventspage section.eventspage .cards-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sc-eventspage section.eventspage .cards-holder .eventcard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .sc-eventspage section.eventspage .cards-holder .eventcard-body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .sc-eventspage section.eventspage {
+    margin-top: -90px;
+  }
+  .sc-eventspage section.eventspage .cards-holder .eventcard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+  }
+}
+
 section.sc-faq-questions {
   margin-top: -75px;
 }
@@ -8214,7 +8409,6 @@ section.sc-settings .settings-button button {
             flex-direction: row;
   }
   .sc-onboarding section.onboarding-welcome .welcome-container .welcome-video {
-    border: 1px solid red;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 41.66666666666667%;
             flex: 0 0 41.66666666666667%;
