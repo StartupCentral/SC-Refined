@@ -8069,8 +8069,6 @@ section.sc-settings .settings-header .header-tab button {
 }
 
 section.sc-settings .settings-header .header-tab button:hover {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
   background-color: #e6e7e8;
 }
 
@@ -8254,11 +8252,6 @@ section.sc-settings .settings-button button {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  section.sc-settings .settings-main .form-box-container .box #cvr {
-    -webkit-box-flex: 20%;
-        -ms-flex: 20%;
-            flex: 20%;
-  }
   section.sc-settings .settings-main .form-box-container .box .button {
     height: 42.4px;
     margin-top: 2.56rem;
@@ -8423,6 +8416,51 @@ section.sc-settings .settings-button button {
     margin: 0 .5rem;
     max-width: 100%;
   }
+}
+
+#sc-blogpage header.blog-header {
+  position: relative;
+  color: red;
+}
+
+#sc-blogpage header.blog-header .header-image {
+  position: relative;
+}
+
+#sc-blogpage header.blog-header .header-image .header-text-box {
+  border: 5px solid red;
+}
+
+#sc-blogpage header.blog-header .header-image .header-text-box .article-content-meta .author-name-area .author-name-prefix {
+  font-size: 1.7rem;
+  color: #A0A0A0;
+}
+
+#sc-blogpage section.blog-main-section {
+  background-color: #f5f9fe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#sc-blogpage section.blog-main-section .side-container {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  border: 1px solid #e6e7e8;
+}
+
+#sc-blogpage section.blog-main-section .side-container {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  padding: 2.5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  border: 1px solid #e6e7e8;
 }
 
 .sc-businessplan .container section.businessplan {

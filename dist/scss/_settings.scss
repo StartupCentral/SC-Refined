@@ -33,7 +33,6 @@ section.sc-settings {
                 padding: 0.5rem 1rem;
 
                 &:hover {
-                    @include transition(0.2s);
                     background-color: $sc-border;
                 }
 
@@ -208,10 +207,6 @@ section.sc-settings {
             .form-box-container {
                 .box {
                     @include flex(row);
-
-                    #cvr {
-                        flex: 20%;
-                    }
 
                     .button {
                         height: 42.4px;
