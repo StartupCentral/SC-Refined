@@ -1,5 +1,79 @@
 #sc-blog {
+    background-color: $sc-soft;
+
+    section.blog-features {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        .blog-features-main {
+            .blog-card-main {
+                max-width: unset;
+                border: 1px solid $sc-border;
+                @include boxshadow-soft;
+                margin: auto;
+                @include transition(.2s);
+
+                .blog-image {
+                    overflow: hidden;
+                }
+
+                .blog-body {
+                    color: $sc-primary;
+                    background-color: $sc-white;
+                    padding: 1rem 2.5rem 1.5rem;
+
+                    .author-name-area {
+                        color: $sc-gray;
+
+                        .author-name {}
+
+                        .author-position {
+                            &::before {
+                                content: "| ";
+                                margin: .25rem;
+                            }
+                        }
+                    }
+
+                    .blog-content {}
+
+                    .blog-date {
+                        @include flex(row);
+                        justify-content: space-between;
+                        margin-top: 1rem;
+
+                        .tag {
+                            border: 1px solid $sc-border;
+                            color: $sc-primary;
+                            background-color: $sc-white;
+                            @include boxshadow-soft;
+                            border-radius: 2.5rem;
+                            padding: .25rem 1.5rem;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.02);
+
+                    h2 {
+                        color: $sc-accent;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .blog-features-sidebar {
+            display: none;
+        }
+
+    }
+
     section.blog-cards {
+        padding-top: 0;
         display: grid;
         grid-gap: 5rem;
         justify-content: center;
@@ -67,6 +141,87 @@
 
 @include media-md {
     #sc-blog {
+        section.blog-features {
+            @include flex(row);
+            width: 100%;
+
+            .blog-features-main {
+                flex: 1;
+
+                .blog-card-main {
+                    margin-right: 1.5rem;
+                }
+            }
+
+            .blog-features-sidebar {
+                @include flex(column);
+                max-width: 35%;
+
+                .sidebar-toppicks {
+
+                    .toppicks-title {
+                        background-color: $sc-primary;
+                        padding: .5rem;
+                        text-align: center;
+                        border-radius: .5rem;
+                        margin-bottom: .5rem;
+
+                        span {
+                            font-size: 1.6rem;
+                            color: $sc-white;
+                        }
+                    }
+
+                    .toppicks-card {
+                        @include boxshadow-soft;
+                        background-color: $sc-white;
+                        padding: 1rem;
+                        border-radius: .5rem;
+                        @include transition(.2s);
+
+                        &-title {
+                            color: $sc-primary;
+                            font-weight: normal;
+
+                            span {
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        &-date {
+                            @include flex(row);
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: .5rem;
+
+                            .tag {
+                                border: 1px solid $sc-border;
+                                color: $sc-primary;
+                                background-color: $sc-white;
+                                @include boxshadow-soft;
+                                border-radius: 2.5rem;
+                                padding: 0rem .8rem;
+                                font-size: 1.3rem;
+                                font-weight: bold;
+                            }
+
+                            .date {
+                                color: $sc-primary;
+                                font-size: 1.3rem;
+                                font-weight: normal;
+
+                            }
+                        }
+
+                        &:hover {
+                            transform: scale(1.02);
+                        }
+                    }
+                }
+            }
+
+        }
+
         section.blog-cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);

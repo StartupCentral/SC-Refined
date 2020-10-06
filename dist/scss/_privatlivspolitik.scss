@@ -1,0 +1,9 @@
+section.privatlivspolitik {
+    margin-top: -$nav-sm;
+}
+
+@include media-lg {
+    section.privatlivspolitik {
+        margin-top: -$nav-lg;
+    }
+}

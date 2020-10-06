@@ -251,45 +251,68 @@
                                         <span class="content-name">CVR</span>
                                     </label>
                                     <div class="input-container">
-                                        <input type="text" id="firstname" name="firstname" autocomplete="off"
-                                            required />
+                                        <input type="text" id="cvrSettings" name="cvr" autocomplete="off" required />
                                         <span><i class="fas fa-hashtag"></i></span>
                                     </div>
                                 </div>
 
-                                <input type="button" class="button" value="CVR">
+
+                                <input type="button" value="CVR" class="button" id="cvrInfo">
+
 
                                 <div class="form-container" id="industry">
-                                    <label for="address" class="label-name">
-                                        <span class="content-name">Industry Code</span>
+                                    <label for="companyIndustryCode" class="label-name">
+                                        <span class="content-name">Industri kode</span>
                                     </label>
                                     <div class="input-container">
-                                        <input type="text" disabled="disabled" id=" firstname" name="firstname"
-                                            autocomplete="off" required />
+                                        <input type="text" disabled="disabled" id="companyIndustryCodeSettings"
+                                            name="companyIndustryCode" autocomplete="off" required readonly />
                                         <span><i class="fas fa-industry"></i></span>
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="form-container" id="companyNameSettings">
+                                <label for="companyName" class="label-name">
+                                    <span class="content-name">Firmanavn</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="companyNameSettings" name="companyName" autocomplete="off"
+                                        required readonly />
+                                    <span><i class="fas fa-file-signature"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-container" id="companyAddressSettings">
+                                <label for="companyAddress" class="label-name">
+                                    <span class="content-name">Virksomhedsadresse</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="companyAddressSettings" name="companyAddress"
+                                        autocomplete="off" required readonly />
+                                    <span><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                            </div>
+
                             <div class="box">
-                                <div class="form-container zip">
-                                    <label for="address" class="label-name">
+                                <div class="form-container zip" id="companyZipCodeSettings">
+                                    <label for="companyZipCode" class="label-name">
                                         <span class="content-name">Postnummer</span>
                                     </label>
                                     <div class="input-container">
-                                        <input type="text" id="firstname" name="firstname" autocomplete="off"
-                                            required />
+                                        <input type="text" id="companyZipCodeSettings" name="companyZipCode"
+                                            autocomplete="off" required readonly />
                                         <span><i class="fas fa-mail-bulk"></i></span>
                                     </div>
                                 </div>
 
-                                <div class="form-container city">
-                                    <label for="city" class="label-name">
+                                <div class="form-container city" id="companyCitySettings">
+                                    <label for="companyCity" class="label-name">
                                         <span class="content-name">By</span>
                                     </label>
                                     <div class="input-container">
-                                        <input type="text" id="firstname" name="firstname" autocomplete="off"
-                                            required />
+                                        <input type="text" id="companyCitySettings" name="companyCity"
+                                            autocomplete="off" required readonly />
                                         <span><i class="fas fa-city"></i></span>
                                     </div>
                                 </div>
