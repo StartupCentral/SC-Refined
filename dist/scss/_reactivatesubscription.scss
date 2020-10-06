@@ -1,0 +1,216 @@
+section.paylike {
+    margin-top: -$nav-sm;
+
+    .container {
+        .text {
+            h2 {
+                margin-left: auto;
+                margin-right: auto;
+                @include sc-title-text;
+            }
+        }
+
+        .thankyou-img {
+            margin-top: 1rem;
+            max-width: 25rem;
+
+            img {
+                border-radius: 1rem;
+            }
+        }
+
+        .form-container {
+            #phone {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                p {
+
+                    margin-right: .5rem;
+                }
+            }
+
+            &.subscription-cb {
+                .rb-container {
+                    display: grid;
+
+                    [type="checkbox"]:checked,
+                    [type="checkbox"]:not(:checked),
+                    [type="radio"]:checked,
+                    [type="radio"]:not(:checked) {
+                        position: absolute;
+                        left: -9999px;
+                        width: 0;
+                        height: 0;
+                        visibility: hidden;
+                    }
+
+                    .checkbox-subscription:checked+label,
+                    .checkbox-subscription:not(:checked)+label {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        cursor: pointer;
+                        width: auto;
+                        color: $sc-white;
+                        padding: 2rem 1rem;
+                        margin-bottom: 1.5rem;
+                        overflow: hidden;
+                        border: 1px solid $sc-border;
+                        text-align: center;
+                        border-radius: .5rem;
+                        text-transform: uppercase;
+                        -webkit-transition: all 200ms linear;
+                        transition: all 200ms linear;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        i {
+                            font-size: 3rem;
+                            margin-bottom: .5rem;
+                        }
+
+                        .price {
+                            &::after {
+                                content: "/month";
+                                font-size: 1rem;
+                            }
+                        }
+
+                        .description {
+                            display: none;
+                            margin-top: .5rem;
+                            text-align: left;
+                        }
+
+                        span {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .checkbox-subscription:not(:checked)+label {
+                        background-color: $sc-white;
+                        color: $sc-primary;
+                        @include boxshadow-soft;
+                    }
+
+                    .checkbox-subscription:checked+label {
+                        background-color: $sc-primary;
+                        color: $sc-white;
+                        @include boxshadow-soft;
+
+                        .description {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .checkbox {
+                span {
+                    font-size: 1.2rem;
+
+                    a {
+                        font-size: 1.2rem;
+                        color: $sc-accent;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .paylike-button {
+            display: grid;
+            justify-content: center;
+        }
+    }
+}
+
+@include media-md {
+    section.paylike {
+        .container {
+            .form-container {
+                &.subscription-cb {
+                    .rb-container {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-gap: 2.5rem;
+                        margin: 2.5rem auto;
+
+
+                        .checkbox-subscription:checked+label,
+                        .checkbox-subscription:not(:checked)+label {
+                            flex-direction: column;
+                            cursor: pointer;
+                            color: $sc-white;
+                            padding: 2rem 1rem;
+                            margin-bottom: 0;
+                            justify-items: center;
+                            align-items: center;
+
+                            i {
+                                width: 3rem;
+                                font-size: 2.5rem;
+                            }
+
+                            .month {
+                                margin-top: .5rem;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+
+                            .price {
+                                &::after {
+                                    content: "/month";
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            .description {
+                                display: block;
+                            }
+
+                            span {
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .checkbox-subscription:not(:checked)+label {
+                            background-color: $sc-white;
+                            color: $sc-primary;
+                            @include boxshadow-soft;
+                        }
+
+                        .checkbox-subscription:checked+label {
+                            background-color: $sc-primary;
+                            color: $sc-white;
+                            @include boxshadow-soft;
+                        }
+                    }
+                }
+
+                .checkbox {
+                    span {
+                        font-size: 1.5rem;
+
+                        a {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    section.paylike {
+        margin-top: -$nav-lg;
+    }
+}

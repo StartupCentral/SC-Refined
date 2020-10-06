@@ -7,20 +7,21 @@
 
         .blog-features-main {
             .blog-card-main {
-                max-width: unset;
                 border: 1px solid $sc-border;
                 @include boxshadow-soft;
                 margin: auto;
                 @include transition(.2s);
+                max-width: 40rem;
 
                 .blog-image {
                     overflow: hidden;
                 }
 
                 .blog-body {
+                    position: relative;
                     color: $sc-primary;
                     background-color: $sc-white;
-                    padding: 1rem 2.5rem 1.5rem;
+                    padding: 1rem 2.5rem 4.5rem;
 
                     .author-name-area {
                         color: $sc-gray;
@@ -38,7 +39,10 @@
                     .blog-content {}
 
                     .blog-date {
+                        border: 1px solid red;
+                        position: absolute;
                         @include flex(row);
+                        width: auto;
                         justify-content: space-between;
                         margin-top: 1rem;
 
@@ -137,19 +141,69 @@
             }
         }
     }
+
+    section.pagination {
+        padding-top: 0;
+
+        .pagination-list {
+            display: flex;
+            justify-content: center;
+
+            a {
+                width: fit-content;
+                color: $sc-primary;
+                padding: 1rem 1.5rem;
+                text-decoration: none;
+                border-top: 1px solid $sc-gray;
+                border-bottom: 1px solid $sc-gray;
+                border-right: 1px solid $sc-gray;
+                white-space: unset;
+
+                &:active {
+                    background-color: $sc-primary;
+                    color: $sc-white;
+                    border: 1px solid $sc-primary;
+                }
+
+                &:hover:not(.active) {
+                    background-color: $sc-border;
+                }
+
+                &:first-child {
+                    border-top-left-radius: .5rem;
+                    border-bottom-left-radius: .5rem;
+                    border-left: 1px solid $sc-gray;
+                }
+
+                &:last-child {
+                    border-top-right-radius: .5rem;
+                    border-bottom-right-radius: .5rem;
+                }
+
+                &.active {
+                    background-color: $sc-primary;
+                    color: $sc-white;
+                    border: 1px solid $sc-primary;
+                }
+            }
+
+
+        }
+    }
 }
 
 @include media-md {
     #sc-blog {
         section.blog-features {
             @include flex(row);
-            width: 100%;
+            max-width: 95%;
 
             .blog-features-main {
                 flex: 1;
 
                 .blog-card-main {
                     margin-right: 1.5rem;
+                    max-width: unset;
                 }
             }
 
@@ -157,7 +211,7 @@
                 @include flex(column);
                 max-width: 35%;
 
-                .sidebar-toppicks {
+                .sidebar-container {
 
                     .toppicks-title {
                         background-color: $sc-primary;
@@ -217,6 +271,10 @@
                             transform: scale(1.02);
                         }
                     }
+
+                    &.editorpicks {
+                        display: none;
+                    }
                 }
             }
 
@@ -232,6 +290,32 @@
 
 @include media-lg {
     #sc-blog {
+        section.blog-features {
+            @include flex(row);
+            max-width: 95%;
+
+            .blog-features-main {
+                flex: 1;
+
+                .blog-card-main {
+                    margin-right: 1.5rem;
+                    max-width: unset;
+                }
+            }
+
+            .blog-features-sidebar {
+                @include flex(column);
+                max-width: 35%;
+
+                .sidebar-container {
+                    &.editorpicks {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+
         section.blog-cards {
             display: grid;
             grid-gap: 2.5rem;

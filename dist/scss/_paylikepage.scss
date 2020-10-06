@@ -2,13 +2,12 @@ section.paylike {
     margin-top: -$nav-sm;
 
     .container {
-        .text {
-            h2 {
-                margin-left: auto;
-                margin-right: auto;
-                @include sc-title-text;
-            }
+        h2 {
+            margin-left: auto;
+            margin-right: auto;
+            @include sc-title-text;
         }
+
 
         .thankyou-img {
             margin-top: 1rem;

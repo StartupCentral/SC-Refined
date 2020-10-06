@@ -13,6 +13,7 @@
 @import './login';
 @import './thankyoupage';
 @import './paylikepage';
+@import './reactivatesubscription';
 
 //Landing Pages
 @import './index';
@@ -157,12 +158,13 @@ ol {
     li {
         margin-left: 3.5rem;
 
-        &:first-child {
-            margin-left: 2.5rem;
-            font-weight: bold;
-            text-decoration: underline;
-            font-size: 2rem;
-        }
+    }
+
+    &:first-child {
+        margin-left: 2.5rem;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 2rem;
     }
 }
 
