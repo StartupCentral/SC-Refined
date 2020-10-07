@@ -14,7 +14,6 @@ section.sc-extraoffers-section {
                 justify-content: space-between;
                 padding: 5rem 0;
                 cursor: pointer;
-                // border: 1px solid red;
                 margin: 0;
 
                 i {
@@ -52,13 +51,20 @@ section.sc-extraoffers-section {
             }
 
             .extraoffer-description {
-                p {
-                    margin: 0 4rem 4rem;
-                }
-
                 max-height: 0;
                 overflow: hidden;
                 @include transition(.3s);
+
+                .button-box {
+                    display: flex;
+                    width: 100%;
+                    margin: 2.5rem auto;
+
+                    .button {
+                        // width: max-content;
+                        margin: auto;
+                    }
+                }
             }
         }
     }
@@ -89,7 +95,7 @@ section.sc-extraoffers-section {
                     }
 
                     .header-img {
-                        margin: auto 1.5rem auto 0;
+                        margin: 0 1.5rem auto 0;
 
                         img {
                             object-fit: contain;
@@ -108,19 +114,8 @@ section.sc-extraoffers-section {
                 }
 
                 .extraoffer-description {
-                    p {
-                        margin: 0 1.5rem;
-                    }
-
-                    .button-box {
-                        display: flex;
-                        width: 100%;
-                        margin: 2.5rem auto;
-
-                        .button {
-                            width: max-content;
-                            margin: auto;
-                        }
+                    .button {
+                        width: max-content;
                     }
                 }
             }
@@ -137,12 +132,6 @@ section.sc-extraoffers-section {
                         img {
                             width: 20rem;
                         }
-                    }
-                }
-
-                .extraoffer-description {
-                    p {
-                        margin: 0 5rem;
                     }
                 }
             }

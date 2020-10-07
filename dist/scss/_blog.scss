@@ -12,6 +12,9 @@
                 margin: auto;
                 @include transition(.2s);
                 max-width: 40rem;
+                background-color: $sc-white;
+                border-bottom-right-radius: .5rem;
+                border-bottom-left-radius: .5rem;
 
                 .blog-image {
                     overflow: hidden;
@@ -21,12 +24,21 @@
                     position: relative;
                     color: $sc-primary;
                     background-color: $sc-white;
-                    padding: 1rem 2.5rem 4.5rem;
 
                     .author-name-area {
+                        position: absolute;
                         color: $sc-gray;
+                        top: .5rem;
+                        left: 2.5rem;
 
-                        .author-name {}
+                        .author-name {
+                            color: $sc-gray;
+
+                            &:hover {
+                                color: $sc-accent;
+                                text-decoration: underline;
+                            }
+                        }
 
                         .author-position {
                             &::before {
@@ -36,17 +48,21 @@
                         }
                     }
 
-                    .blog-content {}
+                    .blog-content {
+                        display: block;
 
-                    .blog-date {
-                        border: 1px solid red;
-                        position: absolute;
-                        @include flex(row);
-                        width: auto;
-                        justify-content: space-between;
-                        margin-top: 1rem;
+                        a {
+                            color: $sc-primary;
+                            display: block;
+                            padding: 2.5rem 2.5rem 5rem;
+                        }
 
                         .tag {
+                            position: absolute;
+                            bottom: 1.25rem;
+                            left: 2.5rem;
+                            width: auto;
+
                             border: 1px solid $sc-border;
                             color: $sc-primary;
                             background-color: $sc-white;
@@ -55,7 +71,18 @@
                             padding: .25rem 1.5rem;
                             font-size: 1.4rem;
                             font-weight: bold;
+
+
+                            &:hover {
+                                background-color: $sc-border;
+                            }
                         }
+                    }
+
+                    .date {
+                        position: absolute;
+                        bottom: 1.25rem;
+                        right: 2.5rem;
                     }
                 }
 
@@ -63,8 +90,8 @@
                     transform: scale(1.02);
 
                     h2 {
-                        color: $sc-accent;
-                        text-decoration: underline;
+                        // color: $sc-accent;
+                        // text-decoration: underline;
                     }
                 }
             }
@@ -202,8 +229,8 @@
                 transform: scale(1.02);
 
                 h2 {
-                    color: $sc-accent;
-                    text-decoration: underline;
+                    // color: $sc-accent;
+                    // text-decoration: underline;
                 }
             }
         }
@@ -266,9 +293,12 @@
             max-width: 95%;
 
             .blog-features-main {
+                display: flex;
                 flex: 1;
 
                 .blog-card-main {
+                    margin-top: 0;
+                    margin-bottom: 0;
                     margin-right: 1.5rem;
                     max-width: unset;
                 }
@@ -279,7 +309,6 @@
                 max-width: 35%;
 
                 .sidebar-container {
-
                     .toppicks-title {
                         background-color: $sc-primary;
                         padding: .5rem;
@@ -294,52 +323,48 @@
                     }
 
                     .toppicks-card {
+                        position: relative;
                         @include boxshadow-soft;
                         background-color: $sc-white;
-                        padding: 1rem;
                         border-radius: .5rem;
                         @include transition(.2s);
 
-                        &-title {
-                            color: $sc-primary;
-                            font-weight: normal;
 
-                            span {
+                        &-title {
+                            a {
+                                display: block;
+                                color: $sc-primary;
+                                font-weight: normal;
                                 font-size: 1.5rem;
+                                padding: 1rem 1.5rem 4rem;
+                                line-height: 1.4;
                             }
                         }
 
-                        &-date {
-                            position: relative;
-                            @include flex(row);
-                            justify-content: space-between;
-                            align-items: center;
-                            margin-top: .5rem;
+                        .tag {
+                            position: absolute;
+                            bottom: 1rem;
+                            left: 1.5rem;
+                            color: $sc-primary;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            width: auto;
+                            border-radius: 2.5rem;
 
-                            .tag {
-                                position: absolute;
-                                border: 1px solid $sc-border;
-                                color: $sc-primary;
-                                background-color: $sc-white;
-                                @include boxshadow-soft;
-                                border-radius: 2.5rem;
-                                padding: 0rem .8rem;
-                                font-size: 1.3rem;
-                                font-weight: bold;
-                                width: auto;
-
-                                &:hover {
-                                    background-color: $sc-border;
-                                }
+                            &:hover {
+                                text-decoration: underline;
                             }
+                        }
 
-                            .date {
-                                color: $sc-primary;
-                                font-size: 1.3rem;
-                                font-weight: normal;
-                                margin-right: 0;
-                                margin-left: auto;
-                            }
+                        .date {
+                            position: absolute;
+                            bottom: 1rem;
+                            right: 1.5rem;
+                            color: $sc-primary;
+                            font-size: 1.4rem;
+                            font-weight: normal;
+                            margin-right: 0;
+                            margin-left: auto;
                         }
 
                         &:hover {
@@ -349,6 +374,13 @@
 
                     &.editorpicks {
                         display: none;
+
+                        .toppicks-card {
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -358,7 +390,6 @@
         section.blog-cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-
         }
     }
 }
@@ -368,15 +399,6 @@
         section.blog-features {
             @include flex(row);
             max-width: 95%;
-
-            .blog-features-main {
-                flex: 1;
-
-                .blog-card-main {
-                    margin-right: 1.5rem;
-                    max-width: unset;
-                }
-            }
 
             .blog-features-sidebar {
                 @include flex(column);
