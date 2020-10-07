@@ -4,6 +4,7 @@
 $nav-sm: 75px;
 $nav-lg: 90px;
 
+
 //Fonts
 $font-primary:'Poppins',
 sans-serif;
@@ -195,10 +196,10 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     margin-top: 1rem;
     padding: .55rem 1.5rem;
     border-radius: .5rem;
+    font-family: $font-primary;
 
     color: $sc-white;
     background: $sc-primary;
-    font-family: $font-primary;
     border: 1px solid $sc-primary;
 
     @include transition(.2s);
@@ -207,6 +208,28 @@ $sc-overlay-dark:rgba(0, 0, 0, .1);
     &:hover {
         background: $sc-secondary;
         border-color: $sc-secondary;
+    }
+}
+
+@mixin btn-outline {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .55rem 1.5rem;
+    border-radius: .5rem;
+    font-family: $font-primary;
+
+    border: 1px solid $sc-primary;
+    color: $sc-primary;
+    background: none;
+    border: 1px solid $sc-primary;
+
+    @include transition(0.2s);
+
+    &:hover {
+        background: $sc-secondary;
+        border-color: $sc-secondary;
+        color: $sc-white;
     }
 }
 

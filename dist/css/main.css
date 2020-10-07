@@ -2021,6 +2021,124 @@ section.paylike .container .thankyou-img img {
   padding-top: 0;
 }
 
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card {
+  border: 1px solid #e6e7e8;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .card-header {
+  position: relative;
+  background-color: #182848;
+  color: white;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon {
+  position: absolute;
+  bottom: -1.28rem;
+  right: -1.5rem;
+  background-color: #30C1F3;
+  padding-right: 1rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  right: 0rem;
+  background-color: #0B93C1;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+          clip-path: polygon(0 0, 0% 100%, 100% 0);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  width: 1.5rem;
+  height: 2.56rem;
+  background-color: #30C1F3;
+  -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+          clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon span {
+  font-size: 1.6rem;
+  padding: .5rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-header {
+  border-bottom: 1px solid #e6e7e8;
+  text-align: center;
+  padding: 1rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-header span {
+  font-size: 3rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5rem 0;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .uppertext {
+  font-size: 1.4rem;
+  color: #A0A0A0;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .price {
+  position: relative;
+  font-size: 5rem;
+  margin: 1.5rem 0 .5rem;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .price::before {
+  content: "DKK";
+  font-size: 1.6rem;
+  position: absolute;
+  color: #182848;
+  top: 0;
+  right: 0;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .price::after {
+  content: "/mo";
+  font-size: 1.4rem;
+  color: #A0A0A0;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .downtext {
+  font-size: 1.4rem;
+  color: #A0A0A0;
+}
+
+#sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-button {
+  display: -ms-grid;
+  display: grid;
+  margin: 0rem 2.5rem 2.5rem;
+}
+
 #sc-reactivatesubscription .container section.react-subscriptions .form-container.subscription-cb .rb-container {
   display: -ms-grid;
   display: grid;
@@ -2033,8 +2151,8 @@ section.paylike .container .thankyou-img img {
 #sc-reactivatesubscription .container section.react-subscriptions .form-container.subscription-cb .rb-container [type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
-  width: 0;
-  height: 0;
+  width: 1rem;
+  height: 1rem;
   visibility: hidden;
 }
 
@@ -2176,6 +2294,115 @@ section.paylike .container .thankyou-img img {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    border: 1px solid #e6e7e8;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+            box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card {
+    border: none;
+    border-radius: 0rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card:nth-child(2) {
+    border-left: 1px solid #e6e7e8;
+    border-right: 1px solid #e6e7e8;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card:last-child {
+    -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+            box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .card-header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon {
+    position: absolute;
+    bottom: -1.28rem;
+    right: -1.5rem;
+    background-color: #30C1F3;
+    padding-right: 1rem;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0rem;
+    background-color: #0B93C1;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    width: 1.5rem;
+    height: 2.56rem;
+    background-color: #30C1F3;
+    -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+            clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body.focus .ribbon span {
+    font-size: 1.6rem;
+    padding: .5rem;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-header {
+    border-bottom: 1px solid #e6e7e8;
+    text-align: center;
+    padding: 1rem;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-header span {
+    font-size: 3rem;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1.5rem 0;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .uppertext {
+    font-size: 1.4rem;
+    color: #A0A0A0;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .price {
+    position: relative;
+    font-size: 5rem;
+    margin: 1.5rem 0 .5rem;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .price::before {
+    content: "DKK";
+    font-size: 1.6rem;
+    position: absolute;
+    color: #182848;
+    top: 0;
+    right: 0;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .price::after {
+    content: "/mo";
+    font-size: 1.4rem;
+    color: #A0A0A0;
+  }
+  #sc-reactivatesubscription .container section.react-subscriptions .sub-cards .sub-card .card-body .card-text .downtext {
+    font-size: 1.4rem;
+    color: #A0A0A0;
+  }
 }
 
 section.sc-home-landing {
@@ -2285,9 +2512,9 @@ section.sc-home-landing .landing-buttons .button-left {
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -2315,9 +2542,9 @@ section.sc-home-landing .landing-buttons .button-right {
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -2529,9 +2756,9 @@ section.sc-home-services .services-card-container .service-card-button {
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -3230,9 +3457,9 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -3470,9 +3697,9 @@ section.coach-header .container .coach-text button {
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -3541,9 +3768,9 @@ section.coach-testimonial .container .card .coach-description {
     margin-top: 1rem;
     padding: .55rem 1.5rem;
     border-radius: .5rem;
+    font-family: "Poppins", sans-serif;
     color: #FFFFFF;
     background: #182848;
-    font-family: "Poppins", sans-serif;
     border: 1px solid #182848;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -3735,9 +3962,9 @@ section.coach-holder2 .coachcard-buttons .profile-btn {
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -3754,9 +3981,9 @@ section.coach-holder2 .coachcard-buttons .send-msg {
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -10014,9 +10241,9 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbt
     margin-top: 1rem;
     padding: .55rem 1.5rem;
     border-radius: .5rem;
+    font-family: "Poppins", sans-serif;
     color: #FFFFFF;
     background: #182848;
-    font-family: "Poppins", sans-serif;
     border: 1px solid #182848;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -10679,9 +10906,9 @@ textarea:focus {
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -10692,15 +10919,36 @@ textarea:focus {
   border-color: #223869;
 }
 
+.button-border {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #182848;
+  color: #182848;
+  background: none;
+  border: 1px solid #182848;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-border:hover {
+  background: #223869;
+  border-color: #223869;
+  color: #FFFFFF;
+}
+
 .button-white {
   cursor: pointer;
   text-align: center;
   margin-top: 1rem;
   padding: .55rem 1.5rem;
   border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
   color: #FFFFFF;
   background: #182848;
-  font-family: "Poppins", sans-serif;
   border: 1px solid #182848;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -10720,6 +10968,43 @@ textarea:focus {
   background: #223869;
   border-color: #223869;
   border-color: #FFFFFF;
+}
+
+.button-white-border {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .55rem 1.5rem;
+  border-radius: .5rem;
+  font-family: "Poppins", sans-serif;
+  color: #FFFFFF;
+  background: #182848;
+  border: 1px solid #182848;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #182848;
+  background: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  background: none;
+}
+
+.button-white-border:hover {
+  background: #223869;
+  border-color: #223869;
+}
+
+.button-white-border:hover, .button-white-border:focus {
+  color: #FFFFFF;
+  background: #223869;
+  border-color: #223869;
+  border-color: #FFFFFF;
+}
+
+.button-white-border:hover, .button-white-border:focus {
+  color: #111111;
+  background: #FFFFFF;
 }
 
 .cta-button {

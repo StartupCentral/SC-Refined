@@ -613,8 +613,16 @@ textarea {
     @include btn;
 }
 
+.button-border {
+    @include btn-outline;
+}
+
 .button-white {
     @include btn-white;
+}
+
+.button-white-border {
+    @include btn-white-outline;
 }
 
 .cta-button {
