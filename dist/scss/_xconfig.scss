@@ -4,7 +4,6 @@
 $nav-sm: 75px;
 $nav-lg: 90px;
 
-
 //Fonts
 $font-primary:'Poppins',
 sans-serif;
@@ -36,15 +35,6 @@ $font-weights:( //
 @function weight($weight-name) {
     @return map-get($font-weights, $weight-name);
 }
-
-
-
-
-
-
-
-
-
 
 //////////Colors//////////
 
