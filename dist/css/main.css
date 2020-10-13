@@ -7937,6 +7937,28 @@ section.contact-section .contact-container .contact-info-social a:hover i {
   padding: .5rem 2rem;
 }
 
+.aside-container .banner-container .discount-codes .discount-links .see-more {
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.aside-container .banner-container .discount-codes .discount-links .see-more a {
+  margin: auto;
+  color: #A0A0A0;
+}
+
+.aside-container .banner-container .discount-codes .discount-links .see-more::before {
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .aside-container .banner-container .events .event-list {
   padding: .5rem 2rem;
 }
@@ -8284,9 +8306,6 @@ section.contact-section .contact-container .contact-info-social a:hover i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .aside-container .banner-container .discount-codes .discount-links {
-    padding: .5rem 2rem;
   }
   .aside-container .banner-container .events .event-list {
     padding: .5rem 2rem;
