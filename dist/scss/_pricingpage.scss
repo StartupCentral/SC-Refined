@@ -1,4 +1,4 @@
-#sc-reactivatesubscription {
+#sc-pricingpage {
     .container {
         margin-top: -$nav-sm;
         margin-bottom: $nav-sm;
@@ -11,11 +11,7 @@
             }
         }
 
-        section.react-intro {
-            padding-top: 0;
-        }
-
-        section.react-subscriptions {
+        section.pricingpage-prices {
             .sub-cards {
                 display: grid;
                 grid-gap: 5rem;
@@ -244,60 +240,22 @@
                 justify-content: center;
             }
         }
-    }
-}
 
-@include media-md {
-    #sc-reactivatesubscription {
-        .container {
-            section.paylike {}
-
-            section.react-subscriptions {
-                .form-container {
-                    &.subscription-cb {
-                        .rb-container {
-                            display: grid;
-                            grid-gap: 2.5rem;
-                            margin: 2.5rem auto;
-
-
-                            .checkbox-subscription:checked+label,
-                            .checkbox-subscription:not(:checked)+label {
-
-                                .month {
-                                    margin-top: .5rem;
-                                    margin-left: auto;
-                                    margin-right: auto;
-                                }
-
-                                .description {
-                                    display: block;
-                                }
-                            }
-                        }
-                    }
-
-                    .checkbox {
-                        span {
-                            font-size: 1.5rem;
-
-                            a {
-                                font-size: 1.5rem;
-                            }
-                        }
-                    }
-                }
+        section.pricingpage-text {
+            .text-button {
+                margin-top: 1.5rem;
+                display: grid;
             }
         }
     }
 }
 
 @include media-lg {
-    #sc-reactivatesubscription {
+    #sc-pricingpage {
         .container {
             margin-top: -$nav-lg;
 
-            section.react-subscriptions {
+            section.pricingpage-prices {
                 .form-container {
                     &.subscription-cb {
                         .rb-container {
@@ -342,6 +300,16 @@
                                 margin: 1.5rem 0;
                             }
                         }
+                    }
+                }
+            }
+
+            section.pricingpage-text {
+                .text-button {
+                    .button {
+                        width: fit-content;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 }
             }
