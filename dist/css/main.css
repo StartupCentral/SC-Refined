@@ -6893,126 +6893,6 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   margin: 0rem 2.5rem 2.5rem;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container {
-  display: -ms-grid;
-  display: grid;
-  position: relative;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container [type="checkbox"]:checked,
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container [type="checkbox"]:not(:checked),
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container [type="radio"]:checked,
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container [type="radio"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-  width: 1rem;
-  height: 1rem;
-  visibility: hidden;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:checked + label,
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:not(:checked) + label {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  width: auto;
-  color: #FFFFFF;
-  padding: 2rem 2.5rem;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-  border: 1px solid #e6e7e8;
-  text-align: center;
-  border-radius: .5rem;
-  text-transform: uppercase;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:checked + label i,
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:not(:checked) + label i {
-  font-size: 3rem;
-  margin-bottom: .5rem;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:checked + label .price::after,
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:not(:checked) + label .price::after {
-  content: "/month";
-  font-size: 1rem;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:checked + label .description,
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:not(:checked) + label .description {
-  display: none;
-  margin-top: .5rem;
-  text-align: left;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:checked + label span,
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:not(:checked) + label span {
-  font-size: 1.5rem;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:not(:checked) + label {
-  background-color: #FFFFFF;
-  color: #182848;
-  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
-          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:checked + label {
-  background-color: #182848;
-  color: #FFFFFF;
-  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
-          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .checkbox-subscription:checked + label .description {
-  display: block;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container .ribbon {
-  margin: 0;
-  padding: 0;
-  background: #30C1F3;
-  color: white;
-  padding: 1em 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translateX(38%) translateY(30%) rotate(45deg);
-          transform: translateX(38%) translateY(30%) rotate(45deg);
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container .checkbox span {
-  font-size: 1.2rem;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container .checkbox span a {
-  font-size: 1.2rem;
-  color: #30C1F3;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .form-container .checkbox span a:hover {
-  text-decoration: underline;
-}
-
-#sc-pricingpage .container section.pricingpage-prices .paylike-button {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 #sc-pricingpage .container section.pricingpage-text .text-button {
   margin-top: 1.5rem;
   display: -ms-grid;
@@ -7023,13 +6903,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   #sc-pricingpage .container {
     margin-top: -90px;
   }
-  #sc-pricingpage .container section.pricingpage-prices .form-container.subscription-cb .rb-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-  #sc-pricingpage .container section.pricingpage-prices .sub-cards {
+  #sc-pricingpage .container section.pricingpage-prices f .sub-cards {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     grid-gap: 0;
@@ -7039,25 +6913,25 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
     -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
             box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
   }
-  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card {
+  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card {
     border: none;
     border-radius: 0rem;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card:nth-child(2) {
+  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card:nth-child(2) {
     border-left: 1px solid #e6e7e8;
     border-right: 1px solid #e6e7e8;
   }
-  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card:last-child {
+  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card:last-child {
     -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
             box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
   }
-  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body.focus .card-header {
+  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card .card-body.focus .card-header {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
-  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text {
+  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card .card-body .card-text {
     margin: 1.5rem 0;
   }
   #sc-pricingpage .container section.pricingpage-text .text-button .button {
@@ -9406,6 +9280,89 @@ section.sc-settings .settings-button button {
   border: 1px solid #182848;
 }
 
+#sc-blog section.blog-categories {
+  padding-top: 0;
+  text-align: center;
+}
+
+#sc-blog section.blog-categories p {
+  max-width: 600px;
+  margin: auto;
+}
+
+#sc-blog section.blog-categories .more-categories {
+  display: -ms-grid;
+  display: grid;
+}
+
+#sc-blog section.blog-categories .more-categories-item {
+  color: #182848;
+  background-color: #FFFFFF;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  position: relative;
+  padding: 1.5rem;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+#sc-blog section.blog-categories .more-categories-item:hover {
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(1) {
+  border-left: 5px solid #ff7a59;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(2) {
+  border-left: 5px solid #00bda5;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(3) {
+  border-left: 5px solid #6a78d1;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(4) {
+  border-left: 5px solid #ff7a59;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(5) {
+  border-left: 5px solid #00bda5;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(6) {
+  border-left: 5px solid #6a78d1;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(7) {
+  border-left: 5px solid #ff7a59;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(8) {
+  border-left: 5px solid #00bda5;
+}
+
+#sc-blog section.blog-categories .more-categories-item:nth-child(9) {
+  border-left: 5px solid #6a78d1;
+}
+
 @media screen and (min-width: 767px) {
   #sc-blog section.blog-features {
     display: -webkit-box;
@@ -9508,6 +9465,13 @@ section.sc-settings .settings-button button {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  #sc-blog section.blog-categories .more-categories {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 1023px) {
@@ -9538,6 +9502,31 @@ section.sc-settings .settings-button button {
     display: -ms-grid;
     display: grid;
     grid-gap: 2.5rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  #sc-blog section.blog-categories .headline-2 {
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  #sc-blog section.blog-categories .headline-2::after {
+    content: '';
+    display: block;
+    bottom: 0;
+    background: #30C1F3;
+    width: 15rem;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto 0;
+    -webkit-transition: width .5s ease-out;
+    transition: width .5s ease-out;
+  }
+  #sc-blog section.blog-categories .more-categories {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
