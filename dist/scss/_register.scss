@@ -460,7 +460,7 @@
                     }
 
                     position: absolute;
-                    top: 0;
+                    top: -10rem;
                     left: calc(0% - 27vw);
                     // border: 1px solid red;
                     width: 25vw;
@@ -474,7 +474,7 @@
                 .sc-register-info {
                     display: block;
                     position: absolute;
-                    top: 0;
+                    top: -10rem;
                     right: calc(0% - 27vw);
                     width: 25vw;
                     padding: 2.5rem;
