@@ -1,5 +1,59 @@
 .sc-register-page {
+    position: relative;
     width: 100%;
+
+    .register-floating-images {
+        display: grid;
+        // grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 5rem;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        // max-width: 90%;
+        padding: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        -webkit-mask: -webkit-radial-gradient(center, closest-side, transparent 30%, black 80%);
+        -webkit-mask: radial-gradient(closest-side at center, transparent 10%, black 110%);
+        -webkit-filter: blur(1px);
+        overflow: hidden;
+
+        .floating-images {
+            max-width: 35rem;
+            margin: auto;
+            opacity: .3;
+        }
+
+        $i: 0;
+        $icons: 999;
+
+        @keyframes float {
+            0% {
+                transform: translate(0px, 0px);
+            }
+
+            50% {
+                transform: translate(0px, 16px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        @while $i <=$icons {
+            .floating-images:nth-child(#{$i}) {
+                display: inline-block;
+                animation: float 5s infinite ease-in-out;
+                animation-delay: #{$i/4}s;
+            }
+
+            $i: $i+1;
+        }
+
+    }
 
     .register-page-container {
         position: relative;
@@ -10,6 +64,7 @@
         @include boxshadow;
         min-height: 100vh;
         height: 100%;
+        background-color: $sc-white;
 
         .register-header {
             margin-top: auto;
