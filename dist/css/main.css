@@ -14836,19 +14836,22 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
 }
 
 #sc-pricingpage .container section.pricingpage-prices .sub-cards {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 5rem;
+  display: none;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card {
+#sc-pricingpage .container section.pricingpage-prices .prices-carousel li::before {
+  content: none;
+  margin: 0;
+}
+
+#sc-pricingpage .container section.pricingpage-prices .sub-card {
   border: 1px solid #e6e7e8;
   border-radius: .5rem;
   -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body.focus .card-header {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body.focus .card-header {
   position: relative;
   background-color: #182848;
   color: white;
@@ -14856,53 +14859,52 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   border-top-right-radius: .5rem;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body.focus .ribbon {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body.focus .ribbon {
   position: absolute;
   bottom: -1.28rem;
-  right: -1.5rem;
+  right: 1.5rem;
   background-color: #30C1F3;
-  padding-right: 1rem;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body.focus .ribbon::after {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body.focus .ribbon::after {
   content: "";
   position: absolute;
-  bottom: -1.5rem;
   right: 0rem;
-  background-color: #0B93C1;
-  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
-          clip-path: polygon(0 0, 0% 100%, 100% 0);
+  background-color: #30C1F3;
+  right: -1.5rem;
   width: 1.5rem;
-  height: 1.5rem;
+  height: 2.56rem;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+          clip-path: polygon(0 0, 0% 100%, 100% 50%);
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body.focus .ribbon::before {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body.focus .ribbon::before {
   content: "";
   position: absolute;
   left: -1.5rem;
+  background-color: #30C1F3;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 50% 50%, 0 0);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 50% 50%, 0 0);
   width: 1.5rem;
   height: 2.56rem;
-  background-color: #30C1F3;
-  -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
-          clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body.focus .ribbon span {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body.focus .ribbon span {
   font-size: 1.6rem;
   padding: .5rem;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-header {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-header {
   border-bottom: 1px solid #e6e7e8;
   text-align: center;
   padding: 1rem;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-header span {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-header span {
   font-size: 3rem;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14916,18 +14918,18 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   margin: 2.5rem 0;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text .uppertext {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-text .uppertext {
   font-size: 1.4rem;
   color: #A0A0A0;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text .price {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-text .price {
   position: relative;
   font-size: 5rem;
   margin: 1.5rem 0 .5rem;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text .price::before {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-text .price::before {
   content: "DKK";
   font-size: 1.6rem;
   position: absolute;
@@ -14936,18 +14938,18 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   right: 0;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text .price::after {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-text .price::after {
   content: "/mo";
   font-size: 1.4rem;
   color: #A0A0A0;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text .downtext {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-text .downtext {
   font-size: 1.4rem;
   color: #A0A0A0;
 }
 
-#sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-button {
+#sc-pricingpage .container section.pricingpage-prices .sub-card .card-body .card-button {
   display: -ms-grid;
   display: grid;
   margin: 0rem 2.5rem 2.5rem;
@@ -14963,43 +14965,79 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   #sc-pricingpage .container {
     margin-top: -90px;
   }
-  #sc-pricingpage .container section.pricingpage-prices f .sub-cards {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0;
-    border: 1px solid #e6e7e8;
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
-    -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
-            box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  #sc-pricingpage .container section.pricingpage-prices .prices-carousel {
+    display: none;
   }
-  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card {
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
     border: none;
+  }
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card {
+    border-top: 1px solid #e6e7e8;
+    border-bottom: 1px solid #e6e7e8;
+    border-left: none;
+    border-right: none;
     border-radius: 0rem;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card:nth-child(2) {
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card:nth-child(2) {
     border-left: 1px solid #e6e7e8;
     border-right: 1px solid #e6e7e8;
   }
-  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card:last-child {
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card:last-child {
     -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
             box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+    border-top-right-radius: .5rem;
   }
-  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card .card-body.focus .card-header {
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body.focus .card-header {
     border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-right-radius: 0.5rem;
   }
-  #sc-pricingpage .container section.pricingpage-prices f .sub-cards .sub-card .card-body .card-text {
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .card-text {
     margin: 1.5rem 0;
   }
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .ribbon {
+    right: -1.5rem;
+    padding-right: 1rem;
+  }
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card .card-body .ribbon::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0rem;
+    background-color: #0B93C1;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .registernow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+            box-shadow: 0 4px 24px 0 rgba(22, 38, 68, 0.1), 0 10px 30px 0 rgba(22, 38, 68, 0.1);
+    border-radius: 1rem;
+    margin: 1.5rem;
+    padding: 2.5rem 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #sc-pricingpage .container section.pricingpage-prices .sub-cards .registernow a {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
   #sc-pricingpage .container section.pricingpage-text .text-button .button {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    display: none;
   }
 }
 

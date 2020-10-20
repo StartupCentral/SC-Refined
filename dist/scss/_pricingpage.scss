@@ -13,119 +13,125 @@
 
         section.pricingpage-prices {
             .sub-cards {
-                display: grid;
-                grid-gap: 5rem;
+                display: none;
+            }
 
-                .sub-card {
-                    border: 1px solid $sc-border;
-                    border-radius: .5rem;
-                    @include boxshadow-soft;
+            .prices-carousel {
+                li::before {
+                    content: none;
+                    margin: 0;
+                }
+            }
 
-                    .card-body {
-                        &.focus {
-                            .card-header {
-                                position: relative;
-                                background-color: $sc-primary;
-                                color: white;
-                                border-top-left-radius: .5rem;
-                                border-top-right-radius: .5rem;
-                            }
+            .sub-card {
+                border: 1px solid $sc-border;
+                border-radius: .5rem;
+                @include boxshadow-soft;
 
-                            .ribbon {
-                                position: absolute;
-                                bottom: -1.28rem;
-                                right: -1.5rem;
-                                background-color: $sc-accent;
-                                padding-right: 1rem;
-
-                                &::after {
-                                    content: "";
-                                    position: absolute;
-                                    bottom: -1.5rem;
-                                    right: 0rem;
-                                    background-color: #0B93C1;
-                                    clip-path: polygon(0 0, 0% 100%, 100% 0);
-                                    width: 1.5rem;
-                                    height: 1.5rem;
-                                }
-
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    left: -1.5rem;
-                                    width: 1.5rem;
-                                    height: 2.56rem;
-                                    // background-color: red;
-                                    background-color: $sc-accent;
-                                    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
-                                }
-
-                                span {
-                                    font-size: 1.6rem;
-                                    padding: .5rem;
-                                }
-
-
-                            }
-
+                .card-body {
+                    &.focus {
+                        .card-header {
+                            position: relative;
+                            background-color: $sc-primary;
+                            color: white;
+                            border-top-left-radius: .5rem;
+                            border-top-right-radius: .5rem;
                         }
 
-                        .card-header {
-                            border-bottom: 1px solid $sc-border;
-                            text-align: center;
-                            padding: 1rem;
+                        .ribbon {
+                            position: absolute;
+                            bottom: -1.28rem;
+
+                            right: 1.5rem;
+                            background-color: $sc-accent;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                right: 0rem;
+                                background-color: $sc-accent;
+                                // background-color: red;
+                                right: -1.5rem;
+                                width: 1.5rem;
+                                height: 2.56rem;
+                                clip-path: polygon(0 0, 0% 100%, 100% 50%);
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: -1.5rem;
+                                background-color: $sc-accent;
+                                clip-path: polygon(100% 0, 100% 100%, 0 100%, 50% 50%, 0 0);
+                                width: 1.5rem;
+                                height: 2.56rem;
+                            }
 
                             span {
-                                font-size: 3rem;
+                                font-size: 1.6rem;
+                                padding: .5rem;
                             }
+
+
                         }
 
+                    }
 
-                        .card-text {
-                            @include flex(column);
-                            align-items: center;
-                            margin: 2.5rem 0;
+                    .card-header {
+                        border-bottom: 1px solid $sc-border;
+                        text-align: center;
+                        padding: 1rem;
 
-                            .uppertext {
+                        span {
+                            font-size: 3rem;
+                        }
+                    }
+
+
+                    .card-text {
+                        @include flex(column);
+                        align-items: center;
+                        margin: 2.5rem 0;
+
+                        .uppertext {
+                            font-size: 1.4rem;
+                            color: $sc-gray;
+                        }
+
+                        .price {
+                            position: relative;
+                            font-size: 5rem;
+                            margin: 1.5rem 0 .5rem;
+
+                            &::before {
+                                content: "DKK";
+                                font-size: 1.6rem;
+                                position: absolute;
+                                color: $sc-primary;
+                                top: 0;
+                                right: 0;
+                            }
+
+                            &::after {
+                                content: "/mo";
                                 font-size: 1.4rem;
                                 color: $sc-gray;
                             }
-
-                            .price {
-                                position: relative;
-                                font-size: 5rem;
-                                margin: 1.5rem 0 .5rem;
-
-                                &::before {
-                                    content: "DKK";
-                                    font-size: 1.6rem;
-                                    position: absolute;
-                                    color: $sc-primary;
-                                    top: 0;
-                                    right: 0;
-                                }
-
-                                &::after {
-                                    content: "/mo";
-                                    font-size: 1.4rem;
-                                    color: $sc-gray;
-                                }
-                            }
-
-                            .downtext {
-                                font-size: 1.4rem;
-                                color: $sc-gray;
-                            }
                         }
 
-                        .card-button {
-                            display: grid;
-                            margin: 0rem 2.5rem 2.5rem;
+                        .downtext {
+                            font-size: 1.4rem;
+                            color: $sc-gray;
+                        }
+                    }
 
-                            // grid-gap: 2.5rem;
-                            button {
-                                // margin: 0;
-                            }
+                    .card-button {
+                        display: grid;
+                        margin: 0rem 2.5rem 2.5rem;
+
+                        // grid-gap: 2.5rem;
+                        button {
+                            // margin: 0;
                         }
                     }
                 }
@@ -147,16 +153,21 @@
             margin-top: -$nav-lg;
 
             section.pricingpage-prices {
-                f .sub-cards {
-                    grid-template-columns: repeat(3, 1fr);
-                    grid-gap: 0;
-                    border: 1px solid $sc-border;
-                    border-top-left-radius: .5rem;
-                    border-top-right-radius: .5rem;
-                    @include boxshadow-soft;
+                .prices-carousel {
+                    display: none;
+                }
+
+                .sub-cards {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    border: none;
+
 
                     .sub-card {
-                        border: none;
+                        border-top: 1px solid $sc-border;
+                        border-bottom: 1px solid $sc-border;
+                        border-left: none;
+                        border-right: none;
                         border-radius: 0rem;
                         box-shadow: none;
 
@@ -167,19 +178,53 @@
 
                         &:last-child {
                             @include boxshadow-soft;
+                            border-top-right-radius: .5rem;
                         }
 
                         .card-body {
                             &.focus {
                                 .card-header {
                                     border-top-left-radius: 0;
-                                    border-top-right-radius: 0;
+                                    border-top-right-radius: 0.5rem;
                                 }
                             }
 
                             .card-text {
                                 margin: 1.5rem 0;
                             }
+
+                            .ribbon {
+                                right: -1.5rem;
+                                padding-right: 1rem;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: -1.5rem;
+                                    right: 0rem;
+                                    background-color: #0B93C1;
+                                    clip-path: polygon(0 0, 0% 100%, 100% 0);
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .registernow {
+                        display: flex;
+                        flex-direction: column;
+                        // justify-content: center;
+                        @include boxshadow;
+                        border-radius: 1rem;
+                        margin: 1.5rem;
+                        padding: 2.5rem 1rem;
+                        align-items: center;
+
+                        // align-content: center;
+                        a {
+                            margin-top: auto;
+                            margin-bottom: 0;
                         }
                     }
                 }
@@ -188,9 +233,7 @@
             section.pricingpage-text {
                 .text-button {
                     .button {
-                        width: fit-content;
-                        margin-left: auto;
-                        margin-right: auto;
+                        display: none;
                     }
                 }
             }
