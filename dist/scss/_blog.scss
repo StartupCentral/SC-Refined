@@ -335,24 +335,22 @@ section.blog-categories {
     .more-categories {
         display: grid;
 
-        &-item {
+        a {
             color: $sc-primary;
             background-color: $sc-white;
             border: 1px solid $sc-border;
+            margin: .5rem 0;
+            padding: 1.5rem;
             border-radius: .5rem;
             @include boxshadow-soft;
-            position: relative;
-            padding: 1.5rem;
-            font-weight: bold;
-            margin-top: 2.5rem;
-
+            @include transition(0.1s);
             @include flex(row);
             justify-content: space-between;
             align-items: center;
-            @include transition(0.1s);
+            font-weight: bold;
 
             &:hover {
-                transform: translateY(-5%);
+                transform: translateX(3px);
             }
         }
     }

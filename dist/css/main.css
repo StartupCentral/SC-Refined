@@ -17475,17 +17475,17 @@ section.blog-categories .more-categories {
   display: grid;
 }
 
-section.blog-categories .more-categories-item {
+section.blog-categories .more-categories a {
   color: #182848;
   background-color: #FFFFFF;
   border: 1px solid #e6e7e8;
+  margin: .5rem 0;
+  padding: 1.5rem;
   border-radius: .5rem;
   -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
-  position: relative;
-  padding: 1.5rem;
-  font-weight: bold;
-  margin-top: 2.5rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17499,13 +17499,12 @@ section.blog-categories .more-categories-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  font-weight: bold;
 }
 
-section.blog-categories .more-categories-item:hover {
-  -webkit-transform: translateY(-5%);
-          transform: translateY(-5%);
+section.blog-categories .more-categories a:hover {
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
 }
 
 @media screen and (min-width: 767px) {
