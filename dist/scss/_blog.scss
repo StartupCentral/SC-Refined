@@ -338,6 +338,7 @@ section.blog-categories {
         &-item {
             color: $sc-primary;
             background-color: $sc-white;
+            border: 1px solid $sc-border;
             border-radius: .5rem;
             @include boxshadow-soft;
             position: relative;
