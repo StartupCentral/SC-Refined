@@ -2,6 +2,11 @@
     background-size: cover;
     background-position: center;
 
+    .buttons-box {
+        display: grid;
+        width: 100%;
+    }
+
     &::before {
         content: "";
         box-sizing: border-box;
@@ -12,6 +17,7 @@
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
+        background-image: radial-gradient(rgba(24, 40, 72, .75), #182848);
         opacity: 1;
     }
 }
@@ -468,6 +474,15 @@ section.blog-categories {
 
 
 @include media-lg {
+    .blog-header {
+        .buttons-box {
+            display: grid;
+            width: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+        }
+    }
+
     section.blog-features {
         margin-top: -$nav-lg;
         @include flex(row);

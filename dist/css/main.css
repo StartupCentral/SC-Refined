@@ -17090,6 +17090,12 @@ section.sc-settings .settings-button button {
   background-position: center;
 }
 
+.blog-header .buttons-box {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
 .blog-header::before {
   content: "";
   -webkit-box-sizing: border-box;
@@ -17101,6 +17107,7 @@ section.sc-settings .settings-button button {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: radial-gradient(rgba(24, 40, 72, 0.75), #182848);
   opacity: 1;
 }
 
@@ -17571,6 +17578,14 @@ section.blog-categories .more-categories-item:hover {
 }
 
 @media screen and (min-width: 1023px) {
+  .blog-header .buttons-box {
+    display: -ms-grid;
+    display: grid;
+    width: auto;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
   section.blog-features {
     margin-top: -90px;
     display: -webkit-box;
