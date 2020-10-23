@@ -1,0 +1,29 @@
+#sc-budgetguides {
+    section.budget-files {
+        padding-top: 2.5rem;
+        margin-top: -$nav-sm;
+
+        .cards-container {
+            display: grid;
+
+            grid-gap: 2.5rem;
+            margin: 2.5rem 0;
+        }
+
+        h2 {
+            @include sc-title-text;
+        }
+    }
+}
+
+@include media-lg {
+    #sc-budgetguides {
+        section.budget-files {
+            margin-top: -$nav-lg;
+
+            .cards-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}

@@ -215,76 +215,22 @@
                         }
 
                         .categories {
-                            ul {
-                                li {
-                                    margin: .5rem 0;
-                                    background-color: $sc-white;
-                                    border: 1px solid $sc-border;
-                                    border-radius: .5rem;
-                                    @include transition(0.1s);
+                            @include flex(column);
 
-                                    a {
-                                        @include flex(row);
-                                        padding: 1.5rem;
-                                        justify-content: space-between;
-                                        align-items: center;
-                                    }
+                            a {
+                                margin: .5rem 0;
+                                background-color: $sc-white;
+                                border: 1px solid $sc-border;
+                                border-radius: .5rem;
+                                @include transition(0.1s);
 
-                                    &::before {
-                                        content: '';
-                                        margin: 0;
-                                    }
+                                @include flex(row);
+                                padding: 1.5rem;
+                                justify-content: space-between;
+                                align-items: center;
 
-                                    &:hover {
-                                        transform: translateX(3px);
-                                        // background-color: $sc-border;
-
-                                        a {
-                                            span {
-                                                // text-decoration: underline;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                #one {
-                                    border-left: 5px solid red;
-                                }
-
-                                #two {
-                                    border-left: 5px solid red;
-                                }
-
-                                #three {
-                                    border-left: 5px solid red;
-                                }
-
-                                #four {
-                                    border-left: 5px solid red;
-                                }
-
-                                #five {
-                                    border-left: 5px solid red;
-                                }
-
-                                #six {
-                                    border-left: 5px solid red;
-                                }
-
-                                #seven {
-                                    border-left: 5px solid red;
-                                }
-
-                                #eight {
-                                    border-left: 5px solid red;
-                                }
-
-                                #nine {
-                                    border-left: 5px solid red;
-                                }
-
-                                #ten {
-                                    border-left: 5px solid red;
+                                &:hover {
+                                    transform: translateX(3px);
                                 }
                             }
                         }
