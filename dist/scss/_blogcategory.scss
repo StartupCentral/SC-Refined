@@ -1,0 +1,15 @@
+#sc-blogcategory {
+    section.blog-cards {
+        margin-top: -$nav-sm;
+        padding-top: 2.5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@include media-lg {
+    #sc-blogcategory {
+        section.blog-cards {
+            margin-top: -$nav-lg;
+        }
+    }
+}
