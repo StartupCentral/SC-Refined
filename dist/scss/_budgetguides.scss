@@ -1,6 +1,5 @@
 #sc-budgetguides {
     section.budget-files {
-        padding-top: 2.5rem;
         margin-top: -$nav-sm;
 
         .cards-container {
@@ -10,6 +9,12 @@
             margin: 2.5rem 0;
         }
 
+        h2 {
+            @include sc-title-text;
+        }
+    }
+
+    section.budget-text {
         h2 {
             @include sc-title-text;
         }

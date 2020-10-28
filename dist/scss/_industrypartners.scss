@@ -1,0 +1,112 @@
+#sc-industrypartners {
+    .aside-container {
+        margin-top: -$nav-sm;
+    }
+
+    section.industrypartners-rows {
+        padding-top: 2.5rem !important;
+
+        .cards-container {
+            .partner-row {
+                @include flex(column);
+                max-width: 35rem;
+                margin: 2.5rem auto;
+                padding-bottom: 2.5rem;
+                border-bottom: 1px solid $sc-border;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    border-bottom: none;
+                }
+
+
+                .misc {
+                    flex: 0 0 15%;
+
+                    .button-box {
+                        display: flex;
+
+                        .button {
+                            margin-top: 0 !important;
+                        }
+                    }
+                }
+
+                .text {
+                    margin-top: 1.5rem;
+                    @include flex(column);
+
+                    h2 {
+                        text-align: center;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    aside.sc-industry-aside {
+
+        @include flex(column);
+
+        .button-box {
+            display: flex;
+        }
+    }
+}
+
+
+
+@include media-lg {
+    #sc-industrypartners {
+        .aside-container {
+            margin-top: -$nav-lg;
+
+            .container-small {
+                width: unset;
+            }
+        }
+
+        section.industrypartners-rows {
+            margin-top: -$nav-lg;
+            padding-top: 2.5rem !important;
+
+            .cards-container {
+                .partner-row {
+                    @include flex(row);
+                    max-width: unset;
+                    margin: 2.5rem auto;
+
+
+                    .misc {
+                        flex: 0 0 25%;
+
+                        .image-box {
+                            margin-right: 1.5rem;
+                        }
+
+                        .button-box {
+                            margin-right: 1.5rem;
+                        }
+                    }
+
+                    .text {
+                        margin-top: 0rem;
+
+                        h2 {
+                            text-align: left;
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

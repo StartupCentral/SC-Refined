@@ -223,7 +223,7 @@
                                 border: 1px solid $sc-border;
                                 border-radius: .5rem;
                                 @include transition(0.1s);
-
+                                color: $sc-primary;
                                 @include flex(row);
                                 padding: 1.5rem;
                                 justify-content: space-between;
