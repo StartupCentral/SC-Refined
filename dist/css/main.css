@@ -15052,6 +15052,31 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   margin: 2.5rem 0;
 }
 
+#sc-budgetguides section.budget-files .cards-container .card .card-title h3 {
+  text-align: center;
+}
+
+#sc-budgetguides section.budget-files .cards-container .card .downloadbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sc-budgetguides section.budget-files .cards-container .card .downloadbutton i {
+  margin-left: 1rem;
+}
+
 #sc-budgetguides section.budget-files h2 {
   font-weight: bold;
   line-height: 1.3;

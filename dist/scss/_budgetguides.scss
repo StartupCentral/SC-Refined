@@ -7,6 +7,25 @@
 
             grid-gap: 2.5rem;
             margin: 2.5rem 0;
+
+            .card {
+                .card-title {
+                    h3 {
+                        text-align: center;
+                    }
+                }
+
+                .downloadbutton {
+                    @include flex(row);
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        margin-left: 1rem;
+                    }
+                }
+            }
         }
 
         h2 {
