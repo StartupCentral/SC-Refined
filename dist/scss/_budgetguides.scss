@@ -9,10 +9,16 @@
             margin: 2.5rem 0;
 
             .card {
+                @include flex(column);
+
                 .card-title {
                     h3 {
                         text-align: center;
                     }
+                }
+
+                p {
+                    margin-bottom: 1.5rem;
                 }
 
                 .downloadbutton {
@@ -20,6 +26,7 @@
                     width: 100%;
                     justify-content: center;
                     align-items: center;
+                    margin-top: auto;
 
                     i {
                         margin-left: 1rem;

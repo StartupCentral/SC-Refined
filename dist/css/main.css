@@ -1165,6 +1165,7 @@ footer.main-footer section.footer-social .social-cvr {
 
 .sc-popup .popup-text {
   padding: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .sc-popup .popup-buttons {
@@ -15052,8 +15053,22 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   margin: 2.5rem 0;
 }
 
+#sc-budgetguides section.budget-files .cards-container .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #sc-budgetguides section.budget-files .cards-container .card .card-title h3 {
   text-align: center;
+}
+
+#sc-budgetguides section.budget-files .cards-container .card p {
+  margin-bottom: 1.5rem;
 }
 
 #sc-budgetguides section.budget-files .cards-container .card .downloadbutton {
@@ -15071,6 +15086,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: auto;
 }
 
 #sc-budgetguides section.budget-files .cards-container .card .downloadbutton i {
@@ -16111,6 +16127,31 @@ section.contact-section .contact-container .contact-info-social a:hover i {
 .aside-container .banner-container .banner-box a:hover {
   color: #30C1F3;
   text-decoration: underline;
+}
+
+.aside-container .banner-container .survey {
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid #e6e7e8;
+}
+
+.aside-container .banner-container .survey p {
+  font-size: 2rem;
+}
+
+.aside-container .banner-container .survey .button-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.aside-container .banner-container .survey .button-box a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .aside-container .banner-container .discount-codes .discount-links {
