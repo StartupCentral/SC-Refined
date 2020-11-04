@@ -14956,6 +14956,11 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   margin: 0rem 2.5rem 2.5rem;
 }
 
+#sc-pricingpage .container section.pricingpage-prices .register {
+  display: -ms-grid;
+  display: grid;
+}
+
 #sc-pricingpage .container section.pricingpage-text .text-button {
   margin-top: 1.5rem;
   display: -ms-grid;
@@ -14972,8 +14977,8 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   #sc-pricingpage .container section.pricingpage-prices .sub-cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     border: none;
   }
   #sc-pricingpage .container section.pricingpage-prices .sub-cards .sub-card {
@@ -15036,6 +15041,16 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   #sc-pricingpage .container section.pricingpage-prices .sub-cards .registernow a {
     margin-top: auto;
     margin-bottom: 0;
+  }
+  #sc-pricingpage .container section.pricingpage-prices .register {
+    margin-top: 1.5rem;
+  }
+  #sc-pricingpage .container section.pricingpage-prices .register a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
   #sc-pricingpage .container section.pricingpage-text .text-button .button {
     display: none;
@@ -16633,7 +16648,6 @@ section.sc-minprofil-overview .projects-container .finished-projects-container .
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border-right: 5px solid #182848;
   border-left: 2px solid #EAEAEA;
 }
 
@@ -16643,6 +16657,23 @@ section.sc-minprofil-overview .projects-container .finished-projects-container .
 
 section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project .edit i {
   font-size: 2rem;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project .delete {
+  background-color: #FFFFFF;
+  border: none;
+  border-right: 5px solid #182848;
+  border-left: 2px solid #EAEAEA;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project .delete i {
+  font-size: 2rem;
+}
+
+section.sc-minprofil-overview .projects-container .finished-projects-container .finished-project .delete:hover {
+  background-color: #F21B3F;
 }
 
 section.sc-minprofil-overview .projects-container .active-projects-container {

@@ -38,7 +38,6 @@ section.sc-minprofil-overview {
 
                 .edit {
                     width: fit-content;
-                    border-right: 5px solid $sc-primary;
                     border-left: 2px solid $sc-light;
 
                     &:hover {
@@ -47,6 +46,23 @@ section.sc-minprofil-overview {
 
                     i {
                         font-size: 2rem;
+                    }
+                }
+
+                .delete {
+                    background-color: $sc-white;
+                    border: none;
+                    border-right: 5px solid $sc-primary;
+                    border-left: 2px solid $sc-light;
+                    padding: 1rem;
+                    cursor: pointer;
+
+                    i {
+                        font-size: 2rem;
+                    }
+
+                    &:hover {
+                        background-color: $sc-danger;
                     }
                 }
             }
