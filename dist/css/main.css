@@ -18758,6 +18758,50 @@ section.bpoverview .bpo-container {
   border-right: 1px solid #e6e7e8;
   -webkit-box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
           box-shadow: 0 4px 4px 0 rgba(22, 38, 68, 0.1), 0 2px 6px 0 rgba(22, 38, 68, 0.1);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.bpoverview .bpo-container .bpo-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid #e6e7e8;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #182848;
+  padding: 1rem 2.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+section.bpoverview .bpo-container .bpo-header .header-user img {
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+section.bpoverview .bpo-container .bpo-header h3 {
+  color: #FFFFFF;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+
+section.bpoverview .bpo-container .bpo-header .header-project {
+  color: #A0A0A0;
+  text-align: center;
 }
 
 section.bpoverview .bpo-container .bpo-navigation-container {
@@ -18769,7 +18813,6 @@ section.bpoverview .bpo-container .bpo-navigation-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 1rem;
 }
 
 section.bpoverview .bpo-container .bpo-navigation-container .dropButton {
@@ -18822,60 +18865,10 @@ section.bpoverview .bpo-container .bpo-navigation-container ul li a.active {
   color: #30C1F3;
 }
 
-section.bpoverview .bpo-container .bpoverview-form-container .bpo-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  border-bottom: 1px solid #e6e7e8;
-}
-
-section.bpoverview .bpo-container .bpoverview-form-container .bpo-header .header-user {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-}
-
-section.bpoverview .bpo-container .bpoverview-form-container .bpo-header .header-user img {
-  width: 5rem;
-  border-radius: 50%;
-  margin-right: 1rem;
-}
-
-section.bpoverview .bpo-container .bpoverview-form-container .bpo-header .header-user h3 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-section.bpoverview .bpo-container .bpoverview-form-container .bpo-header .header-project {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: #A0A0A0;
-  text-align: center;
-}
-
-section.bpoverview .bpo-container .bpoverview-form-container .bpo-header .header-project h3 {
-  margin: 0;
+section.bpoverview .bpo-container .bpoverview-form-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 section.bpoverview .bpo-container .bpoverview-form-container .bpo-form {
@@ -18885,6 +18878,11 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-form {
   /* Track */
   /* Handle */
   /* Handle on hover */
+}
+
+section.bpoverview .bpo-container .bpoverview-form-container .bpo-form h1,
+section.bpoverview .bpo-container .bpoverview-form-container .bpo-form h2 {
+  margin-left: 0;
 }
 
 section.bpoverview .bpo-container .bpoverview-form-container .bpo-form::-webkit-scrollbar {
@@ -19024,7 +19022,7 @@ section.bpoverview .bpo-container .bpoverview-form-container .bpo-footer .nextbt
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
     padding: 2.5rem;
-    background-color: #e6e7e8;
+    background-color: #FFFFFF;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 0;

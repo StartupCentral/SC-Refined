@@ -12,6 +12,51 @@
             padding: 0;
         }
 
+        p,
+        h2 {
+            color: #182848;
+            margin-bottom: 10px;
+        }
+
+        h2 {}
+
+        ol {
+            list-style: none;
+            counter-reset: my-awesome-counter;
+        }
+
+        ol li {
+            counter-increment: my-awesome-counter;
+        }
+
+        ol li::before {
+            content: counter(my-awesome-counter) ". ";
+            color: #182848;
+            font-weight: bold;
+        }
+
+
+
+        ul li:before {
+            content: '🚀';
+            margin-left: -30px;
+            margin-right: 7px;
+        }
+
+        .sc-businessplan-html {
+            position: relative;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+
         .bp-html-header {
             text-align: center;
             background-color: #182848;
@@ -44,13 +89,38 @@
             max-width: 100%;
         }
 
-        .bp-html-content {
-            margin: 16px 50px;
-            border-bottom: 5px solid #182848;
-        }
-
         .bp-html-content .intro {
             padding-bottom: 16px;
+            border-bottom: 10px solid #182848;
+        }
+
+
+
+
+        .bp-html-footer {
+            align-self: flex-end;
+            background-color: #182848;
+            position: fixed;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .bp-html-footer .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .bp-html-footer .container p {
+            flex: 1;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .bp-html-footer .container img {
+            margin: 15px;
+            max-width: 225px;
         }
     </style>
 </head>
@@ -67,17 +137,70 @@
         </div>
 
         <div class="bp-html-content">
-            <div class="intro">
-                <h2>Introduktion</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                    commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-                    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-                    iusto odio dignissim qui
-                </p>
+            <div class="container">
+                <div class="intro">
+                    <h2>Introduktion</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut
+                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                        veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                        commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+                        molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+                        iusto odio dignissim qui
+                    </p>
+                </div>
+
+                <section>
+                    <ol>
+                        <li>
+                            <h2>Idegrundlag</h2>
+                        </li>
+                        <ol>
+                            <li>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen opstod:</li>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                                hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui </p>
+                        </ol>
+                        <li>
+                            <h2>Målsætning</h2>
+                        </li>
+                    </ol>
+
+
+                    <ol>
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item
+                            <ol>
+                                <li>Indented item</li>
+                                <li>Indented item</li>
+                            </ol>
+                        </li>
+                        <li>Fourth item</li>
+                    </ol>
+
+                </section>
             </div>
         </div>
+
+        <!-- <div class="bp-html-footer">
+            <div class="container">
+                <p>
+                    Startup Central har ikke ophavstret til
+                    <br>
+                    resultatet af dette værktøj.
+                </p>
+                <img src="assets/images/Logos/suc-white-logo.svg" alt="#!">
+                <p>
+                    Lavet i samarbejde med Startup Central
+                    <br>
+                    © 2020 Startup Central | CVR - 39319942
+                </p>
+            </div>
+        </div> -->
     </main>
 </body>
 
