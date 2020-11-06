@@ -4,18 +4,33 @@
             padding-bottom: 1rem;
 
             .businessplan-container {
-                .businessplan-navigation-container {
+                .businessplan-header {
                     background-color: $sc-primary;
-                    @include flex(column);
-                    border-radius: 1rem;
+                    color: $sc-white;
+                    flex: 0 0 100%;
                     border-top-left-radius: 1rem;
                     border-top-right-radius: 1rem;
+                    text-align: center;
+                    padding: 2.5rem;
+
+                    .bp-title {
+                        color: $sc-gray;
+                    }
+                }
+
+                .businessplan-navigation-container {
+                    background-color: $sc-border;
+                    @include flex(column);
 
                     .button {
                         margin-top: 0;
                         color: $sc-white;
                         font-weight: 600;
-                        border-radius: 1rem;
+                        border-radius: 0;
+                        border: 0;
+                        border-bottom: 1px solid $sc-primary;
+                        background-color: $sc-border;
+                        color: $sc-primary;
                     }
 
                     .open~ul {
@@ -33,12 +48,28 @@
                             list-style-type: none;
                             margin-left: 0;
 
+                            @include flex(row);
+                            align-items: center;
+
                             &::before {
                                 display: none;
                             }
 
+
+                            i {
+                                border: 2px solid $sc-primary;
+                                padding: .3rem;
+                                border-radius: 50%;
+                                margin-right: 1.5rem;
+                                color: $sc-primary;
+                                font-size: 1.8rem;
+                                min-width: 2.8rem;
+                                min-height: 2.8rem;
+                                display: grid;
+                            }
+
                             a {
-                                color: $sc-white;
+                                color: $sc-primary;
 
                                 &:hover {
                                     color: $sc-accent;
@@ -59,6 +90,8 @@
                 .businessplan-form-container {
                     padding: 1rem;
                     @include flex(column);
+                    border-left: 1px solid $sc-border;
+                    border-right: 1px solid $sc-border;
 
                     .businessplan-form {
                         padding-top: 1rem;
@@ -72,7 +105,54 @@
                             margin-bottom: 1.5rem;
                         }
 
-                        .form-container {}
+                        .form-container {
+                            label {
+                                @include flex(row);
+                                justify-content: space-between;
+
+                                .label-inspo {
+                                    i {
+                                        position: relative;
+                                        color: $sc-gray;
+                                        font-size: 1.8rem;
+
+                                        .label-inspo-text {
+                                            display: none;
+                                            position: absolute;
+                                            top: 0;
+                                            right: 5rem;
+                                            background-color: $sc-primary;
+                                            color: $sc-white;
+                                            padding: 1rem;
+                                            z-index: 5;
+                                            width: 280px;
+                                            border-radius: 1rem;
+                                            right: 2.5rem;
+                                            font-family: $font-primary;
+                                            font-weight: normal;
+                                            line-height: 1.5;
+
+                                            &:after {
+                                                content: "";
+                                                position: absolute;
+                                                background-color: $sc-primary;
+                                                width: 2.5rem;
+                                                height: 2.5rem;
+                                                top: 0;
+                                                right: -.75rem;
+                                                clip-path: polygon(0 0, 0% 100%, 100% 50%);
+                                            }
+                                        }
+
+                                        &:hover {
+                                            .label-inspo-text {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     .form-header {
@@ -211,6 +291,7 @@
                 .businessplan-container {
                     margin-top: 2.5rem;
                     @include flex(row);
+                    flex-wrap: wrap;
                     border: 1px solid $sc-border;
                     @include boxshadow;
                     border-radius: 1rem;
@@ -218,11 +299,7 @@
                     .businessplan-navigation-container {
                         flex: 0 0 20%;
                         padding: 2.5rem;
-                        // min-width: 240px;
-                        border-top-left-radius: 1rem;
-                        border-bottom-left-radius: 1rem;
-                        border-top-right-radius: 0;
-                        border-bottom-right-radius: 0;
+                        border-right: 5px solid $sc-primary;
 
                         .button {
                             display: none;
@@ -238,6 +315,8 @@
 
                             li {
                                 margin-top: 0;
+                                padding-bottom: 1.5rem;
+                                border-bottom: 1px solid $sc-primary;
                             }
                         }
                     }
@@ -245,16 +324,34 @@
                     .businessplan-form-container {
                         padding: 2.5rem;
                         @include flex(column);
-                        width: 100%;
+                        flex: 1;
 
                         .businessplan-form {
                             padding-top: 1rem;
+
+                            .form-container {
+                                label {
+                                    .label-inspo {
+                                        i {
+                                            .label-inspo-text {
+                                                right: 5rem;
+                                                width: 500px;
+                                                right: 3rem;
+
+                                                &:after {
+                                                    right: -1rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
                         }
 
                         .form-header {
                             &-text {
                                 @include flex(row);
-                                // justify-content: space-between;
                                 flex: 0 0 55%;
 
                                 .text-name {
@@ -278,6 +375,7 @@
                         }
 
                         .form-container {
+
                             textarea {
                                 max-width: 100%;
                                 width: 100%;
@@ -289,9 +387,6 @@
                                 @include transition(.1s);
 
                                 &:focus {
-                                    // border-color: $sc-accent;
-                                    // border: none;
-                                    // border-radius: 0;
                                     box-shadow: 0px 0px 0px .1rem $sc-primary;
 
                                 }

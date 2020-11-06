@@ -136,6 +136,10 @@
                     }
                 }
             }
+
+            .register {
+                display: grid;
+            }
         }
 
         section.pricingpage-text {
@@ -159,7 +163,7 @@
 
                 .sub-cards {
                     display: grid;
-                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
                     border: none;
 
 
@@ -170,6 +174,10 @@
                         border-right: none;
                         border-radius: 0rem;
                         box-shadow: none;
+
+                        &:first-child {
+                            border-left: 1px solid $sc-border;
+                        }
 
                         &:nth-child(2) {
                             border-left: 1px solid $sc-border;
@@ -214,7 +222,7 @@
                     .registernow {
                         display: flex;
                         flex-direction: column;
-                        // justify-content: center; 
+                        // justify-content: center;
                         @include boxshadow;
                         border-radius: 1rem;
                         margin: 1.5rem;
@@ -226,6 +234,16 @@
                             margin-top: auto;
                             margin-bottom: 0;
                         }
+                    }
+                }
+
+                .register {
+                    margin-top: 1.5rem;
+
+                    a {
+                        width: fit-content;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 }
             }

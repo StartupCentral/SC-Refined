@@ -410,23 +410,29 @@
         <div class="container">
             <section class="businessplan">
                 <div class="businessplan-container">
+                    <div class="businessplan-header">
+                        <p class="bp-title">Min forretningsplan (29-10-2020)</p>
+                        <h2>Kom godt i gang med din forretningsplan</h2>
+                    </div>
                     <div class="businessplan-navigation-container">
                         <button class="button dropButton">DropDown</button>
                         <ul class="business-nav">
-                            <li><a href="#!" class="active">Introduktion</a></li>
-                            <li><a href="#!">Idegrundlag</a></li>
-                            <li><a href="#!">Malsetning</a></li>
-                            <li><a href="#!">Verdier</a></li>
-                            <li><a href="#!">Team</a></li>
-                            <li><a href="#!">Produktbesrivelse</a></li>
-                            <li><a href="#!">Markedsanalyse</a></li>
-                            <li><a href="#!">Okonomi</a></li>
-                            <li><a href="#!">Salgsmarkedsføring</a></li>
-                            <li><a href="#!">Juridisk</a></li>
+                            <li> <i class="fas"></i><a href="#!" class="active">Introduktion</a></li>
+                            <li>
+                                <i class="fas"></i><a href="#!">Idegrundlag</a>
+                            </li>
+                            <li><i class="fas fa-ellipsis-h"></i><a href="#!">Malsetning</a></li>
+                            <li><i class="fas fa-check"></i><a href="#!">Verdier</a></li>
+                            <li><i class="fas fa-check"></i><a href="#!">Team</a></li>
+                            <li><i></i><a href="#!">Produktbesrivelse</a></li>
+                            <li><i class="fas"></i><a href="#!">Markedsanalyse</a></li>
+                            <li><i class="fas"></i><a href="#!">Okonomi</a></li>
+                            <li><i class="fas"></i><a href="#!">Salgsmarkedsføring</a></li>
+                            <li><i class="fas"></i><a href="#!">Juridisk</a></li>
                         </ul>
                     </div>
                     <div class="businessplan-form-container">
-                        <div class="form-header" id="formtop">
+                        <!-- <div class="form-header" id="formtop">
                             <div class="form-header-text">
                                 <div class="text-name">
                                     <h3>Project Name</h3>
@@ -442,7 +448,7 @@
                                     Din forretningsplan er 11% udfyldt
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
 
                         <form action method="post" class="businessplan-form" name="introduktion" id="introduktion">
                             <h2 class="headline-2">Kom godt i gang med din forretningsplan!</h2>
@@ -716,12 +722,19 @@
                                 <label for="uddyb">
                                     <span>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen
                                         opstod</span>
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text"> I gratis perioden er der ingen binding.
+                                                Efter prøveperioden er udløbet vil der være binding på løbende måned
+                                                plus en
+                                                måned.
+                                                Læs mere om hvad vi tilbyder. </span>
+                                        </i>
+                                    </div>
                                 </label>
                                 <textarea name="uddyb" class="form-control" id="uddyb" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
 
                             <div class="form-container">
@@ -738,9 +751,7 @@
                                 </label>
                                 <textarea name="videreudvik" class="form-control" id="videreudvik"
                                     placeholder="Skriv..." rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
 
                             <div class="form-container">
@@ -749,9 +760,7 @@
                                 </label>
                                 <textarea name="brugprod" class="form-control" id="brugprod" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
                         </form>
 
@@ -766,9 +775,7 @@
                                 </label>
                                 <textarea name="splitaktiviteter" class="form-control" id="splitaktiviteter"
                                     placeholder="Skriv..." rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
                         </form>
 
@@ -815,9 +822,7 @@
                                 </label>
                                 <textarea name="firmvalues" id="firmvalues" class="form-control" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
                         </form>
 
@@ -865,9 +870,7 @@
                                 </label>
                                 <textarea name="firmvwork" id="firmvwork" class="form-control" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
                         </form>
 
@@ -936,9 +939,7 @@
                                 </label>
                                 <textarea name="cusfind" id="cusfind" class="form-control" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
 
                             <div class="form-container">
@@ -963,9 +964,7 @@
                                 </label>
                                 <textarea name="cusstrong" id="cusstrong" class="form-control" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
                         </form>
 
@@ -1062,9 +1061,7 @@
                                 </label>
                                 <textarea name="produdregn" id="produdregn" class="form-control" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
 
                             <div class="form-container">
@@ -1073,9 +1070,7 @@
                                 </label>
                                 <textarea name="prodsaleplace" id="prodsaleplace" class="form-control"
                                     placeholder="Skriv..." rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
 
                             <div class="form-container">
@@ -1092,9 +1087,7 @@
                                 </label>
                                 <textarea name="prodmarkedsf" id="prodmarkedsf" class="form-control"
                                     placeholder="Skriv..." rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
                         </form> -->
 
@@ -1120,9 +1113,7 @@
                                 </label>
                                 <textarea name="jurleverand" id="jurleverand" class="form-control"
                                     placeholder="Skriv..." rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
 
                             <div class="form-container">
@@ -1131,9 +1122,7 @@
                                 </label>
                                 <textarea name="jurcontact" id="jurcontact" class="form-control" placeholder="Skriv..."
                                     rows="6"></textarea>
-                                <div class="inspo">
-                                    <a href="#!">Brug for inspiration<i class="fas fa-angle-right"></i></a>
-                                </div>
+
                             </div>
 
                             <div class="form-container">
