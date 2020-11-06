@@ -139,6 +139,9 @@
 
             .register {
                 display: grid;
+                text-align: center;
+                grid-column: 1/4;
+                margin-top: 1.5rem;
             }
         }
 

@@ -19,7 +19,7 @@
                 }
 
                 .businessplan-navigation-container {
-                    background-color: $sc-border;
+                    background-color: $sc-white;
                     @include flex(column);
 
                     .button {
@@ -55,6 +55,10 @@
                                 display: none;
                             }
 
+                            .fas {
+                                background-color: $sc-primary;
+                                color: $sc-white;
+                            }
 
                             i {
                                 border: 2px solid $sc-primary;
@@ -96,9 +100,9 @@
                     .businessplan-form {
                         padding-top: 1rem;
 
-                        .headline-2 {
-                            max-width: unset;
-                            @include sc-title-text-side;
+                        h2 {
+                            margin-left: 0;
+                            font-size: 2rem;
                         }
 
                         p {
@@ -109,6 +113,7 @@
                             label {
                                 @include flex(row);
                                 justify-content: space-between;
+                                font-weight: bold;
 
                                 .label-inspo {
                                     i {
@@ -151,6 +156,12 @@
                                         }
                                     }
                                 }
+                            }
+
+                            .ps {
+                                font-style: italic;
+                                color: $sc-gray;
+                                font-size: 1.4rem;
                             }
                         }
                     }
