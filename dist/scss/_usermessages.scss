@@ -122,6 +122,7 @@ section.sc-usermessages-inbox {
                     &-text {
                         margin-top: 1rem;
                         flex-basis: 100%;
+                        word-break: break-word;
                     }
 
                     &-button {

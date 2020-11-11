@@ -16884,6 +16884,7 @@ section.sc-usermessages-inbox .pm-container .private-messages .message-body-text
   margin-top: 1rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  word-break: break-word;
 }
 
 section.sc-usermessages-inbox .pm-container .private-messages .message-body-button {
