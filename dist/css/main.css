@@ -18371,6 +18371,42 @@ section.blog-categories .more-categories a:hover {
   border-right: 1px solid #e6e7e8;
 }
 
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Idegrundlag {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Malsaetning {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Vaerdier {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Team {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Produktbeskrivelse {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Markedsanalyse {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Okonomi {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Salgsmarkedsforing {
+  display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Juridisk {
+  display: none;
+}
+
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form {
   padding-top: 1rem;
 }
