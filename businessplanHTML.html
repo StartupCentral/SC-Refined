@@ -15,10 +15,16 @@
         p,
         h2 {
             color: #182848;
-            margin-bottom: 10px;
         }
 
-        h2 {}
+        h2 {
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        section {
+            margin: 2rem 0;
+        }
 
         ol {
             list-style: none;
@@ -27,20 +33,43 @@
 
         ol li {
             counter-increment: my-awesome-counter;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         ol li::before {
             content: counter(my-awesome-counter) ". ";
             color: #182848;
             font-weight: bold;
+            font-size: 24px;
         }
 
-
+        ol li h2 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
 
         ul li:before {
             content: '🚀';
             margin-left: -30px;
             margin-right: 7px;
+        }
+
+        .sublist {
+            color: #182848;
+            padding-left: 1rem;
+        }
+
+        .sublist p {
+            padding-left: 1.2rem;
+        }
+
+        .sublist li {
+            font-weight: bold;
+        }
+
+        .sublist li::before {
+            font-size: 16px;
         }
 
         .sc-businessplan-html {
@@ -58,6 +87,7 @@
         }
 
         .bp-html-header {
+            display: grid;
             text-align: center;
             background-color: #182848;
             padding: 3rem;
@@ -65,6 +95,7 @@
 
         .bp-html-header img {
             width: 225px;
+            margin: auto;
         }
 
         .bp-html-header h2 {
@@ -93,8 +124,6 @@
             padding-bottom: 16px;
             border-bottom: 10px solid #182848;
         }
-
-
 
 
         .bp-html-footer {
@@ -155,7 +184,7 @@
                         <li>
                             <h2>Idegrundlag</h2>
                         </li>
-                        <ol>
+                        <ol id="first" class="sublist">
                             <li>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen opstod:</li>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                                 nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
@@ -163,6 +192,21 @@
                                 nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
                                 hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
                                 nulla facilisis at vero eros et accumsan et iusto odio dignissim qui </p>
+                            <li>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen opstod:</li>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                                hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui </p>
+                            <li>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen opstod:</li>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                                hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui </p>
+
                         </ol>
                         <li>
                             <h2>Målsætning</h2>
