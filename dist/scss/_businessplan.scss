@@ -290,6 +290,17 @@
                         font-size: 1.5rem;
                     }
                 }
+
+                .businessplan-footer-container {
+                    @include flex(row);
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem;
+
+                    .button {
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }
@@ -336,6 +347,7 @@
                         padding: 2.5rem;
                         @include flex(column);
                         flex: 1;
+                        border: none;
 
                         .businessplan-form {
                             padding-top: 1rem;
@@ -475,6 +487,13 @@
                             width: 100%;
                             font-size: 1.5rem;
                         }
+                    }
+
+                    .businessplan-footer-container {
+                        width: 75%;
+                        padding: 0 2.5rem 2.5rem;
+                        margin: -2rem 0 auto 283.5px;
+                        border-left: 5px solid $sc-primary;
                     }
                 }
             }

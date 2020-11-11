@@ -14959,14 +14959,11 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
 #sc-pricingpage .container section.pricingpage-prices .register {
   display: -ms-grid;
   display: grid;
-<<<<<<< HEAD
-=======
   text-align: center;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
   margin-top: 1.5rem;
->>>>>>> 51cd86261cb71a7497a85a7386815a27648aaf56
 }
 
 #sc-pricingpage .container section.pricingpage-text .text-button {
@@ -18592,6 +18589,27 @@ section.blog-categories .more-categories a:hover {
   font-size: 1.5rem;
 }
 
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-footer-container .button {
+  margin-top: 0;
+}
+
 @media screen and (min-width: 1023px) {
   .sc-businessplan .container section.businessplan .businessplan-container {
     margin-top: 2.5rem;
@@ -18645,6 +18663,7 @@ section.blog-categories .more-categories a:hover {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    border: none;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form {
     padding-top: 1rem;
@@ -18769,6 +18788,12 @@ section.blog-categories .more-categories a:hover {
     display: block;
     width: 100%;
     font-size: 1.5rem;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-footer-container {
+    width: 75%;
+    padding: 0 2.5rem 2.5rem;
+    margin: -2rem 0 auto 283.5px;
+    border-left: 5px solid #182848;
   }
 }
 
