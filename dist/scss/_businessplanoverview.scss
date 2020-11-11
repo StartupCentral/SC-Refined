@@ -1,9 +1,45 @@
 section.bpoverview {
     .bpo-container {
+        border-left: 1px solid $sc-border;
+        border-right: 1px solid $sc-border;
+        @include boxshadow-soft;
+        flex-wrap: wrap;
+
+        .bpo-header {
+            @include flex(row);
+            border-bottom: 1px solid $sc-border;
+            flex: 0 0 100%;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $sc-primary;
+            padding: 1rem 2.5rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+
+            .header-user {
+                img {
+                    width: 5rem;
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                }
+            }
+
+            h3 {
+                color: $sc-white;
+                width: fit-content;
+                margin: 0;
+            }
+
+            .header-project {
+                color: $sc-gray;
+                text-align: center;
+            }
+        }
+
         .bpo-navigation-container {
             background-color: $sc-primary;
             @include flex(column);
-            border-radius: 1rem;
+            // border-radius: 1rem;
 
             .dropButton {
                 margin-top: 0;
@@ -28,12 +64,6 @@ section.bpoverview {
                 color: $sc-white;
                 text-align: center;
                 margin-top: 0rem;
-                border-bottom-left-radius: 1rem;
-                border-bottom-right-radius: 1rem;
-
-                // i {
-                //     font-size: 2.5rem;
-                // }
             }
 
             ul {
@@ -65,46 +95,16 @@ section.bpoverview {
         }
 
         .bpoverview-form-container {
-            .bpo-header {
-                @include flex(row);
-                border-bottom: 1px solid $sc-border;
-
-                .header-user {
-                    flex: 0 0 60%;
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
-
-                    img {
-                        width: 5rem;
-                        border-radius: 50%;
-                        margin-right: 1rem;
-                    }
-
-                    @include flex(row);
-                    align-items: center;
-                    justify-items: center;
-
-                    h3 {
-                        width: fit-content;
-                    }
-                }
-
-                .header-project {
-                    flex: 0 0 40%;
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
-                    color: $sc-gray;
-                    text-align: center;
-
-                    h3 {
-                        margin: 0;
-                    }
-                }
-            }
+            flex: 1;
 
             .bpo-form {
                 display: none;
                 padding-top: 2.5rem;
+
+                h1,
+                h2 {
+                    margin-left: 0;
+                }
 
                 /* width */
                 &::-webkit-scrollbar {
@@ -224,10 +224,14 @@ section.bpoverview {
             .bpo-navigation-container {
                 flex: 0 0 20%;
                 padding: 2.5rem;
+                background-color: $sc-white;
                 border-top-left-radius: 1rem;
                 border-bottom-left-radius: 1rem;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
+                border-top: 1px solid $sc-border;
+                border-right: 5px solid $sc-primary;
+                @include boxshadow;
 
                 .button {
                     display: none;
@@ -236,8 +240,11 @@ section.bpoverview {
                 .pdf-download-link {
                     @include btn-white;
                     margin-top: 5rem;
+                    background-color: $sc-primary;
+                    color: $sc-white;
 
                     i {
+                        color: $sc-white;
                         font-size: 2.5rem;
                     }
                 }
@@ -253,15 +260,21 @@ section.bpoverview {
 
                     li {
                         margin-top: 0;
+
+                        a {
+                            color: $sc-primary;
+                        }
                     }
                 }
             }
 
             .bpoverview-form-container {
+                border: 1px solid $sc-border;
+
                 padding: 2.5rem;
                 @include flex(column);
                 width: 100%;
-
+                background-color: $sc-white;
 
                 .bpo-header {
                     .header-user {

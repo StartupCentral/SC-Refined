@@ -139,6 +139,12 @@
 
             .register {
                 display: grid;
+<<<<<<< HEAD
+=======
+                text-align: center;
+                grid-column: 1/4;
+                margin-top: 1.5rem;
+>>>>>>> 51cd86261cb71a7497a85a7386815a27648aaf56
             }
         }
 
@@ -174,6 +180,10 @@
                         border-right: none;
                         border-radius: 0rem;
                         box-shadow: none;
+
+                        &:first-child {
+                            border-left: 1px solid $sc-border;
+                        }
 
                         &:nth-child(2) {
                             border-left: 1px solid $sc-border;
@@ -218,7 +228,7 @@
                     .registernow {
                         display: flex;
                         flex-direction: column;
-                        // justify-content: center; 
+                        // justify-content: center;
                         @include boxshadow;
                         border-radius: 1rem;
                         margin: 1.5rem;

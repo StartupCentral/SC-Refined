@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BP HTML</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        p,
+        h2 {
+            color: #182848;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        section {
+            margin: 2rem 0;
+        }
+
+        ol {
+            list-style: none;
+            counter-reset: my-awesome-counter;
+        }
+
+        ol li {
+            counter-increment: my-awesome-counter;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        ol li::before {
+            content: counter(my-awesome-counter) ". ";
+            color: #182848;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        ol li h2 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul li:before {
+            content: '🚀';
+            margin-left: -30px;
+            margin-right: 7px;
+        }
+
+        .sublist {
+            color: #182848;
+            padding-left: 1rem;
+        }
+
+        .sublist p {
+            padding-left: 1.2rem;
+        }
+
+        .sublist li {
+            font-weight: bold;
+        }
+
+        .sublist li::before {
+            font-size: 16px;
+        }
+
+        .sc-businessplan-html {
+            position: relative;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+
+        .bp-html-header {
+            display: grid;
+            text-align: center;
+            background-color: #182848;
+            padding: 3rem;
+        }
+
+        .bp-html-header img {
+            width: 225px;
+            margin: auto;
+        }
+
+        .bp-html-header h2 {
+            margin-top: 1rem;
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: #fff;
+
+        }
+
+        .bp-html-header .subtitle {
+            font-size: 20px;
+            color: #A0A0A0;
+        }
+
+        .bp-html-header .subtitle .category::after {
+            content: "|";
+            margin-left: 5px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .bp-html-content .intro {
+            padding-bottom: 16px;
+            border-bottom: 10px solid #182848;
+        }
+
+
+        .bp-html-footer {
+            align-self: flex-end;
+            background-color: #182848;
+            position: fixed;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .bp-html-footer .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .bp-html-footer .container p {
+            flex: 1;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .bp-html-footer .container img {
+            margin: 15px;
+            max-width: 225px;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="sc-businessplan-html" class="sc-businessplan-html">
+        <div class="bp-html-header">
+            <img src="assets/images/Logos/suc-white-logo.svg" alt="#!">
+            <h2>Min forretningsplan (29-10-2020)</h2>
+            <div class="subtitle">
+                <span class="category">Catagory</span>
+                <span class="username">Ejet af {username}</span>
+            </div>
+        </div>
+
+        <div class="bp-html-content">
+            <div class="container">
+                <div class="intro">
+                    <h2>Introduktion</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut
+                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                        veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                        commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+                        molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+                        iusto odio dignissim qui
+                    </p>
+                </div>
+
+                <section>
+                    <ol>
+                        <li>
+                            <h2>Idegrundlag</h2>
+                        </li>
+                        <ol id="first" class="sublist">
+                            <li>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen opstod:</li>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                                hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui </p>
+                            <li>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen opstod:</li>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                                hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui </p>
+                            <li>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen opstod:</li>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                                hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui </p>
+
+                        </ol>
+                        <li>
+                            <h2>Målsætning</h2>
+                        </li>
+                    </ol>
+
+
+                    <ol>
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item
+                            <ol>
+                                <li>Indented item</li>
+                                <li>Indented item</li>
+                            </ol>
+                        </li>
+                        <li>Fourth item</li>
+                    </ol>
+
+                </section>
+            </div>
+        </div>
+
+        <!-- <div class="bp-html-footer">
+            <div class="container">
+                <p>
+                    Startup Central har ikke ophavstret til
+                    <br>
+                    resultatet af dette værktøj.
+                </p>
+                <img src="assets/images/Logos/suc-white-logo.svg" alt="#!">
+                <p>
+                    Lavet i samarbejde med Startup Central
+                    <br>
+                    © 2020 Startup Central | CVR - 39319942
+                </p>
+            </div>
+        </div> -->
+    </main>
+</body>
+
+</html>
