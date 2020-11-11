@@ -296,6 +296,8 @@
                     justify-content: space-between;
                     align-items: center;
                     padding: 1rem;
+                    border-left: 1px solid $sc-border;
+                    border-right: 1px solid $sc-border;
 
                     .button {
                         margin-top: 0;
@@ -490,10 +492,11 @@
                     }
 
                     .businessplan-footer-container {
-                        width: 75%;
+                        width: 100%;
                         padding: 0 2.5rem 2.5rem;
                         margin: -2rem 0 auto 283.5px;
                         border-left: 5px solid $sc-primary;
+                        border-right: none;
                     }
                 }
             }

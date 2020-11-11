@@ -18604,6 +18604,8 @@ section.blog-categories .more-categories a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
+  border-left: 1px solid #e6e7e8;
+  border-right: 1px solid #e6e7e8;
 }
 
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-footer-container .button {
@@ -18790,10 +18792,11 @@ section.blog-categories .more-categories a:hover {
     font-size: 1.5rem;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-footer-container {
-    width: 75%;
+    width: 100%;
     padding: 0 2.5rem 2.5rem;
     margin: -2rem 0 auto 283.5px;
     border-left: 5px solid #182848;
+    border-right: none;
   }
 }
 
