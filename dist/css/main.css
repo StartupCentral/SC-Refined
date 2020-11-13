@@ -15172,6 +15172,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
 
 #sc-industrypartners section.industrypartners-rows {
   padding-top: 2.5rem !important;
+  margin-bottom: 5rem;
 }
 
 #sc-industrypartners section.industrypartners-rows .cards-container .partner-row {
@@ -15274,6 +15275,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
             flex: 0 0 25%;
   }
   #sc-industrypartners section.industrypartners-rows .cards-container .partner-row .misc .image-box {
+    margin-bottom: .5rem;
     margin-right: 1.5rem;
   }
   #sc-industrypartners section.industrypartners-rows .cards-container .partner-row .misc .button-box {
@@ -15285,6 +15287,511 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   #sc-industrypartners section.industrypartners-rows .cards-container .partner-row .text h2 {
     text-align: left;
     margin-left: 0;
+  }
+}
+
+#sc-coaching-sparring section h2 {
+  margin-left: 0;
+}
+
+#sc-coaching-sparring section h2 span {
+  display: inline;
+  font-size: inherit;
+  color: #30C1F3;
+}
+
+#sc-coaching-sparring section:nth-child(odd) {
+  background-color: #182848;
+  color: #FFFFFF;
+}
+
+#sc-coaching-sparring section.sparring-intro {
+  padding-top: 8.5rem;
+}
+
+#sc-coaching-sparring section.sparring-intro .container .intro-text .intro-buttons {
+  margin-bottom: 1rem;
+}
+
+#sc-coaching-sparring section.sparring-intro .container .intro-text .intro-buttons a {
+  display: block;
+}
+
+#sc-coaching-sparring section.sparring-intro .container .intro-text p a {
+  color: #30C1F3;
+}
+
+#sc-coaching-sparring section.sparring-intro .container .intro-text p a:hover {
+  text-decoration: underline;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[1];
+      grid-template-columns: repeat(1, minmax(200px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card {
+  max-width: 300px;
+  margin: auto;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card:not(:first-child) {
+  display: none;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body .coach-info {
+  position: relative;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body .coach-info .hover {
+  background-color: #182848;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body .coach-info .hover,
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body .coach-info .coach-text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body .coach-profession {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #182848;
+  color: #FFFFFF;
+  border-left: 1px solid #e6e7e8;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body:hover .hover {
+  opacity: .7;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body:hover .coach-text {
+  opacity: 1;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachbox .coachcards .coach-card .coach-body:first-child .coach-profession {
+  border-left: none;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachtext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachtext .btn {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+#sc-coaching-sparring section.sparring-coach .coachtext .btn .button {
+  display: block;
+}
+
+#sc-coaching-sparring section.sparring-competencies h2:not(:first-child) {
+  color: #30C1F3;
+}
+
+#sc-coaching-sparring section.sparring-competencies .text a {
+  display: block;
+}
+
+#sc-coaching-sparring section.sparring-competencies .image {
+  margin-top: 2.5rem;
+}
+
+#sc-coaching-sparring section.sparring-gratis .container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5rem;
+}
+
+#sc-coaching-sparring section.sparring-gratis .container .text h2:not(:first-child) {
+  color: #30C1F3;
+}
+
+#sc-coaching-sparring section.sparring-gratis .container .text a {
+  display: block;
+}
+
+#sc-coaching-sparring section.sparring-gratis .container .text .button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@media screen and (min-width: 767px) {
+  #sc-coaching-sparring section.sparring-intro .container {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2.5rem;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  #sc-coaching-sparring section.sparring-intro .container .intro-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-column: 1/8;
+  }
+  #sc-coaching-sparring section.sparring-intro .container .intro-text .intro-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  #sc-coaching-sparring section.sparring-coach .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #sc-coaching-sparring section.sparring-coach .container .coachbox {
+    margin: auto;
+  }
+  #sc-coaching-sparring section.sparring-coach .container .coachbox .coachcards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #sc-coaching-sparring section.sparring-coach .container .coachbox .coachcards .coach-card:nth-child(2),
+  #sc-coaching-sparring section.sparring-coach .container .coachbox .coachcards .coach-card:nth-child(3),
+  #sc-coaching-sparring section.sparring-coach .container .coachbox .coachcards .coach-card:nth-child(4) {
+    display: block;
+  }
+  #sc-coaching-sparring section.sparring-coach .container .coachtext {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+    margin-left: 2.5rem;
+  }
+  #sc-coaching-sparring section.sparring-coach .container .coachtext .btn .button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #sc-coaching-sparring section.sparring-competencies .container {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2.5rem;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  #sc-coaching-sparring section.sparring-competencies .container .text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+    grid-column: 1/10;
+  }
+  #sc-coaching-sparring section.sparring-competencies .container .image {
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 3;
+    grid-column: 10/13;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #sc-coaching-sparring section.sparring-competencies .container .button-white {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #sc-coaching-sparring section.sparring-gratis .container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #sc-coaching-sparring section.sparring-gratis .container .text {
+    display: -ms-grid;
+    display: grid;
+  }
+  #sc-coaching-sparring section.sparring-gratis .container .button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  #sc-coaching-sparring section.sparring-intro .container .intro-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  #sc-coaching-sparring section.sparring-intro .container .intro-text .intro-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  #sc-coaching-sparring section.sparring-coach .container .coachbox .coachcards {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  #sc-coaching-sparring section.sparring-coach .container .coachbox .coachcards .coach-card:not(:first-child) {
+    display: block;
+  }
+}
+
+#sc-partner-rework section h2 {
+  margin-left: 0;
+}
+
+#sc-partner-rework section h2 span {
+  display: inline;
+  font-size: inherit;
+  color: #30C1F3;
+}
+
+#sc-partner-rework section:nth-child(odd) {
+  background-color: #182848;
+  color: #FFFFFF;
+}
+
+#sc-partner-rework section.partner-intro {
+  padding-top: 8.5rem;
+}
+
+#sc-partner-rework section.partner-intro .container .intro-text .intro-buttons {
+  margin-bottom: 1rem;
+}
+
+#sc-partner-rework section.partner-intro .container .intro-text .intro-buttons a {
+  display: block;
+}
+
+#sc-partner-rework section.partner-intro .container .intro-text p a {
+  color: #30C1F3;
+}
+
+#sc-partner-rework section.partner-intro .container .intro-text p a:hover {
+  text-decoration: underline;
+}
+
+#sc-partner-rework section.partner-spare .container .text .button {
+  display: block;
+}
+
+#sc-partner-rework section.partner-spare .container .figure {
+  margin-top: 5rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sc-partner-rework section.partner-spare .container .figure .circle {
+  padding: 2rem;
+  border-radius: 50%;
+  background: #182848;
+  background: radial-gradient(circle, #182848 25%, #30c1f3 100%);
+  display: -ms-grid;
+  display: grid;
+  width: 20rem;
+  height: 20rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFFFFF;
+}
+
+#sc-partner-rework section.partner-spare .container .figure .figure-middle {
+  padding: 2.5rem;
+  border-bottom: 5px solid #30C1F3;
+}
+
+#sc-partner-rework section.partner-spare .container .figure .figure-bottom {
+  padding: 1rem;
+}
+
+#sc-partner-rework section.partner-spare .container .three-column-carousel li::before {
+  content: none;
+  margin: 0;
+}
+
+#sc-partner-rework section.partner-spare .container .three-column-box {
+  text-align: center;
+}
+
+#sc-partner-rework section.partner-spare .container .three-column-box .three-column {
+  display: none;
+}
+
+#sc-partner-rework section.partner-spare .container .three-column-box p {
+  margin-top: 1rem;
+}
+
+#sc-partner-rework section.partner-partnere h2:not(:first-child) {
+  color: #30C1F3;
+}
+
+#sc-partner-rework section.partner-partnere .text .textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#sc-partner-rework section.partner-partnere .text .textbox i {
+  font-size: 2.5rem;
+  color: #30C1F3;
+  margin-right: 2rem;
+}
+
+#sc-partner-rework section.partner-partnere .text a {
+  display: block;
+}
+
+#sc-partner-rework section.partner-partnere .image {
+  display: none;
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 767px) {
+  #sc-partner-rework section.partner-intro .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  #sc-partner-rework section.partner-intro .container .intro-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  #sc-partner-rework section.partner-intro .container .intro-text .intro-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  #sc-partner-rework section.partner-spare .container .text .button {
+    display: block;
+  }
+  #sc-partner-rework section.partner-spare .container .three-column-carousel {
+    display: none;
+  }
+  #sc-partner-rework section.partner-spare .container .three-column-box .three-column {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  #sc-partner-rework section.partner-spare .container .figure {
+    border-left: #30C1F3 5px solid;
+  }
+  #sc-partner-rework section.partner-spare .container .figure:first-child {
+    border-left: none;
+  }
+  #sc-partner-rework section.partner-partnere .container {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2.5rem;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  #sc-partner-rework section.partner-partnere .container .text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+    grid-column: 1/10;
+  }
+  #sc-partner-rework section.partner-partnere .container .text .button-white {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #sc-partner-rework section.partner-partnere .container .image {
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 3;
+    grid-column: 10/13;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  #sc-partner-rework section.partner-spare .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-gap: 5rem;
+  }
+  #sc-partner-rework section.partner-spare .container .text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+  }
+  #sc-partner-rework section.partner-spare .container .text .button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #sc-partner-rework section.partner-spare .container .three-column-box {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 8;
+    grid-column: 5/13;
+  }
+  #sc-partner-rework section.partner-spare .container .three-column-box .three-column {
+    margin: auto;
   }
 }
 

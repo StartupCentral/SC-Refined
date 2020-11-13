@@ -1,0 +1,294 @@
+#sc-coaching-sparring {
+    section {
+        h2 {
+            margin-left: 0;
+
+            span {
+                display: inline;
+                font-size: inherit;
+                color: $sc-accent;
+            }
+        }
+
+        &:nth-child(odd) {
+            background-color: $sc-primary;
+            color: $sc-white;
+        }
+    }
+
+    section.sparring-intro {
+        padding-top: 8.5rem;
+
+        .container {
+            .intro-text {
+                .intro-buttons {
+                    margin-bottom: 1rem;
+
+                    a {
+                        display: block;
+                    }
+                }
+
+                p {
+                    a {
+                        color: $sc-accent;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.sparring-coach {
+        .coachbox {
+            .coachcards {
+                display: grid;
+                grid-template-columns: repeat(1, minmax(200px, 1fr));
+                justify-content: center;
+
+                .coach-card {
+                    max-width: 300px;
+                    margin: auto;
+
+                    &:not(:first-child) {
+                        display: none;
+                    }
+
+                    .coach-body {
+                        .coach-info {
+                            position: relative;
+
+                            .hover {
+                                background-color: $sc-primary
+                            }
+
+                            .hover,
+                            .coach-text {
+                                position: absolute;
+                                @include flex(column);
+                                opacity: 0;
+                                text-align: center;
+                                justify-content: center;
+                                align-items: center;
+                                color: $sc-white;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                @include transition(.15s);
+                            }
+                        }
+
+                        .coach-profession {
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $sc-primary;
+                            color: $sc-white;
+                            border-left: 1px solid $sc-border;
+
+
+                        }
+
+                        &:hover {
+                            .hover {
+                                opacity: .7;
+                            }
+
+                            .coach-text {
+                                opacity: 1;
+                            }
+                        }
+
+                        &:first-child {
+                            .coach-profession {
+                                border-left: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .coachtext {
+            @include flex(column);
+
+            .btn {
+                margin-top: auto;
+                margin-bottom: 0;
+
+                .button {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    section.sparring-competencies {
+        h2:not(:first-child) {
+            color: $sc-accent;
+        }
+
+        .text {
+            a {
+                display: block;
+            }
+        }
+
+        .image {
+            margin-top: 2.5rem;
+        }
+    }
+
+    section.sparring-gratis {
+        .container {
+            display: grid;
+            grid-gap: 5rem;
+
+            .text {
+                // display: grid;
+
+                h2:not(:first-child) {
+                    color: $sc-accent;
+                }
+
+                a {
+                    display: block;
+                }
+
+                .button {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    #sc-coaching-sparring {
+        section.sparring-intro {
+            .container {
+                display: grid;
+                grid-gap: 2.5rem;
+                grid-template-columns: repeat(12, 1fr);
+
+                .intro-text {
+                    grid-column: 1/8;
+
+                    .intro-buttons {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-gap: 1rem;
+                    }
+                }
+            }
+        }
+
+        section.sparring-coach {
+            .container {
+                @include flex(row);
+
+                .coachbox {
+                    margin: auto;
+
+                    .coachcards {
+                        grid-template-columns: repeat(2, 1fr);
+
+                        .coach-card:nth-child(2),
+                        .coach-card:nth-child(3),
+                        .coach-card:nth-child(4) {
+                            display: block;
+                        }
+                    }
+                }
+
+                .coachtext {
+                    flex: 0 0 45%;
+                    margin-left: 2.5rem;
+
+                    .btn {
+                        .button {
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.sparring-competencies {
+            .container {
+                display: grid;
+                grid-gap: 2.5rem;
+                grid-template-columns: repeat(12, 1fr);
+
+                .text {
+                    grid-column: 1/10;
+                }
+
+                .image {
+                    grid-column: 10/13;
+                    display: grid;
+                    align-items: center;
+                }
+
+                .button-white {
+                    width: fit-content;
+                }
+            }
+        }
+
+        section.sparring-gratis {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+
+                .text {
+                    display: grid;
+                }
+
+                .button {
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    #sc-coaching-sparring {
+        section.sparring-intro {
+            .container {
+                .intro-text {
+                    grid-column: 1/7;
+
+                    .intro-buttons {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-gap: 1rem;
+
+                        a {
+                            // width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.sparring-coach {
+            .container {
+                .coachbox {
+                    .coachcards {
+                        grid-template-columns: repeat(3, 1fr);
+
+                        .coach-card {
+                            &:not(:first-child) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
