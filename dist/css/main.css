@@ -15306,7 +15306,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
 }
 
 #sc-coaching-sparring section.sparring-intro {
-  padding-top: 8.5rem;
+  padding-top: 17rem;
 }
 
 #sc-coaching-sparring section.sparring-intro .container .intro-text .intro-buttons {
@@ -15586,7 +15586,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
 }
 
 #sc-partner-rework section.partner-intro {
-  padding-top: 8.5rem;
+  padding-top: 17rem;
 }
 
 #sc-partner-rework section.partner-intro .container .intro-text .intro-buttons {
@@ -15644,11 +15644,14 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
 
 #sc-partner-rework section.partner-spare .container .figure .figure-middle {
   padding: 2.5rem;
-  border-bottom: 5px solid #30C1F3;
+  margin-top: 0;
+  margin-bottom: auto;
 }
 
 #sc-partner-rework section.partner-spare .container .figure .figure-bottom {
+  border-top: 5px solid #30C1F3;
   padding: 1rem;
+  width: 100%;
 }
 
 #sc-partner-rework section.partner-spare .container .three-column-carousel li::before {
