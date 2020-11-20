@@ -1,3 +1,47 @@
+#cookies-policy {
+    position: fixed;
+    z-index: 9999;
+    bottom: 1.5rem;
+    @include boxshadow;
+    background-color: $sc-white;
+    color: $sc-primary;
+    width: 94%;
+    left: 3%;
+    right: 3%;
+    padding: 2.5rem;
+    border-radius: .5rem;
+    border: 1px solid $sc-border;
+
+    img {
+        display: none;
+    }
+
+    .button-box {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .cookie {
+            background: none;
+            border: none;
+            color: $sc-primary;
+            cursor: pointer;
+
+            &:hover {
+                color: $sc-accent;
+                text-decoration: underline;
+            }
+        }
+
+        .button {
+            margin-top: auto;
+            // width: 100%;
+        }
+    }
+}
+
 .modal-container {
     display: none;
     // display: flex;
@@ -216,6 +260,40 @@
 }
 
 @include media-md {
+    #cookies-policy {
+        bottom: 1.5rem;
+        left: unset;
+        right: 1.5rem;
+        width: 37rem;
+        padding: 2.5rem 2.5rem 2rem;
+
+        img {
+            display: block;
+            position: absolute;
+            height: 10rem;
+            top: 50%;
+            margin-top: -5.5rem;
+            left: -3rem;
+            width: auto;
+        }
+
+        .text {
+            padding-left: 6rem;
+        }
+
+        .button-box {
+            padding-left: 6rem;
+
+            .cookie {
+                background: none;
+                border: none;
+                color: $sc-primary;
+                cursor: pointer;
+            }
+        }
+    }
+
+
     .sc-message-popup {
         .message-popup-header {
             @include flex(row);

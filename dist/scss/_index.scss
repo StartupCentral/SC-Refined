@@ -1,3 +1,183 @@
+.sc-home {
+    color: $sc-blackfriday-black !important;
+
+    i {
+        color: $sc-blackfriday-black !important;
+    }
+
+    .headline-2 {
+        &::after {
+            background-color: $sc-blackfriday-yellow !important;
+        }
+    }
+
+    .read-more-box {
+        a {
+            border-bottom: $sc-blackfriday-yellow 2px solid !important;
+
+            &:hover {
+                color: $sc-blackfriday-yellow !important;
+            }
+        }
+    }
+
+    .info-container {
+        border-bottom: $sc-blackfriday-yellow 1px solid !important;
+    }
+
+    .service-card-button {
+        background-color: $sc-blackfriday-black !important;
+        border-color: $sc-blackfriday-black !important;
+
+        &:hover {
+            background-color: $sc-blackfriday-yellow !important;
+            border-color: $sc-blackfriday-yellow !important;
+            color: $sc-blackfriday-black !important;
+        }
+    }
+
+    section.sc-home-landing {
+        background-color: $sc-blackfriday-black;
+
+        a {
+            background-color: $sc-blackfriday-yellow !important;
+            border: none !important;
+        }
+
+        a:hover {
+            background-color: $sc-blackfriday-orange !important;
+            color: $sc-blackfriday-black !important;
+            // border: $sc-blackfriday-black !important;
+        }
+    }
+
+    section.sc-home-offers {
+        &::before {
+            background-color: $sc-blackfriday-black;
+        }
+    }
+
+    section.sc-home-coaches {
+        background-color: $sc-blackfriday-black;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(135deg,
+                    #303133,
+                    #303133 35px,
+                    #FCE22B 35px,
+                    #FCE22B 70px);
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(135deg,
+                    #303133,
+                    #303133 35px,
+                    #FCE22B 35px,
+                    #FCE22B 70px);
+
+        }
+    }
+
+    section.sc-home-statistics {
+        background-color: $sc-blackfriday-black;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(135deg,
+                    #303133,
+                    #303133 35px,
+                    #FCE22B 35px,
+                    #FCE22B 70px);
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(135deg,
+                    #303133,
+                    #303133 35px,
+                    #FCE22B 35px,
+                    #FCE22B 70px);
+
+        }
+    }
+
+    section.sc-newsletter {
+        background-color: $sc-blackfriday-black;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(135deg,
+                    #303133,
+                    #303133 35px,
+                    #FCE22B 35px,
+                    #FCE22B 70px);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(135deg,
+                    #303133,
+                    #303133 35px,
+                    #FCE22B 35px,
+                    #FCE22B 70px);
+
+        }
+
+        .headline-3 {
+            &::after {
+                background-color: $sc-blackfriday-yellow;
+            }
+        }
+
+        .button-white {
+            background-color: $sc-blackfriday-yellow !important;
+            border-color: $sc-blackfriday-yellow !important;
+
+            &:hover {
+                background-color: $sc-blackfriday-black !important;
+                color: $sc-blackfriday-yellow !important;
+            }
+        }
+    }
+
+    .case-text {
+        background-color: $sc-blackfriday-black !important;
+
+        &::before {
+            background-color: $sc-blackfriday-black !important;
+        }
+    }
+}
+
+
 section.sc-home-landing {
     padding-top: 12.5rem !important;
     background-color: $sc-primary;
