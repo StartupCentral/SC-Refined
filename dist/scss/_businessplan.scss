@@ -403,6 +403,10 @@
                                 margin-top: 0;
                                 padding-bottom: 1.5rem;
                                 border-bottom: 1px solid $sc-primary;
+
+                                a {
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }

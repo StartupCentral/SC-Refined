@@ -19668,6 +19668,9 @@ section.blog-categories .more-categories a:hover {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #182848;
   }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container ul li a {
+    cursor: pointer;
+  }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container {
     padding: 2.5rem;
     display: -webkit-box;
