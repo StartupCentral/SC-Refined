@@ -16042,6 +16042,150 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   }
 }
 
+#sc-bp-explanation section h2 {
+  margin-left: 0;
+  max-width: unset;
+  margin-top: 5rem;
+}
+
+#sc-bp-explanation section h2 span {
+  display: inline;
+  font-size: inherit;
+  color: #30C1F3;
+}
+
+#sc-bp-explanation section:first-child {
+  margin-top: 0;
+}
+
+#sc-bp-explanation section:nth-child(odd) {
+  background-color: #182848;
+  color: #FFFFFF;
+}
+
+#sc-bp-explanation section ul li span {
+  color: #30C1F3;
+}
+
+#sc-bp-explanation section.bpex-intro {
+  padding-top: 17rem;
+}
+
+#sc-bp-explanation section.bpex-intro .container .intro-text .intro-buttons {
+  margin-bottom: 1rem;
+}
+
+#sc-bp-explanation section.bpex-intro .container .intro-text .intro-buttons a {
+  display: block;
+}
+
+#sc-bp-explanation section.bpex-intro .container .intro-text p a {
+  color: #30C1F3;
+}
+
+#sc-bp-explanation section.bpex-intro .container .intro-text p a:hover {
+  text-decoration: underline;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan {
+  padding-top: 0;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-box {
+  display: -ms-grid;
+  display: grid;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-box-content {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #182848;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-box-content .column {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border: 1px solid #182848;
+  padding: 1rem .5rem;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-box-content .column-header p {
+  font-weight: bold;
+  color: #30C1F3;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-box-content .column-img {
+  border: none;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-img-box {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2.5rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-img-box .column {
+  border-left: 2px solid #FFFFFF;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-img-box .column:first-child {
+  border: none;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-button-box {
+  margin-top: 2.5rem;
+}
+
+#sc-bp-explanation section.bpex-forretningsplan .container .bp-button-box a {
+  display: block;
+}
+
+@media screen and (min-width: 767px) {
+  #sc-bp-explanation ul li {
+    padding-left: 5rem;
+  }
+  #sc-bp-explanation section.bpex-intro .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  #sc-bp-explanation section.bpex-intro .container .intro-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+  #sc-bp-explanation section.bpex-intro .container .intro-text .intro-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  #sc-bp-explanation section.bpex-forretningsplan .container .bp-box {
+    margin-top: 5rem;
+  }
+  #sc-bp-explanation section.bpex-forretningsplan .container .bp-button-box {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  #sc-bp-explanation section.bpex-forretningsplan .container .bp-button-box a {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20rem;
+  }
+}
+
 section.sc-faq-questions {
   margin-top: -75px;
 }
