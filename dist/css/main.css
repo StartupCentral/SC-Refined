@@ -16180,6 +16180,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
 #sc-bp-explanation section.bpex-forretningsplan .container .bp-box {
   display: -ms-grid;
   display: grid;
+  overflow: scroll;
 }
 
 #sc-bp-explanation section.bpex-forretningsplan .container .bp-box-content {

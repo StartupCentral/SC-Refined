@@ -64,6 +64,7 @@
         .container {
             .bp-box {
                 display: grid;
+                overflow: scroll;
 
                 &-content {
                     display: grid;
