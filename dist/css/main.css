@@ -19269,7 +19269,7 @@ section.blog-categories .more-categories a:hover {
           flex-direction: column;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .button {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .dropButton {
   margin-top: 0;
   color: #FFFFFF;
   font-weight: 600;
@@ -19647,8 +19647,12 @@ section.blog-categories .more-categories a:hover {
     padding: 2.5rem;
     border-right: 5px solid #182848;
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .button {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .dropButton {
     display: none;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .save-draft {
+    display: block;
+    margin-top: auto;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .business-nav {
     max-height: -webkit-fit-content;

@@ -22,7 +22,7 @@
                     background-color: $sc-white;
                     @include flex(column);
 
-                    .button {
+                    .dropButton {
                         margin-top: 0;
                         color: $sc-white;
                         font-weight: 600;
@@ -382,8 +382,13 @@
                         padding: 2.5rem;
                         border-right: 5px solid $sc-primary;
 
-                        .button {
+                        .dropButton {
                             display: none;
+                        }
+
+                        .save-draft {
+                            display: block;
+                            margin-top: auto;
                         }
 
                         .business-nav {
