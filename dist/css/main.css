@@ -11651,6 +11651,68 @@ section.sc-home-cases .cases-container .case-card:hover .case-text-name {
   }
 }
 
+.partner-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: .5rem;
+  padding: 1rem;
+  margin-top: 2.5rem;
+}
+
+.partner-categories .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+}
+
+.partner-categories .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.partner-categories button.category {
+  cursor: pointer;
+  text-align: center;
+  margin: .5rem .5rem;
+  padding: .55rem 1.5rem;
+  border-radius: 2.5rem;
+  color: #FFFFFF;
+  background: #182848;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #FFFFFF;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.partner-categories button.category:focus, .partner-categories button.category:hover {
+  background: #FFFFFF;
+  color: #182848;
+}
+
 section.sc-partners-partnercards .container .cards-container {
   margin-top: -75px;
 }
@@ -11727,6 +11789,30 @@ section.sc-partners-partnercards .container .cards-container .card-body .card .b
 }
 
 @media screen and (min-width: 1023px) {
+  .partner-categories {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .partner-categories .top {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .partner-categories .bottom {
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
   section.sc-partners-partnercards .container .cards-container {
     margin-top: -120px;
   }
