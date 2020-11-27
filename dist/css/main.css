@@ -19240,6 +19240,7 @@ section.blog-categories .more-categories a:hover {
 }
 
 .sc-businessplan .container section.businessplan {
+  padding-top: 7rem;
   padding-bottom: 1rem;
 }
 
@@ -19374,53 +19375,40 @@ section.blog-categories .more-categories a:hover {
   border-right: 1px solid #e6e7e8;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Idegrundlag {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Idegrundlag {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Malsaetning {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Malsaetning {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Vaerdier {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Vaerdier {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Team {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Team {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Produktbeskrivelse {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Produktbeskrivelse {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Markedsanalyse {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Markedsanalyse {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Okonomi {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Okonomi {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Salgsmarkedsforing {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Salgsmarkedsforing {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Juridisk {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Juridisk {
   display: none;
-}
-
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form {
@@ -19643,7 +19631,6 @@ section.blog-categories .more-categories a:hover {
 
 @media screen and (min-width: 1023px) {
   .sc-businessplan .container section.businessplan .businessplan-container {
-    margin-top: 2.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -19671,14 +19658,15 @@ section.blog-categories .more-categories a:hover {
     margin-bottom: 0;
     display: block;
   }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons .button {
+    width: 100%;
+  }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons #lastupdateddate {
     display: block;
-    text-align: center;
+    font-size: 15px;
     margin-top: .5rem;
-  }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons #lastupdateddate p {
-    font-size: 14px;
     color: #A0A0A0;
+    text-align: center;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container #dropButton {
     display: none;
@@ -19726,36 +19714,53 @@ section.blog-categories .more-categories a:hover {
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form {
     padding-top: 1rem;
-    height: 1000px;
-    overflow-y: scroll;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-content {
+    height: 800px;
+    overflow-y: auto;
     padding-right: 1rem;
     /* width */
     /* Track */
     /* Handle */
     /* Handle on hover */
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-content::-webkit-scrollbar {
     width: 10px;
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar-track {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 5px grey;
             box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar-thumb {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-content::-webkit-scrollbar-thumb {
     background: #182848;
     border-radius: 10px;
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar-thumb:hover {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-content::-webkit-scrollbar-thumb:hover {
     background: #223869;
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-container label .label-inspo i .label-inspo-text {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-content .form-container label .label-inspo i .label-inspo-text {
     right: 5rem;
     width: 500px;
     right: 3rem;
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-container label .label-inspo i .label-inspo-text:after {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-content .form-container label .label-inspo i .label-inspo-text:after {
     right: -1rem;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .button-container .button {
+    width: 20rem;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-header-text {
     display: -webkit-box;

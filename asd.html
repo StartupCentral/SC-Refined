@@ -1,0 +1,1350 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@using Umbraco.Web.Security
+
+@{
+Layout = "Master.cshtml";
+
+bool n = true;
+
+var url = HttpContext.Current.Request.RawUrl.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
+
+if (url.Length > 1)
+{
+n = false;
+}
+
+MembershipHelper membershipHelper = new MembershipHelper(UmbracoContext.Current);
+IMember member = ApplicationContext.Current.Services.MemberService.GetByUsername(membershipHelper.CurrentUserName);
+
+<script>
+    var userToken = ''
+    @if(member != null) {
+        @Html.Raw(string.Concat("userToken = '", StartupCentral.Code.Controllers.UserController.IssueTokenIfEmpty(
+            member), "';"))
+    }
+</script>
+
+}
+
+<main id="sc-businessplan" class="sc-businessplan">
+    <div class="container">
+        <section class="businessplan">
+            <div class="businessplan-container">
+                <div class="businessplan-header">
+                    <p class="bp-title">Min forretningsplan</p>
+                    <h2>
+                        @if (CurrentPage.wwoverskrift != "")
+                        {
+                        @CurrentPage.wwoverskrift
+                        }
+                        else
+                        {
+                        @CurrentPage.Name
+                        }
+                    </h2>
+                </div>
+
+                @if (!n)
+                {
+                <div class="businessplan-navigation-container">
+                    <button class="button dropButton" id="dropButton">Steps</button>
+                    @*@Umbraco.RenderMacro("BlueNavMenu")*@
+
+                    <ul class="business-nav">
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks active" onclick="openTab(event, 'Introduktion')"
+                                id="introduktiontab">Introduktion</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Idegrundlag')"
+                                id="idegrundlagtab">Idegrundlag</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Malsaetning')"
+                                id="malsaetningtab">Målsætning</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Vaerdier')" id="vaerdiertab">Værdier</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Team')" id="teamtab">Team og ressourcer</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Produktbeskrivelse')"
+                                id="produktbeskrivelsetab">Produktbeskrivelse</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Markedsanalyse')"
+                                id="markedsanalysetab">Markedsanalyse</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Okonomi')" id="okonomitab">Økonomi</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Salgsmarkedsforing')"
+                                id="salgsmarkedsforingtab">Salgsmarkedsføring</a>
+                        </li>
+                        <li>
+                            <i class="fas"></i>
+                            <a class="tablinks" onclick="openTab(event, 'Juridisk')" id="juridisktab">Juridisk</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="nav-buttons">
+                        <button class="button" id="complete" value="True" onclick="UpdateorAddData(true)">Mark as
+                            Completed</button>
+                        <button class="button" id="save-draft" value="False" onclick="UpdateorAddData(false)">Save as a
+                            Draft</button>
+                        <p id="lastupdateddate">
+                    </div>
+                </div>
+                }
+
+
+                <div class="businessplan-form-container">
+
+                    @* Introduktion starts *@
+                    <form class="tabcontent businessplan-form" id="Introduktion">
+                        <div class="form-content">
+                            <h2 class="headline-2">Introduktion</h2>
+                            <p>@CurrentPage.introduktionManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="projektnavn" class="label-name">
+                                    <span class="content-name">Navn på din forretningsplan</span>
+                                </label>
+                                <div class="input-container">
+                                    <input type="text" id="projektnavn" name="projektnavn" maxlength="100" required />
+                                </div>
+                                <p class="ps"> (Vi har på forhånd indtastet et standard navn for din forretningsplan,
+                                    men du kan til enhver tid ændre det.)</p>
+                            </div>
+                            <div class="form-container">
+                                <label for="kategori" class="label-name">
+                                    <span class="content-name">Vælg den kategori, som passer på din
+                                        forretningsidé</span>
+                                </label>
+                                <div class="input-container">
+                                    <select name="kategori" id="kategori" class="form-control valid">
+                                        <option>Vælg</option>
+                                        @foreach (var opt in Umbraco.Content(1651).Children())
+                                        {
+                                        <option value="@opt.Name">@opt.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <label class="checkbox">
+                                    <span> I'm writing this in English</span>
+                                    <input type="checkbox" id="eng" name="eng" class="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="form-container">
+                                <label for="idedesc">
+                                    <span>Beskriv med få ord din ide (max <span id="charNum"></span> tegn)</span>
+                                </label>
+                                <textarea name="idedesc" class="form-control" id="idedesc" placeholder="Skriv..."
+                                    rows="6" maxlength="200"></textarea>
+                            </div>
+                        </div>
+                        @if (n)
+                        {
+                        <input class="button startButton" value="Start med at lave din forretningsplan"
+                            onclick="UpdateorAddData(false)" />
+                        }
+                        else
+                        {
+
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" style="display:none;">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Videre"
+                                    onclick="document.getElementById('idegrundlagtab').click()">
+                            </div>
+                        </div>
+                        }
+                    </form>
+                    @* Introduktion ends *@
+
+                    @if (!n)
+                    {
+                    @* Idegrundlag starts *@
+                    <form class="tabcontent businessplan-form" id="Idegrundlag">
+                        <div class="form-content">
+                            <h2 class="headline-2">Idegrundlag</h2>
+                            <p>@CurrentPage.idegrundlagManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="uddyb">
+                                    <span>Uddyb projektet og giv læseren fuld adgang til at se hvordan ideen
+                                        opstod</span>
+
+                                    @if (CurrentPage.idegrundlagInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.idegrundlagInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="uddyb" class="form-control" id="uddyb" placeholder="Skriv..." rows="6"
+                                    maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="loser">
+                                    <span>Løser produktet et problem som endnu ikke bliver løst?</span>
+
+                                    @if (CurrentPage.idegrundlagInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.idegrundlagInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="loser" class="form-control" id="loser" placeholder="Skriv..." rows="6"
+                                    maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="videreudvik">
+                                    <span>Er produktet en videreudvikling af noget eksisterende?</span>
+
+                                    @if (CurrentPage.idegrundlagInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.idegrundlagInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="videreudvik" class="form-control" id="videreudvik"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="brugprod">
+                                    <span>Fortæl hvor produktet kan bruges.</span>
+
+                                    @if (CurrentPage.idegrundlagInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.idegrundlagInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="brugprod" class="form-control" id="brugprod" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('introduktiontab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next"
+                                    onclick="document.getElementById('malsaetningtab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Idegrundlag ends *@
+
+                    @* Målsætning starts *@
+                    <form class="tabcontent businessplan-form" id="Malsaetning">
+                        <div class="form-content">
+                            <h2 class="headline-2">Målsætning</h2>
+                            <p>@CurrentPage.maalsaetningManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="splitaktiviteter">
+                                    <span>Del aktiviteter op i 1 år, 3 år og 5 års planer</span>
+
+                                    @if (CurrentPage.maalsaetningInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.maalsaetningInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="splitaktiviteter" class="form-control" id="splitaktiviteter"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('idegrundlagtab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next"
+                                    onclick="document.getElementById('vaerdiertab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Målsætning ends *@
+
+                    @* Værdier starts *@
+                    <form class="tabcontent businessplan-form" id="Vaerdier">
+                        <div class="form-content">
+                            <h2 class="headline-2">Værdier</h2>
+                            <p>@CurrentPage.vaerdierManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="firmimportant">
+                                    <span>Beskriv hvorfor firmaet er vigtigt</span>
+
+                                    @if (CurrentPage.vaerdierInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.vaerdierInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmimportant" id="firmimportant" class="form-control"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmbehov">
+                                    <span>Hvilke behov opfylder firmaet og for hvilke kunder</span>
+
+                                    @if (CurrentPage.vaerdierInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.vaerdierInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmbehov" id="firmbehov" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmreach">
+                                    <span>Hvad vil du opnå om 1 mdr., 1 år og 3 år.</span>
+
+                                    @if (CurrentPage.vaerdierInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.vaerdierInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmreach" id="firmreach" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmissues">
+                                    <span>Hvad er de største problemer, og hvordan vil du løse dem?</span>
+
+                                    @if (CurrentPage.vaerdierInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.vaerdierInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmissues" id="firmissues" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmvalues">
+                                    <span>Hvordan er dine værdier?</span>
+
+                                    @if (CurrentPage.vaerdierInspirationSpm5 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.vaerdierInspirationSpm5</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmvalues" id="firmvalues" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('malsaetningtab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next" onclick="document.getElementById('teamtab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Værdier ends *@
+
+                    @* Team og Ressourcer starts *@
+                    <form class="tabcontent businessplan-form" id="Team">
+                        <div class="form-content">
+                            <h2 class="headline-2">Team og ressourcer</h2>
+                            <p>@CurrentPage.teamOgRessourcerManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="firmroller">
+                                    <span>Hvem er med i projektet og hvilke roller har de?</span>
+
+                                    @if (CurrentPage.teamOgRessourcerInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.teamOgRessourcerInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmroller" id="firmroller" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmokonomi">
+                                    <span>
+                                        Hvem tager ansvaret for økonomi, salg/markedsføring og produktudvikling?
+                                    </span>
+
+                                    @if (CurrentPage.teamOgRessourcerInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.teamOgRessourcerInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmokonomi" id="firmokonomi" class="form-control"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmres">
+                                    <span>Er der behov for yderligere (eventuelt eksterne) ressourcer?</span>
+
+                                    @if (CurrentPage.teamOgRessourcerInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.teamOgRessourcerInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmres" id="firmres" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmdriv">
+                                    <span>Hvem er den drivende person og hvem træffer beslutninger?</span>
+
+                                    @if (CurrentPage.teamOgRessourcerInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.teamOgRessourcerInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmdriv" id="firmdriv" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="firmvwork">
+                                    <span>Hvor mange timer/dage/måneder kan teamet arbejde for projektet?</span>
+
+                                    @if (CurrentPage.teamOgRessourcerInspirationSpm5 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.teamOgRessourcerInspirationSpm5</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="firmvwork" id="firmvwork" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('vaerdiertab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next"
+                                    onclick="document.getElementById('produktbeskrivelsetab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Team og Ressourcer ends *@
+
+                    @* Produktbeskrivelse start *@
+                    <form class="tabcontent businessplan-form" id="Produktbeskrivelse">
+                        <div class="form-content">
+                            <h2 class="headline-2">Produktbeskrivelse</h2>
+                            <p>@CurrentPage.produktbeskrivelseManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="proddesc">
+                                    <span>Giv en beskrivelse af produktet - hvad kan det?</span>
+
+                                    @if (CurrentPage.produktbeskrivelseInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.produktbeskrivelseInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="proddesc" id="proddesc" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodvers">
+                                    <span>Er der forskellige versioner?</span>
+
+                                    @if (CurrentPage.produktbeskrivelseInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.produktbeskrivelseInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodvers" id="prodvers" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodfunkt">
+                                    <span>Hvordan fungerer det?</span>
+
+                                    @if (CurrentPage.produktbeskrivelseInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.produktbeskrivelseInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodfunkt" id="prodfunkt" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodmake">
+                                    <span>Hvordan skal det laves og kræves der obligatoriske godkendelser?</span>
+
+                                    @if (CurrentPage.produktbeskrivelseInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.produktbeskrivelseInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodmake" id="prodmake" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodready">
+                                    <span>Hvad mangler, før produktet er klart til salg?</span>
+
+                                    @if (CurrentPage.produktbeskrivelseInspirationSpm5 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.produktbeskrivelseInspirationSpm5</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodready" id="prodready" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back" onclick="document.getElementById('teamtab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next"
+                                    onclick="document.getElementById('markedsanalysetab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Produktbeskrivelse end *@
+
+                    @* Markedsanalyse start *@
+                    <form class="tabcontent businessplan-form" id="Markedsanalyse">
+                        <div class="form-content">
+                            <h2 class="headline-2">Markedsanalyse</h2>
+                            <p>@CurrentPage.markedsanalyseManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="cuswho">
+                                    <span>Hvem er kunderne?</span>
+
+                                    @if (CurrentPage.markedsanalyseInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.markedsanalyseInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="cuswho" id="cuswho" class="form-control" placeholder="Skriv..." rows="6"
+                                    maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="cusfind">
+                                    <span>Hvor mange kunder findes der?</span>
+
+                                    @if (CurrentPage.markedsanalyseInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.markedsanalyseInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="cusfind" id="cusfind" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+
+                            </div>
+
+                            <div class="form-container">
+                                <label for="cusneeds">
+                                    <span>Hvordan opfyldes deres behov nu?</span>
+
+                                    @if (CurrentPage.markedsanalyseInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.markedsanalyseInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="cusneeds" id="cusneeds" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="cuskon">
+                                    <span>Hvilke konkurrenter er der, og hvordan adskiller dit produkt sig?</span>
+
+                                    @if (CurrentPage.markedsanalyseInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.markedsanalyseInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="cuskon" id="cuskon" class="form-control" placeholder="Skriv..." rows="6"
+                                    maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="cusstrong">
+                                    <span>Hvad er konkurrentens stærke og svage sider?</span>
+
+                                    @if (CurrentPage.markedsanalyseInspirationSpm5 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.markedsanalyseInspirationSpm5</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="cusstrong" id="cusstrong" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('produktbeskrivelsetab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next"
+                                    onclick="document.getElementById('okonomitab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Markedsanalyse end *@
+
+                    @* Økonomi start *@
+                    <form class="tabcontent businessplan-form" id="Okonomi">
+                        <div class="form-content">
+                            <h2 class="headline-2">Økonomi</h2>
+                            <p>@CurrentPage.okonomiManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="prodsale">
+                                    <span>Hvilke større udgifter skal der afholdes før produktet er klar til
+                                        salg?</span>
+
+                                    @if (CurrentPage.markedsanalyseInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.okonomiInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodsale" id="prodsale" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodstart">
+                                    <span>Kan projektet starte op i det små?</span>
+
+                                    @if (CurrentPage.okonomiInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.okonomiInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodstart" id="prodstart" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            @*
+                            <div class="form-container">
+                                <label class="checkbox">
+                                    <span>Er der lavet et budget?</span>
+
+                                    @if (CurrentPage.okonomiInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.okonomiInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                    <input type="checkbox" id="showbudget" name="yestobudget" value="budget"
+                                        class="checkbox">
+                                    <span class="checkmark"></span>
+
+                                    <div class="filename" id="filename" style="display:none;"></div>
+                                </label>
+                            </div>
+
+                            <div class="form-container" id="budget" style="display:none;">
+                                <label for="cusneeds">
+                                    Upload dit budget (you can attach multiple files)
+                                    <br />
+                                    if you dont have a budget plan yet, please visit this
+                                    <a href="/budgetter/">link</a>
+                                    <br />
+                                    you can upoload only excel files(.xls, xlsx) or Numbers(.numbers)
+                                </label>
+                                <input type="file" class="uploadBtn" name="budgetfile" id="budgetfile"
+                                    accept=".xls,.xlsx,.numbers">
+                            </div>
+                            *@
+                            <div class="form-container">
+                                <label for="prodfinance">
+                                    <span>Hvornår i de næste 12 måneder er der udgifter og indtægter?</span>
+
+                                    @if (CurrentPage.okonomiInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.okonomiInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodfinance" id="prodfinance" class="form-control"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('markedsanalysetab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next"
+                                    onclick="document.getElementById('salgsmarkedsforingtab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Økonomi end *@
+
+                    @* Salgsmarkedsføring start *@
+                    <form class="tabcontent businessplan-form" id="Salgsmarkedsforing">
+                        <div class="form-content">
+                            <h2 class="headline-2">Salgsmarkedsføring</h2>
+                            <p>@CurrentPage.salgsmarkedsfoeringManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="prodprice">
+                                    <span>Beskriv priserne for produktet</span>
+
+                                    @if (CurrentPage.salgsmarkedsfoeringInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.salgsmarkedsfoeringInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodprice" id="prodprice" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="produdregn">
+                                    <span>Hvordan er priserne udregnet og hvad er overskudsgraden?</span>
+
+                                    @if (CurrentPage.salgsmarkedsfoeringInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.salgsmarkedsfoeringInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="produdregn" id="produdregn" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodsaleplace">
+                                    <span>Hvordan skal salget foregå - og hvem skal stå for det?</span>
+
+                                    @if (CurrentPage.salgsmarkedsfoeringInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.salgsmarkedsfoeringInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodsaleplace" id="prodsaleplace" class="form-control"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodeksi">
+                                    <span>Hvordan skal kunderne finde ud af at produktet eksisterer?</span>
+
+                                    @if (CurrentPage.salgsmarkedsfoeringInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.salgsmarkedsfoeringInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodeksi" id="prodeksi" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="prodmarkedsf">
+                                    <span>Hvilke udgifter er der til markedsføring, og hvordan skal det foregå?</span>
+
+                                    @if (CurrentPage.salgsmarkedsfoeringInspirationSpm5 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span
+                                                class="label-inspo-text">@CurrentPage.salgsmarkedsfoeringInspirationSpm5</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="prodmarkedsf" id="prodmarkedsf" class="form-control"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('okonomitab').click()">
+                            </div>
+                            <div class="footer-buttons">
+                                <input class="button" value="Next"
+                                    onclick="document.getElementById('juridisktab').click()">
+                            </div>
+                        </div>
+
+                    </form>
+                    @* Salgsmarkedsføring end *@
+
+                    @* Juridisk starts *@
+                    <form class="tabcontent businessplan-form" id="Juridisk">
+                        <div class="form-content">
+                            <h2 class="headline-1">Juridisk</h2>
+                            <p>@CurrentPage.juridiskManchet</p>
+                            <br />
+                            <div class="form-container">
+                                <label for="juraftale">
+                                    <span>Er der en aftale på, hvem der skal investere tid/penge og hvordan ejeforholdet
+                                        er?</span>
+
+                                    @if (CurrentPage.juridiskInspirationSpm1 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.juridiskInspirationSpm1</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="juraftale" id="juraftale" class="form-control" placeholder="Skriv..."
+                                    rows="6"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="jurleverand">
+                                    <span>Skal leverandører eller andre involveres i projektet - hvis ja, er der en
+                                        aftale
+                                        med dem?</span>
+
+                                    @if (CurrentPage.juridiskInspirationSpm2 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.juridiskInspirationSpm2</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="jurleverand" id="jurleverand" class="form-control"
+                                    placeholder="Skriv..." rows="6" maxlength="5000"></textarea>
+
+                            </div>
+
+                            <div class="form-container">
+                                <label for="jurcontact">
+                                    <span>Er der kontaktet jurister - og hvem?</span>
+
+                                    @if (CurrentPage.juridiskInspirationSpm3 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.juridiskInspirationSpm3</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="jurcontact" id="jurcontact" class="form-control" placeholder="Skriv..."
+                                    rows="6" maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label for="jurcvr">
+                                    <span>Er der behov for CVR nummer og/eller momsregistrering - hvornår?</span>
+
+                                    @if (CurrentPage.juridiskInspirationSpm4 != "")
+                                    {
+                                    <div class="label-inspo">
+                                        <i class="fas fa-info-circle">
+                                            <span class="label-inspo-text">@CurrentPage.juridiskInspirationSpm4</span>
+                                        </i>
+                                    </div>
+                                    }
+
+                                </label>
+                                <textarea name="jurcvr" id="jurcvr" class="form-control" placeholder="Skriv..." rows="6"
+                                    maxlength="5000"></textarea>
+                            </div>
+
+                            <div class="form-container">
+                                <label class="checkbox">
+                                    <span>Har du andet at tilføje</span>
+                                    <input type="checkbox" id="andetchk" name="andetchk" value="1" class="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                            <div class="form-container" value="0" style="display:none" id="showandet">
+                                <input type="text" class="form-control" placeholder="Overskrift" id="andetheadline">
+                                <label for="jurcvr">
+                                    <span>Er der behov for CVR nummer og/eller momsregistrering - hvornår?</span>
+                                </label>
+                                <textarea name="andet" id="andet" class="form-control" placeholder="Skriv..."
+                                    rows="6"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <div class="footer-buttons">
+                                <input class="button" value="Back"
+                                    onclick="document.getElementById('salgsmarkedsforingtab').click()">
+                            </div>
+                        </div>
+                    </form>
+                    @* Juridisk end *@
+                    }
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+</main>
+
+
+
+<script>
+    var acc = document.getElementsByClassName("dropButton");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("open");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+<script src="~/scripts/jQuery.datalink.js"></script>
+<script src="~/scripts/startupcental.js"></script>
+
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<script type="text/javascript">
+    var d = new Date();
+    var x = "";
+
+    var bsp = {
+        ProjektNavn: 'Din forretningsplan ' + d.getDate() + '/' + d.getMonth() + '/' + d.getFullYear(),
+        Kategori: 'Vælg',
+        English: false,
+        IdeDesc: 'Skriv...'
+    };
+
+    $(document).ready(Bind());
+
+    function Bind() {
+
+
+        $(bsp)
+            .linkBoth("ProjektNavn", "#projektnavn", "val")
+            //.linkBoth("English", "#eng", "val")
+            .linkBoth("Kategori", "#kategori", "val")
+            .linkBoth("IdeDesc", "#idedesc", "val")
+
+            .linkBoth("Uddyb", "#uddyb", "val")
+            .linkBoth("Loser", "#loser", "val")
+            .linkBoth("Videreudvik", "#videreudvik", "val")
+            .linkBoth("Brugprod", "#brugprod", "val")
+
+            .linkBoth("Splitaktiviteter", "#splitaktiviteter", "val")
+            .linkBoth("FirmImportant", "#firmimportant", "val")
+            .linkBoth("FirmBehov", "#firmbehov", "val")
+            .linkBoth("FirmReach", "#firmreach", "val")
+            .linkBoth("FirmIssues", "#firmissues", "val")
+            .linkBoth("FirmValues", "#firmvalues", "val")
+
+            .linkBoth("FirmRoller", "#firmroller", "val")
+            .linkBoth("FirmOkonomi", "#firmokonomi", "val")
+            .linkBoth("FirmRes", "#firmres", "val")
+            .linkBoth("FirmDriv", "#firmdriv", "val")
+            .linkBoth("FirmVwork", "#firmvwork", "val")
+
+            .linkBoth("ProdDesc", "#proddesc", "val")
+            .linkBoth("ProdVers", "#prodvers", "val")
+            .linkBoth("ProdFunkt", "#prodfunkt", "val")
+            .linkBoth("ProdMake", "#prodmake", "val")
+            .linkBoth("ProdReady", "#prodready", "val")
+
+            .linkBoth("CusWho", "#cuswho", "val")
+            .linkBoth("CusFind", "#cusfind", "val")
+            .linkBoth("CusNeeds", "#cusneeds", "val")
+            .linkBoth("CusKon", "#cuskon", "val")
+            .linkBoth("CusStrong", "#cusstrong", "val")
+
+            .linkBoth("ProdSale", "#prodsale", "val")
+            .linkBoth("ProdStart", "#prodstart", "val")
+            .linkBoth("ProdFinance", "#prodfinance", "val")
+
+            .linkBoth("ProdSale", "#prodsale", "val")
+            .linkBoth("ProdStart", "#prodstart", "val")
+            .linkBoth("ProdFinance", "#prodfinance", "val")
+
+            .linkBoth("ProdSale", "#prodsale", "val")
+            .linkBoth("ProdStart", "#prodstart", "val")
+            .linkBoth("ProdFinance", "#prodfinance", "val")
+
+            .linkBoth("ProdPrice", "#prodprice", "val")
+            .linkBoth("ProdUdregn", "#produdregn", "val")
+            .linkBoth("ProdSaleplace", "#prodsaleplace", "val")
+            .linkBoth("ProdEksi", "#prodeksi", "val")
+            .linkBoth("ProdMarkedsf", "#prodmarkedsf", "val")
+
+            .linkBoth("JurAftale", "#juraftale", "val")
+            .linkBoth("JurLeverand", "#jurleverand", "val")
+            .linkBoth("JurContact", "#jurcontact", "val")
+            .linkBoth("JurCvr", "#jurcvr", "val")
+
+            //.linkBoth("AndetChk", "#andetchk", "val")
+            .linkBoth("AndetHeadline", "#andetheadline", "val")
+            .linkBoth("Andet", "#andet", "val");
+
+        if ($(location).attr('search')) {
+            x = $(location).attr('search');
+            x = x.substr(4, 36);
+
+            PreLoad(x);
+        }
+    }
+
+    function PreLoad(x) {
+        startupCentral.requestData('/umbraco/api/forretningsplanApi/getBusinessPlanById?sBusId=' + x,
+            function (response) {
+                $(bsp).attr(response.Data);
+
+                if (bsp.English) {
+                    $("#eng").prop("checked", true);
+                }
+                if (bsp.BudgetFile) {
+                    $("#showbudget").prop("checked", true);
+                    $('#filename').text(bsp.BudgetFile);
+                    $('#filename').css('display', 'block');
+                }
+                if (bsp.AndetChk) {
+                    $("#andetchk").prop("checked", true);
+                    $('#showandet').css('display', 'block');
+                }
+
+                var uptime = document.getElementById("lastupdateddate");
+                var date = document.createTextNode(bsp.UpdateDate);
+                uptime.appendChild(date);
+            });
+    }
+
+    function UpdateorAddData(y) {
+
+        if (bsp.AndetChk == false) {
+            bsp.AndetHeadline = null;
+            bsp.Andet = null;
+        }
+
+        startupCentral.postRequestData('/umbraco/api/ForretningsplanApi/CreateOrUpdateBusinessPlan', {
+                Id: bsp.Id,
+                CreateDate: bsp.CreateDate,
+                ProjektNavn: bsp.ProjektNavn,
+                Kategori: bsp.Kategori,
+                English: bsp.English,
+                IdeDesc: bsp.IdeDesc,
+                Uddyb: bsp.Uddyb,
+                Loser: bsp.Loser,
+                Videreudvik: bsp.Videreudvik,
+                Brugprod: bsp.Brugprod,
+                Splitaktiviteter: bsp.Splitaktiviteter,
+                FirmImportant: bsp.FirmImportant,
+                FirmBehov: bsp.FirmBehov,
+                FirmReach: bsp.FirmReach,
+                FirmIssues: bsp.FirmIssues,
+                FirmValues: bsp.FirmValues,
+                FirmRoller: bsp.FirmRoller,
+                FirmOkonomi: bsp.FirmOkonomi,
+                FirmRes: bsp.FirmRes,
+                FirmDriv: bsp.FirmDriv,
+                FirmVwork: bsp.FirmVwork,
+                ProdDesc: bsp.ProdDesc,
+                ProdVers: bsp.ProdVers,
+                ProdFunkt: bsp.ProdFunkt,
+                ProdMake: bsp.ProdMake,
+                ProdReady: bsp.ProdReady,
+                CusWho: bsp.CusWho,
+                CusFind: bsp.CusFind,
+                CusNeeds: bsp.CusNeeds,
+                CusKon: bsp.CusKon,
+                CusStrong: bsp.CusStrong,
+                ProdSale: bsp.ProdSale,
+                ProdStart: bsp.ProdStart,
+                BudgetFile: bsp.BudgetFile,
+                ProdFinance: bsp.ProdFinance,
+                ProdPrice: bsp.ProdPrice,
+                ProdUdregn: bsp.ProdUdregn,
+                ProdSaleplace: bsp.ProdSaleplace,
+                ProdEksi: bsp.ProdEksi,
+                ProdMarkedsf: bsp.ProdMarkedsf,
+                JurAftale: bsp.JurAftale,
+                JurLeverand: bsp.JurLeverand,
+                JurContact: bsp.JurContact,
+                JurCvr: bsp.JurCvr,
+                AndetChk: bsp.AndetChk,
+                AndetHeadline: bsp.AndetHeadline,
+                Andet: bsp.Andet,
+                Completed: y
+            },
+            function (data) {
+                if (data) {
+                    if ((data.Success && x === "") && (data.Success && y == false)) {
+                        window.location.href = '/login/min-forretningsplan/?id=' + data.Data;
+                    } else if ((data.Success && x != "") && (data.Success && y == false)) {
+                        return false;
+                    } else if (data.Success && y == true) {
+                        window.location.href = '/login/min-profil-projekter/';
+                    }
+                }
+            });
+    }
+
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    $("#eng").change(function () {
+        if (this.checked)
+            bsp.English = true;
+        else
+            bsp.English = false;
+    });
+
+    $("#andetchk").change(function () {
+        if (this.checked)
+            bsp.AndetChk = true;
+        else
+            bsp.AndetChk = false;
+    });
+</script>
