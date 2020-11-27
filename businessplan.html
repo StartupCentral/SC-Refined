@@ -26,7 +26,7 @@
                         <h2>Kom godt i gang med din forretningsplan</h2>
                     </div>
                     <div class="businessplan-navigation-container">
-                        <button class="button dropButton">DropDown</button>
+                        <button class="button" id="dropButton">DropDown</button>
                         <ul class="business-nav">
                             <li> <i class=""></i><a href="#!" class="active">Introduktion</a></li>
                             <li>
@@ -41,6 +41,17 @@
                             <li><i class=""></i><a href="#!">Salgsmarkedsføring</a></li>
                             <li><i class=""></i><a href="#!">Juridisk</a></li>
                         </ul>
+
+                        <div class="nav-buttons">
+                            <button class="button" id="complete">Mark as Completed</button>
+                            <button class="button" id="save-draft">Save as a Draft</button>
+                            <div id="lastupdateddate">
+                                <p>Last updated date:</p>
+                                <p> 2020-11-27T10:15:10.077</p>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="businessplan-form-container">
                         <!-- <form action method="post" class="businessplan-form" name="introduktion" id="introduktion">
@@ -579,125 +590,124 @@
                             </div>
                         </form> -->
 
+                        <div class="form-content">
+                            <form action="" method="post" class="businessplan-form" name="markedsanalyse"
+                                id="introduktion" novalidate>
+                                <h2>Markedsanalyse</h2>
 
-                        <!-- <form action="" method="post" class="businessplan-form" name="markedsanalyse" id="introduktion"
-                            novalidate>
-                            <h2>Markedsanalyse</h2>
+                                <div class="form-container">
+                                    <label for="cuswho">
+                                        <span>Hvem er kunderne?</span>
+                                    </label>
+                                    <textarea name="cuswho" id="cuswho" class="form-control" placeholder="Skriv..."
+                                        rows="6"></textarea>
+                                </div>
 
-                            <div class="form-container">
-                                <label for="cuswho">
-                                    <span>Hvem er kunderne?</span>
-                                </label>
-                                <textarea name="cuswho" id="cuswho" class="form-control" placeholder="Skriv..."
-                                    rows="6"></textarea>
-                            </div>
+                                <div class="form-container">
+                                    <label for="cusfind">
+                                        <span>Hvor mange kunder findes der?</span>
+                                    </label>
+                                    <textarea name="cusfind" id="cusfind" class="form-control" placeholder="Skriv..."
+                                        rows="6"></textarea>
 
-                            <div class="form-container">
-                                <label for="cusfind">
-                                    <span>Hvor mange kunder findes der?</span>
-                                </label>
-                                <textarea name="cusfind" id="cusfind" class="form-control" placeholder="Skriv..."
-                                    rows="6"></textarea>
+                                </div>
 
-                            </div>
+                                <div class="form-container">
+                                    <label for="cusneeds">
+                                        <span>Hvordan opfyldes deres behov nu?</span>
+                                    </label>
+                                    <textarea name="cusneeds" id="cusneeds" class="form-control" placeholder="Skriv..."
+                                        rows="6"></textarea>
+                                </div>
 
-                            <div class="form-container">
-                                <label for="cusneeds">
-                                    <span>Hvordan opfyldes deres behov nu?</span>
-                                </label>
-                                <textarea name="cusneeds" id="cusneeds" class="form-control" placeholder="Skriv..."
-                                    rows="6"></textarea>
-                            </div>
+                                <div class="form-container">
+                                    <label for="cuskon">
+                                        <span>Hvilke konkurrenter er der, og hvordan adskiller dit produkt sig?</span>
+                                    </label>
+                                    <textarea name="cuskon" id="cuskon" class="form-control" placeholder="Skriv..."
+                                        rows="6"></textarea>
+                                </div>
 
-                            <div class="form-container">
-                                <label for="cuskon">
-                                    <span>Hvilke konkurrenter er der, og hvordan adskiller dit produkt sig?</span>
-                                </label>
-                                <textarea name="cuskon" id="cuskon" class="form-control" placeholder="Skriv..."
-                                    rows="6"></textarea>
-                            </div>
+                                <div class="form-container">
+                                    <label for="cusstrong">
+                                        <span>Hvad er konkurrentens stærke og svage sider?</span>
+                                    </label>
+                                    <textarea name="cusstrong" id="cusstrong" class="form-control"
+                                        placeholder="Skriv..." rows="6"></textarea>
 
-                            <div class="form-container">
-                                <label for="cusstrong">
-                                    <span>Hvad er konkurrentens stærke og svage sider?</span>
-                                </label>
-                                <textarea name="cusstrong" id="cusstrong" class="form-control" placeholder="Skriv..."
-                                    rows="6"></textarea>
-
-                            </div>
-                        </form> -->
-
-
-                        <form action="" method="post" class="businessplan-form" name="okonomi" id="introduktion"
-                            novalidate>
-                            <h2>Økonomi</h2>
-
-                            <div class="form-container">
-                                <label for="prodsale">
-                                    <span>Hvilke større udgifter skal der afholdes før produktet er klar til
-                                        salg?</span>
-                                </label>
-                                <textarea name="prodsale" id="prodsale" class="form-control" placeholder="Skriv..."
-                                    rows="6"></textarea>
-                            </div>
-
-                            <div class="form-container">
-                                <label for="prodstart">
-                                    <span>Kan projektet starte op i det små?</span>
-                                </label>
-                                <textarea name="prodstart" id="prodstart" class="form-control" placeholder="Skriv..."
-                                    rows="6"></textarea>
-                            </div>
-
-                            <div class="form-container">
-                                <label class="checkbox">
-                                    <span>Er der lavet et budget?</span>
-                                    <input type="checkbox" id="showbudget" name="yestobudget" value="budget"
-                                        class="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-
-                            <!-- Change this to display none -->
-                            <div class="form-container" id="budget" style="display:block;">
-                                <label for="cusneeds">Upload dit budget</label>
-
-                                <!-- I HAVE NO IDEA WHAT THIS IS FOR HONESTLY -->
-                                @if(CurrentPage.wwinspi3 !=""){
-                                <span class="f14 pull-right ">
-                                    <a href="javascript:void(0);" class="inspicolor" data-toggle="modal"
-                                        data-target="#inspi_3">Brug for inspiration
-                                        <i class="fa fa-angle-right" aria-hidden="true"></i></a></span>
-                                }
-                                <!-- I HAVE NO IDEA WHAT THIS IS FOR HONESTLY -->
-
-                                <input type="file" class="uploadBtn" name="budgetfile" id="budgetfile">
-                            </div>
-
-                            <div class="form-container">
-                                <label for="prodfinance">
-                                    <span>Hvornår i de næste 12 måneder er der udgifter og indtægter?</span>
-                                </label>
-                                <textarea name="prodfinance" id="prodfinance" class="form-control"
-                                    placeholder="Skriv..." rows="6"></textarea>
-                            </div>
+                                </div>
+                            </form>
 
                             <div class="button-container">
                                 <div class="footer-buttons"><input type="submit" class="button" value="Videre"></div>
                                 <div class="footer-buttons"><input type="submit" class="button" value="Videre"></div>
                             </div>
-                        </form>
+                        </div>
 
-                        <!-- <div class="form-footer" id="formbottom">
-                            <div class="footer-buttons" id="autosave"><span>Gem Kladde</span></div>
-                            <div class="footer-buttons"><input type="submit" class="button" value="Videre"></div>
-                        </div> -->
+                        <div class="form-content">
+                            <form action="" method="post" class="businessplan-form" name="okonomi" id="introduktion"
+                                novalidate>
+                                <h2>Økonomi</h2>
+
+                                <div class="form-container">
+                                    <label for="prodsale">
+                                        <span>Hvilke større udgifter skal der afholdes før produktet er klar til
+                                            salg?</span>
+                                    </label>
+                                    <textarea name="prodsale" id="prodsale" class="form-control" placeholder="Skriv..."
+                                        rows="6"></textarea>
+                                </div>
+
+                                <div class="form-container">
+                                    <label for="prodstart">
+                                        <span>Kan projektet starte op i det små?</span>
+                                    </label>
+                                    <textarea name="prodstart" id="prodstart" class="form-control"
+                                        placeholder="Skriv..." rows="6"></textarea>
+                                </div>
+
+                                <div class="form-container">
+                                    <label class="checkbox">
+                                        <span>Er der lavet et budget?</span>
+                                        <input type="checkbox" id="showbudget" name="yestobudget" value="budget"
+                                            class="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+                                <!-- Change this to display none -->
+                                <div class="form-container" id="budget" style="display:block;">
+                                    <label for="cusneeds">Upload dit budget</label>
+
+                                    <!-- I HAVE NO IDEA WHAT THIS IS FOR HONESTLY -->
+                                    @if(CurrentPage.wwinspi3 !=""){
+                                    <span class="f14 pull-right ">
+                                        <a href="javascript:void(0);" class="inspicolor" data-toggle="modal"
+                                            data-target="#inspi_3">Brug for inspiration
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i></a></span>
+                                    }
+                                    <!-- I HAVE NO IDEA WHAT THIS IS FOR HONESTLY -->
+
+                                    <input type="file" class="uploadBtn" name="budgetfile" id="budgetfile">
+                                </div>
+
+                                <div class="form-container">
+                                    <label for="prodfinance">
+                                        <span>Hvornår i de næste 12 måneder er der udgifter og indtægter?</span>
+                                    </label>
+                                    <textarea name="prodfinance" id="prodfinance" class="form-control"
+                                        placeholder="Skriv..." rows="6"></textarea>
+                                </div>
+                            </form>
+
+                            <div class="button-container">
+                                <div class="footer-buttons"><input type="submit" class="button" value="Videre"></div>
+                                <div class="footer-buttons"><input type="submit" class="button" value="Videre"></div>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <!-- <div class="businessplan-footer-container"> -->
-                    <!-- <div class="footer-buttons" id="autosave"><span>Gem Kladde</span></div> -->
-                    <!-- <div class="footer-buttons"><input type="submit" class="button" value="Back"></div>
-                        <div class="footer-buttons"><input type="submit" class="button" value="Videre"></div>
-                    </div> -->
                 </div>
             </section>
         </div>

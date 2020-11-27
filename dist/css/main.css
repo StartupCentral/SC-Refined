@@ -19021,7 +19021,7 @@ section.blog-categories .more-categories a:hover {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   text-align: center;
-  padding: 2.5rem;
+  padding: 1rem;
 }
 
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-header .bp-title {
@@ -19039,7 +19039,7 @@ section.blog-categories .more-categories a:hover {
           flex-direction: column;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .button {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container #dropButton {
   margin-top: 0;
   color: #FFFFFF;
   font-weight: 600;
@@ -19113,6 +19113,23 @@ section.blog-categories .more-categories a:hover {
   color: #30C1F3;
 }
 
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons .button {
+  width: 100%;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons #lastupdateddate {
+  display: none;
+}
+
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container {
   padding: 1rem;
   display: -webkit-box;
@@ -19126,40 +19143,53 @@ section.blog-categories .more-categories a:hover {
   border-right: 1px solid #e6e7e8;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Idegrundlag {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Idegrundlag {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Malsaetning {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Malsaetning {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Vaerdier {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Vaerdier {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Team {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Team {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Produktbeskrivelse {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Produktbeskrivelse {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Markedsanalyse {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Markedsanalyse {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Okonomi {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Okonomi {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Salgsmarkedsforing {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Salgsmarkedsforing {
   display: none;
 }
 
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container #Juridisk {
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content #Juridisk {
   display: none;
+}
+
+.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-content .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form {
@@ -19232,19 +19262,6 @@ section.blog-categories .more-categories a:hover {
   font-style: italic;
   color: #A0A0A0;
   font-size: 1.4rem;
-}
-
-.sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .form-header {
@@ -19416,9 +19433,25 @@ section.blog-categories .more-categories a:hover {
             flex: 0 0 20%;
     padding: 2.5rem;
     border-right: 5px solid #182848;
+    border-bottom-left-radius: 1rem;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons {
+    margin-top: auto;
+    margin-bottom: 0;
+    display: block;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons #lastupdateddate {
+    display: block;
+    text-align: center;
+    margin-top: .5rem;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .nav-buttons #lastupdateddate p {
+    font-size: 14px;
+    color: #A0A0A0;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .button {
     display: none;
+    width: 100%;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .business-nav {
     max-height: -webkit-fit-content;
@@ -19433,6 +19466,12 @@ section.blog-categories .more-categories a:hover {
     margin-top: 0;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #182848;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container #complete {
+    display: block;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container #save-draft {
+    display: block;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container {
     padding: 2.5rem;
@@ -19450,6 +19489,28 @@ section.blog-categories .more-categories a:hover {
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form {
     padding-top: 1rem;
+    max-height: 1000px;
+    overflow-y: scroll;
+    padding-right: 1rem;
+    /* width */
+    /* Track */
+    /* Handle */
+    /* Handle on hover */
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar {
+    width: 10px;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px grey;
+            box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar-thumb {
+    background: #182848;
+    border-radius: 10px;
+  }
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form::-webkit-scrollbar-thumb:hover {
+    background: #223869;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-form-container .businessplan-form .form-container label .label-inspo i .label-inspo-text {
     right: 5rem;
