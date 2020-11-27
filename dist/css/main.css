@@ -19680,9 +19680,8 @@ section.blog-categories .more-categories a:hover {
     font-size: 14px;
     color: #A0A0A0;
   }
-  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .dropButton {
+  .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container #dropButton {
     display: none;
-    width: 100%;
   }
   .sc-businessplan .container section.businessplan .businessplan-container .businessplan-navigation-container .save-draft {
     display: block;
