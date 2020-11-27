@@ -1,3 +1,45 @@
+.partner-categories {
+    @include flex(column);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-top: 2.5rem;
+
+    .top {
+        @include flex(row);
+        margin: auto;
+    }
+
+    .bottom {
+        @include flex(row);
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    button.category {
+        cursor: pointer;
+        text-align: center;
+        margin: .5rem .5rem;
+        padding: .55rem 1.5rem;
+        border-radius: 2.5rem;
+
+        color: $sc-white;
+        background: $sc-primary;
+        font-family: $font-primary;
+        border: 1px solid $sc-white;
+
+        @include transition(.2s);
+
+        &:focus,
+        &:hover {
+            background: $sc-white;
+            color: $sc-primary;
+        }
+    }
+}
+
 section.sc-partners-partnercards {
     .container {
         .cards-container {
@@ -49,6 +91,25 @@ section.sc-partners-partnercards {
 }
 
 @include media-lg {
+    .partner-categories {
+        @include flex(row);
+
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .top {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bottom {
+            margin: auto;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+    }
+
     section.sc-partners-partnercards {
         .container {
             .cards-container {

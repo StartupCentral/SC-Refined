@@ -1,0 +1,166 @@
+#sc-bp-explanation {
+    section {
+        h2 {
+            margin-left: 0;
+            max-width: unset;
+            margin-top: 5rem;
+
+            span {
+                display: inline;
+                font-size: inherit;
+                color: $sc-accent;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:nth-child(odd) {
+            background-color: $sc-primary;
+            color: $sc-white;
+        }
+
+        ul {
+            li {
+                // padding-left: 2.5rem;
+
+                span {
+                    color: $sc-accent;
+                }
+            }
+        }
+    }
+
+    section.bpex-intro {
+        padding-top: 17rem;
+
+        .container {
+            .intro-text {
+                .intro-buttons {
+                    margin-bottom: 1rem;
+
+                    a {
+                        display: block;
+                    }
+                }
+
+                p {
+                    a {
+                        color: $sc-accent;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.bpex-forretningsplan {
+        padding-top: 0;
+
+        .container {
+            .bp-box {
+                display: grid;
+                overflow: scroll;
+
+                &-content {
+                    display: grid;
+                    text-align: center;
+                    grid-template-columns: repeat(3, 1fr);
+                    border: 1px solid $sc-primary;
+
+                    .column {
+                        display: grid;
+                        align-items: center;
+                        height: 100%;
+                        border: 1px solid $sc-primary;
+                        padding: 1rem .5rem;
+                    }
+
+                    .column-header {
+                        p {
+                            font-weight: bold;
+                            color: $sc-accent;
+                        }
+                    }
+
+                    .column-img {
+                        border: none;
+                    }
+                }
+            }
+
+            .bp-img-box {
+                display: grid;
+                margin-top: 2.5rem;
+                grid-template-columns: repeat(3, 1fr);
+
+                .column {
+                    border-left: 2px solid $sc-white;
+
+                    &:first-child {
+                        border: none;
+                    }
+                }
+            }
+
+            .bp-button-box {
+                margin-top: 2.5rem;
+
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    #sc-bp-explanation {
+        ul {
+            li {
+                padding-left: 5rem;
+            }
+        }
+
+        section.bpex-intro {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+
+                .intro-text {
+                    grid-column: 1/7;
+
+                    .intro-buttons {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-gap: 1rem;
+                    }
+                }
+            }
+        }
+
+        section.bpex-forretningsplan {
+            .container {
+                .bp-box {
+                    margin-top: 5rem;
+                }
+
+                .bp-button-box {
+                    margin-top: 2.5rem;
+                    text-align: center;
+
+                    a {
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                        width: 20rem;
+                    }
+                }
+            }
+        }
+    }
+}
