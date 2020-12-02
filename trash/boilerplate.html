@@ -4,20 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ed5b1a423.js" crossorigin="anonymous"></script>
+
+
     <title>Document</title>
     <!-- TrustBox script -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+
     <!-- End TrustBox script -->
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #323975;
+            color: #fff;
+            height: 100vh;
+        }
+
+        .fa-snowflake {
+            color: #fff;
+            position: absolute;
+            top: -20px;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh);
+            }
+        }
+    </style>
 </head>
 
+
 <body>
-    <!-- TrustBox widget - Starter -->
-    <div class="trustpilot-widget" data-locale="da-DK" data-template-id="5613c9cde69ddc09340c6beb"
-        data-businessunit-id="5bf6a8c5f13cca00015104ed" data-style-height="100%" data-style-width="100%"
-        data-theme="light">
-        <a href="https://dk.trustpilot.com/review/startupcentral.dk" target="_blank" rel="noopener">Trustpilot</a>
+    <div class="asdf">
+        <i class="far fa-snowflake"></i>
     </div>
-    <!-- End TrustBox widget -->
+
+    <script>
+        const body = document.body;
+        setInterval(createSnowFlake, 50);
+
+        function createSnowFlake() {
+            const snow_flake = document.createElement('i');
+            snow_flake.classList.add('fas');
+            snow_flake.classList.add('fa-snowflake');
+            snow_flake.style.left = Math.random() * window.innerWidth + 'px';
+            snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's'; // between 2 - 5 seconds
+            snow_flake.style.opacity = Math.random();
+            snow_flake.style.fontSize = Math.random() * 10 + 10 + 'px';
+
+            document.body.appendChild(snow_flake);
+
+            setTimeout(() => {
+                snow_flake.remove();
+            }, 5000)
+        }
+    </script>
 </body>
 
 </html>
