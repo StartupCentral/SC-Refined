@@ -10469,6 +10469,10 @@ section.paylike .container .thankyou-img img {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body .fa-snowflake {
   color: #fff;
   position: absolute;
@@ -12112,7 +12116,7 @@ section.coach-holder2 .coachcard-buttons {
           flex-direction: column;
   padding: 1rem 2.5rem 2rem;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 0;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -12492,14 +12496,18 @@ section.sc-team-history {
   margin-top: -75px;
 }
 
-section.sc-team-history .headline-2 {
+section.sc-team-history .extra-container .images-container img {
+  margin-bottom: 2.5rem;
+}
+
+section.sc-team-history .extra-container .headline-2 {
   font-weight: bold;
   line-height: 1.3;
   text-align: center;
   padding: 1rem 0;
 }
 
-section.sc-team-history .headline-2::after {
+section.sc-team-history .extra-container .headline-2::after {
   content: '';
   display: block;
   bottom: 0;
@@ -12658,13 +12666,14 @@ section.sc-team-join .button {
   section.sc-team-history {
     margin-top: -90px;
   }
-  section.sc-team-history .headline-2 {
+  section.sc-team-history .title-box .headline-2 {
     font-weight: bold;
     line-height: 1.3;
     text-align: center;
     padding: 1rem 0;
+    margin: auto;
   }
-  section.sc-team-history .headline-2::after {
+  section.sc-team-history .title-box .headline-2::after {
     content: '';
     display: block;
     bottom: 0;
@@ -12675,6 +12684,39 @@ section.sc-team-join .button {
     margin: 5px auto 0;
     -webkit-transition: width .5s ease-out;
     transition: width .5s ease-out;
+  }
+  section.sc-team-history .title-box h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.sc-team-history h2 {
+    margin-top: 2.5rem;
+    margin-left: 0;
+  }
+  section.sc-team-history .extra-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 2.5rem 0;
+  }
+  section.sc-team-history .extra-container .images-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+  }
+  section.sc-team-history .extra-container .text-container {
+    margin-right: 0;
+    margin-left: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  section.sc-team-history .extra-container .text-container h2 {
+    margin-top: 0;
   }
   section.sc-team-staff .container .staff-body {
     -webkit-box-flex: 0;
@@ -20850,6 +20892,10 @@ textarea:focus {
   padding: .25rem 1.5rem;
   font-size: 1.4rem;
   font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .tlt-w {
