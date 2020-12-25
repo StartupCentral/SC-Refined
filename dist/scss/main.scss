@@ -86,6 +86,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: $sc-primary;
+    overflow-x: hidden;
 }
 
 h1,
@@ -211,6 +212,11 @@ textarea {
     &:focus {
         box-shadow: 0px 0px 0px .1rem $sc-primary;
     }
+}
+
+iframe {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 #main-nav+section {
@@ -774,6 +780,11 @@ textarea {
     #main-nav+section {
         margin-top: 0;
         padding-top: $nav-lg;
+    }
+
+    iframe {
+        width: unset;
+        height: unset;
     }
 
     h2 {

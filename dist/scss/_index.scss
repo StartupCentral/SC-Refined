@@ -178,9 +178,10 @@
 // }
 
 
-// CHRISTMAS SNOWFLAKES
+
 body {
     overflow-x: hidden;
+    // CHRISTMAS SNOWFLAKES
 
     .fa-snowflake {
         color: #fff;
@@ -196,17 +197,16 @@ body {
             transform: translateY(150vh);
         }
     }
+
+    // CHRISTMAS SNOWFLAKES
 }
 
-// CHRISTMAS SNOWFLAKES
 
 section.sc-home-landing {
     padding-top: 12.5rem !important;
     background-color: $sc-primary;
     color: $sc-white;
     position: relative;
-
-
 
     .landing-text {
         .wordCarousel {

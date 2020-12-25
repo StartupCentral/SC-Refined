@@ -20189,6 +20189,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #182848;
+  overflow-x: hidden;
 }
 
 h1,
