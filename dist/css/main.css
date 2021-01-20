@@ -16918,10 +16918,21 @@ section.contact-section .contact-container .contact-info-social a:hover i {
       align-content: space-between;
 }
 
+.aside-container aside.user-profile .column-container .profile-header .header-image {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
 .aside-container aside.user-profile .column-container .profile-header .header-image img {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
+}
+
+.aside-container aside.user-profile .column-container .profile-header .header-image img:hover {
+  border: 5px solid #182848;
 }
 
 .aside-container aside.user-profile .column-container .profile-header .header-text {

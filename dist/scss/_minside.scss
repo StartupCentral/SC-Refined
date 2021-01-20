@@ -16,10 +16,19 @@
                 // border: 1px solid red;
 
                 .header-image {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 50%;
+
                     img {
                         width: 10rem;
                         height: 10rem;
                         border-radius: 50%;
+
+                        &:hover {
+                            border: 5px solid $sc-primary;
+                        }
                     }
                 }
 
