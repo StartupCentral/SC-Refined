@@ -17315,6 +17315,10 @@ section.contact-section .contact-container .contact-info-social a:hover i {
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice--inactive {
   background-color: #182848;
   color: #FFFFFF !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice--inactive:hover {

@@ -322,6 +322,7 @@
                             &--inactive {
                                 background-color: $sc-primary;
                                 color: $sc-white !important;
+                                user-select: none;
 
                                 &:hover {
                                     cursor: default;
