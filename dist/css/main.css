@@ -16331,6 +16331,7 @@ section.sc-extraoffers-section .extraoffers-container .extraoffer .extraoffer-de
   padding: 1rem 2rem;
   font-size: 2.2rem;
   text-transform: uppercase;
+  border-radius: 5rem;
 }
 
 #sc-converter-cta .buttonbox .button.cta {
@@ -17309,6 +17310,16 @@ section.contact-section .contact-container .contact-info-social a:hover i {
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice--inactive {
+  background-color: #182848;
+  color: #FFFFFF !important;
+}
+
+.aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices .invoice--inactive:hover {
+  cursor: default;
+  background-color: #182848 !important;
 }
 
 .aside-container .container-small section.sc-minside-informations .info-container .info-box.invoices i {

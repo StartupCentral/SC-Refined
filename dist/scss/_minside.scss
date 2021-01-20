@@ -318,6 +318,16 @@
                             &:hover {
                                 background-color: $sc-overlay-dark;
                             }
+
+                            &--inactive {
+                                background-color: $sc-primary;
+                                color: $sc-white !important;
+
+                                &:hover {
+                                    cursor: default;
+                                    background-color: $sc-primary !important;
+                                }
+                            }
                         }
 
 
