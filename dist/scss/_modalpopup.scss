@@ -1,4 +1,4 @@
-#cookies-policy {
+#cookie-bar {
     position: fixed;
     z-index: 9999;
     bottom: 1.5rem;
@@ -23,11 +23,13 @@
         justify-content: space-around;
         align-items: center;
 
-        .cookie {
+        .cb-policy {
             background: none;
             border: none;
             color: $sc-primary;
             cursor: pointer;
+            word-wrap: none;
+            text-align: center;
 
             &:hover {
                 color: $sc-accent;
@@ -37,7 +39,8 @@
 
         .button {
             margin-top: auto;
-            // width: 100%;
+            margin-right: 16px;
+
         }
     }
 }
@@ -260,7 +263,7 @@
 }
 
 @include media-md {
-    #cookies-policy {
+    #cookie-bar {
         bottom: 1.5rem;
         left: unset;
         right: 1.5rem;
@@ -282,7 +285,7 @@
         }
 
         .button-box {
-            padding-left: 6rem;
+            // padding-left: 6rem;
 
             .cookie {
                 background: none;

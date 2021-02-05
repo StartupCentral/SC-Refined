@@ -987,7 +987,7 @@ footer.main-footer section.footer-social .social-cvr {
   }
 }
 
-#cookies-policy {
+#cookie-bar {
   position: fixed;
   z-index: 9999;
   bottom: 1.5rem;
@@ -1003,11 +1003,11 @@ footer.main-footer section.footer-social .social-cvr {
   border: 1px solid #e6e7e8;
 }
 
-#cookies-policy img {
+#cookie-bar img {
   display: none;
 }
 
-#cookies-policy .button-box {
+#cookie-bar .button-box {
   margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1023,20 +1023,23 @@ footer.main-footer section.footer-social .social-cvr {
           align-items: center;
 }
 
-#cookies-policy .button-box .cookie {
+#cookie-bar .button-box .cb-policy {
   background: none;
   border: none;
   color: #182848;
   cursor: pointer;
+  word-wrap: none;
+  text-align: center;
 }
 
-#cookies-policy .button-box .cookie:hover {
+#cookie-bar .button-box .cb-policy:hover {
   color: #30C1F3;
   text-decoration: underline;
 }
 
-#cookies-policy .button-box .button {
+#cookie-bar .button-box .button {
   margin-top: auto;
+  margin-right: 16px;
 }
 
 .modal-container {
@@ -1280,14 +1283,14 @@ footer.main-footer section.footer-social .social-cvr {
 }
 
 @media screen and (min-width: 767px) {
-  #cookies-policy {
+  #cookie-bar {
     bottom: 1.5rem;
     left: unset;
     right: 1.5rem;
     width: 37rem;
     padding: 2.5rem 2.5rem 2rem;
   }
-  #cookies-policy img {
+  #cookie-bar img {
     display: block;
     position: absolute;
     height: 10rem;
@@ -1296,13 +1299,10 @@ footer.main-footer section.footer-social .social-cvr {
     left: -3rem;
     width: auto;
   }
-  #cookies-policy .text {
+  #cookie-bar .text {
     padding-left: 6rem;
   }
-  #cookies-policy .button-box {
-    padding-left: 6rem;
-  }
-  #cookies-policy .button-box .cookie {
+  #cookie-bar .button-box .cookie {
     background: none;
     border: none;
     color: #182848;
